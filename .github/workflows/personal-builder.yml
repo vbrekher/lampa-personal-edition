@@ -12,6 +12,8 @@ on:
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/pull_request_template.md'
       - 'package.json'
+      - 'src/interaction/extensions/**'
+      - 'src/interaction/settings/**'
       - '.github/workflows/personal-builder.yml'
   pull_request:
     paths:
@@ -24,6 +26,8 @@ on:
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/pull_request_template.md'
       - 'package.json'
+      - 'src/interaction/extensions/**'
+      - 'src/interaction/settings/**'
       - '.github/workflows/personal-builder.yml'
 permissions:
   contents: read
@@ -39,7 +43,7 @@ jobs:
       - name: Run unit and packaging tests
         run: npm run test:personal
       - name: Install upstream build dependencies
-        run: npm install --no-audit --no-fund
+        run: npm install --no-fund
       - name: Compile real upstream Lampa and create a generic smoke WGT
         run: npm run build:personal -- --language ru --plugins off
       - name: Verify smoke artifact without publishing it
@@ -52,4 +56,6 @@ jobs:
             exit 1
           fi
           rm -f dist/Lampa-Personal-Edition.wgt
+      - name: Dependency vulnerability audit (must reach zero before release)
+        run: npm audit --audit-level=low
       # No artifacts uploaded. Users build their own WGT with their own settings.
