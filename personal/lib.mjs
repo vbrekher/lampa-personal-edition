@@ -6,21 +6,30 @@ import {tmpdir} from 'node:os';
 import {resolve, join, dirname} from 'node:path';
 
 export const ID = Object.freeze({app:'L4mpaPers0.LampaPersonal', pkg:'L4mpaPers0', version:'0.1.0'});
+export class PersonalBuildError extends Error {
+  constructor(code,detail='') {
+    super(code);
+    this.name='PersonalBuildError';
+    this.code=code;
+    this.detail=detail;
+  }
+}
+
 export const LANGUAGES = Object.freeze(['ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es']);
 
 export function normalizeServerUrl(raw, optional=true) {
   const value=String(raw??'').trim();
   if(!value && optional)return '';
-  if(!value || /\s/.test(value))throw Error('Введите полный HTTP(S) URL без пробелов');
+  if(!value || /\s/.test(value))throw new PersonalBuildError('INVALID_URL');
   let u;
-  try {u=new URL(value);} catch {throw Error('Некорректный URL: укажи http:// или https://');}
+  try {u=new URL(value);} catch {throw new PersonalBuildError('INVALID_URL_FORMAT');}
   if(!['http:','https:'].includes(u.protocol) || !u.hostname || u.username || u.password || u.search || u.hash)
-    throw Error('Разрешён HTTP(S) URL без пароля, query и #fragment');
+    throw new PersonalBuildError('URL_WITH_SECRET');
   return u.href.replace(/\/+$/,'');
 }
 export function normalizeSettings(input={}) {
   const language=String(input.language||'ru').trim().toLowerCase();
-  if(!LANGUAGES.includes(language))throw Error('Этот язык отсутствует в текущей Lampa: '+language);
+  if(!LANGUAGES.includes(language))throw new PersonalBuildError('UNSUPPORTED_APP_LANGUAGE',language);
   return {language,torrserverUrl:normalizeServerUrl(input.torrserverUrl),pluginsEnabled:input.pluginsEnabled===true};
 }
 export function configScript(input={}) {
@@ -50,7 +59,7 @@ export function configScript(input={}) {
 export function localTizenHtml(original) {
   const marker='<script src="loader.js"></script>';
   if(original.split(marker).length!==2 || !original.includes('css/app.css') || !original.includes('vender/jquery/jquery.js'))
-    throw Error('Upstream Tizen index изменился: требуется обновление адаптера');
+    throw new PersonalBuildError('UPSTREAM_INDEX');
   return original.replace('<title>Lampa</title>','<title>Lampa Personal Edition</title>')
     .replace('<script src="http://www.youtube.com/iframe_api"></script>',
       '<script src="https://www.youtube.com/iframe_api"></script>')
@@ -59,27 +68,27 @@ export function localTizenHtml(original) {
 export function patchedGulp(original) {
   const start=original.indexOf('function merge(done) {');
   const end=original.indexOf('\nfunction bubbleFile(',start);
-  if(start<0 || end<0)throw Error('Upstream gulpfile изменился');
+  if(start<0 || end<0)throw new PersonalBuildError('UPSTREAM_GULP');
   let section=original.slice(start,end);
-  if(!section.includes('    rollup({') || !section.includes('    done();'))throw Error('Unknown Gulp merge implementation');
+  if(!section.includes('    rollup({') || !section.includes('    done();'))throw new PersonalBuildError('UPSTREAM_GULP');
   section=section.replace('function merge(done) {','function merge() {')
     .replace('    rollup({','    return rollup({')
     .replace(/\n    done\(\);\n(?=\})/,'\n');
-  if(section.includes('done();'))throw Error('Gulp callback patch не удался');
+  if(section.includes('done();'))throw new PersonalBuildError('UPSTREAM_GULP_CALLBACK');
   return original.slice(0,start)+section+original.slice(end)
     +'\n// Personal Edition: non-watching, local Tizen assets.\n'
     +'exports.personal_tizen = series(merge, sass_task, lang_task, sync_tizen, uglify_task, public_tizen, index_tizen);\n';
 }
 export function patchedLibraries(original) {
   const needle="        return window.location.protocol == 'file:' || window.location.href.indexOf('chrome-extension') > -1 ? Manifest.github_lampa + 'vender/' + lib : './vender/' + lib";
-  if(!original.includes(needle) || !original.includes('    // Плагины различные'))throw Error('Upstream libraries изменились');
+  if(!original.includes(needle) || !original.includes('    // Плагины различные'))throw new PersonalBuildError('UPSTREAM_LIBRARIES');
   return original.replace(needle,"        if (window.lampa_personal_mode) return './vender/' + lib;\n"+needle)
     .replace('    // Плагины различные',
       "    if (window.lampa_personal_mode) {\n        Utils.putScriptOfMirrors(include,()=>{})\n        return\n    }\n\n    // Плагины различные");
 }
 export function patchedManifest(original) {
   const needle="get: ()=> window.lampa_settings.fix_widget ? 'http://lampa.mx/' : 'https://yumata.github.io/lampa/',";
-  if(!original.includes(needle))throw Error('Upstream asset-base изменился');
+  if(!original.includes(needle))throw new PersonalBuildError('UPSTREAM_ASSET_BASE');
   return original.replace(needle,
     "get: ()=> window.lampa_personal_mode ? './' : (window.lampa_settings.fix_widget ? 'http://lampa.mx/' : 'https://yumata.github.io/lampa/'),");
 }
@@ -104,20 +113,20 @@ function checkAssets(folder) {
     'vender/hls/hls.js','vender/dash/dash.js','vender/qrcode/qrcode.js','lang/ru.js']) {
     const file=join(folder,rel);
     if(!existsSync(file)||!statSync(file).isFile()||statSync(file).size===0)
-      throw Error('Сборка неполная, отсутствует '+rel);
+      throw new PersonalBuildError('MISSING_ASSET',rel);
   }
 }
 function checkLinks(root) {
   for(const name of readdirSync(root)){
     const path=join(root,name),stat=lstatSync(path);
-    if(stat.isSymbolicLink())throw Error('Symlinks запрещены внутри WGT: '+path);
+    if(stat.isSymbolicLink())throw new PersonalBuildError('SYMLINK_FORBIDDEN',path);
     if(stat.isDirectory())checkLinks(path);
   }
 }
 export function packageTizen({builtDir,outputFile,iconFile,settings}) {
   const input=resolve(builtDir),output=resolve(outputFile);
   checkAssets(input);
-  if(!existsSync(iconFile))throw Error('Нет иконки: '+iconFile);
+  if(!existsSync(iconFile))throw new PersonalBuildError('MISSING_ICON',iconFile);
   const temp=mkdtempSync(join(tmpdir(),'lampa-personal-'));
   const stage=join(temp,'package');
   try {
