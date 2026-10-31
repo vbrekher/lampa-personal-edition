@@ -98,6 +98,11 @@ class Main{
         this.add()
 
         const language = Storage.field('language') || 'en'
+        // Keep the familiar “Popular” section, with separate categories underneath.
+        const heading = document.createElement('div')
+        heading.className = 'extensions__block-title'
+        heading.innerText = Lang.translate('extensions_from_popular')
+        this.scroll.body(true).appendChild(heading)
         this.params.catalog.results.forEach(group=>{
             const list = group.results.map(plugin=>{
                 const translated = plugin.lang && (plugin.lang[language] || plugin.lang.en)
