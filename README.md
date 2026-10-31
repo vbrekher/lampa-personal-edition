@@ -82,6 +82,8 @@ Upstream Lampa includes Samsung Tizen support; this personal adapter targets **T
 | Инструкция на русском | [Русская инструкция](docs/README.ru.md) |
 | Handleiding in het Nederlands | [Nederlandse handleiding](docs/README.nl.md) |
 | Diagnosing build/TV problems | [Troubleshooting](docs/TROUBLESHOOTING.md) |
+| Common questions and project scope | [FAQ](docs/FAQ.md) |
+| Tested vs unverified Samsung devices | [Compatibility](docs/COMPATIBILITY.md) |
 | Credential handling and third-party plugins | [Security](SECURITY.md) |
 | Build design and limitations | [Technical notes](docs/BUILD-NOTES.md) |
 | Reporting bugs and contributing | [Contributing](CONTRIBUTING.md) |
