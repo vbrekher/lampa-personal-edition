@@ -10,7 +10,7 @@
 
 **Lampa Personal Edition** is an independent community fork of [Lampa by Yumata](https://github.com/yumata/lampa-source). The goal is simple: customize the app *on your Mac or Linux computer* instead of entering server URLs and settings with a Samsung TV remote.
 
-The personal builder compiles Lampa from source, packages its HTML/CSS/JavaScript in a **local Tizen WGT**, and preconfigures your selected language and optional TorrServer address. It uses a **different Tizen application ID**, so it can coexist with an existing Lampa installation.
+The personal builder compiles Lampa from source, packages its HTML/CSS/JavaScript in a **local Tizen WGT**, and preconfigures your selected language and optional TorrServer address while retaining editable Parser and TorrServer settings on the TV. It uses a **different Tizen application ID**, so it can coexist with an existing Lampa installation.
 
 > **Current status — developer preview (v0.1.0).** The build pipeline has automated tests, but Samsung installation and end-to-end playback have **not yet been verified on a physical TV**. This is not a production-certified TV release.
 
@@ -41,7 +41,7 @@ TorrServer URL (optional; Enter to skip):
 Enable third-party plugins? [y/N]:
 ~~~
 
-Press Enter to accept the defaults for all three questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no third-party plugins**. It never asks for your CUB account/password.
+Press Enter to accept the defaults for all three questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no installed third-party plugins**. The optional plugin catalogue is visible, but installing a plugin requires a user action and the first installation requires explicit consent. It never asks for your CUB account/password.
 
 The **builder's terminal language** is separate from the **Lampa TV interface language**. The terminal defaults to English; use `--builder-language ru` or `--builder-language nl` for Russian or Dutch setup messages. Lampa does not yet provide a Dutch TV interface, so Dutch setup defaults the TV interface to English.
 
@@ -64,13 +64,13 @@ Install through [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung) →
 | Setting | Default | Notes |
 | --- | --- | --- |
 | TV interface language | `en` (English builder) | Supported upstream: ru, en, uk, be, zh, pt, bg, he, cs, ro, fr, pl, es |
-| TorrServer URL | empty | Your own reachable `http://192.168.x.x:8090` or HTTPS endpoint; optional |
-| Third-party plugins | disabled | Opt in only if you trust the plugin sources; remote JavaScript can execute |
+| TorrServer URL | empty | Your own reachable `http://192.168.x.x:8090` or HTTPS endpoint; optional. Parser and Server menus are visible even when empty. |
+| Third-party plugins | disabled | Six source-reviewed links appear in an offline categorized catalogue. Explicit user installation/consent is required before third-party code runs. |
 | Lampa account login | not bundled | No username, password, CUB cookie or tokens embedded |
 | App identity | `L4mpaPers0.LampaPersonal` | Separate from the original Lampa app |
 | App source | local WGT assets | No `loader.js` fetching updated application JS at launch |
 
-The bundled choices are applied on startup. To change them, **rebuild and reinstall**. Your TorrServer must run separately and be accessible from the TV; this project does not run torrent engines on Tizen.
+The builder seeds language and TorrServer URL on first launch, or when those builder inputs change in a new WGT. **TV-side edits persist across ordinary restarts.** You can fill in the missing TorrServer/Parser settings directly from the TV after installing, without rebuilding. To change builder defaults for a new personal package, rebuild and reinstall. TorrServer itself must run separately and be reachable from the TV; this project does not run torrent engines on Tizen.
 
 ## Compatibility
 
@@ -87,6 +87,7 @@ Upstream Lampa includes Samsung Tizen support; this personal adapter targets **T
 | Common questions and project scope | [FAQ](docs/FAQ.md) |
 | Tested vs unverified Samsung devices | [Compatibility](docs/COMPATIBILITY.md) |
 | Credential handling and third-party plugins | [Security](SECURITY.md) |
+| Curated vs unverified plugin link inventory | [Plugin link audit](docs/PLUGIN-LINK-AUDIT.md) |
 | Build design and limitations | [Technical notes](docs/BUILD-NOTES.md) |
 | Reporting bugs and contributing | [Contributing](CONTRIBUTING.md) |
 
