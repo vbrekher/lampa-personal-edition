@@ -1,6 +1,7 @@
 import Controller from '../../core/controller'
 import Subscribe from '../../utils/subscribe'
 import Main from './main'
+import PersonalCatalog from './personal_catalog'
 import ParentalControl from '../parental_control'
 
 let extensions
@@ -15,6 +16,11 @@ function init(){
 
 function show(params = {}){
     if(extensions) return
+
+    // Personal Edition has a small, offline metadata catalogue and no CUB store dependency.
+    if(window.lampa_personal_mode && !params.store && !params.catalog){
+        params = {...params, catalog: PersonalCatalog, with_installed: true}
+    }
 
     let controller = Controller.enabled().name
 
