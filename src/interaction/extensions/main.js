@@ -64,6 +64,11 @@ class Main{
                 let plugin = new Extension(data, {type: 'installs', autocheck: true})
                     plugin.create()
 
+                // Manual entry is only possible after the upstream install-consent dialog.
+                if(window.lampa_personal_mode){
+                    localStorage.setItem('lampa_personal_plugins_opt_in','true')
+                    window.lampa_settings.plugins_use = true
+                }
                 Plugins.add(data)
 
                 $(add.render()).after(plugin.render())
