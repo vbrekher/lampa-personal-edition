@@ -58,3 +58,9 @@ test('Personal Edition loads packaged non-core translations instead of fetching 
   assert.match(app,/window\.lampa_personal_mode \? '\.\/'/);
   assert.ok(app.includes("+ 'lang/' + code + '.js'"));
 });
+
+test('Personal Edition uses English fallback for non-Russian locales',()=>{
+  const source=readFileSync(resolve(root,'src/core/lang.js'),'utf8');
+  assert.match(source,/window\.lampa_personal_mode && code !== 'ru' \? 'en'/);
+  assert.ok(source.includes("langs[fallback][name]"));
+});
