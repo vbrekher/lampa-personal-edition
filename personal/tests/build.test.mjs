@@ -35,6 +35,13 @@ test('seeds local preferences, disables remote configuration and CUB account',()
   assert.equal(data.get('tmdb_lang'),'en');
   assert.ok(!js.includes('token='));
 });
+test('rebuilding without TorrServer clears a previously bundled server address',()=>{
+  const data=new Map([['torrserver_url','http://192.168.1.25:8090']]);
+  new Function('window','localStorage',configScript({torrserverUrl:''}))({},{
+    setItem:(key,val)=>data.set(key,val)
+  });
+  assert.equal(data.get('torrserver_url'),'');
+});
 test('opt-in allows upstream plugin system, but not store by default',()=>{
   const js=configScript({pluginsEnabled:true});
   const w={};

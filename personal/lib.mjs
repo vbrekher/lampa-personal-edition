@@ -41,10 +41,9 @@ export function configScript(input={}) {
     '  s.disable_features.remote_configuration=true;',
     '  localStorage.setItem("language",cfg.language);',
     '  localStorage.setItem("tmdb_lang",cfg.language);',
-    '  if(cfg.torrserverUrl){',
-    '    localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
-    '    localStorage.setItem("torrserver_use_link","one");',
-    '  }',
+    '  // Always overwrite prior installs, including when the URL is cleared.',
+    '  localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
+    '  localStorage.setItem("torrserver_use_link","one");',
     '})();',''
   ].join('\n');
 }
