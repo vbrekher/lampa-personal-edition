@@ -20,7 +20,7 @@ function create() {
   const clients = new Set();
   const reload = () => {
     for (const res of clients) {
-      try { res.write('data: reload\\n\\n'); }
+      try { res.write('data: reload\n\n'); }
       catch { clients.delete(res); }
     }
   };
@@ -37,7 +37,7 @@ function create() {
           'Cache-Control':'no-store',
           'X-Content-Type-Options':'nosniff'
         });
-        res.write(': connected\\n\\n');
+        res.write(': connected\n\n');
         clients.add(res);
         req.on('close',()=>clients.delete(res));
         return;
