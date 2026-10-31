@@ -21,8 +21,9 @@ async function ask(locale,defaultLanguage) {
     console.log(t.intro+'\n');
     const language=(await rl.question(t.interfaceLanguage.replace('{default}',defaultLanguage))).trim()||defaultLanguage;
     const torrserverUrl=(await rl.question(t.serverUrl)).trim();
+    const parserType=(await rl.question(t.parserType)).trim().toLowerCase()||'jackett';
     const answer=(await rl.question(t.plugins)).trim().toLowerCase();
-    return normalizeSettings({language,torrserverUrl,
+    return normalizeSettings({language,torrserverUrl,parserType,
       pluginsEnabled:['y','yes','j','ja','д','да'].includes(answer)});
   }finally{rl.close();}
 }
