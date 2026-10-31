@@ -51,7 +51,7 @@ Third-party remotely hosted plugins own their own UI strings; Lampa Personal Edi
 
 ## Work completed in this branch
 
-Eight first-pass core translation dictionaries (97 UI terms each) are authored under `i18n/drafts/`; these are **starting points** for comprehensive translations, not language packs claimed complete. No new draft is loaded at runtime. A dependency-free audit and tests make incomplete language claims detectable. Existing core translations are unchanged.
+Eight first-pass core translation dictionaries (97 UI terms each) are authored under `i18n/drafts/`; these are **starting points** for comprehensive translations, not language packs claimed complete. The bundled curated plugin catalogue now has category headings and all six plugin descriptions in every requested language; that component's metadata is independently covered by tests. No new draft is loaded at runtime. A dependency-free audit and tests make incomplete language claims detectable. Existing core translations are unchanged.
 
 ## Roadmap for completion
 
