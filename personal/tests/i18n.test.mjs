@@ -75,3 +75,11 @@ test('translator export is complete, JSON-only and never silently fills missing 
   assert.equal(json.items.length,json.missingCount);
   assert.ok(json.items.every(i=>i.key && (i.english || i.russian)));
 });
+
+test('five shipped top-ten language files have complete canonical key and placeholder coverage',()=>{
+  for(const code of EXISTING){
+    const report=examine(code);
+    assert.deepEqual(report.missing,[],code+' has untranslated canonical keys');
+    assert.deepEqual(report.mismatches,[],code+' lost dynamic placeholders');
+  }
+});
