@@ -10,8 +10,7 @@ var concat         = require('gulp-concat'),
     chokidar       = require('chokidar'),
     uglify         = require('gulp-uglify-es').default,
     uglifycss      = require('gulp-uglifycss'),
-    browser        = require('browser-sync').create(),
-    newer          = require('gulp-newer'),
+    browser        = require('./personal/dev-server.cjs').create(),
     sass           = require('gulp-sass')(require('sass')),
     autoprefixer   = require('gulp-autoprefixer'),
     fileinclude    = require('gulp-file-include'),
@@ -33,8 +32,18 @@ var babel = require('@rollup/plugin-babel').babel;
 // Add support for require() syntax
 var commonjs = require('@rollup/plugin-commonjs');
 // Add support for importing from node_modules folder like import x from 'module-name'
-var nodeResolve = require('@rollup/plugin-node-resolve').nodeResolve;
-var regenerator = require('rollup-plugin-regenerator');
+// This build only needs package imports such as regenerator-runtime/runtime.
+// Avoid the upstream resolver's unpatched deepmerge dependency (CVE-2026-93753).
+var nodeResolve = function(){
+    return {
+        name: 'lampa-package-resolver',
+        resolveId: function(id, importer){
+            if(id.startsWith('.') || id.startsWith('/') || id.includes(':')) return null;
+            try { return require.resolve(id,{paths:[importer ? path.dirname(importer) : process.cwd()]}); }
+            catch (e) { return null; }
+        }
+    };
+};
 
 
 var cache;
@@ -240,7 +249,6 @@ function index_github(){
 /** Сверяем файлы **/
 function sync_task(path){
     return src([pubFolder + '**/*'])
-        .pipe(newer(bulFolder+path))
         .pipe(dest(bulFolder+path));
 }
 
@@ -258,7 +266,6 @@ function sync_github(){
 }
 function sync_doc(){
     return src([idxFolder + 'doc/' + '**/*'])
-        .pipe(newer(docFolder))
         .pipe(dest(docFolder));
 }
 

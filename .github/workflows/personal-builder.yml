@@ -12,6 +12,8 @@ on:
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/pull_request_template.md'
       - 'package.json'
+      - 'src/interaction/extensions/**'
+      - 'src/interaction/settings/**'
       - '.github/workflows/personal-builder.yml'
   pull_request:
     paths:
@@ -24,6 +26,8 @@ on:
       - '.github/ISSUE_TEMPLATE/**'
       - '.github/pull_request_template.md'
       - 'package.json'
+      - 'src/interaction/extensions/**'
+      - 'src/interaction/settings/**'
       - '.github/workflows/personal-builder.yml'
 permissions:
   contents: read
@@ -32,16 +36,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
       - name: Run unit and packaging tests
         run: npm run test:personal
       - name: Install upstream build dependencies
-        run: npm install --no-audit --no-fund
+        run: npm install --no-fund
       - name: Compile real upstream Lampa and create a generic smoke WGT
-        run: npm run build:personal -- --language ru --plugins off
+        run: |
+          if ! npm run build:personal -- --language ru --plugins off; then
+            echo '=== Sanitized public-source build diagnostic ==='
+            if [ -f dist/build-error.log ]; then sed -n '1,180p' dist/build-error.log; fi
+            exit 1
+          fi
       - name: Verify smoke artifact without publishing it
         run: |
           unzip -tq dist/Lampa-Personal-Edition.wgt
@@ -52,4 +61,6 @@ jobs:
             exit 1
           fi
           rm -f dist/Lampa-Personal-Edition.wgt
+      - name: Dependency vulnerability audit (must reach zero before release)
+        run: npm audit --audit-level=low
       # No artifacts uploaded. Users build their own WGT with their own settings.

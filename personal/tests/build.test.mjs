@@ -18,34 +18,84 @@ test('URL validation and no secret-bearing URL',()=>{
   }
 });
 test('only supported source languages',()=>{
-  assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',pluginsEnabled:false});
+  assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',parserType:'jackett',pluginsEnabled:false});
   assert.equal(normalizeSettings({language:'uk'}).language,'uk');
   assert.throws(()=>normalizeSettings({language:'nl'}));
+  assert.equal(normalizeSettings({parserType:'prowlarr'}).parserType,'prowlarr');
+  assert.throws(()=>normalizeSettings({parserType:'invalid'}),e=>e.code==='INVALID_PARSER_TYPE');
 });
 test('seeds local preferences, disables remote configuration and CUB account',()=>{
   const js=configScript({language:'en',torrserverUrl:'http://192.168.1.20:8090'});
   const w={},data=new Map();
-  new Function('window','localStorage',js)(w,{setItem:(key,val)=>data.set(key,val)});
+  new Function('window','localStorage',js)(w,{setItem:(key,val)=>data.set(key,val),getItem:(key)=>data.get(key)??null});
   assert.equal(w.lampa_personal_mode,true);
   assert.equal(w.lampa_settings.account_use,false);
   assert.equal(w.lampa_settings.socket_use,false);
   assert.equal(w.lampa_settings.plugins_use,false);
+  assert.equal(w.lampa_settings.torrents_use,true);
   assert.equal(w.lampa_settings.disable_features.remote_configuration,true);
   assert.equal(data.get('torrserver_url'),'http://192.168.1.20:8090');
   assert.equal(data.get('tmdb_lang'),'en');
+  assert.equal(data.get('parser_torrent_type'),'jackett');
   assert.ok(!js.includes('token='));
 });
 test('rebuilding without TorrServer clears a previously bundled server address',()=>{
   const data=new Map([['torrserver_url','http://192.168.1.25:8090']]);
   new Function('window','localStorage',configScript({torrserverUrl:''}))({},{
-    setItem:(key,val)=>data.set(key,val)
+    setItem:(key,val)=>data.set(key,val),getItem:(key)=>data.get(key)??null
   });
   assert.equal(data.get('torrserver_url'),'');
 });
+test('TV-side TorrServer edits survive app relaunch when builder inputs are unchanged',()=>{
+  const data=new Map();
+  const storage={setItem:(key,val)=>data.set(key,val),getItem:(key)=>data.get(key)??null};
+  const js=configScript({language:'ru',torrserverUrl:''});
+  new Function('window','localStorage',js)({},storage);
+  data.set('torrserver_url','http://192.168.1.40:8090');
+  new Function('window','localStorage',js)({},storage);
+  assert.equal(data.get('torrserver_url'),'http://192.168.1.40:8090');
+  const updated=configScript({language:'ru',torrserverUrl:'https://my-new-server.example'});
+  new Function('window','localStorage',updated)({},storage);
+  assert.equal(data.get('torrserver_url'),'https://my-new-server.example');
+});
+
+test('third-party plugins can be enabled only after persisted user opt-in',()=>{
+  const data=new Map([['lampa_personal_plugins_opt_in','true']]);
+  const w={};
+  new Function('window','localStorage',configScript())(w,{setItem:(k,v)=>data.set(k,v),getItem:(k)=>data.get(k)??null});
+  assert.equal(w.lampa_settings.plugins_use,true);
+});
+
+test('Personal Edition keeps parser and plugin settings reachable without a server',()=>{
+  const settings=readFileSync(join(root,'src/interaction/settings/main.js'),'utf8');
+  const extensions=readFileSync(join(root,'src/interaction/extensions/extensions.js'),'utf8');
+  assert.ok(settings.includes('!window.lampa_settings.plugins_use && !window.lampa_personal_mode'));
+  assert.match(extensions,/catalog: PersonalCatalog/);
+  const w={};
+  new Function('window','localStorage',configScript())(w,{setItem(){},getItem(){return null}});
+  assert.equal(w.lampa_settings.torrents_use,true);
+});
+
+test('bundled catalogue is small, categorized, deduplicated and HTTPS-only',()=>{
+  const source=readFileSync(join(root,'src/interaction/extensions/personal_catalog.js'),'utf8');
+  const catalog=JSON.parse(source.slice(source.indexOf('export default ')+15).trim());
+  assert.ok(catalog.results.length>=3);
+  const urls=catalog.results.flatMap(category=>{
+    assert.ok(category.titles.en && category.titles.ru);
+    return category.results.map(item=>{
+      assert.ok(item.link.startsWith('https://') && item.link.length>12);
+      assert.ok(item.name && item.descr && item.lang.en && item.lang.ru);
+      return item.link;
+    });
+  });
+  assert.equal(urls.length,new Set(urls).size);
+  assert.ok(urls.length>=5);
+});
+
 test('opt-in allows upstream plugin system, but not store by default',()=>{
   const js=configScript({pluginsEnabled:true});
   const w={};
-  new Function('window','localStorage',js)(w,{setItem(){}});
+  new Function('window','localStorage',js)(w,{setItem(){},getItem(){return null}});
   assert.equal(w.lampa_settings.plugins_use,true);
   assert.equal(w.lampa_settings.plugins_store,false);
 });

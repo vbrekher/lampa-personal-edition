@@ -10,7 +10,7 @@
 
 ## 1. Что понадобится
 
-- Mac или Linux с Node.js 18+ и npm.
+- Mac или Linux с Node.js 22+ и npm.
 - Команды `zip`, `unzip` и интернет для установки зависимостей.
 - Samsung Smart TV с Tizen 5.0+ и включённым Developer Mode.
 - [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases).
@@ -40,6 +40,7 @@ npm run build:personal -- --builder-language ru
 ~~~text
 Язык интерфейса Lampa [ru/en/uk/fr/es/pl] (Enter=ru):
 Адрес TorrServer (необязательно; Enter — пропустить):
+Тип парсера [jackett/prowlarr/torrserver] (Enter=jackett):
 Разрешить сторонние плагины? [д/Н]:
 ~~~
 

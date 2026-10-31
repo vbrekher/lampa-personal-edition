@@ -21,8 +21,9 @@ async function ask(locale,defaultLanguage) {
     console.log(t.intro+'\n');
     const language=(await rl.question(t.interfaceLanguage.replace('{default}',defaultLanguage))).trim()||defaultLanguage;
     const torrserverUrl=(await rl.question(t.serverUrl)).trim();
+    const parserType=(await rl.question(t.parserType)).trim().toLowerCase()||'jackett';
     const answer=(await rl.question(t.plugins)).trim().toLowerCase();
-    return normalizeSettings({language,torrserverUrl,
+    return normalizeSettings({language,torrserverUrl,parserType,
       pluginsEnabled:['y','yes','j','ja','д','да'].includes(answer)});
   }finally{rl.close();}
 }
@@ -34,6 +35,10 @@ function compile(settings,locale) {
   const temp=mkdtempSync(join(tmpdir(),'lampa-personal-build-'));
   try{
     for(const name of ['src','public','index'])cpSync(join(ROOT,name),join(temp,name),{recursive:true});
+    // Local-only Gulp development-server adapter is required by the build script,
+    // but is not copied into the WGT output.
+    mkdirSync(join(temp,'personal'),{recursive:true});
+    cpSync(join(ROOT,'personal/dev-server.cjs'),join(temp,'personal/dev-server.cjs'));
     symlinkSync(join(ROOT,'node_modules'),join(temp,'node_modules'),'dir');
     const libs=join(temp,'src/services/libs.js');
     writeFileSync(libs,patchedLibraries(readFileSync(libs,'utf8')));

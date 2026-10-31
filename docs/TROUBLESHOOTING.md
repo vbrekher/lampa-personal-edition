@@ -10,7 +10,7 @@ npm run build:personal -- --language en --plugins off
 
 ## "node" or "npm" is not found
 
-Install Node.js 18+ from [nodejs.org](https://nodejs.org/).
+Install Node.js 22+ from [nodejs.org](https://nodejs.org/).
 
 ## "zip" / "unzip" not found
 

@@ -63,6 +63,7 @@ test('quick-start questions are exact copies of the selected builder messages',(
     for(const exact of [
       prompt.interfaceLanguage.replace('{default}',defaults).trim(),
       prompt.serverUrl.trim(),
+      prompt.parserType.trim(),
       prompt.plugins.trim()
     ])assert.ok(docs[lang].includes(exact),lang+' doc missing exact prompt: '+exact);
   }
@@ -111,6 +112,8 @@ test('argument and validation errors have one chosen language',()=>{
     e=>e.code==='INVALID_BUILDER_LANGUAGE');
   assert.throws(()=>parseBuilderArgs(['--plugins','maybe']),
     e=>e.code==='INVALID_PLUGIN_CHOICE');
+  assert.throws(()=>parseBuilderArgs(['--parser','notreal']),
+    e=>e.code==='INVALID_PARSER_TYPE');
   assert.throws(()=>parseBuilderArgs(['--foo','bar']),
     e=>e.code==='INVALID_ARGUMENT');
   for(const lang of BUILDER_LANGUAGES){
