@@ -45,7 +45,12 @@ jobs:
       - name: Install upstream build dependencies
         run: npm install --no-fund
       - name: Compile real upstream Lampa and create a generic smoke WGT
-        run: npm run build:personal -- --language ru --plugins off
+        run: |
+          if ! npm run build:personal -- --language ru --plugins off; then
+            echo '=== Sanitized public-source build diagnostic ==='
+            if [ -f dist/build-error.log ]; then sed -n '1,180p' dist/build-error.log; fi
+            exit 1
+          fi
       - name: Verify smoke artifact without publishing it
         run: |
           unzip -tq dist/Lampa-Personal-Edition.wgt
