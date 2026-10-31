@@ -18,6 +18,7 @@
 - Personal build is self-contained for main app assets, but third-party metadata/provider calls **still happen**.
 - Default disables remote configuration and CUB account integration, with third-party plugin use off.
 - Gulp and manifest patch functions **fail closed** if the expected upstream code changes.
+- The builder's terminal language (`en`, `ru`, `nl`) is independent of the original Lampa TV interface language; the TV interface currently has no `nl` translation.
 - The WGT is unsigned until Apps2Samsung re-signs as appropriate.
 - Unit packaging tests exercise a synthetic fixture; CI also attempts a **real source build**. Neither is equivalent to testing the app on Samsung.
 - Upstream source and dependencies may change; keep the pinned baseline and document upgrades.

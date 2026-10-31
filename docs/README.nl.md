@@ -6,7 +6,7 @@ Lampa Personal Edition is een onofficiële fork van [Lampa](https://github.com/y
 
 Je hebt **geen aparte Lampa-server, VPS of Bunny-account nodig**. Films, series en een torrentserver worden niet meegeleverd; de app gebruikt online metadatadiensten en je eigen ingestelde bronnen.
 
-> **Developer preview:** de buildtests zijn beschikbaar, maar installatie en afspelen op een echte Samsung-tv zijn nog niet bevestigd.
+> **Voorlopige ontwikkelversie:** de buildtests zijn beschikbaar, maar installatie en afspelen op een echte Samsung-tv zijn nog niet bevestigd.
 
 ## 1. Wat heb je nodig?
 
@@ -24,14 +24,26 @@ Open Terminal op je computer:
 git clone https://github.com/vbrekher/lampa-personal-edition.git
 cd lampa-personal-edition
 npm install
-npm run build:personal
+npm run build:personal -- --builder-language nl
 ~~~
+
+Zo verschijnen de vragen en foutmeldingen van de bouwer in het **Nederlands**. Met `--builder-language` kies je de taal van de terminal; met `--language` kies je de interfacetaal van Lampa op de televisie.
 
 Het bouwscript stelt drie vragen:
 
 1. **Taal:** standaard `ru`; je kunt onder andere `en`, `uk`, `fr`, `pl` of `es` kiezen. Let op: **Nederlands is momenteel geen beschikbare interfacetaal in de oorspronkelijke Lampa**.
 2. **TorrServer URL:** optioneel. Bijvoorbeeld `http://192.168.1.25:8090`. Je moet de server afzonderlijk draaien.
 3. **Externe plug-ins:** standaard uitgeschakeld. Schakel deze alleen in wanneer je de bronnen vertrouwt.
+
+De Nederlandstalige terminal toont:
+
+~~~text
+Taal van Lampa op de tv [ru/en/uk/fr/es/pl] (Enter=en):
+TorrServer-adres (optioneel; Enter om over te slaan):
+Externe plug-ins inschakelen? [j/N]:
+~~~
+
+De standaardtaal van de **tv-app** is hier Engels: de originele Lampa biedt nog geen Nederlandse interface.
 
 Het script vraagt **niet** naar je wachtwoord, CUB-account of API-tokens. Zet geen wachtwoord in het serveradres.
 
@@ -61,7 +73,7 @@ Controleer of het menu verschijnt, je met de afstandsbediening kunt navigeren en
 
 ## 5. Instellingen wijzigen
 
-Voer `npm run build:personal` opnieuw uit, kies andere instellingen en installeer het nieuwe WGT-bestand.
+Voer `npm run build:personal -- --builder-language nl` opnieuw uit, kies andere instellingen en installeer het nieuwe WGT-bestand.
 
 ## Veiligheid
 
@@ -69,4 +81,4 @@ Je persoonlijke WGT bevat je serveradres en voorkeuren **zonder versleuteling**.
 
 De oorspronkelijke code en auteursrechten blijven afkomstig van [yumata/lampa-source](https://github.com/yumata/lampa-source), met de GPL v2-licentietekst.
 
-[English README](../README.md) · [Русская инструкция](README.ru.md) · [Installatie (Engels)](INSTALLATION.md)
+[Engelse handleiding](../README.md) · [Russische handleiding](README.ru.md) · [Installatie (Engels)](INSTALLATION.md)

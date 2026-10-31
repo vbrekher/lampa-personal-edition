@@ -3,7 +3,7 @@
 <p align="center">A personal Samsung Tizen build of the Lampa movie &amp; TV catalogue, made on your own computer.</p>
 <p align="center"><a href="https://github.com/vbrekher/lampa-personal-edition/actions/workflows/personal-builder.yml"><img alt="Personal Builder CI" src="https://github.com/vbrekher/lampa-personal-edition/actions/workflows/personal-builder.yml/badge.svg"></a> <a href="LICENSE"><img alt="License GPL v2" src="https://img.shields.io/badge/license-GPL--2.0-informational"></a> <a href="https://github.com/yumata/lampa-source"><img alt="Upstream Lampa" src="https://img.shields.io/badge/upstream-yumata%2Flampa--source-8b5cf6"></a></p>
 <p align="center">
-<a href="#quick-start">Quick Start</a> · <a href="docs/README.ru.md">Русский</a> · <a href="docs/README.nl.md">Nederlands</a> · <a href="docs/INSTALLATION.md">Install guide</a> · <a href="docs/TROUBLESHOOTING.md">Troubleshooting</a>
+<a href="#quick-start">Quick Start</a> · <a href="docs/README.ru.md">Russian guide</a> · <a href="docs/README.nl.md">Dutch guide</a> · <a href="docs/INSTALLATION.md">Install guide</a> · <a href="docs/TROUBLESHOOTING.md">Troubleshooting</a>
 </p>
 
 ---
@@ -36,12 +36,14 @@ npm run build:personal
 The builder will ask for:
 
 ~~~text
-Язык [ru/en/uk/fr/es/pl] (Enter=ru):
-TorrServer URL (необязательно, Enter=пропустить):
-Разрешить сторонние плагины? [y/N]:
+Lampa interface language [ru/en/uk/fr/es/pl] (Enter=en):
+TorrServer URL (optional; Enter to skip):
+Enable third-party plugins? [y/N]:
 ~~~
 
-All fields except language can be skipped. The default build has **no TorrServer URL, no account credentials and no third-party plugins**. It never asks for your CUB account/password.
+Press Enter to accept the defaults for all three questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no third-party plugins**. It never asks for your CUB account/password.
+
+The **builder's terminal language** is separate from the **Lampa TV interface language**. The terminal defaults to English; use `--builder-language ru` or `--builder-language nl` for Russian or Dutch setup messages. Lampa does not yet provide a Dutch TV interface, so Dutch setup defaults the TV interface to English.
 
 Want a non-interactive build? For example:
 
@@ -61,7 +63,7 @@ Install through [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung) →
 
 | Setting | Default | Notes |
 | --- | --- | --- |
-| UI language | `ru` | Supported upstream: ru, en, uk, be, zh, pt, bg, he, cs, ro, fr, pl, es |
+| TV interface language | `en` (English builder) | Supported upstream: ru, en, uk, be, zh, pt, bg, he, cs, ro, fr, pl, es |
 | TorrServer URL | empty | Your own reachable `http://192.168.x.x:8090` or HTTPS endpoint; optional |
 | Third-party plugins | disabled | Opt in only if you trust the plugin sources; remote JavaScript can execute |
 | Lampa account login | not bundled | No username, password, CUB cookie or tokens embedded |
@@ -79,8 +81,8 @@ Upstream Lampa includes Samsung Tizen support; this personal adapter targets **T
 | Goal | Guide |
 | --- | --- |
 | Full installation walkthrough | [Installation](docs/INSTALLATION.md) |
-| Инструкция на русском | [Русская инструкция](docs/README.ru.md) |
-| Handleiding in het Nederlands | [Nederlandse handleiding](docs/README.nl.md) |
+| Russian-language instructions | [Russian guide](docs/README.ru.md) |
+| Dutch-language instructions | [Dutch guide](docs/README.nl.md) |
 | Diagnosing build/TV problems | [Troubleshooting](docs/TROUBLESHOOTING.md) |
 | Common questions and project scope | [FAQ](docs/FAQ.md) |
 | Tested vs unverified Samsung devices | [Compatibility](docs/COMPATIBILITY.md) |
@@ -92,7 +94,7 @@ Upstream Lampa includes Samsung Tizen support; this personal adapter targets **T
 
 ~~~bash
 npm run test:personal
-npm run build:personal -- --language ru --plugins off
+npm run build:personal -- --language en --plugins off
 unzip -tq dist/Lampa-Personal-Edition.wgt
 ~~~
 
