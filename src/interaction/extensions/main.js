@@ -41,7 +41,8 @@ class Main{
 
         this.html.querySelector('.extensions__body').appendChild(this.scroll.render(true))
 
-        if(this.params.store) this.loadCustomStore()
+        if(this.params.catalog) this.loadBundledCatalog()
+        else if(this.params.store) this.loadCustomStore()
         else this.load()
     }
 
@@ -79,6 +80,35 @@ class Main{
         }
 
         line.scroll.body(true).appendChild(add.render())
+    }
+
+    loadBundledCatalog(){
+        // Every row is metadata only. Remote JS is fetched solely after user installation.
+        this.appendLine(Plugins.get().reverse(), {
+            title: Lang.translate('extensions_from_memory'),
+            type: 'installs',
+            autocheck: true
+        })
+
+        this.add()
+
+        const language = Storage.field('language') || 'en'
+        this.params.catalog.results.forEach(group=>{
+            const list = group.results.map(plugin=>{
+                const translated = plugin.lang && (plugin.lang[language] || plugin.lang.en)
+                return translated ? {...plugin, name: translated.name, descr: translated.descr} : plugin
+            })
+            this.appendLine(list, {
+                title: group.titles[language] || group.titles.en,
+                type: 'extensions',
+                noedit: true,
+                personalCatalog: true
+            })
+        })
+
+        this.items.slice(0,3).forEach(item=>item.display())
+        Layer.visible(this.html)
+        this.toggle()
     }
 
     loadCustomStore(){
