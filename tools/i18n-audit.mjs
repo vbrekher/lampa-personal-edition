@@ -39,7 +39,7 @@ export function reference(){
   return {...readLanguage('ru'),...readLanguage('en')};
 }
 export function examine(code){
-  const ref=reference(),eng=readLanguage('en'),lang=readLanguage(code);
+  const ref=reference(),eng=readLanguage('en'),ru=readLanguage('ru'),lang=readLanguage(code);
   const required=Object.keys(ref),owned=Object.keys(lang);
   const missing=required.filter(k=>!Object.hasOwn(lang,k)||!String(lang[k]).trim());
   const extra=owned.filter(k=>!Object.hasOwn(ref,k));
@@ -53,7 +53,9 @@ export function examine(code){
   const identicalEnglish=required.filter(k=>code!=='en' && Object.hasOwn(lang,k)
     && Object.hasOwn(eng,k) && lang[k]===eng[k] && /[a-z]{4}/i.test(eng[k]));
   const identicalRussian=required.filter(k=>code!=='ru' && Object.hasOwn(lang,k)
-    && lang[k]===readLanguage('ru')[k] && /[\u0400-\u052f]{3}/u.test(lang[k]));
+    && lang[k]===ru[k] && /[\u0400-\u052f]{3}/u.test(lang[k]));
+  // A literal match may be a deliberate trademark or established loanword.
+  // This is a review signal, not proof of a bad translation.
   return {
     language:code,name:NAMES[code]||code,
     source:existsSync(resolve(ROOT,'i18n/drafts',code+'.json'))?'draft':'upstream',
