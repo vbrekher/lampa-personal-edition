@@ -10,11 +10,11 @@ export function getBuilderLocale(args) {
   return index>=0 && BUILDER_LANGUAGES.includes(args[index+1])?args[index+1]:'en';
 }
 export function parseBuilderArgs(args) {
-  let locale='en', language, torrserverUrl='', pluginsEnabled=false, explicit=false, help=false;
+  let locale='en', language, torrserverUrl='', parserType='jackett', pluginsEnabled=false, explicit=false, help=false;
   for(let i=0;i<args.length;i++){
     const flag=args[i];
     if(flag==='--help'){help=true;continue;}
-    if(!['--builder-language','--language','--torrserver','--plugins'].includes(flag))
+    if(!['--builder-language','--language','--torrserver','--parser','--plugins'].includes(flag))
       throw new PersonalBuildError('INVALID_ARGUMENT',flag);
     const value=args[++i];
     if(!value || value.startsWith('--'))throw new PersonalBuildError('MISSING_VALUE',flag);
@@ -24,6 +24,7 @@ export function parseBuilderArgs(args) {
     }
     if(flag==='--language'){language=value;explicit=true;}
     if(flag==='--torrserver'){torrserverUrl=value;explicit=true;}
+    if(flag==='--parser'){parserType=value;explicit=true;}
     if(flag==='--plugins'){
       if(!['on','off'].includes(value))throw new PersonalBuildError('INVALID_PLUGIN_CHOICE');
       pluginsEnabled=value==='on';explicit=true;
@@ -31,5 +32,5 @@ export function parseBuilderArgs(args) {
   }
   return {locale,help,interactive:!explicit,
     defaultLanguage:defaultAppLanguage(locale),
-    settings: explicit?normalizeSettings({language:language||defaultAppLanguage(locale),torrserverUrl,pluginsEnabled}):null};
+    settings: explicit?normalizeSettings({language:language||defaultAppLanguage(locale),torrserverUrl,parserType,pluginsEnabled}):null};
 }
