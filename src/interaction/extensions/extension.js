@@ -10,6 +10,9 @@ import Input from '../settings/input'
 import Utils from './utils'
 import UtilsOther from '../../utils/utils'
 import Manifest from '../../core/manifest'
+import Storage from '../../core/storage/storage'
+import Modal from '../modal'
+import Template from '../template'
 
 class Extension extends Item {
     constructor(data, params){
@@ -138,18 +141,26 @@ class Extension extends Item {
                     this.check()
                 }
                 else if(a.install){
-                    let ready = Plugins.get().find(b=>b.url == this.data.link)
-
-                    if(ready){
-                        Noty.show(Lang.translate('extensions_ready'))
-
+                    const url = this.data.link
+                    if(this.params.personalCatalog && !/^https:\/\/[^/]+\//i.test(url || '')){
                         back()
+                        Noty.show('HTTPS plugin URL required')
+                        return
                     }
-                    else{
-                        back()
 
-                        Plugins.add({url:this.data.link, status: 1, name: this.data.name, author: this.data.author})
+                    const install = ()=>{
+                        const ready = Plugins.get().find(b=>b.url == url)
+                        if(ready){
+                            Noty.show(Lang.translate('extensions_ready'))
+                            return
+                        }
 
+                        // This is user-initiated: the catalogue contains no auto-installed scripts.
+                        if(window.lampa_personal_mode){
+                            localStorage.setItem('lampa_personal_plugins_opt_in','true')
+                            window.lampa_settings.plugins_use = true
+                        }
+                        Plugins.add({url, status: 1, name: this.data.name, author: this.data.author})
                         this.html.querySelector('.extensions__item-included').classList.remove('hide')
 
                         if(this.params.cub && this.data.id){
@@ -158,6 +169,31 @@ class Extension extends Item {
                             })
                         }
                     }
+
+                    back()
+                    if(this.params.personalCatalog && !Storage.get('agree_installation')){
+                        // The upstream consent prompt is mandatory before the first catalogue installation.
+                        Modal.open({
+                            title: Lang.translate('install_extension_rule_1'),
+                            html: Template.get('plugins_rules'),
+                            size: 'medium',
+                            buttons_position: 'outside',
+                            buttons: [
+                                {name: Lang.translate('settings_plugins_install'), onSelect: ()=>{
+                                    Storage.set('agree_installation',true)
+                                    Modal.close()
+                                    Controller.toggle(controller)
+                                    install()
+                                }},
+                                {name: Lang.translate('cancel'), onSelect: ()=>{
+                                    Modal.close()
+                                    Controller.toggle(controller)
+                                }}
+                            ],
+                            onBack: ()=>{Modal.close(); Controller.toggle(controller)}
+                        })
+                    }
+                    else install()
                 }
                 else if(a.instruction){
                     Utils.showInfo(this.data, back)
