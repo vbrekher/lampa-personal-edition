@@ -33,6 +33,7 @@ const messages = {
       UPSTREAM_ASSET_BASE: 'The upstream asset base has changed. Update the adapter.',
       MISSING_ASSET: 'The build is incomplete; missing asset: {detail}.',
       SYMLINK_FORBIDDEN: 'Symbolic links are forbidden in the WGT package: {detail}.',
+      UPSTREAM_BUILD_FAILED: 'Upstream Lampa compilation failed. See the local diagnostic log at dist/build-error.log.',
       MISSING_ICON: 'App icon not found: {detail}.'
     }
   },
@@ -67,6 +68,7 @@ const messages = {
       UPSTREAM_ASSET_BASE: 'Исходный путь ресурсов изменился. Обнови адаптер.',
       MISSING_ASSET: 'Сборка неполная. Отсутствует файл: {detail}.',
       SYMLINK_FORBIDDEN: 'Символические ссылки внутри WGT запрещены: {detail}.',
+      UPSTREAM_BUILD_FAILED: 'Сборка исходной Lampa завершилась ошибкой. Подробный журнал сохранён в dist/build-error.log.',
       MISSING_ICON: 'Не найдена иконка приложения: {detail}.'
     }
   },
@@ -101,6 +103,7 @@ const messages = {
       UPSTREAM_ASSET_BASE: 'Het oorspronkelijke pad naar appbestanden is veranderd. Werk de adapter bij.',
       MISSING_ASSET: 'De build is niet compleet. Bestand ontbreekt: {detail}.',
       SYMLINK_FORBIDDEN: 'Symbolische koppelingen in het WGT-pakket zijn niet toegestaan: {detail}.',
+      UPSTREAM_BUILD_FAILED: 'Het bouwen van de oorspronkelijke Lampa is mislukt. Het lokale logbestand staat in dist/build-error.log.',
       MISSING_ICON: 'Het app-pictogram ontbreekt: {detail}.'
     }
   }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // The personal WGT is assembled on the user's computer. No credentials are sent to CI.
 import {createInterface} from 'node:readline/promises';
-import {cpSync,existsSync,mkdtempSync,readFileSync,rmSync,symlinkSync,writeFileSync} from 'node:fs';
+import {cpSync,existsSync,mkdtempSync,mkdirSync,readFileSync,rmSync,symlinkSync,writeFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {tmpdir} from 'node:os';
 import {dirname,join,resolve} from 'node:path';
@@ -41,7 +41,20 @@ function compile(settings,locale) {
     writeFileSync(manifest,patchedManifest(readFileSync(manifest,'utf8')));
     writeFileSync(join(temp,'gulpfile.js'),patchedGulp(readFileSync(join(ROOT,'gulpfile.js'),'utf8')));
     console.log(t.compiling);
-    execFileSync(join(ROOT,'node_modules/.bin/gulp'),['personal_tizen'],{cwd:temp,stdio:'inherit'});
+    // Upstream Gulp may log in Russian. Keep the user's selected language consistent
+    // and preserve raw upstream output only when a build fails.
+    const logPath=join(ROOT,'dist/build-error.log');
+    rmSync(logPath,{force:true});
+    try{
+      execFileSync(join(ROOT,'node_modules/.bin/gulp'),['personal_tizen'],
+        {cwd:temp,stdio:['ignore','pipe','pipe'],maxBuffer:32*1024*1024});
+    }catch(error){
+      mkdirSync(join(ROOT,'dist'),{recursive:true});
+      const diagnostics=[String(error?.message||error),
+        error?.stdout?.toString('utf8')||'',error?.stderr?.toString('utf8')||''].join('\n\n');
+      writeFileSync(logPath,diagnostics,{mode:0o600});
+      throw new PersonalBuildError('UPSTREAM_BUILD_FAILED');
+    }
     packageTizen({builtDir:join(temp,'build/tizen'),
       outputFile:join(ROOT,'dist/Lampa-Personal-Edition.wgt'),
       iconFile:join(ROOT,'personal/assets/icon.png'),settings});
