@@ -3,7 +3,7 @@
 ## Confirmed
 
 - Upstream fork baseline: Lampa 3.x source at `3c658ffb4047d62a605389a1039281288836d6b8`.
-- Personal-builder source tests: eleven tests, including configuration and synthetic ZIP packaging.
+- Personal-builder and localization tests: source configuration, ZIP packaging, multilingual CLI and documentation consistency (count shown by current CI).
 - GitHub Actions real compile smoke: Gulp compiled the copied upstream source, generated a WGT, and `unzip -tq` verified the archive.
 - Personal app ID separate from original Lampa: `L4mpaPers0.LampaPersonal`.
 - WGT excludes upstream remote `loader.js`.

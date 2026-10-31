@@ -20,10 +20,12 @@
 - Gulp and manifest patch functions **fail closed** if the expected upstream code changes.
 - The builder's terminal language (`en`, `ru`, `nl`) is independent of the original Lampa TV interface language; the TV interface currently has no `nl` translation.
 - The WGT is unsigned until Apps2Samsung re-signs as appropriate.
-- Unit packaging tests exercise a synthetic fixture; CI also attempts a **real source build**. Neither is equivalent to testing the app on Samsung.
+- Unit packaging and multilingual documentation tests run before CI attempts a **real source build**. Neither is equivalent to testing the app on Samsung.
 - Upstream source and dependencies may change; keep the pinned baseline and document upgrades.
 - No on-device proof of install, menu, catalogue, AVPlay, codecs or remote control has yet been recorded.
 
 ## Legal and content boundaries
 
 This fork does not ship movies, third-party streaming links, piracy plugins or a torrent server. The user's TorrServer is independent. Original Lampa is maintained by Yumata; this repo preserves upstream copyright/attribution. `LICENSE` is GPL v2 while upstream `package.json` says ISC: verify against rights holders before claiming a final redistributable product license.
+
+The builder's successful terminal output is localized. If upstream Gulp compilation fails, raw diagnostics are written locally to `dist/build-error.log` (ignored by Git) and the terminal shows a localized error.
