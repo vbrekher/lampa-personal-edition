@@ -5,7 +5,7 @@
 Run `npm run build:personal` in Terminal on your Mac or Linux computer. For automated builds, pass explicit flags:
 
 ~~~bash
-npm run build:personal -- --language ru --plugins off
+npm run build:personal -- --language en --plugins off
 ~~~
 
 ## "node" or "npm" is not found

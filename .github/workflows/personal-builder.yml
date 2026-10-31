@@ -4,11 +4,25 @@ on:
     branches: [main, feature/personal-edition-builder]
     paths:
       - 'personal/**'
+      - 'README.md'
+      - 'docs/**'
+      - 'SECURITY.md'
+      - 'CONTRIBUTING.md'
+      - 'CHANGELOG.md'
+      - '.github/ISSUE_TEMPLATE/**'
+      - '.github/pull_request_template.md'
       - 'package.json'
       - '.github/workflows/personal-builder.yml'
   pull_request:
     paths:
       - 'personal/**'
+      - 'README.md'
+      - 'docs/**'
+      - 'SECURITY.md'
+      - 'CONTRIBUTING.md'
+      - 'CHANGELOG.md'
+      - '.github/ISSUE_TEMPLATE/**'
+      - '.github/pull_request_template.md'
       - 'package.json'
       - '.github/workflows/personal-builder.yml'
 permissions:

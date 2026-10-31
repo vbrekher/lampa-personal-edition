@@ -27,7 +27,7 @@ npm run test:personal
 npm run build:personal
 ~~~
 
-Choose the UI language, optional TorrServer URL, and whether to allow third-party plugins (default: no). The URL should include `http://` or `https://`, with no username/password, tokens or query parameters.
+The terminal prompts are in English by default. Choose the Lampa TV interface language, optional TorrServer URL, and whether to allow third-party plugins (default: no). To use translated terminal prompts, run `npm run build:personal -- --builder-language ru` for Russian or `npm run build:personal -- --builder-language nl` for Dutch; these commands remain interactive. The Dutch builder defaults the TV interface to English because upstream Lampa has no Dutch TV language. The URL should include `http://` or `https://`, with no username/password, tokens or query parameters.
 
 To build without questions:
 
