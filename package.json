@@ -1,7 +1,7 @@
 {
-  "name": "lampa",
-  "version": "0.0.1",
-  "description": "Lampa",
+  "name": "lampa-personal-edition",
+  "version": "0.1.0",
+  "description": "Local personal Samsung Tizen WGT builder for Lampa; user-configured language and TorrServer.",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -46,5 +46,6 @@
     "subsrt": "^1.1.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "private": true
 }
