@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
+import {execFileSync} from 'node:child_process';
 import {TARGETS,NAMES,NEW,EXISTING,readLanguage,reference,examine} from '../../tools/i18n-audit.mjs';
 const root=resolve(import.meta.dirname,'../..');
 const select=code=>readFileSync(resolve(root,'src/lang/meta.js'),'utf8').includes("code: '"+code+"'");
@@ -63,4 +64,14 @@ test('Personal Edition uses English fallback for non-Russian locales',()=>{
   const source=readFileSync(resolve(root,'src/core/lang.js'),'utf8');
   assert.match(source,/window\.lampa_personal_mode && code !== 'ru' \? 'en'/);
   assert.ok(source.includes("langs[fallback][name]"));
+});
+
+test('translator export is complete, JSON-only and never silently fills missing strings',()=>{
+  const raw=execFileSync(process.execPath,['tools/i18n-export.mjs','nl'],{cwd:root,encoding:'utf8'});
+  const json=JSON.parse(raw);
+  const report=examine('nl');
+  assert.equal(json.locale,'nl');
+  assert.equal(json.missingCount,report.missing.length);
+  assert.equal(json.items.length,json.missingCount);
+  assert.ok(json.items.every(i=>i.key && (i.english || i.russian)));
 });
