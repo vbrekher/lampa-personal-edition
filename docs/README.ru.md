@@ -40,6 +40,7 @@ npm run build:personal -- --builder-language ru
 ~~~text
 Язык интерфейса Lampa [ru/en/uk/fr/es/pl] (Enter=ru):
 Адрес TorrServer (необязательно; Enter — пропустить):
+Тип парсера [jackett/prowlarr/torrserver] (Enter=jackett):
 Разрешить сторонние плагины? [д/Н]:
 ~~~
 
