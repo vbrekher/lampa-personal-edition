@@ -1436,5 +1436,9 @@ export default {
     player_ai_agent_no_data: 'No hay datos que mostrar.',
     player_ai_agent_no_analysis: 'No se pudo analizar el vídeo.',
     player_ai_agent_quota: 'Se superó el límite de solicitudes. Inténtalo más tarde.',
-    player_ai_agent_working: 'Seguimos trabajando en ello...'
+    player_ai_agent_working: 'Seguimos trabajando en ello...',
+
+    // Personal Edition: source-language coverage additions.
+    settings_rest_cache_descr: "Se borrarán todos los ajustes y datos.",
+    settings_param_torrent_lang_ru: "Ruso"
 }

@@ -1431,5 +1431,27 @@ export default {
     title_meta_romance: 'Romance',
     title_meta_pace: 'Pace',
     title_meta_importance: 'Key scenes',
-    title_meta_action: 'Action'
+    title_meta_action: 'Action',
+
+    // Personal Edition: source-language coverage additions.
+    title_in_high_quality: "In high quality",
+    menu_feed: "Feed",
+    lampa_movie_title: "Lampa Movies",
+    lampa_movie_descr: "Keep up with new releases on your phone. <br>Telegram: <b>@lampa_movie</b>",
+    account_premium_include_5: "Notifications",
+    account_premium_include_6: "Data synchronization",
+    account_premium_include_text_1: "More bookmarks, more possibilities! Save your favorite movies and TV series, create watchlists and enjoy them whenever you like.",
+    account_premium_include_text_2: "Expand your watch history to keep track of what you have already seen. Easily find and rewatch your favorite movies and series.",
+    account_premium_include_text_3: "Never lose your place! Save more playback positions and easily resume your favorite films and episodes where you left off.",
+    account_premium_include_text_4: "Get more flexibility with premium access. Create more profiles on your account so friends and family can enjoy their own movie and series lists.",
+    account_premium_include_text_5: "Never miss a new episode or translation! Receive timely notifications about new episodes and audio releases on your phone.",
+    account_premium_include_text_6: "Sync watch progress across devices with premium access. Pick up the last episode exactly where you stopped, on any device running the app.",
+    discuss_rules_title: "Follow the rules and respect others — let's keep the community welcoming!",
+    discuss_rules_rule_1: "Do not use words made up only of digits.",
+    discuss_rules_rule_2: "Write in one language and use words with at least five letters.",
+    discuss_rules_rule_3: "Use punctuation and end sentences with periods.",
+    discuss_rules_rule_4: "Avoid confusing symbols such as !?#%.",
+    discuss_rules_rule_5: "Write complete sentences containing at least five words.",
+    discuss_rules_rule_6: "Avoid excessively long words.",
+    discuss_rules_rule_7: "Keep your message within 300 characters."
 }

@@ -52,14 +52,18 @@ function translate(name, custom_code){
 
     if(!langs[code]) code = lang_default
 
+    // Personal Edition must not unexpectedly show Russian fallback text to
+    // users of another locale. This is a fallback, not a replacement for a complete translation.
+    let fallback = window.lampa_personal_mode && code !== 'ru' ? 'en' : lang_default
+
     if(name.indexOf('#{') >= 0){
         result = name.replace(/#{([a-z_0-9-]+)}/g, function(e,s){
-            return langs[code][s] || langs[lang_default][s] || s
+            return langs[code][s] || langs[fallback][s] || langs[lang_default][s] || s
         })
     }
     else{
         let step = name === 'loading_progress_step_0' ? 0 : name === 'loading_progress_step_1' ? 1 : null
-        result = langs[code][name] || (step !== null ? startup[code]?.[step] : null) || langs[lang_default][name] || name
+        result = langs[code][name] || (step !== null ? startup[code]?.[step] : null) || langs[fallback][name] || langs[lang_default][name] || name
     }
 
     result = result.replace(/{site}/g, Manifest.cub_site)

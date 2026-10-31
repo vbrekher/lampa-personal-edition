@@ -1381,5 +1381,28 @@ export default {
     title_meta_romance: '浪漫',
     title_meta_pace: '节奏',
     title_meta_importance: '关键场景',
-    title_meta_action: '动作'
+    title_meta_action: '动作',
+
+    // Personal Edition: missing canonical UI keys.
+    full_writing: "编剧",
+    title_in_high_quality: "高清画质",
+    menu_feed: "动态",
+    lampa_movie_title: "Lampa 影视",
+    lampa_movie_descr: "在手机上了解最新影视资讯。<br>Telegram：<b>@lampa_movie</b>",
+    account_premium_include_5: "通知",
+    account_premium_include_6: "数据同步",
+    account_premium_include_text_1: "收藏更多精彩内容，拥有更多选择！保存喜欢的电影和剧集，创建观看清单，随时轻松观看。",
+    account_premium_include_text_2: "扩展观看历史，轻松了解已经看过的内容。快速找到喜欢的电影和剧集，随时重温。",
+    account_premium_include_text_3: "不错过任何重要情节！保存更多播放进度，随时从上次暂停的位置继续观看电影和剧集。",
+    account_premium_include_text_4: "通过高级会员享受更多自由！在同一个账号中创建更多个人资料，让家人朋友分别管理自己的影片和剧集。",
+    account_premium_include_text_5: "不错过新剧集或新配音！及时在手机上收到有关新剧集和配音版本的通知。",
+    account_premium_include_text_6: "通过高级会员在设备之间同步观看进度！无论在哪台安装了应用的设备上，都能从上次停止的位置继续观看。",
+    discuss_rules_title: "请遵守规则并尊重他人，共同营造友好的交流环境！",
+    discuss_rules_rule_1: "不要使用完全由数字组成的词语。",
+    discuss_rules_rule_2: "使用同一种语言，并尽量使用至少五个字母的词语。",
+    discuss_rules_rule_3: "正确使用标点符号，并以句号结束句子。",
+    discuss_rules_rule_4: "避免使用难以理解的符号，如 !?#%。",
+    discuss_rules_rule_5: "使用完整句子，每句话尽量包含至少五个词语。",
+    discuss_rules_rule_6: "不要使用过长的词语。",
+    discuss_rules_rule_7: "请将消息限制在 300 个字符以内。"
 }

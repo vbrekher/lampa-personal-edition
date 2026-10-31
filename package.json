@@ -9,7 +9,9 @@
     "test": "vitest",
     "doc": "gulp doc",
     "build:personal": "node personal/build.mjs",
-    "test:personal": "node --test personal/tests/*.test.mjs"
+    "test:personal": "node --test personal/tests/*.test.mjs",
+    "i18n:report": "node tools/i18n-audit.mjs",
+    "i18n:strict": "node tools/i18n-audit.mjs --strict"
   },
   "author": "unk",
   "license": "ISC",
