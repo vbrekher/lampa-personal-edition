@@ -145,7 +145,7 @@ export default {
     settings_parser_torlook_type: 'Méthode d\'analyse TorLook',
     settings_parser_scraperapi_placeholder: 'Exemple : scraperapi.com',
     settings_parser_scraperapi_link: 'Lien vers l\'analyseur de site',
-    settings_parser_scraperapi_descr: 'Inscrivez-vous sur scraperapi.com et entrez le lien api.scraperapi.com?api_key=...&url={q}',
+    settings_parser_scraperapi_descr: "Inscrivez-vous sur scraperapi.com et saisissez le lien api.scraperapi.com?api_key=...&url={q}<br>Le site w41.torlook.info sera inséré à la place de {q}.",
     settings_parser_search: 'Recherche',
     settings_parser_search_descr: 'Langue de recherche',
     settings_parser_in_search: 'Analyseur dans la recherche',
@@ -1431,5 +1431,27 @@ export default {
     title_meta_romance: 'Romance',
     title_meta_pace: 'Rythme',
     title_meta_importance: 'Scènes clés',
-    title_meta_action: 'Action'
+    title_meta_action: 'Action',
+
+    // Personal Edition: complete missing canonical UI keys.
+    title_in_high_quality: "En haute qualité",
+    menu_feed: "Fil d'actualité",
+    lampa_movie_title: "Cinéma Lampa",
+    lampa_movie_descr: "Suivez les nouveautés depuis votre téléphone. <br>Telegram : <b>@lampa_movie</b>",
+    account_premium_include_5: "Notifications",
+    account_premium_include_6: "Synchronisation des données",
+    account_premium_include_text_1: "Plus de favoris, plus de possibilités ! Enregistrez vos films et séries préférés, créez des listes à regarder et retrouvez-les quand vous le souhaitez.",
+    account_premium_include_text_2: "Conservez un historique de visionnage plus long pour savoir ce que vous avez déjà regardé. Retrouvez facilement vos films et séries préférés et regardez-les à nouveau.",
+    account_premium_include_text_3: "Ne perdez plus le fil de vos vidéos ! Enregistrez davantage de positions de lecture et reprenez vos films et épisodes là où vous vous êtes arrêté.",
+    account_premium_include_text_4: "Profitez de plus de liberté avec l'accès Premium : créez davantage de profils sur votre compte pour que vos proches puissent organiser leurs propres films et séries.",
+    account_premium_include_text_5: "Ne manquez aucun nouvel épisode ni aucune nouvelle traduction ! Recevez des notifications sur votre téléphone dès qu'un épisode ou une piste audio est disponible.",
+    account_premium_include_text_6: "Synchronisez votre progression entre vos appareils grâce à l'accès Premium. Reprenez le dernier épisode là où vous l'avez laissé sur n'importe quel appareil équipé de l'application.",
+    discuss_rules_title: "Respectez les règles et les autres pour préserver une communauté agréable !",
+    discuss_rules_rule_1: "N'utilisez pas de mots composés uniquement de chiffres.",
+    discuss_rules_rule_2: "Écrivez dans une seule langue et utilisez des mots d'au moins cinq lettres.",
+    discuss_rules_rule_3: "Utilisez la ponctuation et terminez vos phrases par un point.",
+    discuss_rules_rule_4: "Évitez les symboles difficiles à comprendre, comme !?#%.",
+    discuss_rules_rule_5: "Rédigez des phrases complètes d'au moins cinq mots.",
+    discuss_rules_rule_6: "N'utilisez pas de mots excessivement longs.",
+    discuss_rules_rule_7: "Limitez votre message à 300 caractères."
 }
