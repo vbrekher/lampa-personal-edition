@@ -4,6 +4,9 @@ on:
     branches: [main, feature/personal-edition-builder]
     paths:
       - 'personal/**'
+      - 'i18n/**'
+      - 'src/lang/**'
+      - 'tools/i18n-audit.mjs'
       - 'README.md'
       - 'docs/**'
       - 'SECURITY.md'
@@ -18,6 +21,9 @@ on:
   pull_request:
     paths:
       - 'personal/**'
+      - 'i18n/**'
+      - 'src/lang/**'
+      - 'tools/i18n-audit.mjs'
       - 'README.md'
       - 'docs/**'
       - 'SECURITY.md'
@@ -42,6 +48,8 @@ jobs:
           node-version: '22'
       - name: Run unit and packaging tests
         run: npm run test:personal
+      - name: Report exact translation completeness (drafts are not published)
+        run: npm run i18n:report
       - name: Install upstream build dependencies
         run: npm install --no-fund
       - name: Compile real upstream Lampa and create a generic smoke WGT
