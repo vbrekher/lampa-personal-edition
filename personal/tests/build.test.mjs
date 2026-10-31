@@ -18,9 +18,11 @@ test('URL validation and no secret-bearing URL',()=>{
   }
 });
 test('only supported source languages',()=>{
-  assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',pluginsEnabled:false});
+  assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',parserType:'jackett',pluginsEnabled:false});
   assert.equal(normalizeSettings({language:'uk'}).language,'uk');
   assert.throws(()=>normalizeSettings({language:'nl'}));
+  assert.equal(normalizeSettings({parserType:'prowlarr'}).parserType,'prowlarr');
+  assert.throws(()=>normalizeSettings({parserType:'invalid'}),e=>e.code==='INVALID_PARSER_TYPE');
 });
 test('seeds local preferences, disables remote configuration and CUB account',()=>{
   const js=configScript({language:'en',torrserverUrl:'http://192.168.1.20:8090'});
@@ -34,6 +36,7 @@ test('seeds local preferences, disables remote configuration and CUB account',()
   assert.equal(w.lampa_settings.disable_features.remote_configuration,true);
   assert.equal(data.get('torrserver_url'),'http://192.168.1.20:8090');
   assert.equal(data.get('tmdb_lang'),'en');
+  assert.equal(data.get('parser_torrent_type'),'jackett');
   assert.ok(!js.includes('token='));
 });
 test('rebuilding without TorrServer clears a previously bundled server address',()=>{
