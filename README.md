@@ -24,7 +24,7 @@ The personal builder compiles Lampa from source, packages its HTML/CSS/JavaScrip
 
 ## Quick Start
 
-Requirements: **macOS or Linux**, Node.js 18+ and npm, `zip`, `unzip`, and an internet connection during dependency installation.
+Requirements: **macOS or Linux**, Node.js 22+ and npm, `zip`, `unzip`, and an internet connection during dependency installation.
 
 ~~~bash
 git clone https://github.com/vbrekher/lampa-personal-edition.git
