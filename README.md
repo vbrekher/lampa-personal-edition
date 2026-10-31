@@ -38,10 +38,11 @@ The builder will ask for:
 ~~~text
 Lampa interface language [ru/en/uk/fr/es/pl] (Enter=en):
 TorrServer URL (optional; Enter to skip):
+Parser backend [jackett/prowlarr/torrserver] (Enter=jackett):
 Enable third-party plugins? [y/N]:
 ~~~
 
-Press Enter to accept the defaults for all three questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no installed third-party plugins**. The optional plugin catalogue is visible, but installing a plugin requires a user action and the first installation requires explicit consent. It never asks for your CUB account/password.
+Press Enter to accept the defaults for all four questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no installed third-party plugins**. The optional plugin catalogue is visible, but installing a plugin requires a user action and the first installation requires explicit consent. It never asks for your CUB account/password.
 
 The **builder's terminal language** is separate from the **Lampa TV interface language**. The terminal defaults to English; use `--builder-language ru` or `--builder-language nl` for Russian or Dutch setup messages. Lampa does not yet provide a Dutch TV interface, so Dutch setup defaults the TV interface to English.
 
