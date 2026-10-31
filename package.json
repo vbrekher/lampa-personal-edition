@@ -7,7 +7,9 @@
     "start": "gulp",
     "debug": "gulp debug",
     "test": "vitest",
-    "doc": "gulp doc"
+    "doc": "gulp doc",
+    "build:personal": "node personal/build.mjs",
+    "test:personal": "node --test personal/tests/*.test.mjs"
   },
   "author": "unk",
   "license": "ISC",
