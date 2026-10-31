@@ -30,7 +30,9 @@ export function normalizeServerUrl(raw, optional=true) {
 export function normalizeSettings(input={}) {
   const language=String(input.language||'ru').trim().toLowerCase();
   if(!LANGUAGES.includes(language))throw new PersonalBuildError('UNSUPPORTED_APP_LANGUAGE',language);
-  return {language,torrserverUrl:normalizeServerUrl(input.torrserverUrl),pluginsEnabled:input.pluginsEnabled===true};
+  const parserType=String(input.parserType||'jackett').trim().toLowerCase();
+  if(!['jackett','prowlarr','torrserver'].includes(parserType))throw new PersonalBuildError('INVALID_PARSER_TYPE',parserType);
+  return {language,torrserverUrl:normalizeServerUrl(input.torrserverUrl),parserType,pluginsEnabled:input.pluginsEnabled===true};
 }
 export function configScript(input={}) {
   const json=JSON.stringify(normalizeSettings(input)).replace(/</g,'\\u003c').replace(/>/g,'\\u003e')
@@ -52,12 +54,13 @@ export function configScript(input={}) {
     '  s.disable_features=s.disable_features||{};',
     '  s.disable_features.remote_configuration=true;',
     '  // Seed on first install or when builder inputs change; do not erase TV-side edits at each launch.',
-    '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl});',
+    '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl,parserType:cfg.parserType});',
     '  if(localStorage.getItem("lampa_personal_seed_v2")!==seed){',
     '    localStorage.setItem("language",cfg.language);',
     '    localStorage.setItem("tmdb_lang",cfg.language);',
     '    localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
     '    localStorage.setItem("torrserver_use_link","one");',
+    '    localStorage.setItem("parser_torrent_type",cfg.parserType);',
     '    localStorage.setItem("lampa_personal_seed_v2",seed);',
     '  }',
     '})();',''
