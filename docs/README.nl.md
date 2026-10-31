@@ -10,7 +10,7 @@ Je hebt **geen aparte Lampa-server, VPS of Bunny-account nodig**. Films, series 
 
 ## 1. Wat heb je nodig?
 
-- Een Mac of Linux-computer met Node.js 18+ en npm.
+- Een Mac of Linux-computer met Node.js 22+ en npm.
 - `zip`, `unzip` en internet voor het installeren van de afhankelijkheden.
 - Een Samsung-tv met Tizen 5.0+ en Developer Mode.
 - [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases).
