@@ -52,3 +52,9 @@ test('Personal plugin catalogue category names and descriptions exist for all 13
     }
   }
 });
+
+test('Personal Edition loads packaged non-core translations instead of fetching remote Lampa',()=>{
+  const app=readFileSync(resolve(root,'src/app.js'),'utf8');
+  assert.match(app,/window\.lampa_personal_mode \? '\.\/'/);
+  assert.ok(app.includes("+ 'lang/' + code + '.js'"));
+});
