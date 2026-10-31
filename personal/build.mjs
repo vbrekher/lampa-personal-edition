@@ -35,6 +35,10 @@ function compile(settings,locale) {
   const temp=mkdtempSync(join(tmpdir(),'lampa-personal-build-'));
   try{
     for(const name of ['src','public','index'])cpSync(join(ROOT,name),join(temp,name),{recursive:true});
+    // Local-only Gulp development-server adapter is required by the build script,
+    // but is not copied into the WGT output.
+    mkdirSync(join(temp,'personal'),{recursive:true});
+    cpSync(join(ROOT,'personal/dev-server.cjs'),join(temp,'personal/dev-server.cjs'));
     symlinkSync(join(ROOT,'node_modules'),join(temp,'node_modules'),'dir');
     const libs=join(temp,'src/services/libs.js');
     writeFileSync(libs,patchedLibraries(readFileSync(libs,'utf8')));
