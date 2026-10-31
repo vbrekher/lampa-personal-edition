@@ -24,7 +24,7 @@ The personal builder compiles Lampa from source, packages its HTML/CSS/JavaScrip
 
 ## In-app localization
 
-The 13-language localization expansion is currently **in progress**, not complete: Dutch, German and Turkish are priority languages, joined by the ten most-spoken languages worldwide. Existing upstream English, Chinese, Spanish, French and Portuguese remain available; the eight additional locales are in translation drafts and are **not displayed as finished TV languages**. The curated plugin catalogue has translated categories and descriptions for all 13 languages. See the [localization coverage audit and acceptance criteria](docs/LOCALIZATION.md). Run `npm run i18n:report` to inspect real string coverage before publishing a language. No unfinished translation is substituted silently for a completed pack.
+The 13-language localization expansion is currently **in progress**, not complete: Dutch, German and Turkish are priority languages, joined by the ten most-spoken languages worldwide. Existing English, Chinese, Spanish, French and Portuguese now have complete canonical translation-key coverage (native-language editorial review remains separate); the eight additional locales are in translation drafts and are **not displayed as finished TV languages**. The curated plugin catalogue has translated categories and descriptions for all 13 languages. See the [localization coverage audit and acceptance criteria](docs/LOCALIZATION.md). Run `npm run i18n:report` to inspect real string coverage before publishing a language. No unfinished translation is substituted silently for a completed pack.
 
 ## Quick Start
 
