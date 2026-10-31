@@ -66,7 +66,7 @@ test('third-party plugins can be enabled only after persisted user opt-in',()=>{
 test('Personal Edition keeps parser and plugin settings reachable without a server',()=>{
   const settings=readFileSync(join(root,'src/interaction/settings/main.js'),'utf8');
   const extensions=readFileSync(join(root,'src/interaction/extensions/extensions.js'),'utf8');
-  assert.match(settings,/!window\\.lampa_settings\\.plugins_use && !window\\.lampa_personal_mode/);
+  assert.ok(settings.includes('!window.lampa_settings.plugins_use && !window.lampa_personal_mode'));
   assert.match(extensions,/catalog: PersonalCatalog/);
   const w={};
   new Function('window','localStorage',configScript())(w,{setItem(){},getItem(){return null}});
