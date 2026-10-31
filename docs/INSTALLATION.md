@@ -6,7 +6,7 @@ This is the detailed setup for a locally compiled Samsung Tizen WGT.
 
 ## Requirements
 
-You need macOS or Linux, Node.js 18+, npm, zip, unzip, and a Samsung Tizen TV with Developer Mode. First installation of npm dependencies requires internet.
+You need macOS or Linux, Node.js 22+, npm, zip, unzip, and a Samsung Tizen TV with Developer Mode. First installation of npm dependencies requires internet.
 
 ## Step 1 — prepare the TV
 
