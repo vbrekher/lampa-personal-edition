@@ -11,14 +11,14 @@ The user requested **Dutch, German and Turkish**, plus the **ten most spoken lan
 | nl | Nederlands | `i18n/drafts/nl.json` | DRAFT — not exposed |
 | de | Deutsch | `i18n/drafts/de.json` | DRAFT — not exposed |
 | tr | Türkçe | `i18n/drafts/tr.json` | DRAFT — not exposed |
-| en | English | `src/lang/en.js` | Upstream, audit |
-| zh | 简体中文 | `src/lang/zh.js` | Upstream, audit |
+| en | English | `src/lang/en.js` | 100% canonical keys; linguistic review pending |
+| zh | 简体中文 | `src/lang/zh.js` | 100% canonical keys; linguistic review pending |
 | hi | हिन्दी | `i18n/drafts/hi.json` | DRAFT — not exposed |
-| es | Español | `src/lang/es.js` | Upstream, audit |
+| es | Español | `src/lang/es.js` | 100% canonical keys; linguistic review pending |
 | ar | العربية | `i18n/drafts/ar.json` | DRAFT — RTL untested |
-| fr | Français | `src/lang/fr.js` | Upstream, audit |
+| fr | Français | `src/lang/fr.js` | 100% canonical keys; linguistic review pending |
 | bn | বাংলা | `i18n/drafts/bn.json` | DRAFT — not exposed |
-| pt | Português | `src/lang/pt.js` | Upstream, audit |
+| pt | Português | `src/lang/pt.js` | 100% canonical keys; linguistic review pending |
 | id | Bahasa Indonesia | `i18n/drafts/id.json` | DRAFT — not exposed |
 | ur | اردو | `i18n/drafts/ur.json` | DRAFT — RTL untested |
 
@@ -52,7 +52,7 @@ Third-party remotely hosted plugins own their own UI strings; Lampa Personal Edi
 
 ## Work completed in this branch
 
-Eight first-pass core translation dictionaries (97 UI terms each) are authored under `i18n/drafts/`; these are **starting points** for comprehensive translations, not language packs claimed complete. The bundled curated plugin catalogue now has category headings and all six plugin descriptions in every requested language; that component's metadata is independently covered by tests. No new draft is loaded at runtime. A dependency-free audit and tests make incomplete language claims detectable. Existing core translations are unchanged.
+Eight first-pass core translation dictionaries (97 UI terms each) are authored under `i18n/drafts/`; these are **starting points** for comprehensive translations, not language packs claimed complete. The bundled curated plugin catalogue now has category headings and all six plugin descriptions in every requested language; that component's metadata is independently covered by tests. No new draft is loaded at runtime. A dependency-free audit and tests make incomplete language claims detectable. Five pre-existing top-ten language files have also been completed to the reference key union (English, Chinese, Spanish, French and Portuguese), and both known dynamic-placeholder mismatches repaired. This provides structural coverage, not a native-speaker quality certification.
 
 ## Roadmap for completion
 
