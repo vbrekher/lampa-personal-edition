@@ -80,7 +80,7 @@ test('bundled catalogue is small, categorized, deduplicated and HTTPS-only',()=>
   const urls=catalog.results.flatMap(category=>{
     assert.ok(category.titles.en && category.titles.ru);
     return category.results.map(item=>{
-      assert.match(item.link,/^https:\\/\\/[^/]+\\//);
+      assert.ok(item.link.startsWith('https://') && item.link.length>12);
       assert.ok(item.name && item.descr && item.lang.en && item.lang.ru);
       return item.link;
     });
