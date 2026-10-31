@@ -28,3 +28,6 @@ TASKS.md
 /dist/
 /.personal-build/
 *.personal.wgt
+
+# Generated localization evidence is uploaded by CI.
+/reports/localization/

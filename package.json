@@ -11,7 +11,8 @@
     "build:personal": "node personal/build.mjs",
     "test:personal": "node --test personal/tests/*.test.mjs",
     "i18n:report": "node tools/i18n-audit.mjs",
-    "i18n:strict": "node tools/i18n-audit.mjs --strict"
+    "i18n:strict": "node tools/i18n-audit.mjs --strict",
+    "i18n:inventory": "node tools/i18n-source-audit.mjs"
   },
   "author": "unk",
   "license": "ISC",
@@ -22,7 +23,8 @@
     "gulp": "^5.0.1",
     "gulp-concat": "^2.6.1",
     "sass": "^1.43.4",
-    "vitest": "^5.0.5"
+    "vitest": "^5.0.5",
+    "@babel/parser": "^7.28.5"
   },
   "dependencies": {
     "@babel/core": "^7.15.8",
