@@ -28,6 +28,7 @@ The user requested **Dutch, German and Turkish**, plus the **ten most spoken lan
 
 ```sh
 npm run i18n:report
+node tools/i18n-export.mjs nl > nl-missing.json
 npm run test:personal
 npm run i18n:strict
 ```
