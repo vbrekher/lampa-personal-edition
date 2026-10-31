@@ -10,7 +10,7 @@
 
 ## 1. Что понадобится
 
-- Mac или Linux с Node.js 18+ и npm.
+- Mac или Linux с Node.js 22+ и npm.
 - Команды `zip`, `unzip` и интернет для установки зависимостей.
 - Samsung Smart TV с Tizen 5.0+ и включённым Developer Mode.
 - [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases).
