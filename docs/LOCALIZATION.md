@@ -2,6 +2,8 @@
 
 **Status: translation groundwork, not a multilingual release.** The requested languages are not all fully translated yet. Do not claim the eight new language packs are available on Samsung or introduce them in `src/lang/meta.js` before completion.
 
+For the newer audit/repair checkpoint and honest acceptance status, see [localization/README.md](localization/README.md).
+
 ## Requested scope
 
 The user requested **Dutch, German and Turkish**, plus the **ten most spoken languages worldwide** (first- and second-language speakers; Ethnologue 2026 as summarized by Visual Capitalist): **English, Mandarin Chinese, Hindi, Spanish, Modern Standard Arabic, French, Bengali, Portuguese, Indonesian, Urdu**.

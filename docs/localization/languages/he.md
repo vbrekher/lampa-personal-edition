@@ -1,0 +1,29 @@
+# he individual audit
+
+State: shipped; **NOT_READY**.
+
+| Metric | Result |
+|---|---|
+| Required dictionary keys | 1351 |
+| Present nonempty keys | 1307 |
+| Structural coverage | 96.7% |
+| Missing keys | 44 |
+| Placeholder mismatches | 0 |
+| Duplicate properties | 0 |
+| Value validation issues | 0 |
+| Identical English review signals | 257 |
+| Identical Russian review signals | 0 |
+| Unexpected Cyrillic review signals | 0 |
+| Long Latin phrase review signals | 3 |
+| Long-translation review signals | 0 |
+| Terminology / independent editorial review | NOT_RUN |
+| Native-speaker review | NOT_RUN |
+| Full 14-category visual matrix | NOT_RUN |
+| Samsung remote navigation | NOT_RUN |
+| Physical Samsung test | NOT_RUN |
+
+Repairs in this checkpoint: three added reference entries (country name and About labels); shadowed declarations removed where present. 11 broken/empty existing values repaired.
+
+Visual observations: limited real browser home/settings smoke; RTL FAIL; see RTL report.
+
+Missing keys and suspicious values are enumerated individually in generated `reports/localization/he.json`; run `node tools/i18n-evidence.mjs` or download the CI artifact. No source-copy signal has been accepted automatically as an exception. No claim of semantic translation completeness is made.
