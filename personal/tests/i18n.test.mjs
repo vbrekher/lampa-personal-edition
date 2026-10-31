@@ -37,3 +37,18 @@ test('RTL locales remain unpublished until direction and font acceptance',()=>{
   assert.ok(css.includes('lang_default'),'fallback runtime must remain present');
   for(const code of ['ar','ur'])assert.equal(select(code),false);
 });
+
+test('Personal plugin catalogue category names and descriptions exist for all 13 languages',()=>{
+  const source=readFileSync(resolve(root,'src/interaction/extensions/personal_catalog.js'),'utf8');
+  const catalog=JSON.parse(source.slice(source.indexOf('export default ')+15).trim());
+  assert.equal(catalog.results.length,3);
+  for(const group of catalog.results){
+    for(const code of TARGETS)assert.ok(group.titles[code]?.trim(),code+' category missing');
+    for(const plugin of group.results){
+      for(const code of TARGETS){
+        assert.ok(plugin.lang[code]?.name?.trim(),code+' plugin name missing');
+        assert.ok(plugin.lang[code]?.descr?.trim(),code+' plugin description missing');
+      }
+    }
+  }
+});
