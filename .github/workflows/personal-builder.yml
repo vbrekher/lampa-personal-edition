@@ -1,0 +1,41 @@
+name: Lampa Personal Edition verification
+on:
+  push:
+    branches: [main, feature/personal-edition-builder]
+    paths:
+      - 'personal/**'
+      - 'package.json'
+      - '.github/workflows/personal-builder.yml'
+  pull_request:
+    paths:
+      - 'personal/**'
+      - 'package.json'
+      - '.github/workflows/personal-builder.yml'
+permissions:
+  contents: read
+jobs:
+  builder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run unit and packaging tests
+        run: npm run test:personal
+      - name: Install upstream build dependencies
+        run: npm install --no-audit --no-fund
+      - name: Compile real upstream Lampa and create a generic smoke WGT
+        run: npm run build:personal -- --language ru --plugins off
+      - name: Verify smoke artifact without publishing it
+        run: |
+          unzip -tq dist/Lampa-Personal-Edition.wgt
+          unzip -p dist/Lampa-Personal-Edition.wgt index.html | grep 'personal-config.js'
+          unzip -p dist/Lampa-Personal-Edition.wgt config.xml | grep 'L4mpaPers0.LampaPersonal'
+          if unzip -Z -1 dist/Lampa-Personal-Edition.wgt | grep -Fx 'loader.js'; then
+            echo 'Remote loader unexpectedly packaged'
+            exit 1
+          fi
+          rm -f dist/Lampa-Personal-Edition.wgt
+      # No artifacts uploaded. Users build their own WGT with their own settings.
