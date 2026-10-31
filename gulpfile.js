@@ -38,7 +38,7 @@ var nodeResolve = function(){
     return {
         name: 'lampa-package-resolver',
         resolveId: function(id, importer){
-            if(/^(\\.|\\/|[a-z]+:)/i.test(id)) return null;
+            if(id.startsWith('.') || id.startsWith('/') || id.includes(':')) return null;
             try { return require.resolve(id,{paths:[importer ? path.dirname(importer) : process.cwd()]}); }
             catch (e) { return null; }
         }
