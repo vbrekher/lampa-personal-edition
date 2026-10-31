@@ -151,7 +151,7 @@ export default {
     settings_parser_in_search_descr: 'Паказваць вынікі ў пошуку?',
     settings_parser_timeout_title: 'Таймаўт парсера',
     settings_parser_timeout_descr: 'Час у секундах, які будзе чакацца адказу ад сервера',
-    
+
     settings_player_type: 'Тып плэера',
     settings_player_type_descr: 'Якім плэерам прайграваць',
     settings_infuse_launch_mode: 'Запуск у Infuse',
@@ -231,7 +231,7 @@ export default {
     settings_server_password_use: 'Уваход па паролі',
     settings_server_login: 'Лагін',
     settings_server_password: 'Пароль',
-    settings_server_not_specified: 'Не паказаны',
+
     settings_server_search_type: 'Тып пошуку',
     settings_server_search_type_descr: 'Дзе шукаць тарэнты: убудаваны rutor, Torznab-індэксары ў TorrServer, або абодва крыніцы.',
     settings_param_torrserver_search_rutor: 'Rutor',
@@ -581,7 +581,7 @@ export default {
     filter_alt_names: 'Іншыя назвы',
     filter_rating_from: 'ад',
     filter_rating_to: 'да',
-    
+
     filter_lang_af: 'Афрыкаанс',
     filter_lang_ar: 'Арабская',
     filter_lang_az: 'Азербайджанская',
@@ -899,13 +899,13 @@ export default {
     account_imported: 'імпартавана',
     account_reload_after: 'перазагрузка праз 5 сек.',
     account_create: 'Адкрыйце больш магчымасцяў з акаўнтам CUB. Зарэгіструйцеся на сайце <span class="account-modal__site">{site}</span> і атрымайце доступ да сінхранізацыі вашых закладак, тайм-кодаў і іншых магчымасцяў акаўнта CUB.',
-    account_premium: 'Раскрыйце новыя гарызонты з акаўнтам CUB Premium! Атрымлівайце асалоду ад павялічанымі лімітамі і ўзбагачаным функцыяналам сэрвісу. Перайдзіце на сайт <span class="account-modal__site">{site}/premium</span> і даведайцеся больш пра перавагі прэміум акаўнта.',
+
     account_premium_more: 'Больш падрабязна пра CUB Premium',
     account_limited: 'Вы дасягнулі максімальнага ліміту. Павялічце ліміт з акаўнтам CUB Premium. Падрабязней на сайце <span class="account-modal__site">{site}/premium</span>',
-    account_premium_include_1: 'Павелічэнне колькасць закладак',
-    account_premium_include_2: 'Павелічэнне гісторыі праглядаў',
-    account_premium_include_3: 'Павелічэнне колькасць тайм-кодаў',
-    account_premium_include_4: 'Колькасць профіляў на рахунак',
+
+
+
+
     account_premium_include_5: 'Апавяшчэнні',
     account_premium_include_6: 'Сінхранізацыя дадзеных',
     account_premium_include_text_1: 'Больш закладак - больш магчымасцяў! Захоўвайце свае любімыя фільмы і серыялы, стварайце спісы прагляду і атрымлівайце асалоду ад прагляду ў любы зручны час.',
@@ -1016,7 +1016,7 @@ export default {
     watch_history_view: 'Прагляд',
     empty_watch_history_title: 'Праглядаў пакуль няма',
     empty_watch_history_text: 'Тут захоўваецца кожны прагляд з датай — паўторныя прагляды і серыі асобна. Дадаць ці змяніць прагляд можна на сайце CUB у раздзеле «Гісторыя».',
-    
+
     extensions_enable: 'Уключыць',
     extensions_disable: 'Адключыць',
     extensions_check: 'Праверыць статус',
@@ -1106,7 +1106,7 @@ export default {
     settings_interface_glass_opacity: 'Празрыстасць шкла',
     torrent_error_check_no_auth: 'Сервер адказаў на запыт, але не ўдалося прайсці аўтарызацыю',
     settings_interface_card_cover: 'Паказаць вокладку',
-    
+
     title_upcoming_episodes: 'Бліжэйшыя выхады эпізодаў',
     title_recent_episodes: 'Нядаўнія выхады эпізодаў',
     settings_rest_cache_images: 'Кэш малюнкаў',
@@ -1446,5 +1446,9 @@ export default {
     title_meta_romance: 'Раманты',
     title_meta_pace: 'Тэмп',
     title_meta_importance: 'Важныя сцэны',
-    title_meta_action: 'Экшн'
+    title_meta_action: 'Экшн',
+
+    country_ba: "Боснія і Герцагавіна",
+    about_hash: "Хэш",
+    about_build_date: "Дата зборкі",
 }

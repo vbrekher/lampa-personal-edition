@@ -1440,5 +1440,9 @@ export default {
 
     // Personal Edition: source-language coverage additions.
     settings_rest_cache_descr: "Se borrarán todos los ajustes y datos.",
-    settings_param_torrent_lang_ru: "Ruso"
+    settings_param_torrent_lang_ru: "Ruso",
+
+    country_ba: "Bosnia y Herzegovina",
+    about_hash: "Hash",
+    about_build_date: "Fecha de compilación",
 }

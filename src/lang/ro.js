@@ -423,7 +423,7 @@ export default {
     country_au: 'Australia',
     country_aw: 'Aruba',
     country_az: 'Azerbaidjan',
-    country_ba: 'Bosnia și Herțegovina',
+    country_ba: "Bosnia și Herțegovina",
     country_bd: 'Bangladesh',
     country_be: 'Belgia',
     country_bg: 'Bulgaria',
@@ -1430,5 +1430,8 @@ export default {
     title_meta_romance: 'Romantism',
     title_meta_pace: 'Ritm',
     title_meta_importance: 'Scene importante',
-    title_meta_action: 'Acțiune'
+    title_meta_action: 'Acțiune',
+
+    about_hash: "Hash",
+    about_build_date: "Data compilării",
 }

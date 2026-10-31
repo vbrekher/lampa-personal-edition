@@ -95,5 +95,8 @@
   "extensions_install": "ইনস্টল করুন",
   "extensions_info": "তথ্য",
   "extensions_ready": "ইতিমধ্যে ইনস্টল করা",
-  "extensions_add": "প্লাগইন যোগ করুন"
+  "extensions_add": "প্লাগইন যোগ করুন",
+  "country_ba": "বসনিয়া ও হার্জেগোভিনা",
+  "about_hash": "হ্যাশ",
+  "about_build_date": "বিল্ডের তারিখ"
 }

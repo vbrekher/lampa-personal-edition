@@ -150,7 +150,7 @@ export default {
     settings_parser_in_search_descr: 'Mostrar resultados de pesquisa?',
     settings_parser_timeout_title: 'Tempo limite do analisador',
     settings_parser_timeout_descr: 'Tempo em segundos para aguardar uma resposta do servidor',
-	
+
 	settings_player_type: 'Tipo player',
     settings_player_type_descr: 'Qual o player a utilizar',
     settings_infuse_launch_mode: 'Iniciar no Infuse',
@@ -205,13 +205,13 @@ export default {
     settings_player_quality_descr: 'Qualidade de vídeo preferida para visualização',
     settings_player_hls_title: 'Processando o stream .m3u8',
     settings_player_hls_descr: 'Não toque neste parâmetro se você não sabe o motivo.',
-    
+
 	settings_plugins_notice: 'Para aplicar o plugin, você precisa reiniciar a aplicação',
     settings_plugins_add: 'Adicionar plugin',
     settings_plugins_add_descr: 'Para remover um plugin, segure ou clique duas vezes na tecla (OK) nele',
     settings_plugins_install: 'Instalar Plugin',
     settings_plugins_install_descr: 'Instalar um plugin da lista de disponíveis',
-	 
+
 	settings_server_link: 'Usar endereço',
     settings_server_links: 'Endereços',
     settings_server_placeholder: 'Por exemplo: 192.168.X',
@@ -247,7 +247,7 @@ export default {
     torent_nohash_do_three: 'Certifique-se de que o Jackett também pode fazer o download do ficheiro',
     torent_nohash_do_four: 'Escreva para nosso grupo do Telegram: @lampa_group',
     torent_nohash_do_five: 'Especifique qual o filme, qual distribuição e, se possível, uma foto desta distribuição',
-	 
+
 	torrent_error_text: 'Falha ao conectar ao TorrServer. Vamos passar rapidamente pela lista de possíveis problemas e verificar tudo.',
     torrent_error_step_1: 'O TorrServer está a correr',
     torrent_error_step_2: 'IP dinâmico',
@@ -324,7 +324,7 @@ export default {
     torrent_parser_magnet_error: 'Falha ao obter o endereço magnético',
     torrent_parser_no_responce: 'O analisador não está respondendo à solicitação',
     torrent_parser_torlook_fallback_search_notification: 'O analisador Jackett não está disponível ou as configurações de conexão estão incorretas. Procurando Torlook...',
-	
+
 	about_text: 'A aplicação é totalmente gratuita e usa endereços públicos para obter informações sobre vídeos, novos lançamentos, filmes populares, etc. Todas as informações disponíveis são usadas exclusivamente para fins educacionais, a aplicação não usa servidores próprios para distribuir informações.',
     about_channel: 'Nosso canal',
     about_group: 'Grupo',
@@ -401,11 +401,11 @@ export default {
     title_subscribes: 'Subscrições',
     title_unsubscribe: 'Cancelar inscrição',
     title_language: 'Idioma original',
-	
+
 	subscribe_success: 'Inscreveu-se com sucesso',
     subscribe_error: 'Ocorreu um erro ao inscrever, por favor tente novamente mais tarde',
     subscribe_noinfo: 'Falha ao recuperar informações, tente novamente mais tarde',
-	 
+
     company_headquarters: 'Sede',
     company_homepage: 'Website',
     company_country: 'País',
@@ -734,7 +734,7 @@ export default {
     plugins_load_from: 'Carregado do CUB',
     plugins_ok_for_check: 'Clique em (OK) para testar o plugin',
     plugins_no_loaded: 'Ao iniciar a aplicação alguns plugins não puderam ser carregados',
-	 
+
     time_viewed: 'Visualizado',
     time_from: 'Desde',
     time_reset: 'Reset tempo visualizado',
@@ -790,7 +790,7 @@ export default {
     helper_torrents: 'Mantenha pressionada a tecla (OK) para abrir o menu de contexto',
     helper_cleared: 'Sucesso, dicas serão mostradas novamente.',
     helper_torrents_view: 'Mantenha pressionada a tecla (OK) para redefinir o tempo de visualizado e exibir o menu',
-	 
+
 	fav_sync_title: 'Sincronização dos favoritos',
     fav_sync_text: 'Conecte a sincronização e visualize em qualquer dispositivo os seus favoritos. <br><br>Para isso, registe-se no site {site}, crie um perfil e faça login na aplicação.',
     fav_sync_site: 'Site',
@@ -847,7 +847,7 @@ export default {
     player_normalization_step_hight: 'Alto',
     player_youtube_no_played: 'Desculpe, este vídeo não está disponível em sua região e pode ter sido bloqueado ou removido.',
     player_youtube_start_play: 'Para começar a reproduzir o vídeo, clique no botão "Reproduzir"',
-	
+
 	broadcast_open: 'Abrir o cartão em outro dispositivo',
     broadcast_play: 'Escolha o dispositivo para assistir',
 
@@ -901,7 +901,7 @@ export default {
     watch_history_view: 'Visualização',
     empty_watch_history_title: 'Ainda não há visualizações',
     empty_watch_history_text: 'Cada visualização é salva aqui com a data — revisões e episódios separadamente. Você pode adicionar ou editar visualizações no site do CUB, na seção “Histórico”.',
-	 
+
 	copy_link: 'Copiar endereço do vídeo',
     copy_secuses: 'Endereço copiado para a área de transferência',
     copy_error: 'Erro ao copiar o endereço',
@@ -922,10 +922,10 @@ export default {
     account_imported: 'Importado',
     account_reload_after: 'Reinicializar após 5 segundos.',
     account_create: 'Descubra mais oportunidades com uma conta CUB. Registe-se em <span class="account-modal__site">{site}</span> e tenha acesso para sincronizar seus favoritos, tempos visualizados e outros recursos da conta CUB.',
-    account_premium: 'Desbrave novos horizontes com uma conta CUB Premium! Tire partido de limites maiores e funcionalidades de serviço melhoradas. Visite <span class="account-modal__site">{site}/premium</span> e saiba mais sobre os benefícios de uma conta premium.',
+
     account_premium_more: 'Saiba mais sobre CUB Premium',
     account_limited: 'Você atingiu o limite máximo. Aumente o limite com uma conta CUB Premium. Saiba mais em <span class="account-modal__site">{site}/premium</span>',
-    
+
     account_code_enter: 'Digite um código de seis dígitos',
     account_code_error: 'Você inseriu um código incorreto ou desatualizado',
     account_code_wrong: 'Você especificou um formato incorreto',
@@ -1452,5 +1452,9 @@ export default {
     discuss_rules_rule_4: "Evita símbolos difíceis de compreender, como !?#%.",
     discuss_rules_rule_5: "Escreve frases completas com pelo menos cinco palavras.",
     discuss_rules_rule_6: "Evita palavras demasiado compridas.",
-    discuss_rules_rule_7: "Limita a tua mensagem a 300 caracteres."
+    discuss_rules_rule_7: "Limita a tua mensagem a 300 caracteres.",
+
+    country_ba: "Bósnia e Herzegovina",
+    about_hash: "Hash",
+    about_build_date: "Data de compilação",
 }

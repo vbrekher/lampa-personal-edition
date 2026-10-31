@@ -422,7 +422,7 @@ export default {
     country_au: 'Австралия',
     country_aw: 'Аруба',
     country_az: 'Азербайджан',
-    country_ba: 'Босна и Херцеговина',
+    country_ba: "Босна и Херцеговина",
     country_bd: 'Бангладеш',
     country_be: 'Белгия',
     country_bg: 'България',
@@ -923,7 +923,7 @@ export default {
     account_imported: 'импортирано',
     account_reload_after: 'рестарт след 5 сек.',
     account_create: 'Открийте повече възможности с CUB акаунт. Регистрирайте се на <span class="account-modal__site">{site}</span> и получете достъп за синхронизиране на вашите отметки, времеви кодове и други функции на CUB акаунта.',
-    account_premium: 'Отключете нови хоризонти с CUB Premium акаунт! Възползвайте се от увеличени лимити и подобрена функционалност на услугата. Посетете <span class="account-modal__site">{site}/premium</span> и научете повече за предимствата на премиум акаунта.',
+
     account_premium_more: 'Научете повече за CUB Premium',
     account_limited: 'Достигнали сте максималния лимит. Увеличете лимита с CUB Premium акаунт. Научете повече на <span class="account-modal__site">{site}/premium</span>',
 
@@ -1432,5 +1432,8 @@ export default {
     title_meta_romance: 'Романтика',
     title_meta_pace: 'Темпо',
     title_meta_importance: 'Ключови сцени',
-    title_meta_action: 'Екшън'
+    title_meta_action: 'Екшън',
+
+    about_hash: "Хеш",
+    about_build_date: "Дата на компилация",
 }

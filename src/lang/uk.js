@@ -220,7 +220,7 @@ export default {
     settings_server_password_use: 'Вхід паролем',
     settings_server_login: 'Логін',
     settings_server_password: 'Пароль',
-    settings_server_not_specified: 'Не вказано',
+
     settings_server_search_type: 'Тип пошуку',
     settings_server_search_type_descr: 'Де шукати торренти: вбудований rutor, Torznab-індексери в TorrServer, або обидва джерела.',
     settings_param_torrserver_search_rutor: 'Rutor',
@@ -855,13 +855,13 @@ export default {
     account_imported: 'імпортовано',
     account_reload_after: 'перезавантаження через 5 с.',
     account_create: 'Відкрийте більше можливостей з облікового запису CUB. Зареєструйтесь на сайті <span class="account-modal__site">{site}</span> та отримайте доступ до синхронізації ваших закладок, тайм-кодів та інших можливостей облікового запису CUB.',
-    account_premium: 'Розкрийте нові горизонти з обліковим записом CUB Premium! Насолоджуйтесь збільшеними лімітами та збагаченим функціоналом сервісу. Перейдіть на сайт <span class="account-modal__site">{site}/premium</span> та дізнайтесь більше про переваги преміум акаунту.',
+
     account_premium_more: 'Докладніше про CUB Premium',
     account_limited: 'Ви досягли максимального ліміту. Збільште ліміт з обліковим записом CUB Premium. Докладніше на сайті <span class="account-modal__site">{site}/premium</span>',
-    account_premium_include_1: 'Збільшення кількості закладок',
-    account_premium_include_2: 'Збільшення історії переглядів',
-    account_premium_include_3: 'Збільшення кількості тайм-кодів',
-    account_premium_include_4: 'Кількість профілів на обліковий запис',
+
+
+
+
     account_premium_include_5: 'Повідомлення',
     account_premium_include_6: 'Синхронізація даних',
     account_premium_include_text_1: 'Більше закладок – більше можливостей! Зберігайте свої улюблені фільми та серіали, створюйте списки перегляду та насолоджуйтесь переглядом у будь-який зручний час.',
@@ -870,7 +870,7 @@ export default {
     account_premium_include_text_4: 'Отримайте більше свободи з нашим преміум-доступом! Збільште кількість профілів на обліковому записі та дозвольте своїм друзям та близьким насолоджуватися фільмами та серіалами разом з вами. Жодних обмежень - насолоджуйтесь переглядом з коханими людьми.',
     account_premium_include_text_5: 'Не пропустіть жодної нової серії чи перекладу! Отримуйте сповіщення вчасно та будьте в курсі всіх оновлень. Збільште свій кінопотік разом з нами та отримуйте повідомлення про вихід нових серій та перекладів прямо на свій смартфон.',
     account_premium_include_text_6: 'Синхронізуйте дані між пристроями з преміум-доступом! Більше не потрібно гаяти час на пошук останнього епізоду, на якому ви зупинилися. З нашим преміум доступом ви можете синхронізувати свої дані між пристроями, щоб продовжувати перегляд з місця, де ви зупинилися, на будь-якому пристрої, де встановлено програму.',
-    
+
     account_code_enter: 'Введіть шестизначний код',
     account_code_error: 'Можливо, ви ввели невірний або застарілий код',
     account_code_wrong: 'Можливо, ви вказали неправильний формат',
@@ -1407,5 +1407,9 @@ export default {
     title_meta_romance: 'Романтика',
     title_meta_pace: 'Темп',
     title_meta_importance: 'Важливі сцени',
-    title_meta_action: 'Екшн'
+    title_meta_action: 'Екшн',
+
+    country_ba: "Боснія і Герцеговина",
+    about_hash: "Хеш",
+    about_build_date: "Дата збирання",
 }

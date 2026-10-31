@@ -95,5 +95,8 @@
   "extensions_install": "تثبيت",
   "extensions_info": "معلومات",
   "extensions_ready": "مثبت مسبقًا",
-  "extensions_add": "إضافة ملحق"
+  "extensions_add": "إضافة ملحق",
+  "country_ba": "البوسنة والهرسك",
+  "about_hash": "قيمة التجزئة",
+  "about_build_date": "تاريخ البناء"
 }

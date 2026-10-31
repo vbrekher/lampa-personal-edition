@@ -1453,5 +1453,9 @@ export default {
     discuss_rules_rule_4: "Évitez les symboles difficiles à comprendre, comme !?#%.",
     discuss_rules_rule_5: "Rédigez des phrases complètes d'au moins cinq mots.",
     discuss_rules_rule_6: "N'utilisez pas de mots excessivement longs.",
-    discuss_rules_rule_7: "Limitez votre message à 300 caractères."
+    discuss_rules_rule_7: "Limitez votre message à 300 caractères.",
+
+    country_ba: "Bosnie-Herzégovine",
+    about_hash: "Empreinte",
+    about_build_date: "Date de compilation",
 }

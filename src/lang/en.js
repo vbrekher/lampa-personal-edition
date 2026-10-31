@@ -1453,5 +1453,9 @@ export default {
     discuss_rules_rule_4: "Avoid confusing symbols such as !?#%.",
     discuss_rules_rule_5: "Write complete sentences containing at least five words.",
     discuss_rules_rule_6: "Avoid excessively long words.",
-    discuss_rules_rule_7: "Keep your message within 300 characters."
+    discuss_rules_rule_7: "Keep your message within 300 characters.",
+
+    country_ba: "Bosnia and Herzegovina",
+    about_hash: "Hash",
+    about_build_date: "Build date",
 }

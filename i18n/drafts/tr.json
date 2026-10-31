@@ -95,5 +95,8 @@
   "extensions_install": "Yükle",
   "extensions_info": "Bilgi",
   "extensions_ready": "Zaten yüklü",
-  "extensions_add": "Eklenti ekle"
+  "extensions_add": "Eklenti ekle",
+  "country_ba": "Bosna-Hersek",
+  "about_hash": "Özet değeri",
+  "about_build_date": "Derleme tarihi"
 }

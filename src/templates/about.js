@@ -25,12 +25,12 @@ let html = `<div class="about">
             </div>
 
             <div>
-                <small>Hash</small><br>
+                <small>#{about_hash}</small><br>
                 <span>{__APP_HASH__}</span>
             </div>
 
             <div>
-                <small>Builded</small><br>
+                <small>#{about_build_date}</small><br>
                 <span>{__APP_BUILD__}</span>
             </div>
         </div>

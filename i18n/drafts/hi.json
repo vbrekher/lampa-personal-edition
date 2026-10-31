@@ -95,5 +95,8 @@
   "extensions_install": "इंस्टॉल करें",
   "extensions_info": "जानकारी",
   "extensions_ready": "पहले से इंस्टॉल है",
-  "extensions_add": "प्लगइन जोड़ें"
+  "extensions_add": "प्लगइन जोड़ें",
+  "country_ba": "बोस्निया और हर्ज़ेगोविना",
+  "about_hash": "हैश",
+  "about_build_date": "बिल्ड की तारीख"
 }

@@ -1439,4 +1439,8 @@ export default {
     player_ai_agent_no_analysis: 'Не удалось провести анализ видео.',
     player_ai_agent_quota: 'Лимит запросов превышен. Попробуйте повторить запрос позже.',
     player_ai_agent_working: 'Я еще работаю над этим...',
+
+    country_ba: "Босния и Герцеговина",
+    about_hash: "Хеш",
+    about_build_date: "Дата сборки",
 }

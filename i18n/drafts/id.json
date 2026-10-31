@@ -95,5 +95,8 @@
   "extensions_install": "Pasang",
   "extensions_info": "Informasi",
   "extensions_ready": "Sudah terpasang",
-  "extensions_add": "Tambah plugin"
+  "extensions_add": "Tambah plugin",
+  "country_ba": "Bosnia dan Herzegovina",
+  "about_hash": "Hash",
+  "about_build_date": "Tanggal kompilasi"
 }

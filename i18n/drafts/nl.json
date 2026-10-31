@@ -95,5 +95,8 @@
   "extensions_install": "Installeren",
   "extensions_info": "Informatie",
   "extensions_ready": "Al geïnstalleerd",
-  "extensions_add": "Plug-in toevoegen"
+  "extensions_add": "Plug-in toevoegen",
+  "country_ba": "Bosnië en Herzegovina",
+  "about_hash": "Hash",
+  "about_build_date": "Builddatum"
 }
