@@ -1234,7 +1234,7 @@ export default {
     "tv_status_ended": "Beendet",
     "tv_status_canceled": "Abgesagt",
     "tv_status_pilot": "Pilot",
-    "tv_status_released": "Freigegeben",
+    "tv_status_released": "Veröffentlicht",
     "tv_status_rumored": "Gerüchten zufolge",
     "tv_status_post_production": "Postproduktion",
     "input_detection_touch": "Möchten Sie zur Touch-Steuerung wechseln?",

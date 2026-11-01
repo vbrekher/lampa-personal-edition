@@ -125,7 +125,9 @@
     "settings_param_no": "না",
     "torrent_parser_yes": "হ্যাঁ",
     "torrent_parser_no": "না",
-    "title_left": "বাকি"
+    "title_left": "বাকি",
+    "filter_sorted": "সাজান",
+    "tv_status_released": "মুক্তিপ্রাপ্ত"
   },
   "locale": "bn",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

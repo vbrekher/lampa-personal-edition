@@ -124,7 +124,8 @@
     "settings_param_no": "Tidak",
     "torrent_parser_yes": "Ya",
     "torrent_parser_no": "Tidak",
-    "title_left": "Tersisa"
+    "title_left": "Tersisa",
+    "tv_status_released": "Dirilis"
   },
   "locale": "id",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

@@ -76,7 +76,8 @@
     "torrent_error_info_3": "כדי להתחבר ל-TorrServer, הוסיפו את הפרוטוקול http:// בתחילת הכתובת ואת הפורט :8090 בסופה. ודאו שמספר הפורט מופיע אחרי כתובת ה-IP. הכתובת הנוכחית: {ip}",
     "loading_progress_step_2": "חיפוש שרתים חלופיים",
     "loading_progress_step_5": "הפעלת האפליקציה",
-    "title_left": "נותר"
+    "title_left": "נותר",
+    "tv_status_released": "יצא לאקרנים"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

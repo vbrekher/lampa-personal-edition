@@ -121,7 +121,9 @@
     "loading_progress_step_1": "भाषाएँ लोड की जा रही हैं",
     "loading_progress_step_3": "एक्सटेंशन तैयार किए जा रहे हैं",
     "loading_progress_step_4": "लगभग तैयार",
-    "title_left": "शेष"
+    "title_left": "शेष",
+    "filter_sorted": "क्रमबद्ध करें",
+    "tv_status_released": "रिलीज़ हो चुकी है"
   },
   "locale": "hi",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."
