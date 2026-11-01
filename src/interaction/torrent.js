@@ -266,81 +266,71 @@ function parseSubs(path, files){
     return subtitles.length ? subtitles : false
 }
 
+const TORRENT_PRELOAD_POLL_MS = 1000
+const TORRENT_PRELOAD_STALL_MS = 8000
+const TORRENT_PRELOAD_DEADLINE_MS = 30000
+
 function preload(data, run){
-    let has_server = Torserver.ip() && data.url.indexOf(Torserver.ip()) > -1
-    let has_preload = data.url.indexOf('&preload') > -1
-    let need_preload = has_server && has_preload
+    let server = Torserver.ip()
+    let need_preload = server && data.url.indexOf(server) > -1 && data.url.indexOf('&preload') > -1
+    let player = data.launch_player || Storage.field('player_torrent')
 
-    if(need_preload){
-        let checkout
-        let network = new Request()
-        let first   = true
-        let stopped = false
-        let last_bytes  = 0
-        let last_change = Date.now()
-
-        let stop = ()=>{
-            stopped = true
-
-            clearTimeout(checkout)
-
-            network.clear()
-
-            Loading.stop()
-        }
-
-        Loading.start(stop, '', {media: data})
-
-        let next = ()=>{
-            if(stopped) return
-
-            if(Date.now() - last_change > 30000){
-                stop()
-            }
-            else checkout = setTimeout(update, 1000)
-        }
-
-        let update = ()=>{
-            network.timeout(2000)
-
-            network.silent(first ? data.url : data.url.replace('&preload', '&stat'), function (res) {
-                if(stopped) return
-
-                let pb = res.preloaded_bytes || 0,
-                    ps = res.preload_size || 0,
-                    sp = res.download_speed ? Utils.bytesToSize(res.download_speed * 8, true) : '0.0',
-                    active_peers = parseInt(res.active_peers || 0),
-                    total_peers = parseInt(res.total_peers || 0)
-
-                let progress = Math.min(100,((pb * 100) / ps ))
-
-                if(progress >= 95 || isNaN(progress)){
-                    stop()
-
-                    run()
-                }
-                else{
-                    if(pb > last_bytes){
-                        last_bytes  = pb
-                        last_change = Date.now()
-                    }
-
-                    Loading.setProgress(progress, {
-                        speed: sp,
-                        active_peers: active_peers,
-                        total_peers: total_peers
-                    })
-
-                    next()
-                }
-            }, next)
-
-            first = false
-        }
-
-        update()
+    // External Android players own buffering; hand them a playback URL directly.
+    if(need_preload && Platform.is('android') && player === 'android'){
+        data.url = data.url.replace('&preload', '&play')
+        run()
+        return
     }
-    else run()
+    if(!need_preload){
+        run()
+        return
+    }
+
+    let network = new Request(), checkout, deadline
+    let first = true, stopped = false, last_bytes = 0, last_change = Date.now()
+    let stop = ()=>{
+        if(stopped) return
+        stopped = true
+        clearTimeout(checkout)
+        clearTimeout(deadline)
+        network.clear()
+        Loading.stop()
+    }
+    let finish = (fallback)=>{
+        if(stopped) return
+        stop()
+        if(fallback) data.url = data.url.replace('&preload', '&play')
+        run()
+    }
+    let next = ()=>{
+        if(stopped) return
+        if(Date.now() - last_change >= TORRENT_PRELOAD_STALL_MS) finish(true)
+        else checkout = setTimeout(update, TORRENT_PRELOAD_POLL_MS)
+    }
+    let update = ()=>{
+        if(stopped) return
+        network.timeout(2000)
+        network.silent(first ? data.url : data.url.replace('&preload', '&stat'), (res)=>{
+            if(stopped) return
+            let pb = res.preloaded_bytes || 0, ps = res.preload_size || 0
+            let progress = Math.min(100, pb * 100 / ps)
+            if(progress >= 95 || isNaN(progress)) finish(false)
+            else{
+                if(pb > last_bytes){last_bytes = pb; last_change = Date.now()}
+                Loading.setProgress(progress, {
+                    speed: res.download_speed ? Utils.bytesToSize(res.download_speed * 8, true) : '0.0',
+                    active_peers: parseInt(res.active_peers || 0),
+                    total_peers: parseInt(res.total_peers || 0)
+                })
+                next()
+            }
+        }, next)
+        first = false
+    }
+    Loading.start(stop, '', {media: data})
+    // Independent of request callbacks, including a broken native network bridge.
+    deadline = setTimeout(()=>finish(true), TORRENT_PRELOAD_DEADLINE_MS)
+    update()
 }
 
 function list(items, params){

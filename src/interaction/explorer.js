@@ -6,6 +6,7 @@ import Controller from '../core/controller'
 import Arrays from '../utils/arrays'
 import Emit from '../utils/emit'
 import TMDB from '../core/api/sources/tmdb'
+import Lang from '../core/lang'
 
 /**
  * Исследователь
@@ -43,13 +44,13 @@ class Explorer extends Emit {
         let movie = this.object.movie || this.object.card || {}
 
         Arrays.extend(movie, {
-            title: 'Фильм не найден',
+            title: Lang.translate('explorer_movie_not_found'),
             original_title: '',
             img: './img/img_broken.svg',
-            genres: [{name: 'Комедия'}, {name: 'Боевик'}, {name: 'Драма'}],
-            overview: 'Этот фильм мог бы быть интересным, но, к сожалению, нет данных о нём.',
-            vote_average: 8,
-            production_countries: [{iso_3166_1: 'US'}],
+            genres: [],
+            overview: Lang.translate('full_notext'),
+            vote_average: 0,
+            production_countries: [],
         })
 
         if(movie.id){

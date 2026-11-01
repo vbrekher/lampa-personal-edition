@@ -83,10 +83,10 @@ test('bundled catalogue is small, categorized, deduplicated and HTTPS-only',()=>
   const catalog=JSON.parse(source.slice(source.indexOf('export default ')+15).trim());
   assert.ok(catalog.results.length>=3);
   const urls=catalog.results.flatMap(category=>{
-    assert.ok(category.titles.en && category.titles.ru);
+    assert.ok(category.title_key);
     return category.results.map(item=>{
       assert.ok(item.link.startsWith('https://') && item.link.length>12);
-      assert.ok(item.name && item.descr && item.lang.en && item.lang.ru);
+      assert.ok(item.name && item.descr_key);
       return item.link;
     });
   });

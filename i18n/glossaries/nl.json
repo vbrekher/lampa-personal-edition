@@ -24,6 +24,36 @@
     "TorrServer": "TorrServer"
   },
   "overrides": {
-    "settings_interface_menu_always": "Zijmenu altijd tonen"
+    "settings_interface_menu_always": "Zijmenu altijd tonen",
+    "account_profile_info": "Je kunt profielen beheren in je accountinstellingen. Ga hiervoor naar <span class=\"account-modal__site\">{site}/profiles</span>",
+    "account_device_code_text": "Open <span class=\"account-modal__site\">{site}/activate</span> op je telefoon of computer en voer de code in:",
+    "activity_wait_refresh_title": "Wachten",
+    "activity_wait_refresh_hint": "Druk op Pijl omlaag om dit scherm te vernieuwen.",
+    "android_update_required": "Werk de app bij naar versie {version}.",
+    "player_initialization_failed": "De videospeler kon niet worden gestart.",
+    "player_restore_failed": "Het afspelen kon niet worden hervat. Open de video opnieuw.",
+    "personal_catalog_category_3": "Kijkgeschiedenis en synchronisatie",
+    "personal_catalog_description_3_1": "Synchroniseert de kijkgeschiedenis met Simkl; een account moet worden ingesteld.",
+    "personal_catalog_description_2_1": "Slaat intro’s, samenvattingen en aftiteling over als tijdmarkeringen beschikbaar zijn.",
+    "premium_renew_title": "Verleng CUB Premium",
+    "premium_renew_text": "Uw CUB Premium-abonnement is verlopen. Verleng het om de premiumfuncties te blijven gebruiken.",
+    "birthday_promotion_dates": "De actie loopt van {start} tot {end}. Meer informatie:",
+    "torrent_error_correct_address": "Correct adresformaat",
+    "torrent_error_browser_unavailable": "Als de browser geen verbinding kan maken, controleer dan of TorrServer actief is of start het opnieuw.",
+    "iptv_load_error_title": "Kan de app niet laden",
+    "iptv_load_error_text": "De app is niet geladen. Probeer deze opnieuw te starten.",
+    "personal_catalog_description_1_1": "Aanbieder van online video; het afspelen is niet geverifieerd.",
+    "activity_create_error": "Kan dit scherm niet maken:",
+    "activity_start_error": "Kan dit scherm niet openen:",
+    "storage_manager_title": "Opslagbeheer",
+    "android_only_tv": "Deze functie werkt alleen op Android TV.",
+    "birthday_promotion_intro": "Vier de derde verjaardag van Lampa met kortingen op CUB Premium.",
+    "birthday_promotion_thanks": "Bedankt dat je deel uitmaakt van de Lampa gemeenschap.",
+    "iptv_about_text": "Bekijk tv-zenders, films en sport met de IPTV-app. Bewaar favoriete zenders voor snelle toegang en bekijk ze op je apparaat wanneer je wilt.",
+    "diagnostics_protocol": "Protocol",
+    "diagnostics_host": "Host",
+    "diagnostics_platform": "Platform",
+    "diagnostics_connection": "Verbinding",
+    "diagnostics_mirror": "Spiegelserver"
   }
 }

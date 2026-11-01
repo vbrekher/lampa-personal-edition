@@ -50,7 +50,7 @@ function init(){
                         "type": "MVPD_IP",
                         "showPopup": true,
                         "label": "Lampa",
-                        "description": "Lampa app for LG webOS",
+                        "description": Lang.translate('webos_application_description'),
                     },
                     onSuccess: function (res) {
                         Noty.show(Lang.translate('settings_added'))

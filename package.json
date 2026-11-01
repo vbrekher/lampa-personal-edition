@@ -12,7 +12,8 @@
     "test:personal": "node --test personal/tests/*.test.mjs",
     "i18n:report": "node tools/i18n-audit.mjs",
     "i18n:strict": "node tools/i18n-audit.mjs --strict",
-    "i18n:inventory": "node tools/i18n-source-audit.mjs"
+    "i18n:inventory": "node tools/i18n-source-audit.mjs",
+    "i18n:source-check": "node tools/i18n-source-review.mjs"
   },
   "author": "unk",
   "license": "ISC",

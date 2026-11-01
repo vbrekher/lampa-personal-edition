@@ -25,9 +25,9 @@ function init(){
 function step(position){
     if(destroyed) return
     
-    html.find('.lp-step').text(Lang.translate('loading_progress_step_' + position))
+    html.find('.lp-step').text(Lang.known('loading_progress_step_' + position,'loading'))
 
-    console.log('LoadingProgress', 'step:', position, Lang.translate('loading_progress_step_' + position))
+    console.log('LoadingProgress', 'step:', position, Lang.known('loading_progress_step_' + position,'loading'))
 }
 
 /**

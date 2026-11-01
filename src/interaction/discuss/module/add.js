@@ -133,7 +133,7 @@ export default {
                         keyboard.listener.follow('change',(event)=>{
                             let code = filter(event.value.trim())
 
-                            helper.toggleClass('hide', !Boolean(code)).text(Lang.translate('discuss_rules_rule_' + code))
+                            helper.toggleClass('hide', !Boolean(code)).text(Lang.known('discuss_rules_rule_' + code,'network_error'))
                         })
                     }
                 }

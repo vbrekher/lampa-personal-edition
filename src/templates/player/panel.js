@@ -63,7 +63,7 @@ let html = `<div class="player-panel">
             </div>
             <div class="player-panel__right player-panel__tv-visible">
                 <div class="player-panel__box-buttons">
-                    <div class="player-panel__quality button selector">auto</div>
+                    <div class="player-panel__quality button selector">#{player_quality_auto}</div>
                 </div>
                 <div class="player-panel__box-buttons">
                     <div class="player-panel__flow button selector hide">

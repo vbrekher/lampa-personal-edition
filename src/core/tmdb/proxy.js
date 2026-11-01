@@ -5,6 +5,7 @@ import Utils from '../../utils/utils.js'
 import TMDB from './tmdb.js'
 import Settings from '../../interaction/settings/settings.js'
 import Arrays from '../../utils/arrays.js'
+import Lang from '../lang'
 
 function ImageMirror(){
     let stat    = []
@@ -68,7 +69,7 @@ function init(){
     let tmdb_proxy = {
         name: 'TMDB Proxy',
         version: '1.0.6',
-        description: 'Проксирование постеров и API сайта TMDB',
+        description: Lang.translate('tmdb_proxy_description'),
 
         path_api: 'apitmdb.'+Manifest.cub_domain+'/3/',
         path_api_backup: 'lampa.byskaz.ru/tmdb/api/3/',

@@ -107,7 +107,7 @@ describe('standard source menu', ()=>{
         })
         let buttons = load('components/full/start/buttons.js', {
             Controller: h.Controller, Select: h.Select, Lang: h.Lang,
-            Storage: {get: ()=> 'priority', set: vi.fn()}, Utils: {hash: ()=> 'priority'}, $: wrap
+            window: {lampa_settings: {}}, Storage: {get: ()=> 'priority', set: vi.fn()}, Utils: {hash: ()=> 'priority'}, $: wrap
         })
         let owner = {html: {find: ()=>collection}, emit: vi.fn()}
         let context = {season: 1, onBack: vi.fn()}

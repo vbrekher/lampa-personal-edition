@@ -144,7 +144,7 @@ class Extension extends Item {
                     const url = this.data.link
                     if(this.params.personalCatalog && !/^https:\/\/[^/]+\//i.test(url || '')){
                         back()
-                        Noty.show('HTTPS plugin URL required')
+                        Noty.show(Lang.translate('extensions_https_required'))
                         return
                     }
 

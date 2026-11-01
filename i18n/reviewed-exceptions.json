@@ -523,6 +523,18 @@
     "about_hash": {
       "value": "Hash",
       "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "diagnostics_protocol": {
+      "value": "Protocol",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "de": {
@@ -1029,6 +1041,10 @@
     "about_hash": {
       "value": "Hash",
       "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "tr": {
@@ -1199,6 +1215,10 @@
     "extensions_hpu_video": {
       "value": "Video",
       "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "hi": {
@@ -1785,6 +1805,14 @@
     "about_hash": {
       "value": "Hash",
       "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "he": {
@@ -3023,6 +3051,22 @@
     "ad_after": {
       "value": "Реклама через",
       "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_quality_auto": {
+      "value": "Авто",
+      "reason": "Standard Ukrainian abbreviation for automatic; identical spelling to Russian is a legitimate native cognate."
+    },
+    "diagnostics_protocol": {
+      "value": "Протокол",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "be": {
@@ -3301,6 +3345,14 @@
     "month_5_e": {
       "value": "Мая",
       "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "bg": {
@@ -3967,6 +4019,22 @@
     "about_hash": {
       "value": "Хеш",
       "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "personal_catalog_category_2": {
+      "value": "Интерфейс и удобство",
+      "reason": "Native Bulgarian interface label; legitimate shared vocabulary with Russian, independently reviewed in context."
+    },
+    "diagnostics_protocol": {
+      "value": "Протокол",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "cs": {
@@ -4367,6 +4435,10 @@
     "terminal_title": {
       "value": "Terminal",
       "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   },
   "ro": {
@@ -4753,6 +4825,10 @@
     "extensions_hpu_video": {
       "value": "Video",
       "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_protocol": {
+      "value": "Protocol",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
     }
   }
 }

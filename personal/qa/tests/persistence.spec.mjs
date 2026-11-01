@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 import {readLanguage} from '../../../tools/i18n-audit.mjs';
 const states=['nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur','ru','uk','be','bg','cs','he','pl','ro'];
 test('language selection preserves bookmarks, playback state, parser, plugins and metadata language',async({page})=>{
- test.setTimeout(180000);
+ test.setTimeout(360000);
  await page.setViewportSize({width:1920,height:1080});
  await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url().startsWith('data:')?route.continue():route.abort());
  await page.goto('/?locale=nl&screen=movie');

@@ -3,6 +3,7 @@ import Favorite from '../core/favorite.js'
 import Params from '../interaction/settings/params.js'
 import Bell from '../interaction/bell.js'
 import Activity from '../interaction/activity/activity.js'
+import Lang from './lang'
 
 let reqCallback = {}
 let timeCallback = {}
@@ -151,7 +152,7 @@ function timeCall(timeline){
 
 function voiceStart(){
     if(checkVersion(25)) AndroidJS.voiceStart()
-    else Lampa.Noty.show("Работает только на Android TV")
+    else Lampa.Noty.show(Lang.translate('android_only_tv'))
 }
 
 function updateChannel(where){
@@ -167,11 +168,11 @@ function checkVersion(needVersion, silent=false){
                 return true
             } else {
                 if(!silent)
-                    Bell.push({text: 'Обновите приложение до версии ' + needVersion})
+                    Bell.push({text: Lang.translate('android_update_required').replace('{version}',needVersion)})
                 return false
             }
         } catch (e) {
-            Bell.push({text: 'Обновите приложение до версии ' + needVersion})
+            Bell.push({text: Lang.translate('android_update_required').replace('{version}',needVersion)})
             return false
         }
     } else return false

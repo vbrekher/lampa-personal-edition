@@ -24,6 +24,30 @@
     "TorrServer": "TorrServer"
   },
   "overrides": {
-    "settings_interface_menu_always": "Seitenmenü immer anzeigen"
+    "settings_interface_menu_always": "Seitenmenü immer anzeigen",
+    "activity_wait_refresh_title": "Warten",
+    "activity_wait_refresh_hint": "Drücke die Pfeiltaste nach unten, um diese Ansicht zu aktualisieren.",
+    "android_update_required": "Aktualisieren Sie die App auf Version {version}.",
+    "player_initialization_failed": "Der Videoplayer konnte nicht gestartet werden.",
+    "player_restore_failed": "Die Wiedergabe konnte nicht fortgesetzt werden. Öffnen Sie das Video erneut.",
+    "personal_catalog_category_3": "Wiedergabeverlauf und Synchronisierung",
+    "personal_catalog_description_3_1": "Synchronisiert den Wiedergabeverlauf mit Simkl; ein Konto muss eingerichtet werden.",
+    "personal_catalog_description_2_1": "Überspringt Vorspann, Rückblicke und Abspann, wenn Zeitmarkierungen verfügbar sind.",
+    "premium_renew_title": "CUB Premium verlängern",
+    "premium_renew_text": "Ihr CUB Premium-Abonnement ist abgelaufen. Verlängern Sie es, um die Premium-Funktionen weiter zu nutzen.",
+    "birthday_promotion_dates": "Die Aktion läuft vom {start} bis zum {end}. Details:",
+    "settings_tmdb_image_proxy": "Bild-Proxy",
+    "tmdb_proxy_description": "Proxy für TMDB-Poster und API-Anfragen.",
+    "torrent_error_browser_unavailable": "Wenn der Browser keine Verbindung herstellen kann, prüfen Sie, ob TorrServer läuft, oder starten Sie ihn neu.",
+    "activity_create_error": "Diese Ansicht konnte nicht erstellt werden:",
+    "personal_catalog_description_1_3": "Filmix-Integration für die Suche und Online-Wiedergabe.",
+    "android_only_tv": "Diese Funktion funktioniert nur auf Android TV.",
+    "birthday_promotion_intro": "Feiern Sie das dritte Jubiläum von Lampa mit Rabatten auf CUB Premium.",
+    "birthday_promotion_thanks": "Danke, dass du Teil der Lampa Gemeinschaft bist.",
+    "diagnostics_protocol": "Protokoll",
+    "diagnostics_host": "Host",
+    "diagnostics_platform": "Plattform",
+    "diagnostics_connection": "Verbindung",
+    "diagnostics_mirror": "Spiegelserver"
   }
 }

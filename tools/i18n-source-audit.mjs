@@ -23,7 +23,7 @@ export function inspectSource(source,file='<fixture>'){
   try{ast=parse(source,{sourceType:'unambiguous'});}catch(error){
     out.syntaxErrors.push({file,line:error.loc?.line,message:error.message});return out;
   }
-  const at=node=>({file,line:node.loc.start.line});
+  const at=node=>({file,line:node.loc.start.line,column:node.loc.start.column+1});
   const addRef=(key,node,kind)=>out.references.push({...at(node),key,kind});
   walk(ast,(node,parent)=>{
     if(node.type==='ObjectExpression'){
@@ -41,7 +41,8 @@ export function inspectSource(source,file='<fixture>'){
       const method=name(callee.property);
       const isLang=owner==='Lang'||(callee.object.type==='MemberExpression'&&
         name(callee.object.property)==='Lang');
-      if(isLang&&method==='translate'){
+      if(isLang&&['translate','known'].includes(method)){
+        if(method==='known'&&typeof literal(node.arguments[1])==='string')addRef(literal(node.arguments[1]),node,'dynamic-fallback');
         const value=literal(node.arguments[0]);
         if(value===null)out.dynamicCalls.push({...at(node),expression:source.slice(node.start,node.end)});
         else if(!value.includes('#{'))addRef(value,node,'translate');
@@ -50,12 +51,14 @@ export function inspectSource(source,file='<fixture>'){
         out.registrations.push({...at(node),method,expression:source.slice(node.start,node.end)});
       }
     }
+    if(node.type==='ObjectProperty'&&name(node.key)==='i18n_key'&&typeof literal(node.value)==='string')addRef(literal(node.value),node,'notice-key');
     let value=literal(node);
     // Quasis with expressions still contain translatable static text.
     if(node.type==='TemplateElement')value=node.value.cooked;
     if(typeof value!=='string')return;
     // Avoid counting an expression-free template twice.
     if(node.type==='TemplateElement'&&parent?.type==='TemplateLiteral'&&!parent.expressions.length)return;
+    if(parent?.type==='ObjectProperty'&&['title','subtitle','label','caption'].includes(name(parent.key))&&/^(?:title|menu|settings|player|extensions|filter|full|torrent|network|watch_history|developer|reactions)_[a-z0-9_]+$/.test(value))addRef(value,node,'registry-key');
     for(const match of value.matchAll(/#\{([\w-]+)\}/g))addRef(match[1],node,'template');
     // Strip markup/attributes and SVG paths so the review queue contains visible text.
     // Keep raw non-HTML literals too: notifications and generated messages live there.
@@ -64,8 +67,11 @@ export function inspectSource(source,file='<fixture>'){
       const texts=html?value.replace(/<svg[\s\S]*?<\/svg>/gi,'').split(/<[^>]*>/g):[value];
       for(const text of texts){
         const visible=text.replace(/#?\{[\w.-]+\}/g,'').replace(/&[\w#]+;/g,' ').trim();
-        if((html&&/[\p{L}]{3}/u.test(visible))||/[\u0400-\u052f]{3}/u.test(visible)||/[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(visible)){
-          out.hardcodedCandidates.push({...at(node),value:text.trim(),kind:html?'html-text':'literal'});
+        const uiProperty=parent?.type==='ObjectProperty'&&['title','label','text','placeholder','descr','description','caption','name'].includes(name(parent.key));
+        const uiSetter=parent?.type==='CallExpression'&&parent.callee?.type==='MemberExpression'&&(['text','html'].includes(name(parent.callee.property))||name(parent.callee.property)==='attr'&&['title','placeholder','aria-label'].includes(literal(parent.arguments[0])));
+        const singleUiWord=(uiProperty||uiSetter)&&/^[A-Za-z][A-Za-z -]*[.!?:…]?$/.test(visible);
+        if(singleUiWord||(html&&/[\p{L}]{3}/u.test(visible))||/[\u0400-\u052f]{3}/u.test(visible)||/[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(visible)){
+          out.hardcodedCandidates.push({...at(node),value:text.trim(),kind:html?'html-text':singleUiWord?'ui-literal':'literal'});
         }
       }
     }

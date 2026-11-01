@@ -79,12 +79,12 @@ class Vast3 {
 
         console.log('Ad3', 'run', this.preroll.name, 'from', this.preroll.name == 'plugin' ? 'plugin' : 'cub')
 
-        this.elems.status.text('Loading IMA SDK...')
+        this.elems.status.text(Lang.translate('loading') + ' · IMA SDK')
 
         IMA.loadSDK3().then(() => {
             if(this.removed) return
 
-            this.elems.status.text('Initialize...')
+            this.elems.status.text(Lang.translate('loading_progress_step_0'))
 
             try{
                 this.initialize()
@@ -160,7 +160,7 @@ class Vast3 {
 
         this.adsLoader.requestAds(request)
 
-        this.elems.status.text('Requesting...')
+        this.elems.status.text(Lang.translate('loading'))
     }
 
     /**
@@ -185,7 +185,7 @@ class Vast3 {
         this.adsManager.addEventListener(ima.AdEvent.Type.PAUSED,              ()=> { this.paused = true },  false)
         this.adsManager.addEventListener(ima.AdEvent.Type.RESUMED,             ()=> { this.paused = false }, false)
 
-        this.elems.status.text('Loaded')
+        this.elems.status.text(Lang.translate('ready'))
 
         try{
             this.adsManager.init(
@@ -225,7 +225,7 @@ class Vast3 {
         let ad       = adEvent.getAd()
         let duration = ad ? ad.getDuration() : this.skip_time
 
-        this.elems.status.text('Started: ' + (duration ? Math.round(duration) + 's' : ''))
+        this.elems.status.text(Lang.translate('settings_infuse_launch_play') + ': ' + (duration ? durationLabel(duration) : ''))
 
         stat('started', this.preroll.name)
 
@@ -250,7 +250,7 @@ class Vast3 {
         this.tiks.watch = setTimeout(() => {
             console.log('Ad3', 'error', 'watch timeout', duration)
 
-            this.elems.status.text('Watch timeout: ' + duration + 's')
+            this.elems.status.text(Lang.translate('torrent_parser_timeout') + ': ' + durationLabel(duration))
 
             this.stop()
             this.onEnd()
@@ -397,3 +397,9 @@ class Vast3 {
 }
 
 export default Vast3
+
+// Numeric duration stays readable independently of UI language.
+function durationLabel(seconds){
+    let total = Math.max(0, Math.round(seconds))
+    return Math.floor(total / 60) + ":" + ("0" + total % 60).slice(-2)
+}

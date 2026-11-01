@@ -105,7 +105,26 @@
     "termsofuse_t_12": "اگر آپ کو Lampa ایپ میں کاپی رائٹ کی خلاف ورزی نظر آئے تو ایپ کے ڈویلپرز سے رابطہ کریں۔ اس کے لیے ایپ میں دی گئی رابطہ معلومات استعمال کی جا سکتی ہیں۔ Lampa ایپ themoviedb.org کیٹلاگ کا API استعمال کرتی ہے، جو فلموں اور ٹی وی شوز کی معلومات تک کھلی رسائی دیتا ہے۔ اس کا مطلب ہے کہ ایپ میں دکھائی گئی معلومات عوامی طور پر دستیاب ہیں اور کاپی رائٹ کی خلاف ورزی نہیں کرتیں۔",
     "settings_player_subs_ass_mode": "ASS کی طرز بندی",
     "terminal_text": "آپ ٹرمینل تک رسائی کی درخواست کر رہے ہیں۔ ڈویلپرز آپ کی ڈیوائس تک رسائی حاصل کر کے اسے کنٹرول کر سکتے ہیں۔ یہ تشخیص اور مسائل حل کرنے میں مدد دے سکتا ہے، مگر سیکیورٹی کا خطرہ بھی پیدا کر سکتا ہے۔ رسائی دینے سے پہلے یقینی بنائیں کہ آپ ڈویلپرز پر اعتماد کرتے ہیں۔<br><br>آپ \"مسترد کریں\" بٹن دبا کر یہ سہولت کسی بھی وقت بند کر سکتے ہیں۔",
-    "settings_interface_menu_always": "سائیڈ مینو ہمیشہ دکھائیں"
+    "settings_interface_menu_always": "سائیڈ مینو ہمیشہ دکھائیں",
+    "activity_wait_refresh_title": "انتظار جاری ہے",
+    "activity_wait_refresh_hint": "اس اسکرین کو دوبارہ لوڈ کرنے کے لیے نیچے کے تیر کا بٹن دبائیں۔",
+    "android_update_required": "ایپ کو ورژن {version} پر اپ ڈیٹ کریں۔",
+    "player_initialization_failed": "ویڈیو پلیئر شروع نہیں ہو سکا۔",
+    "player_restore_failed": "پلے بیک بحال نہیں ہو سکا۔ ویڈیو دوبارہ کھولیں۔",
+    "personal_catalog_category_3": "دیکھنے کی تاریخ اور ہم وقت سازی",
+    "personal_catalog_description_3_1": "دیکھنے کی تاریخ Simkl کے ساتھ ہم وقت کرتا ہے؛ اکاؤنٹ ترتیب دینا ضروری ہے۔",
+    "personal_catalog_description_2_1": "وقت کی معلومات دستیاب ہوں تو تعارف، پچھلی قسط کا خلاصہ اور اختتامی ناموں کو چھوڑ دیتا ہے۔",
+    "premium_renew_title": "CUB Premium کی تجدید کریں",
+    "premium_renew_text": "آپ کی CUB Premium سبسکرپشن ختم ہو گئی ہے۔ پریمیم خصوصیات کا استعمال جاری رکھنے کے لیے اس کی تجدید کریں۔",
+    "birthday_promotion_dates": "یہ پیشکش {start} سے {end} تک جاری ہے۔ تفصیلات:",
+    "android_only_tv": "یہ خصوصیت صرف Android TV پر کام کرتی ہے۔",
+    "birthday_promotion_intro": "CUB Premium پر رعایت کے ساتھ Lampa کی تیسری سالگرہ منائیں۔",
+    "birthday_promotion_thanks": "Lampa کمیونٹی کا حصہ ہونے کے لئے آپ کا شکریہ.",
+    "diagnostics_protocol": "پروٹوکول",
+    "diagnostics_host": "ہوسٹ",
+    "diagnostics_platform": "پلیٹ فارم",
+    "diagnostics_connection": "کنکشن",
+    "diagnostics_mirror": "مرر سرور"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

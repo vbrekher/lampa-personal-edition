@@ -45,7 +45,7 @@ function init(){
                     onBack: closeModal
                 })
             }).catch((code)=>{
-                Noty.show(Lang.translate('account_export_fail' + (code && typeof code == 'number' ? '_' + code : '')))
+                Noty.show(Lang.known('account_export_fail' + (code && typeof code == 'number' ? '_' + code : ''),'account_export_fail'))
             }).finally(()=>{
                 waite = false
 

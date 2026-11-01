@@ -33,6 +33,12 @@ export function markupErrors(text){
   if(stack.length)errors.push('unclosed '+stack.join(','));
   return errors;
 }
+function tagTokens(text){
+  return [...text.matchAll(/<\s*(\/?)\s*([a-z][\w-]*)\b([^>]*)>/gi)].map(([,close,tag,attrs])=>{
+    attrs=attrs.replace(/\/\s*$/,'').trim().replace(/\s*=\s*/g,'=').replace(/'/g,'"').replace(/\s+/g,' ');
+    return '<'+close+tag.toLowerCase()+(attrs?' '+attrs:'')+'>';
+  }).sort();
+}
 export function inspectValue(value,reference=''){
   const issues=[];
   if(typeof value!=='string')return ['non-string'];
@@ -43,10 +49,13 @@ export function inspectValue(value,reference=''){
   if(/\b(?:TODO|FIXME|TRANSLATE_ME)\b/.test(value))issues.push('unfinished-marker');
   if(JSON.stringify(placeholders(value))!==JSON.stringify(placeholders(reference)))issues.push('placeholder-mismatch');
   issues.push(...markupErrors(value).map(issue=>'markup: '+issue));
+  if(JSON.stringify(tagTokens(value))!==JSON.stringify(tagTokens(reference)))issues.push('markup-token-mismatch');
+  for(const match of reference.matchAll(/\{site\}\/[a-z0-9_/-]+/gi))if(!value.includes(match[0]))issues.push('site-path-mismatch');
+  for(const match of reference.matchAll(/<code>([\s\S]*?)<\/code>/gi))if(!value.includes('<code>'+match[1]+'</code>'))issues.push('technical-code-mismatch');
   return issues;
 }
 
 export function productIssues(value,source){
-  const products=['Lampa','CUB','TMDB','TorrServer','Jackett','Prowlarr','Torlook','Rutor','Infuse','libass','MatriX','MediaStationX','Telegram','YouTube','VLC','MPV','JavaScript','Samsung','Tizen'];
+  const products=['Lampa','CUB','TMDB','TorrServer','Jackett','Prowlarr','Torlook','Rutor','Infuse','libass','MatriX','MediaStationX','Telegram','YouTube','VLC','MPV','JavaScript','Samsung','Tizen','Simkl','LG','webOS'];
   return products.filter(product=>new RegExp('\\b'+product+'\\b','i').test(source)&&!new RegExp('\\b'+product+'\\b','i').test(value));
 }

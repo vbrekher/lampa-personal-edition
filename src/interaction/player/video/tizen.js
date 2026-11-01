@@ -1,4 +1,5 @@
 import Subscribe from '../../../utils/subscribe'
+import Lang from '../../../core/lang'
 import Lifecycle, {whenRestored} from './tizen_lifecycle'
 
 function AVPlay(call_video){
@@ -11,7 +12,7 @@ function AVPlay(call_video){
     let listener = Subscribe()
     let destroyed = false
     let lifecycle = Lifecycle(webapis.avplay, document, ()=>{
-        video.error = {code:'tizen', message:'Failed to restore playback. Please reopen the video.'}
+        video.error = {code:'tizen', message:Lang.translate('player_restore_failed')}
         listener.send('error',{error:video.error})
     }, ()=>stream_url)
 
@@ -38,7 +39,7 @@ function AVPlay(call_video){
 					webapis.avplay.setDisplayMethod('PLAYER_DISPLAY_MODE_LETTER_BOX')
 				}
 				catch(e){
-					listener.send('error',{error:{code: 'tizen',message: 'failed to initialize player'}})
+					listener.send('error',{error:{code: 'tizen',message: Lang.translate('player_initialization_failed')}})
 				}
 
 				try{

@@ -47,11 +47,15 @@ jobs:
         with:
           node-version: '22'
       - name: Install upstream build dependencies
-        run: npm install --no-fund
+        run: npm ci --no-fund
       - name: Run unit and packaging tests
         run: npm run test:personal
-      - name: Report exact translation completeness (drafts are not published)
-        run: npm run i18n:report
+      - name: Require complete translations for all 21 locales
+        run: npm run i18n:strict
+      - name: Check all source candidate and dynamic-call decisions
+        run: npm run i18n:source-check
+      - name: Run upstream regression suites
+        run: npm test -- --run
       - name: Save reproducible localization evidence
         run: node tools/i18n-evidence.mjs
       - name: Upload localization review queues

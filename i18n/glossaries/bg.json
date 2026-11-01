@@ -41,7 +41,26 @@
     "settings_param_subtitles_source_legacy": "Вграден (остарял метод)",
     "settings_interface_menu_always": "Винаги показвай страничното меню",
     "torent_nohash_do_four": "Пишете в нашата група Telegram:",
-    "settings_param_torrent_lang_ru": "Руски"
+    "settings_param_torrent_lang_ru": "Руски",
+    "activity_wait_refresh_title": "Изчакване",
+    "activity_wait_refresh_hint": "Натиснете стрелката надолу, за да обновите този екран.",
+    "android_update_required": "Актуализирайте приложението до версия {version}.",
+    "player_initialization_failed": "Видеоплейърът не може да се стартира.",
+    "player_restore_failed": "Възпроизвеждането не може да се възстанови. Отворете видеото отново.",
+    "personal_catalog_category_3": "История на гледане и синхронизация",
+    "personal_catalog_description_3_1": "Синхронизира историята на гледане със Simkl; изисква настройване на акаунт.",
+    "personal_catalog_description_2_1": "Пропуска началните заставки, резюметата и финалните надписи при налични времеви маркери.",
+    "premium_renew_title": "Подновяване на CUB Premium",
+    "premium_renew_text": "Абонаментът ви за CUB Premium изтече. Подновете го, за да продължите да използвате премиум функциите.",
+    "birthday_promotion_dates": "Промоцията е от {start} до {end}. Подробности:",
+    "android_only_tv": "Тази функция работи само на Android TV.",
+    "birthday_promotion_intro": "Отпразнувайте третата годишнина на Lampa с отстъпки на CUB Premium.",
+    "birthday_promotion_thanks": "Благодаря, че си част от общността Lampa.",
+    "diagnostics_protocol": "Протокол",
+    "diagnostics_host": "Хост",
+    "diagnostics_platform": "Платформа",
+    "diagnostics_connection": "Връзка",
+    "diagnostics_mirror": "Огледален сървър"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

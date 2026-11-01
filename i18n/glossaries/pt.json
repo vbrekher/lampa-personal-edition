@@ -49,7 +49,27 @@
     "player_size_s130_title": "Ampliação 130%",
     "extensions_price_shareware": "Grátis com recursos pagos",
     "filter_lang_hi": "Híndi",
-    "filter_lang_ps": "Pastó"
+    "filter_lang_ps": "Pastó",
+    "activity_wait_refresh_title": "Aguardando",
+    "activity_wait_refresh_hint": "Pressione a seta para baixo para atualizar esta tela.",
+    "android_update_required": "Atualize o aplicativo para a versão {version}.",
+    "player_initialization_failed": "Não foi possível iniciar o reprodutor de vídeo.",
+    "player_restore_failed": "Não foi possível retomar a reprodução. Abra o vídeo novamente.",
+    "personal_catalog_category_3": "Histórico de exibição e sincronização",
+    "personal_catalog_description_3_1": "Sincroniza o histórico de exibição com Simkl; requer a configuração de uma conta.",
+    "personal_catalog_description_2_1": "Pula aberturas, resumos e créditos quando há marcações de tempo disponíveis.",
+    "premium_renew_title": "Renovar CUB Premium",
+    "premium_renew_text": "Sua assinatura CUB Premium expirou. Renove-a para continuar usando os recursos premium.",
+    "birthday_promotion_dates": "A promoção vai de {start} a {end}. Detalhes:",
+    "android_only_tv": "Este recurso funciona apenas no Android TV.",
+    "birthday_promotion_intro": "Celebrem o terceiro aniversário do Lampa com descontos no CUB Premium.",
+    "birthday_promotion_thanks": "Obrigado por fazer parte da comunidade Lampa.",
+    "iptv_about_text": "Assista a canais de TV, filmes e esportes com o aplicativo IPTV. Salve seus canais favoritos para acesso rápido e assista no seu dispositivo quando quiser.",
+    "diagnostics_protocol": "Protocolo",
+    "diagnostics_host": "Servidor",
+    "diagnostics_platform": "Plataforma",
+    "diagnostics_connection": "Conexão",
+    "diagnostics_mirror": "Servidor espelho"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

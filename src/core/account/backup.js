@@ -100,7 +100,7 @@ function publish(callback){
 
                     console.log('Backup', 'network error', Lampa.Network.errorDecode(e,x))
 
-                    Noty.show(Lang.translate('account_export_fail_' + (Lampa.Network.errorJSON(e).code || 500)))
+                    Noty.show(Lang.known('account_export_fail_' + (Lampa.Network.errorJSON(e).code || 500),'account_export_fail'))
                 }
             })
         }

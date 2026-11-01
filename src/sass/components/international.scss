@@ -159,3 +159,5 @@ html[dir='rtl'] .full-start-new__rate-line > * { margin-right: 0 !important; mar
 html[lang='zh'] body, .lang__selector-item[lang='zh'], .lang__body[lang='zh'] {
     font-family: 'Noto CJK', 'SegoeUI', sans-serif;
 }
+code { direction: ltr; unicode-bidi: embed; unicode-bidi: isolate; display: inline-block; }
+pre { direction: ltr; unicode-bidi: embed; unicode-bidi: isolate; text-align: left; }

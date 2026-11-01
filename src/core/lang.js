@@ -11,23 +11,6 @@ import en from '../lang/en'
 let langs = {}
 let keys  = {}
 
-const startup = {
-    nl: ['Voorbereiding', 'Talen laden'],
-    de: ['Vorbereitung', 'Sprachen werden geladen'],
-    tr: ['Hazırlanıyor', 'Diller yükleniyor'],
-    uk: ['Підготовка', 'Завантаження мов'],
-    be: ['Падрыхтоўка', 'Загрузка моў'],
-    zh: ['准备', '加载语言'],
-    pt: ['Preparação', 'Carregando idiomas'],
-    bg: ['Подготовка', 'Зареждане на езици'],
-    he: ['הכנה', 'טעינת שפות'],
-    cs: ['Příprava', 'Načítání jazyků'],
-    ro: ['Inițializare', 'Încărcare limbi'],
-    fr: ['Préparation', 'Chargement des langues'],
-    pl: ['Przygotowanie', 'Ładowanie języków'],
-    es: ['Preparación', 'Cargando idiomas']
-}
-
 let lang_default = 'ru'
 
 Object.defineProperty(langs, 'ru', { get: ()=> ru })
@@ -69,14 +52,20 @@ function translate(name, custom_code){
         })
     }
     else{
-        let step = name === 'loading_progress_step_0' ? 0 : name === 'loading_progress_step_1' ? 1 : null
-        result = langs[code][name] || (step !== null ? startup[code]?.[step] : null) || langs[fallback][name] || langs[lang_default][name] || name
+        result = langs[code][name] || langs[fallback][name] || langs[lang_default][name] || name
     }
 
     result = result.replace(/{site}/g, Manifest.cub_site)
     result = result.replace(/{mirror}/g, Utils.protocol() + Manifest.cub_domain)
 
     return result
+}
+
+/** Translate an owned dynamic key without exposing an unknown identifier to the UI. */
+function known(name, fallback = 'network_error'){
+    const code = Storage.get('language','ru')
+    const exists = [langs[code],langs.en,langs.ru].some(table=>table && typeof table[name] === 'string')
+    return translate(exists ? name : fallback)
 }
 
 /**
@@ -131,6 +120,7 @@ function selected(check_codes){
 
 export default {
     translate,
+    known,
     add,
     codes,
     addCodes,

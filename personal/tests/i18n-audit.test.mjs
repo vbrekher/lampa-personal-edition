@@ -76,7 +76,7 @@ test('visible startup status is translated while original diagnostics remain ava
     .replace('export default {','globalThis.progress = {');
   const visible=[],logs=[];
   const view={find:()=>({text:value=>visible.push(value)}),remove(){}};
-  const context={Lang:{translate:key=>key==='loading'?'Bezig met laden':'Voorbereiding'},$:()=>view,console:{log:(...args)=>logs.push(args)},globalThis:null};
+  const context={Lang:{translate:key=>key==='loading'?'Bezig met laden':'Voorbereiding',known:key=>key==='loading'?'Bezig met laden':'Voorbereiding'},$:()=>view,console:{log:(...args)=>logs.push(args)},globalThis:null};
   context.globalThis=context;context.$=Object.assign(context.$,{});
   context.$=selector=>selector==='body'?{append(){}}:view;
   vm.runInNewContext(source,context);
@@ -99,4 +99,25 @@ test('integrated locales use reviewed glossary terms and every override targets 
     for(const [key,value] of Object.entries(glossary.overrides||{}))assert.equal(lang[key]?.normalize('NFC'),value.normalize('NFC'),code+' '+key);
     for(const [key,term] of [['title_settings','settings'],['settings_player_subs','subtitles'],['title_history','watchHistory'],['settings_main_player','player']])assert.equal(lang[key],glossary.terms[term],code+' '+key);
   }
+});
+
+
+test('balanced but changed markup, translated URL paths and modified technical examples fail validation',()=>{
+ assert.ok(inspectValue('<b>Bonjour</b>','<b>Hello</b><br>').includes('markup-token-mismatch'));
+ assert.ok(inspectValue('{site}/activer','{site}/activate').includes('site-path-mismatch'));
+ assert.ok(inspectValue('<code>192.168</code>','<code>192.168.0.100:8090</code>').includes('technical-code-mismatch'));
+ assert.deepEqual(inspectValue('<span class="site">{site}/activate</span>','<span class="site">{site}/activate</span>'),[]);
+});
+
+
+test('owned dynamic keys fall back to native messages while external text remains verbatim',async()=>{
+ const {readFileSync}=await import('node:fs');const vm=await import('node:vm');
+ let source=readFileSync(new URL('../../src/core/lang.js',import.meta.url),'utf8').replace(/^import .*$/gm,'').replace('export default {','globalThis.api = {');
+ const context={Storage:{get:()=> 'nl'},Direction:{isRTL:()=>false},Arrays:{clone:v=>({...v})},Manifest:{cub_site:'example.invalid',cub_domain:'example.invalid'},Utils:{protocol:()=> 'https://'},meta:{languages:{nl:{name:'Nederlands'}}},ru:{network_error:'Ошибка сети'},en:{network_error:'Network error',player_unknown:'Unknown',tv_status_released:'Released'},window:{lampa_personal_mode:true}};
+ vm.runInNewContext(source,context);
+ context.api.AddTranslation('nl',{network_error:'Netwerkfout',player_unknown:'Onbekend',tv_status_released:'Uitgebracht'});
+ assert.equal(context.api.known('tv_status_released','player_unknown'),'Uitgebracht');
+ assert.equal(context.api.known('tv_status_new_external_status','player_unknown'),'Onbekend');
+ assert.equal(context.api.known('account_export_fail_999'),'Netwerkfout');
+ assert.equal(context.api.translate('BBC News'),'BBC News');
 });
