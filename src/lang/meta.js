@@ -1,5 +1,14 @@
 export default {
     languages: {
+        ar: {
+            code: 'ar',
+            name: "العربية",
+            loading: "جارٍ التحميل",
+            preparing: "التحضير",
+            loading_languages: "لغات التحميل",
+            lang_choice_title: "مرحبًا",
+            lang_choice_subtitle: "اختر لغتك",
+        },
         id: {
             code: 'id',
             name: "Bahasa Indonesia",

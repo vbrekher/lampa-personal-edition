@@ -84,7 +84,20 @@
     "torrent_error_text": "تعذر الاتصال بـ TorrServer. افحص الأسباب المحتملة التالية واحدًا تلو الآخر.",
     "torent_nohash_do_one": "تأكد من صحة إعدادات Jackett.",
     "torent_nohash_do_three": "تأكد من أن Jackett يستطيع تنزيل الملف أيضًا.",
-    "torent_nohash_do_four": "اكتب في مجموعة Telegram الخاصة بنا:"
+    "torent_nohash_do_four": "اكتب في مجموعة Telegram الخاصة بنا:",
+    "full_editing": "المونتاج",
+    "full_creator": "مبتكر العمل",
+    "torrent_item_bitrate": "معدل البت",
+    "settings_player_timecode": "موضع التشغيل",
+    "fav_sync_text": "احتفظ بإشاراتك المرجعية على جميع أجهزتك. فعّل المزامنة للوصول إليها من أي جهاز.<br><br>سجّل في الموقع {site}، ثم أنشئ ملفًا شخصيًا وسجّل الدخول إلى التطبيق.",
+    "account_create": "يتيح حساب CUB مزيدًا من الميزات. سجّل في <span class=\"account-modal__site\">{site}</span> لمزامنة الإشارات المرجعية ومواضع التشغيل واستخدام ميزات الحساب الأخرى.",
+    "account_premium": "استفد من حدود أعلى وميزات إضافية مع حساب CUB Premium. زر <span class=\"account-modal__site\">{site}/premium</span> لمعرفة المزيد عن مزايا الحساب.",
+    "account_limited": "لقد وصلت إلى الحد الأقصى. ارفع الحد باستخدام حساب CUB Premium. تعرّف على المزيد في <span class=\"account-modal__site\">{site}/premium</span>",
+    "torrent_parser_torlook_fallback_search_notification": "محلل Jackett غير متاح أو إعدادات الاتصال غير صحيحة. جارٍ البحث عبر Torlook...",
+    "https_text": "أنت تستخدم HTTPS. إذا لم يعمل Lampa بصورة صحيحة مع هذا البروتوكول، فاستخدم عنوانًا ببروتوكول HTTP.",
+    "inner_player_disclaimer_text": "أفهم أنني أشغّل مشغّلًا بدعم غير مكتمل وأن ذلك قد يسبب سلوكًا غير معتاد على الجهاز. يوصى باستخدام مشغّلات عائلة tvOS أو بدائل أخرى.",
+    "player_ai_agent_info": "هل تريد معرفة المزيد عن هذا الفيديو؟ اسأل مساعد الذكاء الاصطناعي ليعرض مخططًا للمزاج وملخصًا قصيرًا للحبكة وأبرز الأحداث.",
+    "install_extension_rule_5": "إذا ساورك شك بشأن أمان الإضافة أو قانونيتها، فمن الأفضل الامتناع عن تثبيتها."
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

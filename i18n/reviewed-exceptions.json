@@ -1828,5 +1828,35 @@
       "value": "TorrServer",
       "reason": "Reviewed TorrServer product name; Latin spelling is intentional."
     }
+  },
+  "ar": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    }
   }
 }

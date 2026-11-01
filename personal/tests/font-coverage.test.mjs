@@ -42,11 +42,12 @@ function hasGlyph(cmap,code){
   }
   return false;
 }
-for(const [code,family,first,last] of [['hi','NotoSansDevanagari',0x900,0x97f],['bn','NotoSansBengali',0x980,0x9ff],['ar','NotoNaskhArabic',0x600,0x6ff],['ur','NotoNaskhArabic',0x600,0x6ff],['he','NotoSansHebrew',0x590,0x5ff]]){
+for(const [code,family,first,last] of [['hi','NotoSansDevanagari',0x900,0x97f],['bn','NotoSansBengali',0x980,0x9ff],['ar','NotoNaskhArabic',0x600,0x8ff],['ur','NotoNaskhArabic',0x600,0x8ff],['he','NotoSansHebrew',0x590,0x5ff]]){
   test(code+' bundled font covers every translated script character and retains shaping tables',()=>{
     const tables=woffTables('public/fonts/noto/'+family+'-Regular.woff');
     for(const tag of ['cmap','GSUB','GPOS','GDEF'])assert.ok(tables.has(tag),tag);
-    const characters=new Set(Object.values(readLanguage(code)).join(''));
+    const keyboard=['ar','ur'].includes(code)?readFileSync(new URL('src/interaction/keyboard/layers.js',root),'utf8'):'';
+    const characters=new Set(Object.values(readLanguage(code)).join('')+keyboard);
     for(const character of characters){
       const point=character.codePointAt(0);
       if(point>=first&&point<=last)assert.ok(hasGlyph(tables.get('cmap'),point),code+' missing U+'+point.toString(16));

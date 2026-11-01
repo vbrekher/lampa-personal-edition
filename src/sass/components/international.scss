@@ -124,3 +124,12 @@ html[dir='rtl'] {
     .card__marker > img { margin-right: 0; margin-left: 0.4em; }
     .card__textbox-episode, .card__status-voice { margin-left: 0; margin-right: auto; }
 }
+html[dir='rtl'] {
+    .selectbox__content { left: auto; right: 100%; }
+    body.selectbox--open .selectbox__content { transform: translate3d(100%,0,0); }
+    .head__time { direction: ltr; unicode-bidi: isolate; }
+    @media screen and (max-width: $media_xm) {
+        .selectbox__content { left: 0; right: 0; transform: translate3d(0,100%,0); }
+        body.selectbox--open .selectbox__content { transform: translate3d(0,0,0); }
+    }
+}

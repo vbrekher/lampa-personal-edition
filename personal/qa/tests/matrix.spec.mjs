@@ -22,6 +22,7 @@ for(const locale of locales)for(const [scene,selector]of Object.entries(screens)
    const labels=Array.from(document.querySelectorAll('.settings-param__name,.settings-param__descr,.settings-folder__name,.modal__button,.simple-button,.full-start__button')).filter(shown);
    return {viewport:[innerWidth,innerHeight],overflow:labels.filter(e=>e.scrollWidth>e.clientWidth+2).map(e=>e.textContent),unresolved:(document.body.innerText.match(/#\{[^}]+\}/g)||[]),text:document.body.innerText,fonts:Array.from(document.fonts).filter(f=>/Noto/.test(f.family)).map(f=>({family:f.family,status:f.status})),technical:Array.from(document.querySelectorAll('bdi.technical-ltr')).filter(shown).map(e=>({text:e.textContent,dir:getComputedStyle(e).direction}))};
   });
+  await info.attach('assertions',{body:JSON.stringify(audit,null,2),contentType:'application/json'});
   expect(audit.viewport).toEqual([width,height]);expect(audit.overflow).toEqual([]);expect(audit.unresolved).toEqual([]);expect(errors).toEqual([]);
   if(['hi','bn','ar','ur','he'].includes(locale))expect(audit.fonts.some(f=>f.status==='loaded')).toBeTruthy();
   if(expectedDir==='rtl')expect(audit.technical.every(e=>e.dir==='ltr')).toBeTruthy();
@@ -31,6 +32,5 @@ for(const locale of locales)for(const [scene,selector]of Object.entries(screens)
   const path=`reports/ui-screenshots/${locale}-${scene}-${width}x${height}.png`;
   await page.screenshot({path,animations:'disabled'});
   await info.attach('screenshot',{path,contentType:'image/png'});
-  await info.attach('assertions',{body:JSON.stringify(audit,null,2),contentType:'application/json'});
  });
 }

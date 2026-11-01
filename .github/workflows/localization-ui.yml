@@ -28,7 +28,7 @@ jobs:
       - run: npm run build:personal -- --language en --plugins off
       - run: npx playwright test --config personal/qa/playwright.config.mjs
         env:
-          QA_LOCALES: ${{ inputs.locales || 'nl,he' }}
+          QA_LOCALES: ${{ inputs.locales || 'nl,he,ar,hi,bn,id' }}
           QA_BROWSER: ${{ inputs.browser || 'chromium' }}
       - uses: actions/upload-artifact@v4
         if: always()
