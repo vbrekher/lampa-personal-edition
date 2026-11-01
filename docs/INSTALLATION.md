@@ -1,77 +1,59 @@
-# Install Lampa Personal Edition
+# Install your Samsung TV app
 
-This is the detailed setup for a locally compiled Samsung Tizen WGT.
+Build on your computer, then install the WGT separately. The Builder does not sign the package or install it on your TV automatically. This independent project has no Samsung hardware certification.
 
-**Status:** preview. Real Samsung installation and playback are not yet certified.
+## Before you start
 
-## Requirements
+- A Samsung Tizen TV compatible with your installation tooling; the package targets TV profile 5.0+.
+- The TV and computer on the same trusted network.
+- Developer Mode and an appropriate signing/re-signing setup.
+- Your locally generated `Lampa-Personal-Edition.wgt`.
 
-You need macOS or Linux, Node.js 22+, npm, zip, unzip, and a Samsung Tizen TV with Developer Mode. First installation of npm dependencies requires internet.
+## 1. Prepare the device
 
-## Step 1 — prepare the TV
+On supported Samsung models, open Apps, find Settings, enter `12345` with the remote and enable Developer Mode. Enter your **computer's IP address**, not your TorrServer address, and restart the TV when instructed. Menus vary by model; follow [Samsung's official device guide](https://developer.samsung.com/smarttv/develop/getting-started/using-sdk/tv-device.html).
 
-1. On the Samsung TV open **Apps → Settings**.
-2. Use the remote to enter **12345** to open Developer Mode.
-3. Enable Developer Mode and enter your **computer's IP address**, not your TorrServer's address.
-4. Restart the TV and keep the computer and TV on the same LAN.
+## 2. Build locally
 
-Follow [Samsung's official developer-mode guide](https://developer.samsung.com/smarttv/develop/getting-started/using-sdk/tv-device.html) if the menu differs on your model.
-
-## Step 2 — build on your computer
-
-~~~bash
+```bash
 git clone https://github.com/vbrekher/lampa-personal-edition.git
 cd lampa-personal-edition
-npm install
-npm run test:personal
-npm run build:personal
-~~~
+npm ci
+npm run builder
+```
 
-The terminal prompts are in English by default. Choose the Lampa TV interface language, optional TorrServer URL, and whether to allow third-party plugins (default: no). To use translated terminal prompts, run `npm run build:personal -- --builder-language ru` for Russian or `npm run build:personal -- --builder-language nl` for Dutch; these commands remain interactive. The Dutch builder defaults the TV interface to English because upstream Lampa has no Dutch TV language. The URL should include `http://` or `https://`, with no username/password, tokens or query parameters.
+Choose a language, optionally enter TorrServer, review parser/plugin preferences and compile. The wizard downloads the result and shows its SHA-256. The file also remains in `dist/Lampa-Personal-Edition.wgt`.
 
-To build without questions:
+Every package includes all 21 interface languages. You can leave TorrServer unconfigured and add it on the TV later. For command-line use:
 
-~~~bash
+```bash
 npm run build:personal -- --language en --plugins off
-~~~
+```
 
-The output is `dist/Lampa-Personal-Edition.wgt`. The source tree is unchanged: the build happens inside a temporary directory.
-
-## Step 3 — install through Apps2Samsung
+## 3. Install through Apps2Samsung
 
 1. Open [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases).
-2. Select your Samsung TV or enter its IP.
-3. Choose **Custom WGT** and select the file from `dist/`.
-4. Follow certificate or re-signing prompts if Apps2Samsung requests them.
+2. Select your Samsung device or enter its IP address.
+3. Choose **Custom WGT** and select your local file.
+4. Follow its certificate, signing or re-signing prompts. An unsigned WGT alone does not bypass device signing requirements.
 5. Launch **Lampa Personal Edition** from Samsung Apps.
 
-This personal app uses ID `L4mpaPers0.LampaPersonal` and is separate from upstream Lampa.
+The app ID `L4mpaPers0.LampaPersonal` is separate from upstream Lampa. Apps2Samsung is an independent project; consult its current instructions if its interface changes.
 
-## Step 4 — check the app
+## 4. Check your setup
 
-Verify the home screen, navigation, catalogue data, and any self-hosted TorrServer connection. Test an actual media stream separately. If it fails, capture a **redacted** error without including authenticated URLs.
+Confirm the initial language, home screen, navigation and editable settings. Configure your own services if needed. Test an authorized media source separately, including actual audio/subtitle/codec behaviour. Browser tests cannot establish firmware-specific AVPlay compatibility.
 
-## Updating
+## Update
 
-~~~bash
-cd lampa-personal-edition
+From the existing checkout:
+
+```bash
 git pull --ff-only
-npm install
-npm run build:personal
-~~~
+npm ci
+npm run builder
+```
 
-Then reinstall the generated WGT. Do not upload it to GitHub.
+Build and reinstall the new WGT. Per-setting seeding preserves ordinary TV-side edits; a changed corresponding builder default applies that managed setting. Existing metadata preferences remain independent. Recheck your device's signing/update requirements.
 
-## About Windows
-
-The build process uses Node.js and Unix CLI tools. Windows + WSL2 may work but is **not verified**. A native Windows builder is not yet supported.
-
-## Important boundaries
-
-- This WGT does not contain TorrServer or movies.
-- Compiling assets locally does not mean the app runs offline; upstream Lampa still contacts external services.
-- No CUB account or TV password is embedded.
-- Enabling plugins allows remote plugin JavaScript.
-- The Personal Edition build has not yet passed on-device certification.
-
-See [Troubleshooting](TROUBLESHOOTING.md) and [Security](../SECURITY.md).
+Do not upload your personal WGT or authenticated media addresses. See [Compatibility](COMPATIBILITY.md) and [Troubleshooting](TROUBLESHOOTING.md).

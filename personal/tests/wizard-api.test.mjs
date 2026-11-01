@@ -12,6 +12,7 @@ test('loopback API enforces origin, token, body shape, consent and file boundari
   for(const path of ['/../package.json','/%2e%2e/package.json','/api/file?path=/etc/passwd','/.git/config','/engine.mjs','/api/download?id=anything'])assert.equal((await fetch(app.url+path,{headers})).status,404);
   for(const torrserverUrl of ['https://name:password@host','https://host/?token=secret','file:///etc/passwd','http://host/a b'])assert.equal((await fetch(app.url+'/api/validate',{method:'POST',headers,body:JSON.stringify({language:'en',torrserverUrl})})).status,400);
   for(const torrserverUrl of ['','http://192.168.1.100:8090','https://host.example/path']){const x=await fetch(app.url+'/api/validate',{method:'POST',headers,body:JSON.stringify({language:'en',torrserverUrl})});assert.equal(x.status,200);}
+  const log=await(await fetch(app.url+'/api/log',{headers})).json();assert.ok(!log.log.includes('secret')&&!log.log.includes('password'));
   assert.equal((await fetch(app.url+'/api/build',{method:'POST',headers,body:JSON.stringify({language:'en',pluginsEnabled:true})})).status,400);
   assert.equal((await fetch(app.url+'/api/build',{method:'POST',headers,body:JSON.stringify({command:'cat /etc/passwd'})})).status,400);
   assert.equal((await fetch(app.url+'/api/build',{method:'POST',headers:{...headers,'Content-Type':'text/plain'},body:'{}'})).status,405);

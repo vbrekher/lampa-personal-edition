@@ -1,0 +1,6 @@
+// Static preview only. Never starts or exposes the compiler API.
+import{createServer}from'node:http';import{readFileSync,readdirSync,statSync,realpathSync}from'node:fs';import{resolve,join,extname}from'node:path';import{fileURLToPath}from'node:url';
+const root=fileURLToPath(new URL('../site',import.meta.url)),files=new Map();
+function walk(dir,prefix=''){for(const name of readdirSync(dir)){const p=join(dir,name);if(!realpathSync(p).startsWith(root+'/'))continue;if(statSync(p).isDirectory())walk(p,prefix+name+'/');else files.set('/'+prefix+name,p);}}walk(root);
+const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.woff':'font/woff'};
+createServer((req,res)=>{let path;try{path=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);if(path.endsWith('/'))path+='index.html';}catch{res.writeHead(400);return res.end();}const file=files.get(path);if(req.method!=='GET'||!file){res.writeHead(404);return res.end('Not found');}res.writeHead(200,{'Content-Type':types[extname(file)]||'text/plain','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(readFileSync(file));}).listen(8893,'127.0.0.1',()=>console.log('Product page preview: http://127.0.0.1:8893'));

@@ -1,49 +1,53 @@
 # Frequently asked questions
 
-### Do I need to host Lampa myself?
+## Do I need to host Lampa?
 
-**No.** Lampa's application code is packaged in your own WGT. The app still uses external services for catalogue/metadata and optional playback sources.
+No. The WGT packages the compiled application and local assets. Your optional TorrServer/parser service runs separately.
 
-### Do I need a TorrServer?
+## Does the website build my WGT?
 
-No. Leave the URL empty to create a Lampa catalogue build. If you want TorrServer functionality, run TorrServer separately on a machine reachable by the TV and enter its URL at build time.
+No. The product website is static. Its interactive preview demonstrates the wizard without a compiler or API. Run `npm run builder` locally for a real build.
 
-### Can I install it alongside the original Lampa?
+## Can I build without TorrServer?
 
-The personal WGT declares a different Tizen app ID: `L4mpaPers0.LampaPersonal`. The installation is intended not to overwrite the original application.
+Yes. Choose the no-server option. An empty address is supported. Add or change it later in the TV app if needed.
 
-### Can I install a prebuilt WGT from GitHub Releases?
+## Are all 21 languages included?
 
-There are no preconfigured user binaries. Clone the source and build your own. Generated WGT files are not distributed by the maintainer.
+Yes. The initial language selection does not remove the others. Arabic, Urdu and Hebrew retain RTL. The Builder itself has complete English, Russian and Dutch interfaces.
 
-### Does the WGT contain my password?
+## Does the Builder install plugins?
 
-The current builder **does not ask for or embed account passwords**. It does embed the optional TorrServer URL and selected settings, in readable form. Never include credentials in the URL.
+No. It sets a runtime preference. Third-party JavaScript is disabled by default and needs acknowledgement when enabled. Each new installation on the TV retains its confirmation. Catalogue metadata does not guarantee a provider's availability.
 
-### Why are plugins disabled?
+## Does building install the app on my Samsung?
 
-Plugins can load remote JavaScript that may change app behavior, access settings or contact third-party services. This project disables them by default; `--plugins on` enables the original Lampa plugin capability but not the upstream plugin store.
+No. Download the unsigned WGT, then install it separately using your signing setup or Apps2Samsung. [Installation Guide](INSTALLATION.md).
 
-### Can I use a server on Bunny?
+## Is this certified or official?
 
-Yes, as long as the service is reachable with a valid HTTP(S) URL and is compatible with Lampa's TorrServer connection. **Bunny is never required**.
+No. This independent community fork is not endorsed by Samsung, Apps2Samsung or the original Lampa maintainers. Physical hardware certification has not been performed.
 
-### What about Media Station X?
+## Can I keep my old Lampa?
 
-This package creates a direct Tizen WGT for Lampa, not a Media Station X portal. It doesn't install or modify the Media Station X application.
+The Personal Edition uses a separate Tizen application ID and can coexist with upstream Lampa, subject to your device's installation/signing behaviour.
 
-### Does this automatically start a torrent server on my TV?
+## Can I use the CLI?
 
-No. A WGT web application is not a replacement for TorrServer's engine. Host your own server separately.
+Yes. `npm run build:personal` and its existing flags remain. The CLI and wizard use one engine, normalizer, lock and packager.
 
-### Is the TV model verified?
+## Where do my settings go?
 
-No actual Samsung Tizen installation/playback acceptance has yet been recorded for this fork. The CI smoke test verifies source compilation and ZIP structure, not TV playback. See [Compatibility](COMPATIBILITY.md).
+Into the current browser tab, the running local process and your local WGT. There is no configuration upload, account or telemetry. The installed TV app can contact services/providers you choose. Do not share a personal WGT.
 
-### Can I build on Windows?
+## Can I set a separate metadata language in the wizard?
 
-Windows Subsystem for Linux 2 might work with the required tools, but it is not verified as a supported build platform.
+The existing safe mechanism seeds metadata from the initial interface language on a new installation and preserves existing TV metadata preferences. Change metadata/search/audio/subtitle languages independently in TV Settings. The wizard explains this instead of presenting an unsupported toggle.
 
-### Is Lampa Personal Edition the official Lampa?
+## What if I cancel or compilation fails?
 
-No. It is an independent GPL-source fork with its own personal builder. Original Lampa is [yumata/lampa-source](https://github.com/yumata/lampa-source).
+Temporary files are cleaned and the prior successful WGT is preserved. Return to review and retry. Graceful server shutdown also cancels active work; an uncatchable process kill cannot guarantee cleanup.
+
+## How do I improve a translation?
+
+Use [Improve a Translation](LOCALIZATION_GUIDE.md). A few wording changes need focused checks, not another full audit of all 21 languages.

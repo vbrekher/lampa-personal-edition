@@ -16,7 +16,9 @@
     "i18n:source-check": "node tools/i18n-source-review.mjs",
     "builder": "node personal/server.mjs",
     "site:prepare": "node tools/prepare-product-site.mjs",
-    "test:builder": "playwright test --config personal/wizard-tests/playwright.config.mjs"
+    "test:builder": "playwright test --config personal/wizard-tests/playwright.config.mjs",
+    "site:preview": "node tools/preview-product-site.mjs",
+    "site:check": "node tools/check-product-links.mjs"
   },
   "author": "unk",
   "license": "ISC",

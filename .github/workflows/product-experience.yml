@@ -1,7 +1,7 @@
 name: Product experience and local Builder
 on:
   pull_request:
-    paths: ['personal/**', 'site/**', 'tools/prepare-product-site.mjs', 'package*.json', '.github/workflows/product-experience.yml']
+    paths: ['personal/**', 'site/**', 'tools/*product*.mjs', 'package*.json', '.github/workflows/product-experience.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +19,7 @@ jobs:
         with: {node-version: '22', cache: npm}
       - run: npm ci --no-fund
       - run: npm run site:prepare
+      - run: npm run site:check
       - run: npm run test:personal
       - run: npx playwright install --with-deps chromium
       - run: npm run build:personal -- --language nl --plugins off
@@ -30,6 +31,5 @@ jobs:
           path: |
             reports/builder-e2e.json
             reports/builder-screenshots/
-            reports/builder-e2e-results/
           retention-days: 7
       # dist/ and .personal-build/ are intentionally never uploaded.

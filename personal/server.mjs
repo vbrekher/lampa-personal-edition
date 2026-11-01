@@ -13,20 +13,20 @@ export async function startBuilder({port=0,root=ROOT,build=buildPersonal,openBro
   const files=new Map();
   const add=(dir,prefix)=>{if(!existsSync(dir))return;for(const name of readdirSync(dir)){const p=join(dir,name);if(!realpathSync(p).startsWith(realpathSync(dir)+'/'))continue;if(statSync(p).isDirectory())add(p,prefix+name+'/');else files.set(prefix+name,p);}};
   add(join(ROOT,'personal/web'),'/');add(join(ROOT,'site/assets'),'/assets/');files.set('/',join(ROOT,'personal/web/index.html'));files.set('/brand.css',join(ROOT,'site/brand.css'));
-  const secure=(a,b)=>typeof a==='string'&&a.length===b.length&&timingSafeEqual(Buffer.from(a),Buffer.from(b));
+  const secure=(a,b)=>typeof a==='string'&&/^[a-f0-9]{64}$/.test(a)&&a.length===b.length&&timingSafeEqual(Buffer.from(a),Buffer.from(b));
   const server=createServer(async(req,res)=>{
-    const origin=`http://127.0.0.1:${server.address().port}`;
+    const origin=`http://127.0.0.1:${server.address().port}`,cookieName='lampa_builder_'+server.address().port;
     const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"};
     const json=(status,data)=>{res.writeHead(status,{...headers,'Content-Type':'application/json'});res.end(JSON.stringify(data));};
     try {
       if(req.headers.host!==`127.0.0.1:${server.address().port}`||req.headers.origin&&req.headers.origin!==origin||req.headers['sec-fetch-site']==='cross-site')return json(403,{code:'REQUEST_FORBIDDEN'});
       const url=new URL(req.url,origin),path=url.pathname;
       if(path==='/api/session'&&req.method==='GET'){
-        res.setHeader('Set-Cookie',`lampa_builder=${token}; HttpOnly; SameSite=Strict; Path=/`);
+        res.setHeader('Set-Cookie',`${cookieName}=${token}; HttpOnly; SameSite=Strict; Path=/`);
         return json(200,{token,languages:LANGUAGES,appId:ID.app,version:ID.version,requirements:requirements(root)});
       }
       if(path.startsWith('/api/')){
-        const cookie=req.headers.cookie?.split(';').map(x=>x.trim()).includes('lampa_builder='+token);
+        const cookie=req.headers.cookie?.split(';').map(x=>x.trim()).includes(cookieName+'='+token);
         if(!cookie||path!=='/api/download'&&!secure(req.headers['x-builder-token'],token))return json(403,{code:'REQUEST_FORBIDDEN'});
         if(req.method==='GET'&&path==='/api/state')return json(200,job||{status:'idle'});
         if(req.method==='GET'&&path==='/api/log')return json(200,{log:job?.log||''});

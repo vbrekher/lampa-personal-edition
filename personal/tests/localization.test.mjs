@@ -55,8 +55,8 @@ test('Dutch documentation is Dutch, Russian documentation is Russian',()=>{
     'Russian guide contains mixed-language navigation');
 });
 
-test('quick-start questions are exact copies of the selected builder messages',()=>{
-  const docs={en:read('README.md'),ru:read('docs/README.ru.md'),nl:read('docs/README.nl.md')};
+test('documented terminal questions are exact copies of the selected builder messages',()=>{
+  const docs={en:read('docs/BUILDER_GUIDE.md'),ru:read('docs/README.ru.md'),nl:read('docs/README.nl.md')};
   for(const lang of BUILDER_LANGUAGES){
     const defaults=defaultAppLanguage(lang);
     const prompt=strings(lang);

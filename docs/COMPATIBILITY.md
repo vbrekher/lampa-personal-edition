@@ -1,37 +1,24 @@
-# Compatibility and acceptance checklist
+# Compatibility matrix
 
-## Confirmed
+Product Experience 2.0 separates the local build host from the TV runtime. A successful archive is not hardware certification.
 
-- Upstream fork baseline: Lampa 3.x source at `3c658ffb4047d62a605389a1039281288836d6b8`.
-- Personal-builder and localization tests: source configuration, ZIP packaging, multilingual CLI and documentation consistency (count shown by current CI).
-- GitHub Actions real compile smoke: Gulp compiled the copied upstream source, generated a WGT, and `unzip -tq` verified the archive.
-- Personal app ID separate from original Lampa: `L4mpaPers0.LampaPersonal`.
-- WGT excludes upstream remote `loader.js`.
+| Component | Target / verification scope |
+|---|---|
+| Visual Builder host | macOS and Linux; Node.js 22+, npm, zip/unzip |
+| CLI host | Same shared engine and host requirements |
+| Browser E2E | Chromium on macOS and Linux; real compilation, cancellation, failure/recovery and downloads |
+| Windows / WSL | Not verified; no native Windows support claim |
+| WGT platform | Tizen TV profile, `required_version="5.0"` |
+| Application ID | `L4mpaPers0.LampaPersonal`; separate from upstream Lampa |
+| Languages | All 21 full dictionaries in every WGT; ar/ur/he RTL retained |
+| Signing | Unsigned output; appropriate signing/re-signing required at installation |
+| Physical Samsung installation / firmware / remote / AVPlay | Not certified by this project |
+| Live user TorrServer / parser / provider playback | Requires your own integration acceptance |
 
-## Not yet confirmed
+The merged localization baseline has desktop Chromium/WebKit fixture evidence. This PR preserves the application dictionaries and RTL source instead of repeating the full localization audit. New tests cover the Builder and actual package output on both build-host platforms. Exact CI runs and results are recorded in the PR and product verification report.
 
-| Surface | Status |
-| --- | --- |
-| Samsung Tizen 5.x physical device | Not tested |
-| Samsung Tizen 6.x/7.x/8.x physical device | Not tested |
-| Samsung UE43DU7100UXUA, Tizen 9 | Not tested for this Lampa fork |
-| Apps2Samsung signing and real installation | Not tested |
-| Remote-control focus and back navigation | Not tested |
-| Live catalogue/metadata response | Not tested |
-| HLS/AVPlay and codec playback | Not tested |
-| Optional external TorrServer connection | Not tested |
+## Report a device result
 
-The original Lampa source includes Tizen support and the WGT declares `required_version="5.0"`. This is a **target**, not proof of full compatibility.
+Record TV model, firmware, Tizen version, resolution, installation/signing method and the WGT SHA-256. Check launch, all relevant settings, actual remote navigation, standby/restore and your authorized playback source, including codecs/audio/subtitles. Rebuild and verify update behaviour. Distinguish PASS, FAIL and NOT_RUN per scenario.
 
-## TV acceptance procedure
-
-1. Enable Developer Mode on the TV and install the unsigned WGT via Apps2Samsung's re-signing workflow.
-2. Verify launch icon, first screen, settings, navigation and app exit/back behavior.
-3. Check catalogue loading and open a film/series page.
-4. Check that the app does **not** fetch its core `app.min.js` from the public upstream Lampa loader.
-5. Test actual media playback in an authorized source, tracking codec/container and TV model.
-6. If using TorrServer, test both server reachability and playback behavior.
-7. Rebuild with a different language and verify settings persist across restarts.
-8. Verify original Lampa installation remains unaffected.
-
-Send compatibility reports through a redacted GitHub issue. Never upload a personal WGT or authenticated media URL.
+Use a redacted issue. Do not include a personal WGT, passwords, certificate, authenticated URL or private server address. The [physical device procedure](localization/SAMSUNG_TIZEN_ACCEPTANCE.md) remains available.

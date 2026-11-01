@@ -8,7 +8,7 @@ const button=(label,id,kind='secondary',extra='')=>`<button type="button" id="${
 function error(key){$('error').textContent=key?t(key):'';$('error').hidden=!key;}
 async function api(path,data){
  const res=await fetch('api/'+path,{method:data===undefined?'GET':'POST',headers:{'X-Builder-Token':session?.token||'',...(data===undefined?{}:{'Content-Type':'application/json'})},...(data===undefined?{}:{body:JSON.stringify(data)})});
- let body;try{body=await res.json();}catch{throw Error('connectedError');}if(!res.ok){const e=Error(['INVALID_URL','INVALID_URL_FORMAT','URL_WITH_SECRET'].includes(body.code)?'invalidUrl':body.code==='BUILD_BUSY'?'busyError':body.code==='MISSING_DEPENDENCY'?'fix_dependencies':'buildError');e.code=body.code;throw e;}return body;
+ let body;try{body=await res.json();}catch{throw Error('connectedError');}if(!res.ok){const e=Error(['INVALID_URL','INVALID_URL_FORMAT','URL_WITH_SECRET'].includes(body.code)?'invalidUrl':body.code==='PLUGIN_CONSENT_REQUIRED'?'consentError':body.code==='BUILD_BUSY'?'busyError':body.code==='MISSING_DEPENDENCY'?'fix_dependencies':'buildError');e.code=body.code;throw e;}return body;
 }
 function title(name,intro){return `<div class="eyebrow">${t('step')} ${step+1} ${t('of')} 9 · ${t(steps[step])}</div><h1 tabindex="-1">${t(name)}</h1><p class="intro">${t(intro)}</p>`;}
 function controls(next='continue'){return `<div class="actions">${step>0?button('back','back'):''}<div class="right">${button(next,'next','primary')}</div></div>`;}
@@ -39,7 +39,7 @@ function render(){
 }
 function go(next){error();step=next;maxStep=Math.max(maxStep,step);render();$('content').querySelector('h1')?.focus({preventScroll:true});}
 async function validate(){if(step===2){settings.torrserverUrl=useServer?$('server-url').value.trim():'';if(useServer&&!settings.torrserverUrl)throw Error('invalidUrl');if(demo){if(settings.torrserverUrl){try{const u=new URL(settings.torrserverUrl);if(!['http:','https:'].includes(u.protocol)||u.username||u.password||u.search||u.hash||/\s/.test(settings.torrserverUrl))throw Error();}catch{throw Error('invalidUrl');}}}else settings.torrserverUrl=(await api('validate',settings)).settings.torrserverUrl;}
- if(step===4&&settings.pluginsEnabled&&!consent)throw Error('consentError');}
+ if([4,6].includes(step)&&settings.pluginsEnabled&&!consent)throw Error('consentError');if(step===6){if(useServer&&!settings.torrserverUrl.trim())throw Error('invalidUrl');if(!demo)await api('validate',settings);}}
 async function copy(text){try{await navigator.clipboard.writeText(text);toast(t('copied'));}catch{const node=document.createElement('div');node.className='notice';node.textContent=t('copyFallback')+' '+text;$('content').append(node);}}
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;setTimeout(()=>$('toast').hidden=true,2200);}
 async function poll(){if(polling||demo)return;polling=true;try{job=await api('state');if(job.status==='complete'){go(8);return;}if(['building','cancelling','error','cancelled'].includes(job.status)){step=7;maxStep=Math.max(maxStep,7);const open=$('build-log')?.parentElement.open;render();if(open)$('build-log').parentElement.open=true;}}catch{error('connectedError');}finally{polling=false;}if(['building','cancelling'].includes(job?.status))setTimeout(poll,650);}
@@ -49,7 +49,7 @@ function bind(){
  if($('next'))$('next').onclick=async()=>{try{error();await validate();if(step===6){if(demo){const div=document.createElement('div');div.className='setup-panel';div.innerHTML=`<h3>${t('localSetup')}</h3><pre>git clone https://github.com/vbrekher/lampa-personal-edition.git\ncd lampa-personal-edition\nnpm ci\nnpm run builder</pre>`;$('next').disabled=true;$('content').append(div);return;}await api('build',{...settings,pluginsConsent:consent});job={status:'building',stage:'preparing'};go(7);poll();}else go(step+1);}catch(e){error(messages.en[e.message]?e.message:'connectedError');}};
  if($('refresh'))$('refresh').onclick=init;
  if($('language-search'))$('language-search').oninput=e=>{query=e.target.value;$('language-grid').innerHTML=languageButtons();bindLanguages();};bindLanguages();
- document.querySelectorAll('[name=server-mode]').forEach(i=>i.onchange=()=>{useServer=i.value==='address';$('url-field').hidden=!useServer;if(useServer)$('server-url').focus();});
+ document.querySelectorAll('[name=server-mode]').forEach(i=>i.onchange=()=>{useServer=i.value==='address';if(!useServer){settings.torrserverUrl='';$('server-url').value='';}$('url-field').hidden=!useServer;if(useServer)$('server-url').focus();});
  if($('server-url'))$('server-url').oninput=e=>{settings.torrserverUrl=e.target.value;$('http-notice').hidden=!e.target.value.startsWith('http:');};
  document.querySelectorAll('[name=parser-mode]').forEach(i=>i.onchange=()=>settings.parserType=i.value);
  document.querySelectorAll('[name=plugin-mode]').forEach(i=>i.onchange=()=>{settings.pluginsEnabled=i.value==='on';$('consent-field').hidden=!settings.pluginsEnabled;if(!settings.pluginsEnabled){consent=false;$('plugin-consent').checked=false;}});
