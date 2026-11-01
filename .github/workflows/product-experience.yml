@@ -2,8 +2,7 @@ name: Product experience and local Builder
 on:
   pull_request:
     paths: ['personal/**', 'site/**', 'tools/prepare-product-site.mjs', 'package*.json', '.github/workflows/product-experience.yml']
-  push:
-    branches: [feat/product-experience-2]
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

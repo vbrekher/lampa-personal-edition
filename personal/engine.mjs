@@ -15,7 +15,7 @@ export function requirements(root=ROOT) {
     {id:'dependencies',ok:['.bin/gulp','rollup/package.json','sass/package.json','@babel/core/package.json'].every(p=>existsSync(join(root,'node_modules',p)))},
     {id:'packaging',ok:tool('zip')&&tool('unzip')},
     {id:'source',ok:['src','public','index','gulpfile.js'].every(p=>existsSync(join(root,p)))},
-    {id:'platform',ok:['darwin','linux'].includes(platform()),detail:platform()}
+    {id:'platform',ok:['darwin','linux'].includes(platform()),detail:platform()==='darwin'?'macOS':platform()}
   ];
 }
 export function acquireBuildLock(root=ROOT) {
@@ -60,9 +60,9 @@ export async function buildPersonal(input,{root=ROOT,signal,onStage=()=>{},onLog
     mkdirSync(join(temp,'personal'));cpSync(join(root,'personal/dev-server.cjs'),join(temp,'personal/dev-server.cjs'));
     symlinkSync(join(root,'node_modules'),join(temp,'node_modules'),'dir');
     for(const [file,patch]of [['src/services/libs.js',patchedLibraries],['src/core/manifest.js',patchedManifest],['gulpfile.js',patchedGulp]])writeFileSync(join(temp,file),patch(readFileSync(join(root,file),'utf8')));
-    stage('compiling');let diagnostics='';
-    try {await runTool(join(root,'node_modules/.bin/gulp'),['personal_tizen'],{cwd:temp,signal,onLog:text=>{diagnostics=sanitizeBuildLog(diagnostics+text).slice(-256000);onLog(sanitizeBuildLog(text));}});}
-    catch(error){if(error.code!=='BUILD_CANCELLED'&&!signal?.aborted){mkdirSync(join(root,'dist'),{recursive:true});writeFileSync(join(root,'dist/build-error.log'),diagnostics,{mode:0o600});}throw error;}
+    stage('compiling');rmSync(join(root,'dist/build-error.log'),{force:true});let diagnostics='';
+    try {await runTool(join(root,'node_modules/.bin/gulp'),['personal_tizen'],{cwd:temp,signal,onLog:text=>{diagnostics=(diagnostics+text).slice(-512000);onLog(sanitizeBuildLog(diagnostics).slice(-256000));}});}
+    catch(error){if(error.code!=='BUILD_CANCELLED'&&!signal?.aborted){mkdirSync(join(root,'dist'),{recursive:true});writeFileSync(join(root,'dist/build-error.log'),sanitizeBuildLog(diagnostics),{mode:0o600});}throw error;}
     stage('assets');for(const code of [...LANGUAGES,'meta'])if(!readFileSync(join(root,'src/lang',code+'.js')).equals(readFileSync(join(temp,'build/tizen/lang',code+'.js'))))throw new PersonalBuildError('CORRUPT_ASSET','lang/'+code+'.js');checkBinaryAssets(join(temp,'public'),join(temp,'build/tizen'));
     stage('configuration');const pkg=preparePackage({builtDir:join(temp,'build/tizen'),iconFile:join(root,'personal/assets/icon.png'),settings});packageTemp=pkg.temp;
     stage('archive');const archive=join(packageTemp,'app.wgt');

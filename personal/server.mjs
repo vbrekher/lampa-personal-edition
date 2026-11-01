@@ -48,7 +48,7 @@ export async function startBuilder({port=0,root=ROOT,build=buildPersonal,openBro
           if(job?.id)rmSync(join(jobFolder,job.id+'.wgt'),{force:true});
           controller=new AbortController();job={id:randomBytes(12).toString('hex'),status:'building',stage:'preparing',log:''};const current=job;
           // No settings are written into logs, URLs, telemetry or persistent browser storage.
-          build(settings,{root,signal:controller.signal,onArtifact:file=>{cpSync(file,join(jobFolder,current.id+'.wgt'));chmodSync(join(jobFolder,current.id+'.wgt'),0o600);},onStage:stage=>{current.stage=stage;},onLog:text=>{current.log=(current.log+text).slice(-256000);}})
+          build(settings,{root,signal:controller.signal,onArtifact:file=>{cpSync(file,join(jobFolder,current.id+'.wgt'));chmodSync(join(jobFolder,current.id+'.wgt'),0o600);},onStage:stage=>{current.stage=stage;},onLog:text=>{current.log=text.slice(-256000);}})
             .then(result=>{current.result=result;current.status='complete';current.stage='complete';})
             .catch(error=>{current.status=controller.signal.aborted?'cancelled':'error';current.code=current.status==='cancelled'?'BUILD_CANCELLED':error instanceof PersonalBuildError?error.code:'UPSTREAM_BUILD_FAILED';});
           return json(202,{id:job.id});
