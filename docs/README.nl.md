@@ -45,7 +45,7 @@ Parser-type [jackett/prowlarr/torrserver] (Enter=jackett):
 Externe plug-ins inschakelen? [j/N]:
 ~~~
 
-De standaardtaal van de **tv-app** is hier Engels: de originele Lampa biedt nog geen Nederlandse interface.
+De standaardtaal van de **tv-app** is hier Engels. Kies `nl` bij de taalvraag voor de Nederlandse tv-interface.
 
 Het script vraagt **niet** naar je wachtwoord, CUB-account of API-tokens. Zet geen wachtwoord in het serveradres.
 

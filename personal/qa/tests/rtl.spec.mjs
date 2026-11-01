@@ -21,6 +21,8 @@ for(const locale of locales)test(`${locale} physical arrows, horizontal scroll a
  expect(await page.locator('.card.focus').innerText()).toBe(initial);
 });
 for(const locale of locales)test(`${locale} URL editor uses LTR and saves exact ASCII through the on-screen keyboard`,async({page})=>{
+ // Select the production built-in keyboard explicitly: Safari/macOS defaults to the system editor.
+ await page.addInitScript(()=>localStorage.setItem('keyboard_type','lampa'));
  await page.setViewportSize({width:1920,height:1080});
  await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url().startsWith('data:')?route.continue():route.abort());
  await page.goto(`/?locale=${locale}&screen=torrserver`);
