@@ -135,3 +135,17 @@ html[dir='rtl'] {
 }
 .lang__selector-item[lang='hi'], .lang__body[lang='hi'] { font-family: 'Noto Devanagari', 'SegoeUI', sans-serif; }
 .lang__selector-item[lang='bn'], .lang__body[lang='bn'] { font-family: 'Noto Bengali', 'SegoeUI', sans-serif; }
+html[dir='rtl'] {
+    .selectbox-item__checkbox { right: auto; left: 2em; }
+    .selectbox-item__lock { right: auto; left: 1.7em; }
+    .selectbox-item--checkbox { padding-right: 2em; padding-left: 4em; }
+    .selectbox-item__icon { margin-right: 0; margin-left: 1em; }
+    .selectbox-item__title sub { margin-left: 0; margin-right: 0.7em; }
+    .modal__button + .modal__button { margin-left: 0; margin-right: 1em; }
+    .torrent-item__date, .torrent-item__tracker, .torrent-item__bitrate,
+    .torrent-item__grabs, .torrent-item__seeds { margin-right: 0; margin-left: 1em; }
+    @media screen and (max-width: $media_xm) {
+        .modal__button + .modal__button { margin-right: 0; }
+    }
+}
+html[dir='rtl'] .full-start-new__rate-line > * { margin-right: 0 !important; margin-left: 1em !important; }

@@ -33,7 +33,11 @@ function Keyboard(params = {}){
         'zh': 'zh-CN',
         'bg': 'bg-BG',
         'pt': 'pt-PT',
-        'cs': 'cs-CZ'
+        'cs': 'cs-CZ',
+        'nl': 'nl-NL', 'de': 'de-DE', 'tr': 'tr-TR',
+        'hi': 'hi-IN', 'bn': 'bn-BD', 'id': 'id-ID',
+        'ar': 'ar-SA', 'ur': 'ur-PK', 'he': 'he-IL',
+        'es': 'es-ES', 'fr': 'fr-FR', 'pl': 'pl-PL', 'ro': 'ro-RO'
     }
 
     let last
@@ -367,7 +371,7 @@ function Keyboard(params = {}){
                 }
             })
 
-            let lang = Storage.get('keyboard_default_lang', Storage.get('language','ru')) 
+            let lang = Direction.fieldDirection(params.name, false) === 'ltr' ? 'en' : Storage.get('keyboard_default_lang', Storage.get('language','ru')) 
 
             _keyBord.setOptions({
                 layoutName: lang == 'ru' ? 'default' : Arrays.getKeys(layout).indexOf(lang) >= 0 ? lang : layout.en ? 'en' : 'default',

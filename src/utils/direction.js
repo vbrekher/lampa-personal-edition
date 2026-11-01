@@ -28,6 +28,7 @@ export function isolate(root){
     if(root.matches('input,textarea'))inputs.push(root)
     if(root.querySelectorAll)inputs.push(...root.querySelectorAll('input,textarea'))
     inputs.forEach(input=>{
+        if(input.hasAttribute('dir'))return
         const field=(input.type+' '+input.name+' '+(input.closest('[data-name]')?.getAttribute('data-name') || ''))
         input.dir=fieldDirection(field)
     })
