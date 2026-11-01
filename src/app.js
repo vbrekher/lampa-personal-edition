@@ -882,6 +882,8 @@ function loadLang(){
  * Первая загрузка приложения
  */
 function loadApp(){
+    document.documentElement.lang = Storage.get('language','ru')
+
     prepareApp() // Готовим приложение
 
     // Если язык уже установлен, то запускаем приложение

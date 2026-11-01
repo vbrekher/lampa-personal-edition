@@ -1,0 +1,37 @@
+// Static WOFF faces retain OpenType shaping and work without variable-font support.
+@font-face {
+    font-family: 'Noto Devanagari';
+    src: url('../fonts/noto/NotoSansDevanagari-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Bengali';
+    src: url('../fonts/noto/NotoSansBengali-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+html[lang='hi'] body {
+    font-family: 'Noto Devanagari', 'SegoeUI', sans-serif;
+    line-height: 1.5;
+}
+html[lang='bn'] body {
+    font-family: 'Noto Bengali', 'SegoeUI', sans-serif;
+    line-height: 1.55;
+}
+html[lang='hi'], html[lang='bn'] {
+    input, textarea, .simple-keyboard {
+        font-family: inherit;
+    }
+    .settings-param__name, .settings-param__descr, .modal__text {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+// The language picker shows several scripts at once, regardless of UI locale.
+body {
+    font-family: 'SegoeUI', 'Noto Devanagari', 'Noto Bengali', sans-serif;
+}

@@ -40,6 +40,8 @@ for(let code in meta.languages){
     langs[code].lang_choice_title    = meta.languages[code].lang_choice_title
     langs[code].lang_choice_subtitle = meta.languages[code].lang_choice_subtitle
     if(meta.languages[code].loading) langs[code].loading = meta.languages[code].loading
+    if(meta.languages[code].preparing) langs[code].loading_progress_step_0 = meta.languages[code].preparing
+    if(meta.languages[code].loading_languages) langs[code].loading_progress_step_1 = meta.languages[code].loading_languages
 }
 
 /**

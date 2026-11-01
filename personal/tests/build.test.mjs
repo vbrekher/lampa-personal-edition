@@ -170,3 +170,17 @@ test('changing the bundled interface locale preserves independently chosen metad
     for(const [key,value] of before)assert.equal(data.get(key),value,key);
   }
 });
+
+test('rebuilding with only another interface language preserves TV-side TorrServer and parser edits',()=>{
+  const values=new Map();
+  const storage={setItem:(key,val)=>values.set(key,val),getItem:key=>values.get(key)??null};
+  new Function('window','localStorage',configScript({language:'nl'}))({},storage);
+  values.set('torrserver_url','http://192.168.1.42:8090');
+  values.set('torrserver_use_link','two');
+  values.set('parser_torrent_type','prowlarr');
+  new Function('window','localStorage',configScript({language:'de'}))({},storage);
+  assert.equal(values.get('language'),'de');
+  assert.equal(values.get('torrserver_url'),'http://192.168.1.42:8090');
+  assert.equal(values.get('torrserver_use_link'),'two');
+  assert.equal(values.get('parser_torrent_type'),'prowlarr');
+});

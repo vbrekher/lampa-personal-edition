@@ -1,0 +1,20 @@
+[
+  {
+    "family": "NotoSansBengali",
+    "file": "NotoSansBengali-Regular.woff",
+    "bytes": 73288,
+    "sha256": "c9501a462ac2c0a8b72b239fa71609c2a303bffe20b7e9fa4473cf6b8524faa5",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosansbengali",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 444
+  },
+  {
+    "family": "NotoSansDevanagari",
+    "file": "NotoSansDevanagari-Regular.woff",
+    "bytes": 87944,
+    "sha256": "b95caaf6f7671b01f4d3444135c69c4ea5e9be48e755c411b382cce898d2a397",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosansdevanagari",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 551
+  }
+]

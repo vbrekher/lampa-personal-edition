@@ -11,3 +11,11 @@ All three modules are packaged locally and present in both runtime selection and
 Real home/settings screenshots at 1920×1080 and 3840×2160 are stored in `screenshots/stage1/`. Dutch settings and Turkish parser inspected text did not overflow horizontally. The Turkish Jackett translation defect was repaired and rechecked in the live parser settings. These smoke checks are a checkpoint, not the final full 364-case visual matrix or physical Samsung acceptance.
 
 Unit and packaging tests: 45/45. A real Dutch WGT build and ZIP integrity verification passed. The full 13-configuration build matrix remains a later acceptance step. Older localization reports describe the historical 428fd7f5 snapshot and will be replaced after the remaining implementation checkpoints.
+
+## B — Hindi, Bengali, Indonesian runtime packages
+
+All three packages contain 1,351 keys and are active in the language picker and builder. Structural checks, product checks, exact-value copy review and 50 automated tests pass. Each locale has a 21-term glossary and a separate contextual correction pass. Initial translations came from a pinned, locally run NLLB model; this is not native-speaker certification. Fragment translations, player/account terminology, subtitle source descriptions and account URL suffixes were manually corrected. The model is an authoring aid outside the repository and is not shipped.
+
+Static, licensed Noto Devanagari and Bengali WOFF assets are bundled locally, with source hashes and OFL notices. Tests check every used script code point and shaping tables. Hindi settings/subtitle settings and Bengali/Indonesian settings/parser were opened in production components with controlled catalog fixtures. Bengali/Indonesian smoke captures at both target resolutions are retained in `screenshots/stage2/`. These are fixtures, not proof of live TorrServer or plugin integrations. A Hindi subtitle capture was initially premature and is excluded from acceptance pending the full stable matrix.
+
+Actual Hindi, Bengali and Indonesian WGT builds and ZIP checks passed. The final 13-locale build matrix will rebuild these after subsequent changes. Seeding now updates each builder-managed setting independently, preserving TV-side server/parser changes when only the builder language changes.

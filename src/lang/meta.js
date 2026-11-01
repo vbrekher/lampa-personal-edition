@@ -1,5 +1,32 @@
 export default {
     languages: {
+        id: {
+            code: 'id',
+            name: "Bahasa Indonesia",
+            loading: "Memuat",
+            preparing: "Persiapan",
+            loading_languages: "Bahasa pengunggahan",
+            lang_choice_title: "Selamat datang",
+            lang_choice_subtitle: "Pilih bahasa Anda",
+        },
+        bn: {
+            code: 'bn',
+            name: "বাংলা",
+            loading: "লোড হচ্ছে",
+            preparing: "প্রস্তুতি",
+            loading_languages: "লোডিং ভাষা",
+            lang_choice_title: "স্বাগতম",
+            lang_choice_subtitle: "আপনার ভাষা নির্বাচন করুন",
+        },
+        hi: {
+            code: 'hi',
+            name: "हिन्दी",
+            loading: "लोड हो रहा है",
+            preparing: "तैयारी",
+            loading_languages: "लोड करने की भाषाएँ",
+            lang_choice_title: "स्वागत है",
+            lang_choice_subtitle: "अपनी भाषा चुनें",
+        },
         tr: {
             code: 'tr',
             loading: 'Yükleniyor',

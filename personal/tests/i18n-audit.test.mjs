@@ -84,3 +84,19 @@ test('visible startup status is translated while original diagnostics remain ava
   assert.equal(visible.at(-1),'Bezig met laden');
   assert.ok(logs.some(args=>args.includes('Mirrors initialization')));
 });
+
+test('integrated locales use reviewed glossary terms and every override targets a real UI key',async()=>{
+  const {readFileSync,readdirSync,existsSync}=await import('node:fs');
+  const {readLanguage,reference}=await import('../../tools/i18n-audit.mjs');
+  const root=new URL('../../',import.meta.url),ref=reference();
+  for(const file of readdirSync(new URL('i18n/glossaries/',root))){
+    const glossary=JSON.parse(readFileSync(new URL('i18n/glossaries/'+file,root),'utf8'));
+    const code=glossary.locale;
+    assert.ok(Object.keys(glossary.terms).length>=20,code);
+    for(const key of Object.keys(glossary.overrides||{}))assert.ok(Object.hasOwn(ref,key),code+' unknown override '+key);
+    if(!existsSync(new URL('src/lang/'+code+'.js',root)))continue;
+    const lang=readLanguage(code);
+    for(const [key,value] of Object.entries(glossary.overrides||{}))assert.equal(lang[key]?.normalize('NFC'),value.normalize('NFC'),code+' '+key);
+    for(const [key,term] of [['title_settings','settings'],['settings_player_subs','subtitles'],['title_history','watchHistory'],['settings_main_player','player']])assert.equal(lang[key],glossary.terms[term],code+' '+key);
+  }
+});

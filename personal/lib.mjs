@@ -15,7 +15,7 @@ export class PersonalBuildError extends Error {
   }
 }
 
-export const LANGUAGES = Object.freeze(['ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es','nl','de','tr']);
+export const LANGUAGES = Object.freeze(['id','bn','hi','tr','de','nl','ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es']);
 
 export function normalizeServerUrl(raw, optional=true) {
   const value=String(raw??'').trim();
@@ -55,12 +55,16 @@ export function configScript(input={}) {
     '  s.disable_features.remote_configuration=true;',
     '  // Seed on first install or when builder inputs change; do not erase TV-side edits at each launch.',
     '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl,parserType:cfg.parserType});',
+    '  var previous=null;',
+    '  try { previous=JSON.parse(localStorage.getItem("lampa_personal_seed_v2")); } catch(ignore) {}',
     '  if(localStorage.getItem("lampa_personal_seed_v2")!==seed){',
-    '    localStorage.setItem("language",cfg.language);',
+    '    if(!previous || previous.language!==cfg.language) localStorage.setItem("language",cfg.language);',
     '    if(!localStorage.getItem("tmdb_lang")) localStorage.setItem("tmdb_lang",cfg.language);',
-    '    localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
-    '    localStorage.setItem("torrserver_use_link","one");',
-    '    localStorage.setItem("parser_torrent_type",cfg.parserType);',
+    '    if(!previous || previous.torrserverUrl!==cfg.torrserverUrl){',
+    '      localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
+    '      localStorage.setItem("torrserver_use_link","one");',
+    '    }',
+    '    if(!previous || previous.parserType!==cfg.parserType) localStorage.setItem("parser_torrent_type",cfg.parserType);',
     '    localStorage.setItem("lampa_personal_seed_v2",seed);',
     '  }',
     '})();',''

@@ -1200,5 +1200,591 @@
       "value": "Video",
       "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
     }
+  },
+  "hi": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    }
+  },
+  "bn": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    }
+  },
+  "id": {
+    "full_genre": {
+      "value": "Genre",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "full_episode": {
+      "value": "Episode",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_cub_status": {
+      "value": "Status",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "torrent_item_bitrate": {
+      "value": "Bitrate",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "torrent_item_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_genre": {
+      "value": "Genre",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_filter": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_buffer": {
+      "value": "Buffer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_metadata": {
+      "value": "Metadata",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_af": {
+      "value": "Afghanistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_al": {
+      "value": "Albania",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_am": {
+      "value": "Armenia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ar": {
+      "value": "Argentina",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_at": {
+      "value": "Austria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_au": {
+      "value": "Australia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_az": {
+      "value": "Azerbaijan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bd": {
+      "value": "Bangladesh",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bg": {
+      "value": "Bulgaria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bh": {
+      "value": "Bahrain",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bo": {
+      "value": "Bolivia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bt": {
+      "value": "Bhutan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_by": {
+      "value": "Belarus",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_dj": {
+      "value": "Djibouti",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_dk": {
+      "value": "Denmark",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ee": {
+      "value": "Estonia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ge": {
+      "value": "Georgia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gl": {
+      "value": "Greenland",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gp": {
+      "value": "Guadeloupe",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_id": {
+      "value": "Indonesia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_il": {
+      "value": "Israel",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_in": {
+      "value": "India",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ir": {
+      "value": "Iran",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ke": {
+      "value": "Kenya",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kg": {
+      "value": "Kyrgyzstan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kz": {
+      "value": "Kazakhstan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kw": {
+      "value": "Kuwait",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lb": {
+      "value": "Lebanon",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lv": {
+      "value": "Latvia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ly": {
+      "value": "Libya",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_md": {
+      "value": "Moldova",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mn": {
+      "value": "Mongolia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_my": {
+      "value": "Malaysia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_qa": {
+      "value": "Qatar",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_rs": {
+      "value": "Serbia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_rw": {
+      "value": "Rwanda",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_si": {
+      "value": "Slovenia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_th": {
+      "value": "Thailand",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tj": {
+      "value": "Tajikistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tn": {
+      "value": "Tunisia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_uz": {
+      "value": "Uzbekistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_yu": {
+      "value": "Yugoslavia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "filter_filtred": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_ta": {
+      "value": "Tamil",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_tt": {
+      "value": "Tatar",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_genre_dr": {
+      "value": "Drama",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_genre_md": {
+      "value": "Melodrama",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "menu_filter": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_interface_size_normal": {
+      "value": "Normal",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_player_hls_js": {
+      "value": "Program",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "player_volume": {
+      "value": "Volume",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "watch_history_episode_n": {
+      "value": "Episode {n}",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_gb": {
+      "value": "Gbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_4": {
+      "value": "April",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_9": {
+      "value": "September",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_11": {
+      "value": "November",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_4_e": {
+      "value": "April",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_9_e": {
+      "value": "September",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_11_e": {
+      "value": "November",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "about_hash": {
+      "value": "Hash",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    }
   }
 }
