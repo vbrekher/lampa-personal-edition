@@ -20,11 +20,15 @@ for(const locale of locales)for(const [scene,selector]of Object.entries(screens)
   const audit=await page.evaluate(()=>{
    const shown=e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.width&&r.height&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth&&s.display!=='none'&&s.visibility!=='hidden';};
    const labels=Array.from(document.querySelectorAll('.settings-param__name,.settings-param__descr,.settings-folder__name,.modal__button,.simple-button,.full-start__button')).filter(shown);
-   return {viewport:[innerWidth,innerHeight],overflow:labels.filter(e=>e.scrollWidth>e.clientWidth+2).map(e=>e.textContent),unresolved:(document.body.innerText.match(/#\{[^}]+\}/g)||[]),text:document.body.innerText,fonts:Array.from(document.fonts).filter(f=>/Noto/.test(f.family)).map(f=>({family:f.family,status:f.status})),technical:Array.from(document.querySelectorAll('bdi.technical-ltr')).filter(shown).map(e=>({text:e.textContent,dir:getComputedStyle(e).direction}))};
+   return {viewport:[innerWidth,innerHeight],overflow:labels.filter(e=>e.scrollWidth>e.clientWidth+2).map(e=>e.textContent),unresolved:(document.body.innerText.match(/#\{[^}]+\}/g)||[]),text:document.body.innerText,bodyFont:getComputedStyle(document.body).fontFamily,fonts:Array.from(document.fonts).filter(f=>/Noto/.test(f.family)).map(f=>({family:f.family,status:f.status})),technical:Array.from(document.querySelectorAll('bdi.technical-ltr')).filter(shown).map(e=>({text:e.textContent,dir:getComputedStyle(e).direction}))};
   });
   await info.attach('assertions',{body:JSON.stringify(audit,null,2),contentType:'application/json'});
   expect(audit.viewport).toEqual([width,height]);expect(audit.overflow).toEqual([]);expect(audit.unresolved).toEqual([]);expect(errors).toEqual([]);
-  if(['hi','bn','ar','ur','he'].includes(locale))expect(audit.fonts.some(f=>f.status==='loaded')).toBeTruthy();
+  const expectedFont={hi:'Noto Devanagari',bn:'Noto Bengali',ar:'Noto Arabic',ur:'Noto Arabic',he:'Noto Hebrew',zh:'Noto CJK'}[locale];
+  if(expectedFont){
+   expect(audit.bodyFont).toContain(expectedFont);
+   expect(audit.fonts.some(f=>f.family.replace(/["']/g,'')===expectedFont&&f.status==='loaded')).toBeTruthy();
+  }
   if(expectedDir==='rtl'){
    expect(audit.technical.every(e=>e.dir==='ltr')).toBeTruthy();
    if(scene==='errors')expect(audit.technical.some(e=>e.text.includes('192.168.1.100:8090'))).toBeTruthy();

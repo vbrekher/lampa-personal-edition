@@ -77,7 +77,7 @@ export default {
     "settings_input_links": "پسندیدہ",
     "settings_interface_type": "لائٹ ورژن",
     "settings_interface_size": "انٹرفیس کا سائز",
-    "settings_interface_menu_always": "ہمیشہ بائیں مینو دکھائیں",
+    "settings_interface_menu_always": "سائیڈ مینو ہمیشہ دکھائیں",
     "settings_interface_background": "پس منظر",
     "settings_interface_background_use": "پس منظر دکھائیں",
     "settings_interface_background_type": "پس منظر کی قسم",

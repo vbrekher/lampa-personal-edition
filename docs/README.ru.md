@@ -38,7 +38,7 @@ npm run build:personal -- --builder-language ru
 Пример вопросов в русском терминале:
 
 ~~~text
-Язык интерфейса Lampa [ru/en/uk/fr/es/pl] (Enter=ru):
+Язык интерфейса Lampa [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter=ru):
 Адрес TorrServer (необязательно; Enter — пропустить):
 Тип парсера [jackett/prowlarr/torrserver] (Enter=jackett):
 Разрешить сторонние плагины? [д/Н]:

@@ -1,7 +1,8 @@
 import {test,expect} from '@playwright/test';
 import {readLanguage} from '../../../tools/i18n-audit.mjs';
-const states=['nl','he','de'];
+const states=['nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur','ru','uk','be','bg','cs','he','pl','ro'];
 test('language selection preserves bookmarks, playback state, parser, plugins and metadata language',async({page})=>{
+ test.setTimeout(180000);
  await page.setViewportSize({width:1920,height:1080});
  await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url().startsWith('data:')?route.continue():route.abort());
  await page.goto('/?locale=nl&screen=movie');
@@ -17,7 +18,10 @@ test('language selection preserves bookmarks, playback state, parser, plugins an
  await page.evaluate(values=>{for(const[k,v]of Object.entries(values))localStorage.setItem(k,v);},own);
  const before=await page.evaluate(()=>Object.fromEntries(['favorite','tmdb_lang','torrserver_url','parser_torrent_type','plugins','file_view'].map(k=>[k,localStorage.getItem(k)])));
  for(const locale of states.slice(1)){
-  await page.locator('.open--settings').click();
+  const selectedBefore=await page.locator('html').getAttribute('lang');
+  // Mount the production settings fixture; language selection itself uses real remote keys.
+  await page.goto(`/?locale=${selectedBefore}&screen=settings`);
+  await expect(page.locator('body')).toHaveAttribute('data-qa-ready','settings');
   await expect(page.locator('.settings-folder.focus')).toHaveAttribute('data-component','interface');
   await page.keyboard.press('Enter',{delay:120});
   await expect(page.locator('.settings-param.focus')).toHaveAttribute('data-static','true');

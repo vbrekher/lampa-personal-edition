@@ -149,3 +149,13 @@ html[dir='rtl'] {
     }
 }
 html[dir='rtl'] .full-start-new__rate-line > * { margin-right: 0 !important; margin-left: 1em !important; }
+@font-face {
+    font-family: 'Noto CJK';
+    src: url('../fonts/noto/NotoSansSC-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+html[lang='zh'] body, .lang__selector-item[lang='zh'], .lang__body[lang='zh'] {
+    font-family: 'Noto CJK', 'SegoeUI', sans-serif;
+}

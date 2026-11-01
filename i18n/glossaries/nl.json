@@ -22,5 +22,8 @@
     "resume": "Verder kijken",
     "cache": "Cache",
     "TorrServer": "TorrServer"
+  },
+  "overrides": {
+    "settings_interface_menu_always": "Zijmenu altijd tonen"
   }
 }

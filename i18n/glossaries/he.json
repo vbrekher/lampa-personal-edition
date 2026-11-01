@@ -39,7 +39,11 @@
     "settings_main_torrserver": "TorrServer",
     "settings_param_subtitles_source_torserver": "TorrServer",
     "settings_param_subtitles_source_legacy": "מובנה (שיטה ישנה)",
-    "settings_server_tracktimecode": "הפעלת TrackTimecode"
+    "settings_server_tracktimecode": "הפעלת TrackTimecode",
+    "settings_interface_menu_always": "הצגת תפריט הצד תמיד",
+    "torent_nohash_reason_one": "TorrServer לא הצליח להוריד את קובץ הטורנט",
+    "torent_nohash_reason_two": "תשובה מ-TorrServer",
+    "empty_mytorrents_text": "טורנטים שהורדתם דרך TorrServer יופיעו כאן."
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

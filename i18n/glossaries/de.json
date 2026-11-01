@@ -22,5 +22,8 @@
     "resume": "Weiterschauen",
     "cache": "Cache",
     "TorrServer": "TorrServer"
+  },
+  "overrides": {
+    "settings_interface_menu_always": "Seitenmenü immer anzeigen"
   }
 }

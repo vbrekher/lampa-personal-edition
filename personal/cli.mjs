@@ -3,7 +3,7 @@ import {normalizeSettings,PersonalBuildError} from './lib.mjs';
 import {BUILDER_LANGUAGES} from './i18n.mjs';
 
 export function defaultAppLanguage(builderLocale) {
-  return builderLocale==='ru'?'ru':'en'; // Original Lampa has no Dutch TV UI yet.
+  return builderLocale==='ru'?'ru':'en'; // Builder messages and TV interface defaults are independent.
 }
 export function getBuilderLocale(args) {
   const index=args.indexOf('--builder-language');

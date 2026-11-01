@@ -3,7 +3,7 @@ import {mkdirSync,writeFileSync,readdirSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {inventory} from './i18n-source-audit.mjs';
-import {TARGETS,examine,reference} from './i18n-audit.mjs';
+import {TARGETS,SUPPORTED,examine,reference} from './i18n-audit.mjs';
 const root=resolve(fileURLToPath(new URL('..',import.meta.url)));
 const output=resolve(root,'reports/localization');
 mkdirSync(output,{recursive:true});
@@ -26,11 +26,11 @@ const results=languages.map(code=>{
 json('summary.json',{
   canonicalKeys:Object.keys(ref).length,sourceKeys:sources.keys.length,
   sourceKeyUniverse:[...new Set([...Object.keys(ref),...sources.keys])].length,
-  shippedLocales:shipped,targetLocales:TARGETS,languages:results,
-  checks:{translationKeys:results.filter(r=>TARGETS.includes(r.language)).every(r=>!r.missing.length)?'PASS':'FAIL',
+  shippedLocales:shipped,targetLocales:TARGETS,supportedLocales:SUPPORTED,languages:results,
+  checks:{translationKeys:results.filter(r=>SUPPORTED.includes(r.language)).every(r=>!r.missing.length)?'PASS':'FAIL',
     sourceReferences:sources.unresolvedReferences.length?'FAIL':'PASS',
     sourceSyntax:sources.syntaxErrors.length?'FAIL':'PASS',
     physicalTizen:'NOT_RUN',visualQA:'NOT_RUN',linguisticReview:'NOT_RUN'}
 });
 console.log(`Evidence: ${output}\n${results.length} locales; ${sources.references.length} references; ${sources.dynamicCalls.length} dynamic calls; ${sources.hardcodedCandidates.length} text candidates.`);
-if(process.argv.includes('--strict')&&(results.filter(r=>TARGETS.includes(r.language)).some(r=>!r.releaseReady)||sources.unresolvedReferences.length||sources.syntaxErrors.length))process.exitCode=1;
+if(process.argv.includes('--strict')&&(results.filter(r=>SUPPORTED.includes(r.language)).some(r=>!r.releaseReady)||sources.unresolvedReferences.length||sources.syntaxErrors.length))process.exitCode=1;

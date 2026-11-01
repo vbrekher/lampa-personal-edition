@@ -15,7 +15,7 @@ export class PersonalBuildError extends Error {
   }
 }
 
-export const LANGUAGES = Object.freeze(['ur','ar','id','bn','hi','tr','de','nl','ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es']);
+export const LANGUAGES = Object.freeze(['nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur','ru','uk','be','bg','cs','he','pl','ro']);
 
 export function normalizeServerUrl(raw, optional=true) {
   const value=String(raw??'').trim();

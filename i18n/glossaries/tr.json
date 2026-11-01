@@ -22,5 +22,8 @@
     "resume": "İzlemeye devam et",
     "cache": "Önbellek",
     "TorrServer": "TorrServer"
+  },
+  "overrides": {
+    "settings_interface_menu_always": "Yan menüyü her zaman göster"
   }
 }

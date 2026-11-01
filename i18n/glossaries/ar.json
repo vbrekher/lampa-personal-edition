@@ -100,7 +100,8 @@
     "install_extension_rule_5": "إذا ساورك شك بشأن أمان الإضافة أو قانونيتها، فمن الأفضل الامتناع عن تثبيتها.",
     "settings_param_subtitles_source_legacy": "مدمج (طريقة قديمة)",
     "settings_server_tracktimecode": "تفعيل TrackTimecode",
-    "settings_server_placeholder": "مثال: 192.168.X"
+    "settings_server_placeholder": "مثال: 192.168.X",
+    "settings_interface_menu_always": "إظهار القائمة الجانبية دائمًا"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

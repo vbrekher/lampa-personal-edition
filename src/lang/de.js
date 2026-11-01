@@ -77,7 +77,7 @@ export default {
     "settings_input_links": "Favoriten",
     "settings_interface_type": "Lite-Version",
     "settings_interface_size": "Schnittstellengröße",
-    "settings_interface_menu_always": "Zeigt immer das linke Menü an",
+    "settings_interface_menu_always": "Seitenmenü immer anzeigen",
     "settings_interface_background": "Hintergrund",
     "settings_interface_background_use": "Hintergrund anzeigen",
     "settings_interface_background_type": "Hintergrundtyp",

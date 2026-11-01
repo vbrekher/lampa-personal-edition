@@ -55,6 +55,11 @@ for(const [code,family,first,last] of [['hi','NotoSansDevanagari',0x900,0x97f],[
     assert.match(readFileSync(new URL('public/fonts/noto/'+family+'-OFL.txt',root),'utf8'),/SIL Open Font License/);
   });
 }
+test('bundled Chinese subset covers all own UI Han characters and picker name',()=>{
+  const cmap=woffTables('public/fonts/noto/NotoSansSC-Regular.woff').get('cmap');
+  const text=Object.values(readLanguage('zh')).join('')+'简体中文';
+  for(const character of new Set(text))if(/\p{Script=Han}/u.test(character))assert.ok(hasGlyph(cmap,character.codePointAt(0)),'Chinese missing '+character);
+});
 test('bundled font provenance hashes match the shipped static WOFF files',()=>{
   const records=JSON.parse(readFileSync(new URL('public/fonts/noto/SOURCES.json',root),'utf8'));
   for(const record of records){
@@ -62,4 +67,10 @@ test('bundled font provenance hashes match the shipped static WOFF files',()=>{
     assert.equal(createHash('sha256').update(bytes).digest('hex'),record.sha256);
     assert.equal(bytes.length,record.bytes);
   }
+});
+test('bundled SegoeUI supports every Latin and Cyrillic UI character across all 21 locales',async()=>{
+  const {SUPPORTED}=await import('../../tools/i18n-audit.mjs');
+  const cmap=woffTables('public/fonts/SegoeUI/SegoeUI.woff').get('cmap');
+  const text=SUPPORTED.flatMap(code=>Object.values(readLanguage(code))).join('');
+  for(const character of new Set(text))if(/[\p{Script=Latin}\p{Script=Cyrillic}]/u.test(character))assert.ok(hasGlyph(cmap,character.codePointAt(0)),'SegoeUI missing '+character+' U+'+character.codePointAt(0).toString(16));
 });

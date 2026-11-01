@@ -77,7 +77,7 @@ export default {
     "settings_input_links": "Favorieten",
     "settings_interface_type": "Lite-versie",
     "settings_interface_size": "Interfacegrootte",
-    "settings_interface_menu_always": "Toon altijd het linkermenu",
+    "settings_interface_menu_always": "Zijmenu altijd tonen",
     "settings_interface_background": "Achtergrond",
     "settings_interface_background_use": "Achtergrond weergeven",
     "settings_interface_background_type": "Achtergrondtype",

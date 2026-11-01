@@ -248,7 +248,8 @@ function Keyboard(params = {}){
         }
         else{
             let layout = typeof params.layout == 'string' ? Layers.get(params.layout) : params.layout || Layers.get('default')
-            let press  = Date.now()
+            let press  = 0
+            let last_press = ''
 
             if(is_electron){
                 Arrays.getKeys(layout).forEach((code)=>{
@@ -279,9 +280,10 @@ function Keyboard(params = {}){
                     this.listener.send('change', {value: value})
                 },
                 onKeyPress: (button)=>{
-                    if(Date.now() - press < 100) return
+                    if(button === last_press && Date.now() - press < 100) return
 
                     press = Date.now()
+                    last_press = button
 
                     if (button === "{SHIFT}" || button === "{SIM}" || button === "{ABC}") this._handle(button)
                     else if(button === '{MIC}'){

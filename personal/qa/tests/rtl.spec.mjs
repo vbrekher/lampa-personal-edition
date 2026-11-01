@@ -30,8 +30,8 @@ for(const locale of locales)test(`${locale} URL editor uses LTR and saves exact 
  const url='http://127.0.0.1:8090';
  for(const key of ['http://',...'127.0.0.1:8090'])await page.locator(`.hg-button[data-skbtn=${JSON.stringify(key)}]`).click();
  await expect(page.locator('.settings-input__input')).toHaveText(url);
- // Hold Enter like a human keypress so the keyboard's input debounce has elapsed.
- await page.locator('.hg-button[data-skbtn="{ENTER}"]').click({delay:250});
+ // Different keys must work in quick succession, including immediate confirmation.
+ await page.locator('.hg-button[data-skbtn="{ENTER}"]').click();
  await expect.poll(()=>page.evaluate(()=>localStorage.getItem('torrserver_url'))).toBe(url);
  await expect(page.locator('[data-name="torrserver_url"] .settings-param__value')).toHaveText(url);
 });

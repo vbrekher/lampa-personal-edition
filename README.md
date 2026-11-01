@@ -40,7 +40,7 @@ npm run build:personal
 The builder will ask for:
 
 ~~~text
-Lampa interface language [ru/en/uk/fr/es/pl] (Enter=en):
+Lampa interface language [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter=en):
 TorrServer URL (optional; Enter to skip):
 Parser backend [jackett/prowlarr/torrserver] (Enter=jackett):
 Enable third-party plugins? [y/N]:

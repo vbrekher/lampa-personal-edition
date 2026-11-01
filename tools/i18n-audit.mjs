@@ -9,7 +9,9 @@ const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const TARGETS=Object.freeze([
   'nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur'
 ]);
+export const SUPPORTED=Object.freeze([...TARGETS,'ru','uk','be','bg','cs','he','pl','ro']);
 export const NAMES=Object.freeze({
+  ru:'Русский',uk:'Українська',be:'Беларуская',bg:'Български',cs:'Čeština',he:'עברית',pl:'Polski',ro:'Română',
   nl:'Nederlands',de:'Deutsch',tr:'Türkçe',en:'English',zh:'简体中文',
   hi:'हिन्दी',es:'Español',ar:'العربية',fr:'Français',bn:'বাংলা',
   pt:'Português',id:'Bahasa Indonesia',ur:'اردو'
@@ -75,7 +77,7 @@ export function examine(code){
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const strict=process.argv.includes('--strict');
-  const reports=TARGETS.map(examine);
+  const reports=SUPPORTED.map(examine);
   for(const r of reports){
     console.log(r.language.padEnd(3),String(r.translated).padStart(4)+'/'+r.required,
       (r.percent+'%').padStart(6),'missing='+r.missing.length,

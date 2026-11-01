@@ -34,5 +34,15 @@
     "source": "https://github.com/google/fonts/tree/main/ofl/notosanshebrew",
     "license": "SIL Open Font License 1.1",
     "glyphs": 470
+  },
+  {
+    "family": "NotoSansSC",
+    "file": "NotoSansSC-Regular.woff",
+    "bytes": 212856,
+    "sha256": "5ea296e55736ae73f93b0b848f174728d2032beec8d79389a3cb0adf2ace7a2d",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 1448,
+    "subset": "All current zh UI characters and native picker name; regenerate when zh strings change."
   }
 ]

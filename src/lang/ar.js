@@ -77,7 +77,7 @@ export default {
     "settings_input_links": "المفضلة",
     "settings_interface_type": "إصدار ليت",
     "settings_interface_size": "حجم الواجهة",
-    "settings_interface_menu_always": "دائماً أظهر القائمة اليسرى",
+    "settings_interface_menu_always": "إظهار القائمة الجانبية دائمًا",
     "settings_interface_background": "الخلفية",
     "settings_interface_background_use": "إظهار الخلفية",
     "settings_interface_background_type": "نوع الخلفية",

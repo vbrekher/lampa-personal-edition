@@ -38,7 +38,7 @@ Het bouwscript stelt drie vragen:
 De Nederlandstalige terminal toont:
 
 ~~~text
-Taal van Lampa op de tv [ru/en/uk/fr/es/pl] (Enter=en):
+Taal van Lampa op de tv [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter=en):
 TorrServer-adres (optioneel; Enter om over te slaan):
 Parser-type [jackett/prowlarr/torrserver] (Enter=jackett):
 Externe plug-ins inschakelen? [j/N]:

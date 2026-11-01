@@ -5,7 +5,7 @@ const messages = {
   en: {
     title: 'Lampa Personal Edition — local Samsung Tizen build',
     intro: 'Lampa hosting is not required. The builder does not ask for passwords.',
-    interfaceLanguage: 'Lampa interface language [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Lampa interface language [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'TorrServer URL (optional; Enter to skip): ',
     parserType: 'Parser backend [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Enable third-party plugins? [y/N]: ',
@@ -43,7 +43,7 @@ const messages = {
   ru: {
     title: 'Lampa Personal Edition — локальная сборка для Samsung Tizen',
     intro: 'Хостинг Lampa не требуется. Сборщик не спрашивает пароли.',
-    interfaceLanguage: 'Язык интерфейса Lampa [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Язык интерфейса Lampa [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'Адрес TorrServer (необязательно; Enter — пропустить): ',
     parserType: 'Тип парсера [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Разрешить сторонние плагины? [д/Н]: ',
@@ -81,7 +81,7 @@ const messages = {
   nl: {
     title: 'Lampa Personal Edition — lokaal bouwen voor Samsung Tizen',
     intro: 'Je hoeft Lampa niet zelf te hosten. De bouwer vraagt niet om wachtwoorden.',
-    interfaceLanguage: 'Taal van Lampa op de tv [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Taal van Lampa op de tv [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'TorrServer-adres (optioneel; Enter om over te slaan): ',
     parserType: 'Parser-type [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Externe plug-ins inschakelen? [j/N]: ',

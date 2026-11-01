@@ -77,7 +77,7 @@ export default {
     "settings_input_links": "Favoriler",
     "settings_interface_type": "Lite sürüm",
     "settings_interface_size": "Arayüz boyutu",
-    "settings_interface_menu_always": "Her zaman sol menüyü göster",
+    "settings_interface_menu_always": "Yan menüyü her zaman göster",
     "settings_interface_background": "Arka plan",
     "settings_interface_background_use": "Arka planı göster",
     "settings_interface_background_type": "Arka plan türü",
