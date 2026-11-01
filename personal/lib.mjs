@@ -15,7 +15,7 @@ export class PersonalBuildError extends Error {
   }
 }
 
-export const LANGUAGES = Object.freeze(['ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es']);
+export const LANGUAGES = Object.freeze(['ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es','nl','de','tr']);
 
 export function normalizeServerUrl(raw, optional=true) {
   const value=String(raw??'').trim();
@@ -57,7 +57,7 @@ export function configScript(input={}) {
     '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl,parserType:cfg.parserType});',
     '  if(localStorage.getItem("lampa_personal_seed_v2")!==seed){',
     '    localStorage.setItem("language",cfg.language);',
-    '    localStorage.setItem("tmdb_lang",cfg.language);',
+    '    if(!localStorage.getItem("tmdb_lang")) localStorage.setItem("tmdb_lang",cfg.language);',
     '    localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
     '    localStorage.setItem("torrserver_use_link","one");',
     '    localStorage.setItem("parser_torrent_type",cfg.parserType);',

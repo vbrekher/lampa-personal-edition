@@ -1,0 +1,26 @@
+{
+  "locale": "de",
+  "review": "Machine-assisted translation with a separate Codex contextual pass; not native-speaker certified.",
+  "terms": {
+    "settings": "Einstellungen",
+    "subtitles": "Untertitel",
+    "search": "Suchen",
+    "watchHistory": "Wiedergabeverlauf",
+    "installPlugin": "Plug-in installieren",
+    "parser": "Parser",
+    "torrent": "Torrent",
+    "player": "Player",
+    "buffer": "Puffer",
+    "stream": "Datenstrom",
+    "playlist": "Wiedergabeliste",
+    "episode": "Folge",
+    "season": "Staffel",
+    "watchlist": "Merkliste",
+    "extensions": "Erweiterungen",
+    "quality": "Qualität",
+    "audioTrack": "Audiospur",
+    "resume": "Weiterschauen",
+    "cache": "Cache",
+    "TorrServer": "TorrServer"
+  }
+}

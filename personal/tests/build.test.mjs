@@ -20,7 +20,8 @@ test('URL validation and no secret-bearing URL',()=>{
 test('only supported source languages',()=>{
   assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',parserType:'jackett',pluginsEnabled:false});
   assert.equal(normalizeSettings({language:'uk'}).language,'uk');
-  assert.throws(()=>normalizeSettings({language:'nl'}));
+  assert.equal(normalizeSettings({language:'nl'}).language,'nl');
+  assert.throws(()=>normalizeSettings({language:'zz'}));
   assert.equal(normalizeSettings({parserType:'prowlarr'}).parserType,'prowlarr');
   assert.throws(()=>normalizeSettings({parserType:'invalid'}),e=>e.code==='INVALID_PARSER_TYPE');
 });
@@ -157,4 +158,15 @@ test('produces a verified ZIP without loader or public credentials',()=>{
     assert.ok(!html.includes('loader.js'));
     assert.equal(readFileSync(join(source,'index.html'),'utf8'),HTML);
   }finally{rmSync(tmp,{recursive:true,force:true});}
+});
+
+test('changing the bundled interface locale preserves independently chosen metadata language and user data',()=>{
+  const data=new Map([['tmdb_lang','fr'],['favorite','[{"id":42}]'],['plugins','[{"url":"https://example.com/plugin.js"}]'],['history','[{"id":7}]']]);
+  const before=new Map(data);
+  const storage={setItem:(key,val)=>data.set(key,val),getItem:(key)=>data.get(key)??null};
+  for(const language of ['nl','de','tr']){
+    new Function('window','localStorage',configScript({language}))({},storage);
+    assert.equal(data.get('language'),language);
+    for(const [key,value] of before)assert.equal(data.get(key),value,key);
+  }
 });

@@ -11,6 +11,9 @@ let langs = {}
 let keys  = {}
 
 const startup = {
+    nl: ['Voorbereiding', 'Talen laden'],
+    de: ['Vorbereitung', 'Sprachen werden geladen'],
+    tr: ['Hazırlanıyor', 'Diller yükleniyor'],
     uk: ['Підготовка', 'Завантаження мов'],
     be: ['Падрыхтоўка', 'Загрузка моў'],
     zh: ['准备', '加载语言'],
@@ -36,6 +39,7 @@ for(let code in meta.languages){
 
     langs[code].lang_choice_title    = meta.languages[code].lang_choice_title
     langs[code].lang_choice_subtitle = meta.languages[code].lang_choice_subtitle
+    if(meta.languages[code].loading) langs[code].loading = meta.languages[code].loading
 }
 
 /**

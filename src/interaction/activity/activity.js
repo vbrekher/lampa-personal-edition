@@ -316,6 +316,10 @@ function push(object){
  * @returns {void}
  */
 function create(object){
+    // Main-page headings belong to the interface, not a saved URL or metadata title.
+    if(window.lampa_personal_mode && object.component === 'main'){
+        object.title = Lang.translate('title_main') + ' - ' + (object.source || Storage.field('source')).toUpperCase()
+    }
     let comp = Component.create(object)
 
     comp.props = new PropsProvider(Arrays.clone(extractObject(object)))

@@ -1,0 +1,26 @@
+{
+  "locale": "tr",
+  "review": "Machine-assisted translation with a separate Codex contextual pass; not native-speaker certified.",
+  "terms": {
+    "settings": "Ayarlar",
+    "subtitles": "Altyazılar",
+    "search": "Ara",
+    "watchHistory": "İzleme geçmişi",
+    "installPlugin": "Eklenti yükle",
+    "parser": "Ayrıştırıcı",
+    "torrent": "Torrent",
+    "player": "Oynatıcı",
+    "buffer": "Arabellek",
+    "stream": "Akış",
+    "playlist": "Oynatma listesi",
+    "episode": "Bölüm",
+    "season": "Sezon",
+    "watchlist": "İzleme listesi",
+    "extensions": "Eklentiler",
+    "quality": "Kalite",
+    "audioTrack": "Ses parçası",
+    "resume": "İzlemeye devam et",
+    "cache": "Önbellek",
+    "TorrServer": "TorrServer"
+  }
+}

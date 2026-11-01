@@ -4,7 +4,7 @@
 import {readFileSync,existsSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {parseDictionary,inspectValue} from './i18n-validation.mjs';
+import {parseDictionary,inspectValue,productIssues} from './i18n-validation.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 export const TARGETS=Object.freeze([
   'nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur'
@@ -16,6 +16,8 @@ export const NAMES=Object.freeze({
 });
 export const EXISTING=Object.freeze(['en','zh','es','fr','pt']);
 export const NEW=Object.freeze(TARGETS.filter(code=>!EXISTING.includes(code)));
+const exceptionFile=resolve(ROOT,'i18n/reviewed-exceptions.json');
+const exceptions=existsSync(exceptionFile)?JSON.parse(readFileSync(exceptionFile,'utf8')):{};
 const placeholderPattern=/#?\{[a-z_][\w.-]*\}/gi;
 export function readLanguage(code){
   const draft=resolve(ROOT,'i18n/drafts',code+'.json');
@@ -47,9 +49,16 @@ export function examine(code){
   const file=existsSync(resolve(ROOT,'src/lang',code+'.js'))?resolve(ROOT,'src/lang',code+'.js'):resolve(ROOT,'i18n/drafts',code+'.json');
   const parsed=existsSync(file)?parseDictionary(readFileSync(file,'utf8'),file):{duplicates:[],invalid:[]};
   const valueIssues=owned.flatMap(key=>inspectValue(lang[key],eng[key]||ref[key]||'').map(reason=>({key,reason})));
+  const productMismatches=owned.flatMap(key=>productIssues(lang[key],eng[key]||ref[key]||'').map(product=>({key,product})));
   const scriptReview=owned.filter(key=>!['ru','uk','be','bg'].includes(code)&&/[\u0400-\u052f]{2}/u.test(lang[key]));
   const latinPhraseReview=owned.filter(key=>['zh','hi','ar','bn','ur','he'].includes(code)&&/[a-z]{3,}\s+[a-z]{3,}\s+[a-z]{3,}/i.test(lang[key]));
   const longTranslations=owned.filter(key=>lang[key].length>80&&lang[key].length>1.7*(eng[key]||ref[key]||'').length);
+  const approved=exceptions[code]||{};
+  const reviewedExceptions=Object.entries(approved).filter(([key,item])=>item.value===lang[key]&&item.reason?.trim()).map(([key,item])=>({key,...item}));
+  const staleExceptions=Object.entries(approved).filter(([key,item])=>item.value!==lang[key]||!item.reason?.trim()).map(([key])=>key);
+  const reviewed=new Set(reviewedExceptions.map(item=>item.key));
+  const unreviewedEnglish=identicalEnglish.filter(key=>!reviewed.has(key));
+  const unreviewedRussian=identicalRussian.filter(key=>!reviewed.has(key));
   // A literal match may be a deliberate trademark or established loanword.
   // This is a review signal, not proof of a bad translation.
   return {
@@ -60,7 +69,8 @@ export function examine(code){
     percent:Number(((required.length-missing.length)*100/required.length).toFixed(1)),
     missing,extra,mismatches,identicalEnglish,identicalRussian,
     duplicates:parsed.duplicates,valueIssues,scriptReview,latinPhraseReview,longTranslations,
-    releaseReady:scriptReview.length===0&&latinPhraseReview.length===0&&parsed.duplicates.length===0&&valueIssues.length===0&&missing.length===0&&mismatches.length===0&&identicalEnglish.length===0&&identicalRussian.length===0
+    reviewedExceptions,staleExceptions,unreviewedEnglish,unreviewedRussian,productMismatches,
+    releaseReady:productMismatches.length===0&&staleExceptions.length===0&&scriptReview.length===0&&latinPhraseReview.length===0&&parsed.duplicates.length===0&&valueIssues.length===0&&missing.length===0&&mismatches.length===0&&unreviewedEnglish.length===0&&unreviewedRussian.length===0
   };
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){

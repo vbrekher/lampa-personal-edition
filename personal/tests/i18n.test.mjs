@@ -13,15 +13,18 @@ test('requested languages are an exact set of 3 priority and 2026 top 10',()=>{
   assert.deepEqual(NEW,['nl','de','tr','hi','ar','bn','id','ur']);
   assert.deepEqual(EXISTING,['en','zh','es','fr','pt']);
 });
-test('language drafts are not exposed to TV users until translation coverage is complete',()=>{
+test('new locales enter the TV selector and builder only after full dictionary validation',()=>{
   const builder=readFileSync(resolve(root,'personal/lib.mjs'),'utf8');
   for(const c of NEW){
-    assert.equal(select(c),false,c+' is incomplete but visible in TV language selector');
-    assert.ok(!new RegExp("'"+c+"'").test(builder.slice(builder.indexOf('export const LANGUAGES'),builder.indexOf('export function normalizeServerUrl'))));
     const report=examine(c);
-    assert.ok(report.translated>=90,c+' draft has unexpectedly low coverage');
-    assert.ok(report.missing.length>0,c+' should not be published until full coverage');
-    assert.equal(report.mismatches.length,0,c+' placeholder mismatch');
+    const inBuilder=new RegExp("'"+c+"'").test(builder.slice(builder.indexOf('export const LANGUAGES'),builder.indexOf('export function normalizeServerUrl')));
+    assert.equal(select(c),inBuilder,c+' runtime and builder disagree');
+    if(select(c)){
+      assert.equal(report.source,'upstream',c+' has no local runtime module');
+      assert.deepEqual(report.missing,[],c);
+      assert.equal(report.releaseReady,true,c+' has unreviewed dictionary errors');
+    }else assert.ok(report.missing.length>0||!report.releaseReady,c+' complete locale should be integrated');
+    assert.deepEqual(report.mismatches,[],c);
   }
 });
 test('the baseline includes all keys from both shipped canonical dictionaries',()=>{

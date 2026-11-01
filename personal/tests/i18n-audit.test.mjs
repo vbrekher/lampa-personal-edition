@@ -67,3 +67,20 @@ test('every static application reference resolves in the canonical dictionary',a
   assert.deepEqual(source.syntaxErrors,[]);
   assert.deepEqual(source.references.filter(item=>!Object.hasOwn(ref,item.key)),[]);
 });
+
+test('visible startup status is translated while original diagnostics remain available',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const vm=await import('node:vm');
+  const source=readFileSync(new URL('../../src/interaction/loading_progress.js',import.meta.url),'utf8')
+    .replace("import Lang from '../core/lang'",'')
+    .replace('export default {','globalThis.progress = {');
+  const visible=[],logs=[];
+  const view={find:()=>({text:value=>visible.push(value)}),remove(){}};
+  const context={Lang:{translate:key=>key==='loading'?'Bezig met laden':'Voorbereiding'},$:()=>view,console:{log:(...args)=>logs.push(args)},globalThis:null};
+  context.globalThis=context;context.$=Object.assign(context.$,{});
+  context.$=selector=>selector==='body'?{append(){}}:view;
+  vm.runInNewContext(source,context);
+  context.progress.init();context.progress.status('Mirrors initialization');
+  assert.equal(visible.at(-1),'Bezig met laden');
+  assert.ok(logs.some(args=>args.includes('Mirrors initialization')));
+});

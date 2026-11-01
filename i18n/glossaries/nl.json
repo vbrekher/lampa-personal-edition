@@ -1,0 +1,26 @@
+{
+  "locale": "nl",
+  "review": "Machine-assisted translation with a separate Codex contextual pass; not native-speaker certified.",
+  "terms": {
+    "settings": "Instellingen",
+    "subtitles": "Ondertitels",
+    "search": "Zoeken",
+    "watchHistory": "Kijkgeschiedenis",
+    "installPlugin": "Plug-in installeren",
+    "parser": "Parser",
+    "torrent": "Torrent",
+    "player": "Speler",
+    "buffer": "Buffer",
+    "stream": "Stream",
+    "playlist": "Afspeellijst",
+    "episode": "Aflevering",
+    "season": "Seizoen",
+    "watchlist": "Kijklijst",
+    "extensions": "Uitbreidingen",
+    "quality": "Kwaliteit",
+    "audioTrack": "Audiotrack",
+    "resume": "Verder kijken",
+    "cache": "Cache",
+    "TorrServer": "TorrServer"
+  }
+}

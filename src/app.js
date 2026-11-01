@@ -849,6 +849,8 @@ function loadTask(){
 function loadLang(){
     let code = window.localStorage.getItem('language') || 'ru'
 
+    document.documentElement.lang = code
+
     LoadingProgress.step(1)
     
     if(['ru','en'].indexOf(code) >= 0) loadTask()

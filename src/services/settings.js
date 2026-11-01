@@ -21,7 +21,6 @@ function init(){
             $('.settings-param:eq(0)',e.body).on('hover:enter',()=>{
                 LangChoice.open((code)=>{
                     Storage.set('language', code, true)
-                    Storage.set('tmdb_lang',code, true)
 
                     window.location.reload()
                 },()=>{

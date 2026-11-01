@@ -99,8 +99,9 @@ test('the app interface language and the builder language are independent',()=>{
   assert.equal(q.settings.pluginsEnabled,false);
 });
 
-test('the unsupported Dutch TV interface is rejected in Dutch',()=>{
-  assert.throws(()=>parseBuilderArgs(['--builder-language','nl','--language','nl']),
+test('unknown TV interfaces are rejected in Dutch and completed Dutch is supported',()=>{
+  assert.equal(parseBuilderArgs(['--builder-language','nl','--language','nl']).settings.language,'nl');
+  assert.throws(()=>parseBuilderArgs(['--builder-language','nl','--language','zz']),
     e=>e instanceof PersonalBuildError && e.code==='UNSUPPORTED_APP_LANGUAGE');
   const message=formatBuildError(new PersonalBuildError('UNSUPPORTED_APP_LANGUAGE','nl'),'nl');
   assert.match(message,/Lampa op de tv ondersteunt/);
@@ -141,7 +142,7 @@ test('localized validation failure is never printed in the wrong language',()=>{
     ['nl','ondersteunt deze taal niet']
   ]){
     const p=spawnSync(process.execPath,
-      ['personal/build.mjs','--builder-language',lang,'--language','nl'],
+      ['personal/build.mjs','--builder-language',lang,'--language','zz'],
       {cwd:root,encoding:'utf8'});
     assert.equal(p.status,1,lang);
     assert.ok(p.stderr.includes(expected),lang+': '+p.stderr);

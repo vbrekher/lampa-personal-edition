@@ -37,7 +37,9 @@ function step(position){
 function status(text){
     if(destroyed) return
 
-    html.find('.lp-status').text(text)
+    // Internal initialization identifiers remain in the diagnostic log. The user
+    // sees localized progress even before the full language module has loaded.
+    html.find('.lp-status').text(Lang.translate('loading'))
 
     console.log('LoadingProgress', 'status:', text)
 }

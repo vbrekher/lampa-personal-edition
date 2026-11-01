@@ -1,5 +1,26 @@
 export default {
     languages: {
+        tr: {
+            code: 'tr',
+            loading: 'Yükleniyor',
+            name: 'Türkçe',
+            lang_choice_title: "Hoş geldiniz",
+            lang_choice_subtitle: "Dilinizi seçin",
+        },
+        de: {
+            code: 'de',
+            loading: 'Wird geladen',
+            name: 'Deutsch',
+            lang_choice_title: "Willkommen",
+            lang_choice_subtitle: "Wähle deine Sprache",
+        },
+        nl: {
+            code: 'nl',
+            loading: 'Bezig met laden',
+            name: 'Nederlands',
+            lang_choice_title: "Welkom",
+            lang_choice_subtitle: "Kies je taal",
+        },
         ru: {
             code: 'ru',
             name: 'Русский',
