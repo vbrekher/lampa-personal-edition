@@ -2,6 +2,15 @@ name: Localization UI fixture matrix
 on:
   push:
     branches: [feat/complete-localization-qa]
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'index/**'
+      - 'personal/**'
+      - 'gulpfile.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/localization-ui.yml' 
   workflow_dispatch:
     inputs:
       locales:

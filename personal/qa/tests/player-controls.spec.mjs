@@ -17,7 +17,12 @@ for(const locale of ['nl','en','ar','ur','he'])test(`${locale} real video remote
  await expect.poll(()=>video.evaluate(v=>v.currentTime)).toBeGreaterThan(before+3);
  await page.keyboard.press('ArrowUp',{delay:120});
  await expect(page.locator('.player-panel__playpause')).toHaveClass(/focus/);
- for(let n=0;n<8&&!await page.locator('.player-panel__quality').evaluate(e=>e.classList.contains('focus'));n++)await page.keyboard.press(['ar','ur','he'].includes(locale)?'ArrowLeft':'ArrowRight',{delay:120});
+ // Media controls keep chronological LTR geometry in every locale. Navigate
+ // by their actual screen positions, never by globally swapping RTL keys.
+ const playRect=await page.locator('.player-panel__playpause').boundingBox();
+ const qualityRect=await page.locator('.player-panel__quality').boundingBox();
+ const direction=qualityRect.x>playRect.x?'ArrowRight':'ArrowLeft';
+ for(let n=0;n<8&&!await page.locator('.player-panel__quality').evaluate(e=>e.classList.contains('focus'));n++)await page.keyboard.press(direction,{delay:120});
  await expect(page.locator('.player-panel__quality')).toHaveClass(/focus/);
  const original=await video.getAttribute('src');
  await page.keyboard.press('Enter',{delay:120});
