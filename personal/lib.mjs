@@ -1,11 +1,11 @@
 // Lampa Personal Edition — independently packaged Tizen application.
 // This file is original integration code; upstream Lampa remains attributed separately.
-import {cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync, lstatSync} from 'node:fs';
+import {cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync, lstatSync, renameSync,chmodSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {tmpdir} from 'node:os';
 import {resolve, join, dirname} from 'node:path';
 
-export const ID = Object.freeze({app:'L4mpaPers0.LampaPersonal', pkg:'L4mpaPers0', version:'0.1.0'});
+export const ID = Object.freeze({app:'L4mpaPers0.LampaPersonal', pkg:'L4mpaPers0', version:'0.2.0'});
 export class PersonalBuildError extends Error {
   constructor(code,detail='') {
     super(code);
@@ -150,10 +150,10 @@ export function checkBinaryAssets(source, built, prefix='') {
     }
   }
 }
-export function packageTizen({builtDir,outputFile,iconFile,settings}) {
-  const input=resolve(builtDir),output=resolve(outputFile);
+export function preparePackage({builtDir,iconFile,settings}) {
+  const input=resolve(builtDir);
   checkAssets(input);
-  if(!existsSync(iconFile))throw new PersonalBuildError('MISSING_ICON',iconFile);
+  if(!existsSync(iconFile))throw new PersonalBuildError('MISSING_ICON');
   const temp=mkdtempSync(join(tmpdir(),'lampa-personal-'));
   const stage=join(temp,'package');
   try {
@@ -168,10 +168,19 @@ export function packageTizen({builtDir,outputFile,iconFile,settings}) {
     if(!existsSync(join(stage,'plugins','modification.js')))
       writeFileSync(join(stage,'plugins','modification.js'),'/* No user plugins configured */\n');
     checkLinks(stage);
+    return {temp,stage};
+  } catch(error) {rmSync(temp,{recursive:true,force:true});throw error;}
+}
+export function packageTizen(options) {
+  const output=resolve(options.outputFile), {temp,stage}=preparePackage(options);
+  const pending=join(temp,'output.wgt');
+  try {
+    execFileSync('zip',['-q','-r',pending,'.'],{cwd:stage,stdio:'pipe'});
+    execFileSync('unzip',['-tq',pending],{stdio:'pipe'});
     mkdirSync(dirname(output),{recursive:true});
-    rmSync(output,{force:true});
-    execFileSync('zip',['-q','-r',output,'.'],{cwd:stage,stdio:'pipe'});
-    execFileSync('unzip',['-tq',output],{stdio:'pipe'});
+    const sibling=output+'.pending';
+    try {cpSync(pending,sibling);chmodSync(sibling,0o600);renameSync(sibling,output);}
+    finally {rmSync(sibling,{force:true});}
     return output;
   } finally {rmSync(temp,{recursive:true,force:true});}
 }

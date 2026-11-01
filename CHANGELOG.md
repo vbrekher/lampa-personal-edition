@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.2.0 — Product Experience 2.0 (release candidate)
+
+- Added a local nine-step visual WGT wizard with complete English, Russian and Dutch UI, 21 TV language choices and RTL previews.
+- Shared the existing compiler/normalizer between CLI and wizard; retained terminal flags and interactive setup.
+- Added live compiler stages, cancellation/process-group cleanup, retry, archive verification, SHA-256, private job downloads and atomic output.
+- Added loopback-only serving, Host/Origin/session checks, fixed file boundaries, explicit plugin consent and cross-process build locking.
+- Added a unified product README, static Pages-ready website and an explicitly non-compiling interactive preview.
+- Added macOS/Linux browser E2E for real builds, failure/recovery, cancellation and downloads, with short-lived screenshot evidence.
+- Added focused community translation guidance and a translation PR template. All 21 Lampa dictionaries and RTL runtime code are preserved.
+
+No Samsung hardware certification, signed binary release or hosted compilation service is claimed. Personal WGTs are never published by this workflow.
+
 ## Unreleased — language consistency
 
 - Localized builder prompts, help, warnings and validation errors into English, Russian and Dutch.

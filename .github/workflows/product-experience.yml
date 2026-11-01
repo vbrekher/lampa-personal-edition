@@ -1,0 +1,35 @@
+name: Product experience and local Builder
+on:
+  pull_request:
+    paths: ['personal/**', 'site/**', 'tools/*product*.mjs', 'package*.json', '.github/workflows/product-experience.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  wizard:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with: {node-version: '22', cache: npm}
+      - run: npm ci --no-fund
+      - run: npm run site:prepare
+      - run: npm run site:check
+      - run: npm run test:personal
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build:personal -- --language nl --plugins off
+      - run: npm run test:builder
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: builder-proof-${{ matrix.os }}
+          path: |
+            reports/builder-e2e.json
+            reports/builder-screenshots/
+          retention-days: 7
+      # dist/ and .personal-build/ are intentionally never uploaded.

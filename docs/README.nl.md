@@ -16,14 +16,27 @@ Je hebt **geen aparte Lampa-server, VPS of Bunny-account nodig**. Films, series 
 - [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases).
 - Optioneel: een eigen TorrServer die bereikbaar is vanaf je televisie.
 
-## 2. Maak je persoonlijke WGT
+## 2. Start de visuele bouwer
+
+```bash
+git clone https://github.com/vbrekher/lampa-personal-edition.git
+cd lampa-personal-edition
+npm ci
+npm run builder
+```
+
+Er opent een lokale pagina op `127.0.0.1`. Kies bovenaan Nederlands als taal van de bouwer. Controleer de vereisten, kies de eerste TV-taal, vul eventueel TorrServer in en bepaal de parser- en plug-invoorkeuren. Alle 21 talen blijven in de WGT beschikbaar. Controleer je instellingen en start de echte lokale compilatie. Download het bestand, vergelijk SHA-256 en installeer het daarna apart op de TV.
+
+Externe plug-ins zijn standaard uit. De bouwer installeert of start geen plug-ins tijdens het bouwen. Annuleren stopt de compiler en ruimt tijdelijke bestanden op; de vorige geslaagde WGT blijft behouden. Je configuratie wordt niet naar een externe server verstuurd. Het statische websitevoorbeeld kan geen WGT compileren.
+
+### Terminalmodus voor ervaren gebruikers
 
 Open Terminal op je computer:
 
 ~~~bash
 git clone https://github.com/vbrekher/lampa-personal-edition.git
 cd lampa-personal-edition
-npm install
+npm ci
 npm run build:personal -- --builder-language nl
 ~~~
 
