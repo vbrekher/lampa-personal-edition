@@ -9,4 +9,4 @@ These are actual application/browser captures, not rendered mockups or cloud-bui
 - `builder-rtl-ar.png`, `builder-rtl-ur.png`, `builder-rtl-he.png`: actual Builder components previewing the real dictionaries/direction. These are explicitly language previews, not full TV application captures.
 - `builder-mobile.png`: the same frontend in its explicitly labelled static preview at a mobile viewport.
 
-Initial successful source: `d5a61eb9f59be8577be8935fe5d7dea0dc1237cb`, [macOS/Linux browser run](https://github.com/vbrekher/lampa-personal-edition/actions/runs/41299554525). Final refreshed capture provenance is recorded in the product verification report. Full raw screenshot/test evidence stays in short-lived Actions artifacts; no 250 MB archive is committed.
+Capture source: `24c7e622cb1532d1e860aec334309c396224db4b`, [successful macOS/Linux browser run](https://github.com/vbrekher/lampa-personal-edition/actions/runs/41300370484). Full raw screenshot/test evidence stays in short-lived Actions artifacts; no large evidence archive or WGT is committed. See [product verification](../../docs/PRODUCT_VERIFICATION.md).
