@@ -1,3 +1,4 @@
+import Direction from '../../../utils/direction'
 import Controller from '../../../core/controller'
 import Reguest from '../../../utils/reguest'
 import Card from '../../card'
@@ -209,7 +210,7 @@ function component(object){
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             right: ()=>{
                 if(this.onRight){

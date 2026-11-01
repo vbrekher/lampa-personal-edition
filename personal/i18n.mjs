@@ -5,7 +5,7 @@ const messages = {
   en: {
     title: 'Lampa Personal Edition — local Samsung Tizen build',
     intro: 'Lampa hosting is not required. The builder does not ask for passwords.',
-    interfaceLanguage: 'Lampa interface language [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Lampa interface language [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'TorrServer URL (optional; Enter to skip): ',
     parserType: 'Parser backend [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Enable third-party plugins? [y/N]: ',
@@ -34,6 +34,7 @@ const messages = {
       UPSTREAM_LIBRARIES: 'The upstream library loader has changed. Update the adapter.',
       UPSTREAM_ASSET_BASE: 'The upstream asset base has changed. Update the adapter.',
       MISSING_ASSET: 'The build is incomplete; missing asset: {detail}.',
+      CORRUPT_ASSET: 'A binary asset changed during compilation: {detail}.',
       SYMLINK_FORBIDDEN: 'Symbolic links are forbidden in the WGT package: {detail}.',
       UPSTREAM_BUILD_FAILED: 'Upstream Lampa compilation failed. See the local diagnostic log at dist/build-error.log.',
       MISSING_ICON: 'App icon not found: {detail}.'
@@ -42,7 +43,7 @@ const messages = {
   ru: {
     title: 'Lampa Personal Edition — локальная сборка для Samsung Tizen',
     intro: 'Хостинг Lampa не требуется. Сборщик не спрашивает пароли.',
-    interfaceLanguage: 'Язык интерфейса Lampa [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Язык интерфейса Lampa [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'Адрес TorrServer (необязательно; Enter — пропустить): ',
     parserType: 'Тип парсера [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Разрешить сторонние плагины? [д/Н]: ',
@@ -71,6 +72,7 @@ const messages = {
       UPSTREAM_LIBRARIES: 'Исходный загрузчик библиотек изменился. Обнови адаптер.',
       UPSTREAM_ASSET_BASE: 'Исходный путь ресурсов изменился. Обнови адаптер.',
       MISSING_ASSET: 'Сборка неполная. Отсутствует файл: {detail}.',
+      CORRUPT_ASSET: 'При сборке повреждён двоичный файл: {detail}.',
       SYMLINK_FORBIDDEN: 'Символические ссылки внутри WGT запрещены: {detail}.',
       UPSTREAM_BUILD_FAILED: 'Сборка исходной Lampa завершилась ошибкой. Подробный журнал сохранён в dist/build-error.log.',
       MISSING_ICON: 'Не найдена иконка приложения: {detail}.'
@@ -79,7 +81,7 @@ const messages = {
   nl: {
     title: 'Lampa Personal Edition — lokaal bouwen voor Samsung Tizen',
     intro: 'Je hoeft Lampa niet zelf te hosten. De bouwer vraagt niet om wachtwoorden.',
-    interfaceLanguage: 'Taal van Lampa op de tv [ru/en/uk/fr/es/pl] (Enter={default}): ',
+    interfaceLanguage: 'Taal van Lampa op de tv [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter={default}): ',
     serverUrl: 'TorrServer-adres (optioneel; Enter om over te slaan): ',
     parserType: 'Parser-type [jackett/prowlarr/torrserver] (Enter=jackett): ',
     plugins: 'Externe plug-ins inschakelen? [j/N]: ',
@@ -108,6 +110,7 @@ const messages = {
       UPSTREAM_LIBRARIES: 'De oorspronkelijke bibliotheeklader is veranderd. Werk de adapter bij.',
       UPSTREAM_ASSET_BASE: 'Het oorspronkelijke pad naar appbestanden is veranderd. Werk de adapter bij.',
       MISSING_ASSET: 'De build is niet compleet. Bestand ontbreekt: {detail}.',
+      CORRUPT_ASSET: 'Een binair bestand is tijdens het bouwen beschadigd: {detail}.',
       SYMLINK_FORBIDDEN: 'Symbolische koppelingen in het WGT-pakket zijn niet toegestaan: {detail}.',
       UPSTREAM_BUILD_FAILED: 'Het bouwen van de oorspronkelijke Lampa is mislukt. Het lokale logbestand staat in dist/build-error.log.',
       MISSING_ICON: 'Het app-pictogram ontbreekt: {detail}.'

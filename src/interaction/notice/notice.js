@@ -15,6 +15,7 @@ import NoticeCub from './cub'
 
 function translate(str){
     if(Arrays.isObject(str)){
+        if(str.i18n_key)return Lang.translate(str.i18n_key)
         let code = Lampa.Storage.get('language','ru')
 
         if(str[code]) return str[code]

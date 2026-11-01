@@ -1,4 +1,5 @@
 import Storage from './storage/storage'
+import Direction from '../utils/direction'
 import Arrays from '../utils/arrays'
 import Manifest from './manifest'
 import Utils from '../utils/utils'
@@ -9,20 +10,6 @@ import en from '../lang/en'
 
 let langs = {}
 let keys  = {}
-
-const startup = {
-    uk: ['Підготовка', 'Завантаження мов'],
-    be: ['Падрыхтоўка', 'Загрузка моў'],
-    zh: ['准备', '加载语言'],
-    pt: ['Preparação', 'Carregando idiomas'],
-    bg: ['Подготовка', 'Зареждане на езици'],
-    he: ['הכנה', 'טעינת שפות'],
-    cs: ['Příprava', 'Načítání jazyků'],
-    ro: ['Inițializare', 'Încărcare limbi'],
-    fr: ['Préparation', 'Chargement des langues'],
-    pl: ['Przygotowanie', 'Ładowanie języków'],
-    es: ['Preparación', 'Cargando idiomas']
-}
 
 let lang_default = 'ru'
 
@@ -36,6 +23,9 @@ for(let code in meta.languages){
 
     langs[code].lang_choice_title    = meta.languages[code].lang_choice_title
     langs[code].lang_choice_subtitle = meta.languages[code].lang_choice_subtitle
+    if(meta.languages[code].loading) langs[code].loading = meta.languages[code].loading
+    if(meta.languages[code].preparing) langs[code].loading_progress_step_0 = meta.languages[code].preparing
+    if(meta.languages[code].loading_languages) langs[code].loading_progress_step_1 = meta.languages[code].loading_languages
 }
 
 /**
@@ -62,14 +52,20 @@ function translate(name, custom_code){
         })
     }
     else{
-        let step = name === 'loading_progress_step_0' ? 0 : name === 'loading_progress_step_1' ? 1 : null
-        result = langs[code][name] || (step !== null ? startup[code]?.[step] : null) || langs[fallback][name] || langs[lang_default][name] || name
+        result = langs[code][name] || langs[fallback][name] || langs[lang_default][name] || name
     }
 
     result = result.replace(/{site}/g, Manifest.cub_site)
     result = result.replace(/{mirror}/g, Utils.protocol() + Manifest.cub_domain)
 
     return result
+}
+
+/** Translate an owned dynamic key without exposing an unknown identifier to the UI. */
+function known(name, fallback = 'network_error'){
+    const code = Storage.get('language','ru')
+    const exists = [langs[code],langs.en,langs.ru].some(table=>table && typeof table[name] === 'string')
+    return translate(exists ? name : fallback)
 }
 
 /**
@@ -124,9 +120,11 @@ function selected(check_codes){
 
 export default {
     translate,
+    known,
     add,
     codes,
     addCodes,
     AddTranslation,
-    selected
+    selected,
+    isRTL: Direction.isRTL
 }

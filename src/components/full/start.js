@@ -79,7 +79,7 @@ class Start extends Emit {
         !window.lampa_settings.torrents_use && this.html.find('.view--torrent').addClass('hide')
 
         this.card.name && this.html.find('.full-start-new__poster').addClass('card--tv').append('<div class="card__type">TV</div>')
-        this.card.adult && this.html.find('.full-start-new__poster').addClass('card--adult').append('<div class="card__type">ADULT</div>')
+        this.card.adult && this.html.find('.full-start-new__poster').addClass('card--adult').append('<div class="card__type">18+</div>')
 
         if(year){
             this.html.find('.tag--year').removeClass('hide').find('> div').text(year)
@@ -107,7 +107,7 @@ class Start extends Emit {
 
         this.card.vote_average == 0 && this.html.find('.rate--tmdb').addClass('hide')
 
-        this.card.status && this.html.find('.full-start__status').removeClass('hide').text(Lang.translate('tv_status_' + this.card.status.toLowerCase().replace(/ /g,'_')))
+        this.card.status && this.html.find('.full-start__status').removeClass('hide').text(Lang.known('tv_status_' + this.card.status.toLowerCase().replace(/ /g,'_'),'player_unknown'))
 
         if(this.card.imdb_rating && parseFloat(this.card.imdb_rating) > 0){
             this.html.find('.rate--imdb').removeClass('hide').find('> div').eq(0).text(parseFloat(this.card.imdb_rating) >= 10 ? 10 : this.card.imdb_rating)

@@ -1,8 +1,10 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Activity from './activity'
 import Component from '../../core/component'
 import Noty from '../noty'
+import Lang from '../../core/lang'
 
 /**
  * Слайд активности
@@ -34,7 +36,7 @@ class ActivitySlide{
         catch(e){
             console.log('Activity','create error:', e.stack)
 
-            Noty.show('Activity create error:' + e.message + ' ' + e.stack)
+            Noty.show(Lang.translate('activity_create_error') + ' ' + e.message + ' ' + e.stack)
 
             this.component = Component.create({
                 component: 'nocomponent'
@@ -68,7 +70,10 @@ class ActivitySlide{
                 Controller.clear()
             },
             left: ()=>{
-                Controller.toggle('menu')
+                if(!Direction.isRTL()) Controller.toggle('menu')
+            },
+            right: ()=>{
+                if(Direction.isRTL()) Controller.toggle('menu')
             },
             up: ()=>{
                 Controller.toggle('head')
@@ -89,7 +94,7 @@ class ActivitySlide{
             catch(e){
                 console.log('Activity','start error:', e.stack)
 
-                Noty.show('Activity start error:' + e.message + ' ' + e.stack)
+                Noty.show(Lang.translate('activity_start_error') + ' ' + e.message + ' ' + e.stack)
             }
         }
     }

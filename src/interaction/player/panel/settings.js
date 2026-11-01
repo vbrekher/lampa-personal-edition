@@ -16,7 +16,7 @@ function show(){
     let items = [
         {
             title: Lang.translate('player_video_size'),
-            subtitle: Lang.translate('player_size_' + Storage.get('player_size','default') + '_title'),
+            subtitle: Lang.known('player_size_' + Storage.get('player_size','default') + '_title','player_size_default_title'),
             method: 'size'
         },
         {
@@ -48,19 +48,19 @@ function show(){
 
         items.push({
             title: Lang.translate('player_normalization_power_title'),
-            subtitle: Lang.translate('player_normalization_step_' + Storage.get('player_normalization_power','hight')),
+            subtitle: Lang.known('player_normalization_step_' + Storage.get('player_normalization_power','hight'),'player_normalization_step_hight'),
             method: 'normalization_power'
         })
 
         items.push({
             title: Lang.translate('player_normalization_smooth_title'),
-            subtitle: Lang.translate('player_normalization_step_' + Storage.get('player_normalization_smooth','medium')),
+            subtitle: Lang.known('player_normalization_step_' + Storage.get('player_normalization_smooth','medium'),'player_normalization_step_medium'),
             method: 'normalization_smooth'
         })
 
         items.push({
             title: Lang.translate('player_normalization_type_title'),
-            subtitle: Lang.translate('player_normalization_type_' + Storage.get('player_normalization_type','all')),
+            subtitle: Lang.known('player_normalization_type_' + Storage.get('player_normalization_type','all'),'player_normalization_type_all'),
             method: 'normalization_type'
         })
     }
@@ -180,12 +180,12 @@ function selectSegments(){
         {
             title: Lang.translate('player_segments_ad_title'),
             name: 'ad',
-            subtitle: Lang.translate('player_segments_value_' + Storage.get('player_segments_ad','auto')),
+            subtitle: Lang.known('player_segments_value_' + Storage.get('player_segments_ad','auto'),'player_segments_value_auto'),
         },
         {
             title: Lang.translate('player_segments_skip_title'),
             name: 'skip',
-            subtitle: Lang.translate('player_segments_value_' + Storage.get('player_segments_skip','auto')),
+            subtitle: Lang.known('player_segments_value_' + Storage.get('player_segments_skip','auto'),'player_segments_value_auto'),
         },
     ]
 

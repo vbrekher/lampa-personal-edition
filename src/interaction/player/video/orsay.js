@@ -1,4 +1,5 @@
 import Subscribe from '../../../utils/subscribe'
+import Lang from '../../../core/lang'
 
 function AVPlay(call_video) {
     let avplay, plugin, stream_url, loaded, current_time, offset_time
@@ -196,7 +197,7 @@ function AVPlay(call_video) {
             let str3 = String.fromCharCode(sHex3);
             str = str1 + str2 + str3;
             if (str === "\0\0\0") {
-                str = "Неизвестный";
+                str = Lang.translate('player_unknown');
             }
         }
         return str;

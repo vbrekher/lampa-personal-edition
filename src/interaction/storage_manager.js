@@ -67,7 +67,7 @@ function open(params = {}){
     })
 
     Modal.open({
-        title: 'StorageManager',
+        title: Lang.translate('storage_manager_title'),
         size: 'large',
         html: html,
         onBack: close

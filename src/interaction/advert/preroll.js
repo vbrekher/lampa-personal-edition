@@ -205,11 +205,12 @@ function show(data, call){
 
     if(preroll && canshow){
         // Загружаем SDK для выбранного преролла, чтобы он был готов к показу
-        IMA.loadSDK(preroll.vast_api).catch(()=>{
+        IMA.loadSDK(preroll.vast_api).then(()=>{
+            launch(preroll, ended)
+        }, ()=>{
             console.log('Ad', 'IMA SDK load error', preroll.vast_api)
+            ended()
         })
-
-        launch(preroll, ended)
     }
     else ended()
 }

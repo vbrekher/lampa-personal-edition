@@ -8,25 +8,25 @@ let html = `<div class="error">
 
 <div class="torrent-error noconnect">
     <div>
-        <div>Причины</div>
+        <div>#{torent_nohash_reasons}</div>
         <ul>
-            <li>Запрос на пинг вернул неверный формат</li>
-            <li>Ответ от TorServer: <code>{echo}</code></li>
+            <li>#{torrent_error_ping_format}</li>
+            <li>#{torent_nohash_reason_two}: <code>{echo}</code></li>
         </ul>
     </div>
 
     <div>
-        <div>Что делать?</div>
+        <div>#{torent_nohash_do}</div>
         <ul>
-            <li>Убедитесь что у вас стоит версия Matrix</li>
+            <li>#{torrent_error_matrix_required}</li>
         </ul>
     </div>
 
     <div>
-        <div>Как проверить?</div>
+        <div>#{torrent_error_how_check}</div>
         <ul>
-            <li>Откройте браузер и зайдите по адресу <code>{ip}/echo</code></li>
-            <li>Убедитесь что в ответе есть наличие кода <code>MatriX</code></li>
+            <li>#{torrent_error_open_echo}</li>
+            <li>#{torrent_error_matrix_in_reply}</li>
         </ul>
     </div>
 </div>`

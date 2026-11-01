@@ -1,3 +1,4 @@
+import Direction from '../../../utils/direction'
 import Template from '../../template'
 import Scroll from '../../scroll'
 import Controller from '../../../core/controller'
@@ -249,12 +250,16 @@ function create(data, params = {}){
 
             },
             right: ()=>{
-                Navigator.move('right')
+                if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()){
+                    if(this.onLeft)this.onLeft()
+                    else Controller.toggle('menu')
+                }
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else if(this.onLeft) this.onLeft()
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL() && this.onLeft) this.onLeft()
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             down:this.onDown,
             up: this.onUp,

@@ -3,6 +3,7 @@ import Define from './utils/define/define'
 import PromisePolyfill from './utils/define/promise'
 import Manifest from './core/manifest'
 import Lang from './core/lang'
+import Direction from './utils/direction'
 import Platform from './core/platform'
 import Render from './interaction/render'
 import Keypad from './core/keypad'
@@ -849,6 +850,8 @@ function loadTask(){
 function loadLang(){
     let code = window.localStorage.getItem('language') || 'ru'
 
+    Direction.apply(code)
+
     LoadingProgress.step(1)
     
     if(['ru','en'].indexOf(code) >= 0) loadTask()
@@ -880,10 +883,12 @@ function loadLang(){
  * Первая загрузка приложения
  */
 function loadApp(){
+    Direction.apply(Storage.get('language','ru'))
+
     prepareApp() // Готовим приложение
 
     // Если язык уже установлен, то запускаем приложение
-    if(window.localStorage.getItem('language') || !window.lampa_settings.lang_use){
+    if((window.localStorage.getItem('language') && !(window.lampa_personal_mode && window.localStorage.getItem('lampa_personal_language_pending') === 'true')) || !window.lampa_settings.lang_use){
         // Но сперва ожидаем не вызвали ли пользователь меню разработчика, затем подгружаем язык
         developerApp(loadLang)
     }
@@ -891,7 +896,8 @@ function loadApp(){
         // Иначе предлагаем выбрать язык
         LangChoice.open((code)=>{
             Storage.set('language', code, true)
-            Storage.set('tmdb_lang',code, true)
+            if(!window.localStorage.getItem('tmdb_lang')) Storage.set('tmdb_lang',code, true)
+            window.localStorage.removeItem('lampa_personal_language_pending')
 
             Keypad.disable()
 

@@ -105,11 +105,12 @@ class Main{
         this.scroll.body(true).appendChild(heading)
         this.params.catalog.results.forEach(group=>{
             const list = group.results.map(plugin=>{
+                if(plugin.descr_key) return {...plugin, descr: Lang.translate(plugin.descr_key)}
                 const translated = plugin.lang && (plugin.lang[language] || plugin.lang.en)
                 return translated ? {...plugin, name: translated.name, descr: translated.descr} : plugin
             })
             this.appendLine(list, {
-                title: group.titles[language] || group.titles.en,
+                title: group.title_key ? Lang.translate(group.title_key) : group.titles[language] || group.titles.en,
                 type: 'extensions',
                 noedit: true,
                 personalCatalog: true

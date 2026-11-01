@@ -8,28 +8,28 @@ let html = `<div class="error">
 
 <div class="torrent-error noconnect">
     <div>
-        <div>Причины</div>
+        <div>#{torent_nohash_reasons}</div>
         <ul>
-            <li>Используется адрес: <code>{ip}</code></li>
-            <li class="nocorect">Текущий адрес <code>{ip}</code> является неверным!</li>
-            <li>Текущий ответ: <code>{echo}</code></li>
+            <li>#{torrent_error_used_address}</li>
+            <li class="nocorect">#{torrent_error_invalid_address}</li>
+            <li>#{torrent_error_current_reply}</li>
         </ul>
     </div>
 
     <div>
-        <div>Как правильно?</div>
+        <div>#{torrent_error_correct_address}</div>
         <ul>
-            <li>Используйте адрес: <code>192.168.0.ххх:8090</code></li>
-            <li>Используйте версию Matrix</li>
+            <li>#{torrent_error_address_example}</li>
+            <li>#{torrent_error_matrix_required}</li>
         </ul>
     </div>
 
     <div>
-        <div>Как проверить?</div>
+        <div>#{torrent_error_how_check}</div>
         <ul>
-            <li>На этом же устройстве, откройте браузер и зайдите по адресу <code>{ip}/echo</code></li>
-            <li>Если же браузер не ответит, проверьте запущен ли TorrServe, или перезагрузите его.</li>
-            <li>Если же браузер ответил, убедитесь что в ответе есть строка <code>MatriX</code></li>
+            <li>#{torrent_error_open_echo}</li>
+            <li>#{torrent_error_browser_unavailable}</li>
+            <li>#{torrent_error_matrix_in_reply}</li>
         </ul>
     </div>
 </div>`

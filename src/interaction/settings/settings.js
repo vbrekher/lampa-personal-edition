@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Component from './component'
@@ -58,7 +59,11 @@ function init(){
         down: ()=>{
             Navigator.move('down')
         },
+        right: ()=>{
+            if(Direction.isRTL()) { main.render().detach(); Controller.toggle('content') }
+        },
         left: ()=>{
+            if(Direction.isRTL()) return
             main.render().detach()
             
             Controller.toggle('content')

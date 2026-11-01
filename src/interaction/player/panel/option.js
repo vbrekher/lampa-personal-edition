@@ -50,7 +50,7 @@ function init(){
     /**
      * Выбор качества
      */
-    Html.elem('quality').text('auto').on('hover:enter',()=>{
+    Html.elem('quality').text(Lang.translate('player_quality_auto')).on('hover:enter',()=>{
         if(qualitys){
             let qs = []
             let nw = Html.elem('quality').text()
@@ -365,7 +365,7 @@ function destroy(){
     flows     = false
     translates = {}
 
-    Html.elem('quality').text('auto')
+    Html.elem('quality').text(Lang.translate('player_quality_auto'))
 
     Html.elem('subs').toggleClass('hide',true)
     Html.elem('tracks').toggleClass('hide',true)

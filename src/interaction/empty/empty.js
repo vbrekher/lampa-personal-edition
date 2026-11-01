@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Activity from '../activity/activity'
@@ -91,7 +92,7 @@ class Empty extends Emit{
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             up: ()=>{
                 if(Navigator.canmove('up')) Navigator.move('up')
@@ -101,7 +102,8 @@ class Empty extends Emit{
                 Navigator.move('down')
             },
             right: ()=>{
-                Navigator.move('right')
+                if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()) Controller.toggle('menu')
             },
             back: ()=>{
                 Activity.backward()
@@ -154,16 +156,16 @@ class Empty extends Emit{
                 html.append($(`<div class="console__line selector"><span class="console__time">${name}</span> - <span>${value}</span></div>`))
             }
 
-            line('Protocol', window.location.protocol)
-            line('Host', window.location.host)
-            line('Platform', Platfrom.get())
-            line('Safe connection', Storage.field('protocol') == 'https' ? 'Yes' : 'No')
-            line('Connection', Utils.protocol())
-            line('TMDB Proxy', Storage.field('tmdb_proxy') ? 'Yes' : 'No')
-            line('TMDB Proxy plugin',  Plugins.loaded().find(u=>/\/plugin\/tmdb-proxy/.test(u)) ? 'Yes' : 'No')
-            line('TMDB Proxy api',  Lampa.TMDB.api('').split('/').slice(0,3).join('/'))
-            line('Premium', Account.hasPremium() ? 'Yes' : 'No')
-            line('Mirror', Manifest.cub_domain)
+            line(Lang.translate('diagnostics_protocol'), window.location.protocol)
+            line(Lang.translate('diagnostics_host'), window.location.host)
+            line(Lang.translate('diagnostics_platform'), Platfrom.get())
+            line(Lang.translate('settings_rest_protocol_use'), Storage.field('protocol') == 'https' ? Lang.translate('settings_param_yes') : Lang.translate('settings_param_no'))
+            line(Lang.translate('diagnostics_connection'), Utils.protocol())
+            line('TMDB Proxy', Storage.field('tmdb_proxy') ? Lang.translate('settings_param_yes') : Lang.translate('settings_param_no'))
+            line('TMDB Proxy · ' + Lang.translate('settings_main_plugins'),  Plugins.loaded().find(u=>/\/plugin\/tmdb-proxy/.test(u)) ? Lang.translate('settings_param_yes') : Lang.translate('settings_param_no'))
+            line('TMDB Proxy API',  Lampa.TMDB.api('').split('/').slice(0,3).join('/'))
+            line('Premium', Account.hasPremium() ? Lang.translate('settings_param_yes') : Lang.translate('settings_param_no'))
+            line(Lang.translate('diagnostics_mirror'), Manifest.cub_domain)
 
             if(add_information){
                 add_information.forEach((info)=>{

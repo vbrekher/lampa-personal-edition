@@ -1,0 +1,4838 @@
+{
+  "nl": {
+    "full_genre": {
+      "value": "Genre",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "full_budget": {
+      "value": "Budget",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "full_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "full_trailers": {
+      "value": "Trailers",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_cub_account": {
+      "value": "Account",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_cub_status": {
+      "value": "Status",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_main_account": {
+      "value": "Account",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_main_interface": {
+      "value": "Interface",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_main_parser": {
+      "value": "Parser",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "torrent_item_grabs": {
+      "value": "Leechers",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "torrent_item_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "torrent_parser_tracker": {
+      "value": "tracker",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "torrent_parser_voice_amateur": {
+      "value": "Amateur",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_trailers": {
+      "value": "Trailers",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_wath": {
+      "value": "Later",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_parser": {
+      "value": "Parser",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_genre": {
+      "value": "Genre",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_filter": {
+      "value": "Filter",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_buffer": {
+      "value": "Buffer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "company_homepage": {
+      "value": "Website",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_af": {
+      "value": "Afghanistan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_bd": {
+      "value": "Bangladesh",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_bt": {
+      "value": "Bhutan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ca": {
+      "value": "Canada",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_cn": {
+      "value": "China",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_co": {
+      "value": "Colombia",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_cr": {
+      "value": "Costa Rica",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_cu": {
+      "value": "Cuba",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_cy": {
+      "value": "Cyprus",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_dj": {
+      "value": "Djibouti",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ec": {
+      "value": "Ecuador",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_fi": {
+      "value": "Finland",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_gp": {
+      "value": "Guadeloupe",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_in": {
+      "value": "India",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ir": {
+      "value": "Iran",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_jm": {
+      "value": "Jamaica",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_jp": {
+      "value": "Japan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mc": {
+      "value": "Monaco",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mo": {
+      "value": "Macau",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mx": {
+      "value": "Mexico",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_mz": {
+      "value": "Mozambique",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ni": {
+      "value": "Nicaragua",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_rw": {
+      "value": "Rwanda",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_sg": {
+      "value": "Singapore",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_th": {
+      "value": "Thailand",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed country name: this spelling is also used in nl."
+    },
+    "filter_lang_af": {
+      "value": "Afrikaans",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_hi": {
+      "value": "Hindi",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_pa": {
+      "value": "Punjabi",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_sw": {
+      "value": "Swahili",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_ta": {
+      "value": "Tamil",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_lang_ur": {
+      "value": "Urdu",
+      "reason": "Reviewed language name: this spelling is also used in nl."
+    },
+    "filter_genre_dr": {
+      "value": "Drama",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_genre_ho": {
+      "value": "Horror",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_genre_md": {
+      "value": "Melodrama",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_genre_tr": {
+      "value": "Thriller",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_keyword_school": {
+      "value": "School",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "filter_keyword_robots": {
+      "value": "Robots",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "menu_tv": {
+      "value": "Series",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "menu_time": {
+      "value": "Later",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "menu_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "menu_console": {
+      "value": "Console",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_background_complex": {
+      "value": "Complex",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "fav_sync_site": {
+      "value": "Website",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "player_volume": {
+      "value": "Volume",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "size_zero": {
+      "value": "0 Byte",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "size_byte": {
+      "value": "Byte",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "speed_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "speed_gb": {
+      "value": "Gbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "month_9": {
+      "value": "September",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "month_12": {
+      "value": "December",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "month_9_e": {
+      "value": "September",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "month_12_e": {
+      "value": "December",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "extensions_price_shareware": {
+      "value": "Freemium",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "about_hash": {
+      "value": "Hash",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in nl."
+    },
+    "diagnostics_protocol": {
+      "value": "Protocol",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "de": {
+    "full_genre": {
+      "value": "Genre",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "full_budget": {
+      "value": "Budget",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "full_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_cub_status": {
+      "value": "Status",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_interface_animation": {
+      "value": "Animation",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_main_player": {
+      "value": "Player",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_main_parser": {
+      "value": "Parser",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_parser_jackett_link": {
+      "value": "Link",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_player_timecode": {
+      "value": "Timecode",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "torent_nohash_reason_three": {
+      "value": "Link",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "torrent_item_bitrate": {
+      "value": "Bitrate",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "torrent_parser_voice_amateur": {
+      "value": "Amateur",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "about_version": {
+      "value": "Version",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_person": {
+      "value": "Person",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_links": {
+      "value": "Links",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_parser": {
+      "value": "Parser",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_genre": {
+      "value": "Genre",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_filter": {
+      "value": "Filter",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_navigation": {
+      "value": "Navigation",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "company_homepage": {
+      "value": "Website",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_af": {
+      "value": "Afghanistan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bh": {
+      "value": "Bahrain",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bs": {
+      "value": "Bahamas",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bt": {
+      "value": "Bhutan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_cl": {
+      "value": "Chile",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_cn": {
+      "value": "China",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_cr": {
+      "value": "Costa Rica",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ec": {
+      "value": "Ecuador",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_gp": {
+      "value": "Guadeloupe",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_il": {
+      "value": "Israel",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ir": {
+      "value": "Iran",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_jp": {
+      "value": "Japan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_kw": {
+      "value": "Kuwait",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mc": {
+      "value": "Monaco",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mo": {
+      "value": "Macau",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_my": {
+      "value": "Malaysia",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ni": {
+      "value": "Nicaragua",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_th": {
+      "value": "Thailand",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ua": {
+      "value": "Ukraine",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed country name: this spelling is also used in de."
+    },
+    "filter_filtred": {
+      "value": "Filter",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "filter_lang_af": {
+      "value": "Afrikaans",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_bn": {
+      "value": "Bengali",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_hi": {
+      "value": "Hindi",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_ne": {
+      "value": "Nepali",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_pa": {
+      "value": "Punjabi",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_so": {
+      "value": "Somali",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_ta": {
+      "value": "Tamil",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_lang_ur": {
+      "value": "Urdu",
+      "reason": "Reviewed language name: this spelling is also used in de."
+    },
+    "filter_genre_dr": {
+      "value": "Drama",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "filter_genre_ho": {
+      "value": "Horror",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "filter_genre_tr": {
+      "value": "Thriller",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "filter_genre_ve": {
+      "value": "Western",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "menu_filter": {
+      "value": "Filter",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "menu_torrents": {
+      "value": "Torrents",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_interface_size_normal": {
+      "value": "Normal",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_torrent_lang_orig": {
+      "value": "Original",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "settings_param_glass_easy": {
+      "value": "Transparent",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "fav_sync_site": {
+      "value": "Website",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "size_zero": {
+      "value": "0 Byte",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "size_byte": {
+      "value": "Byte",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_4": {
+      "value": "April",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_8": {
+      "value": "August",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_9": {
+      "value": "September",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_11": {
+      "value": "November",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_4_e": {
+      "value": "April",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_8_e": {
+      "value": "August",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_9_e": {
+      "value": "September",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "month_11_e": {
+      "value": "November",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "extensions_price_shareware": {
+      "value": "Freemium",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "tv_status_pilot": {
+      "value": "Pilot",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "premiere_title": {
+      "value": "Premiere",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "about_hash": {
+      "value": "Hash",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in de."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "tr": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ke": {
+      "value": "Kenya",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ly": {
+      "value": "Libya",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_md": {
+      "value": "Moldova",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "country_ye": {
+      "value": "Yemen",
+      "reason": "Reviewed country name: this spelling is also used in tr."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_interface_size_normal": {
+      "value": "Normal",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed standard UI loanword, cognate, product name or technical unit in tr."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "hi": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    }
+  },
+  "bn": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product or service name; preserve its Latin trademark spelling."
+    }
+  },
+  "id": {
+    "full_genre": {
+      "value": "Genre",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "full_episode": {
+      "value": "Episode",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_cub_status": {
+      "value": "Status",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "torrent_item_bitrate": {
+      "value": "Bitrate",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "torrent_item_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_genre": {
+      "value": "Genre",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_filter": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_buffer": {
+      "value": "Buffer",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_metadata": {
+      "value": "Metadata",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_af": {
+      "value": "Afghanistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_al": {
+      "value": "Albania",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_am": {
+      "value": "Armenia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ar": {
+      "value": "Argentina",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_at": {
+      "value": "Austria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_au": {
+      "value": "Australia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_az": {
+      "value": "Azerbaijan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bd": {
+      "value": "Bangladesh",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bg": {
+      "value": "Bulgaria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bh": {
+      "value": "Bahrain",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bo": {
+      "value": "Bolivia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bt": {
+      "value": "Bhutan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_by": {
+      "value": "Belarus",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_dj": {
+      "value": "Djibouti",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_dk": {
+      "value": "Denmark",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ee": {
+      "value": "Estonia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ge": {
+      "value": "Georgia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gl": {
+      "value": "Greenland",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gp": {
+      "value": "Guadeloupe",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_id": {
+      "value": "Indonesia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_il": {
+      "value": "Israel",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_in": {
+      "value": "India",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ir": {
+      "value": "Iran",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ke": {
+      "value": "Kenya",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kg": {
+      "value": "Kyrgyzstan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kz": {
+      "value": "Kazakhstan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_kw": {
+      "value": "Kuwait",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lb": {
+      "value": "Lebanon",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_lv": {
+      "value": "Latvia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ly": {
+      "value": "Libya",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_md": {
+      "value": "Moldova",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mn": {
+      "value": "Mongolia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_my": {
+      "value": "Malaysia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_qa": {
+      "value": "Qatar",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_rs": {
+      "value": "Serbia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_rw": {
+      "value": "Rwanda",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_si": {
+      "value": "Slovenia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_th": {
+      "value": "Thailand",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tj": {
+      "value": "Tajikistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tn": {
+      "value": "Tunisia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_uz": {
+      "value": "Uzbekistan",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_yu": {
+      "value": "Yugoslavia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed Indonesian country name; spelling shared with English."
+    },
+    "filter_filtred": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_ta": {
+      "value": "Tamil",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_lang_tt": {
+      "value": "Tatar",
+      "reason": "Reviewed language name shared with Indonesian."
+    },
+    "filter_genre_dr": {
+      "value": "Drama",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_genre_md": {
+      "value": "Melodrama",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "menu_filter": {
+      "value": "Filter",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_interface_size_normal": {
+      "value": "Normal",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_player_hls_js": {
+      "value": "Program",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "player_volume": {
+      "value": "Volume",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "watch_history_episode_n": {
+      "value": "Episode {n}",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_gb": {
+      "value": "Gbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_4": {
+      "value": "April",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_9": {
+      "value": "September",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_11": {
+      "value": "November",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_4_e": {
+      "value": "April",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_9_e": {
+      "value": "September",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "month_11_e": {
+      "value": "November",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "about_hash": {
+      "value": "Hash",
+      "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Platform",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "he": {
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "torrent_item_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "speed_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed TorrServer product name; Latin spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed TorrServer product name; Latin spelling is intentional."
+    }
+  },
+  "ar": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed service or product name; Latin spelling is intentional."
+    }
+  },
+  "ur": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product/service name; Latin spelling is intentional."
+    }
+  },
+  "zh": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "es": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_popular": {
+      "value": "Popular",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_al": {
+      "value": "Albania",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_am": {
+      "value": "Armenia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ar": {
+      "value": "Argentina",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_at": {
+      "value": "Austria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_au": {
+      "value": "Australia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bg": {
+      "value": "Bulgaria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bo": {
+      "value": "Bolivia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cl": {
+      "value": "Chile",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cn": {
+      "value": "China",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_co": {
+      "value": "Colombia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cr": {
+      "value": "Costa Rica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Cuba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ec": {
+      "value": "Ecuador",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ee": {
+      "value": "Estonia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ge": {
+      "value": "Georgia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_id": {
+      "value": "Indonesia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_il": {
+      "value": "Israel",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_in": {
+      "value": "India",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Jamaica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kw": {
+      "value": "Kuwait",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mn": {
+      "value": "Mongolia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mz": {
+      "value": "Mozambique",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ni": {
+      "value": "Nicaragua",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rs": {
+      "value": "Serbia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ye": {
+      "value": "Yemen",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_yu": {
+      "value": "Yugoslavia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_ur": {
+      "value": "Urdu",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrent_lang_orig": {
+      "value": "Original",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_size_v115_title": {
+      "value": "Vertical 115%",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_size_v130_title": {
+      "value": "Vertical 130%",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "account_profile_main": {
+      "value": "General",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "fr": {
+    "full_genre": {
+      "value": "Genre",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_production": {
+      "value": "Production",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_budget": {
+      "value": "Budget",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_interface_animation": {
+      "value": "Animation",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_interface": {
+      "value": "Interface",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_plugins": {
+      "value": "Extensions",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_voice_amateur": {
+      "value": "Amateur",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_version": {
+      "value": "Version",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_genre": {
+      "value": "Genre",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_page": {
+      "value": "Page",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_af": {
+      "value": "Afghanistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ca": {
+      "value": "Canada",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Cuba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dj": {
+      "value": "Djibouti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mc": {
+      "value": "Monaco",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mv": {
+      "value": "Maldives",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ph": {
+      "value": "Philippines",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_ca": {
+      "value": "Catalan",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_sm": {
+      "value": "Samoan",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "menu_console": {
+      "value": "Console",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_glass_easy": {
+      "value": "Transparent",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "termsofuse_t_08": {
+      "value": "Extensions",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "pt": {
+    "full_trailers": {
+      "value": "Trailers",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_interface": {
+      "value": "Interface",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_trailers": {
+      "value": "Trailers",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_popular": {
+      "value": "Popular",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_buffer": {
+      "value": "Buffer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_romance": {
+      "value": "Romance",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ar": {
+      "value": "Argentina",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bd": {
+      "value": "Bangladesh",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bs": {
+      "value": "Bahamas",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cl": {
+      "value": "Chile",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cn": {
+      "value": "China",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cr": {
+      "value": "Costa Rica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Cuba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_il": {
+      "value": "Israel",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Jamaica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kw": {
+      "value": "Kuwait",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_me": {
+      "value": "Montenegro",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mo": {
+      "value": "Macau",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pt": {
+      "value": "Portugal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_pa": {
+      "value": "Punjabi",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_ur": {
+      "value": "Urdu",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_genre_dr": {
+      "value": "Drama",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_md": {
+      "value": "Melodrama",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_rs": {
+      "value": "Reality show",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_interface_size_normal": {
+      "value": "Normal",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_size_v115_title": {
+      "value": "Vertical 115%",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_size_v130_title": {
+      "value": "Vertical 130%",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_zero": {
+      "value": "0 Byte",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_byte": {
+      "value": "Byte",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "extensions_hpu_best": {
+      "value": "Popular",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "ru": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "uk": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_budget": {
+      "value": "Бюджет",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_keywords": {
+      "value": "Теги",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_password": {
+      "value": "Пароль",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_status": {
+      "value": "Статус",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_parser": {
+      "value": "Парсер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_server_password": {
+      "value": "Пароль",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_serial_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_channel": {
+      "value": "Наш канал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_actress": {
+      "value": "Актриса",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_parser": {
+      "value": "Парсер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_type": {
+      "value": "Тип",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_rating": {
+      "value": "Рейтинг",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_channel": {
+      "value": "Канал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_author": {
+      "value": "Автор",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_buffer": {
+      "value": "Буфер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_fear": {
+      "value": "Страх",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_romance": {
+      "value": "Романтика",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "company_homepage": {
+      "value": "Сайт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ad": {
+      "value": "Андорра",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Ангола",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ar": {
+      "value": "Аргентина",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Аруба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_az": {
+      "value": "Азербайджан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bd": {
+      "value": "Бангладеш",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bh": {
+      "value": "Бахрейн",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bt": {
+      "value": "Бутан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bw": {
+      "value": "Ботсвана",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ca": {
+      "value": "Канада",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cm": {
+      "value": "Камерун",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cn": {
+      "value": "Китай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Куба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cv": {
+      "value": "Кабо-Верде",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dz": {
+      "value": "Алжир",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Габон",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Гана",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gp": {
+      "value": "Гваделупа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Гватемала",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_hk": {
+      "value": "Гонконг",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Ямайка",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kh": {
+      "value": "Камбоджа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kz": {
+      "value": "Казахстан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kw": {
+      "value": "Кувейт",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Лаос",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lt": {
+      "value": "Литва",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lu": {
+      "value": "Люксембург",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ma": {
+      "value": "Марокко",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mc": {
+      "value": "Монако",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_md": {
+      "value": "Молдова",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mo": {
+      "value": "Макао",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Мальта",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mx": {
+      "value": "Мексика",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Непал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_om": {
+      "value": "Оман",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Панама",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Перу",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pk": {
+      "value": "Пакистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_py": {
+      "value": "Парагвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_qa": {
+      "value": "Катар",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rw": {
+      "value": "Руанда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sd": {
+      "value": "Судан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Сенегал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sv": {
+      "value": "Сальвадор",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tj": {
+      "value": "Таджикистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tw": {
+      "value": "Тайвань",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Уганда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_us": {
+      "value": "США",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Уругвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uz": {
+      "value": "Узбекистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Самоа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Косово",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_ur": {
+      "value": "Урду",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_genre_dr": {
+      "value": "Драма",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_md": {
+      "value": "Мелодрама",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_fa": {
+      "value": "Фантастика",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_school": {
+      "value": "Школа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_disaster": {
+      "value": "Катастрофа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_console": {
+      "value": "Консоль",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_screensaver_nature": {
+      "value": "Природа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "fav_sync_site": {
+      "value": "Сайт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_byte": {
+      "value": "Байт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "ad": {
+      "value": "Реклама",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "ad_after": {
+      "value": "Реклама через",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_quality_auto": {
+      "value": "Авто",
+      "reason": "Standard Ukrainian abbreviation for automatic; identical spelling to Russian is a legitimate native cognate."
+    },
+    "diagnostics_protocol": {
+      "value": "Протокол",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "be": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_password": {
+      "value": "Пароль",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_status": {
+      "value": "Статус",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_parser": {
+      "value": "Парсер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_server_password": {
+      "value": "Пароль",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_serial_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_year": {
+      "value": "Год",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_channel": {
+      "value": "Наш канал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_parser": {
+      "value": "Парсер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_year": {
+      "value": "Год",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_files": {
+      "value": "Файлы",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_channel": {
+      "value": "Канал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_buffer": {
+      "value": "Буфер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_top_100": {
+      "value": "Топ 100",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_channels": {
+      "value": "Каналы",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_fear": {
+      "value": "Страх",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "company_homepage": {
+      "value": "Сайт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ao": {
+      "value": "Ангола",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Аруба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_az": {
+      "value": "Азербайджан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bt": {
+      "value": "Бутан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_by": {
+      "value": "Беларусь",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ca": {
+      "value": "Канада",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cm": {
+      "value": "Камерун",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Куба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ec": {
+      "value": "Эквадор",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Габон",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Гана",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Ямайка",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kh": {
+      "value": "Камбоджа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kz": {
+      "value": "Казахстан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kw": {
+      "value": "Кувейт",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Лаос",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lu": {
+      "value": "Люксембург",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Мальта",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Непал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Панама",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_py": {
+      "value": "Парагвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_qa": {
+      "value": "Катар",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rw": {
+      "value": "Руанда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sd": {
+      "value": "Судан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Сенегал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_su": {
+      "value": "СССР",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sv": {
+      "value": "Сальвадор",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tw": {
+      "value": "Тайвань",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Уганда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Уругвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ve": {
+      "value": "Венесуэла",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_ur": {
+      "value": "Урду",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_genre_dr": {
+      "value": "Драма",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_mu": {
+      "value": "Музыка",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_school": {
+      "value": "Школа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_disaster": {
+      "value": "Катастрофа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "fav_sync_site": {
+      "value": "Сайт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_zero": {
+      "value": "0 Байт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_byte": {
+      "value": "Байт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "month_5_e": {
+      "value": "Мая",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "bg": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_budget": {
+      "value": "Бюджет",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "full_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_sync": {
+      "value": "Синхронизация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_cub_status": {
+      "value": "Статус",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_interface_animation": {
+      "value": "Анимация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_interface": {
+      "value": "Интерфейс",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_parser": {
+      "value": "Парсер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_rest_tmdb_example": {
+      "value": "Например:",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_parser_jackett_key_placeholder": {
+      "value": "Например: sa0sk83d..",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_parser_scraperapi_placeholder": {
+      "value": "Например: scraperapi.com",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_item_mb": {
+      "value": "Мбит/с",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_serial_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_quality": {
+      "value": "Качество",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "torrent_parser_season": {
+      "value": "Сезон",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_version": {
+      "value": "Версия",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_settings": {
+      "value": "Настройки",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_category": {
+      "value": "Категория",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_genre": {
+      "value": "Жанр",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_channel": {
+      "value": "Канал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_author": {
+      "value": "Автор",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_buffer": {
+      "value": "Буфер",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_reactions": {
+      "value": "Реакции",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_top_100": {
+      "value": "Топ 100",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_developer": {
+      "value": "Разработчик",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_navigation": {
+      "value": "Навигация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_page": {
+      "value": "Страница",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_moods": {
+      "value": "Настроения",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_violence": {
+      "value": "Насилие",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_fear": {
+      "value": "Страх",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_romance": {
+      "value": "Романтика",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_af": {
+      "value": "Афганистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_al": {
+      "value": "Албания",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_am": {
+      "value": "Армения",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Ангола",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_at": {
+      "value": "Австрия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_au": {
+      "value": "Австралия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Аруба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_az": {
+      "value": "Азербайджан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bd": {
+      "value": "Бангладеш",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bh": {
+      "value": "Бахрейн",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Бурунди",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bj": {
+      "value": "Бенин",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bo": {
+      "value": "Боливия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_br": {
+      "value": "Бразилия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bt": {
+      "value": "Бутан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bw": {
+      "value": "Ботсвана",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ca": {
+      "value": "Канада",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ch": {
+      "value": "Швейцария",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cl": {
+      "value": "Чили",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cm": {
+      "value": "Камерун",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cn": {
+      "value": "Китай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_co": {
+      "value": "Колумбия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Куба",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cz": {
+      "value": "Чехия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_de": {
+      "value": "Германия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dj": {
+      "value": "Джибути",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dk": {
+      "value": "Дания",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dz": {
+      "value": "Алжир",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_eg": {
+      "value": "Египет",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_es": {
+      "value": "Испания",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_fr": {
+      "value": "Франция",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Габон",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ge": {
+      "value": "Грузия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Гана",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gl": {
+      "value": "Гренландия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gp": {
+      "value": "Гваделупа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Гватемала",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_id": {
+      "value": "Индонезия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ie": {
+      "value": "Ирландия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_in": {
+      "value": "Индия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_iq": {
+      "value": "Ирак",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ir": {
+      "value": "Иран",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_is": {
+      "value": "Исландия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_it": {
+      "value": "Италия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Ямайка",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jp": {
+      "value": "Япония",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ke": {
+      "value": "Кения",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kh": {
+      "value": "Камбоджа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kz": {
+      "value": "Казахстан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_kw": {
+      "value": "Кувейт",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Лаос",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lb": {
+      "value": "Ливан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lr": {
+      "value": "Либерия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lt": {
+      "value": "Литва",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lu": {
+      "value": "Люксембург",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lv": {
+      "value": "Латвия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mc": {
+      "value": "Монако",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_md": {
+      "value": "Молдова",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mn": {
+      "value": "Монголия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mo": {
+      "value": "Макао",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mw": {
+      "value": "Малави",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_my": {
+      "value": "Малайзия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mz": {
+      "value": "Мозамбик",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_na": {
+      "value": "Намибия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ne": {
+      "value": "Нигер",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ng": {
+      "value": "Нигерия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ni": {
+      "value": "Никарагуа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_no": {
+      "value": "Норвегия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Непал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_om": {
+      "value": "Оман",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Панама",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Перу",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pk": {
+      "value": "Пакистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pt": {
+      "value": "Португалия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_py": {
+      "value": "Парагвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_qa": {
+      "value": "Катар",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rw": {
+      "value": "Руанда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sd": {
+      "value": "Судан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_se": {
+      "value": "Швеция",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sg": {
+      "value": "Сингапур",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_si": {
+      "value": "Словения",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Сенегал",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sy": {
+      "value": "Сирия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tj": {
+      "value": "Таджикистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tm": {
+      "value": "Туркменистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tn": {
+      "value": "Тунис",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tr": {
+      "value": "Турция",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tz": {
+      "value": "Танзания",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Уганда",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Уругвай",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uz": {
+      "value": "Узбекистан",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Самоа",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Косово",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ye": {
+      "value": "Йемен",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_yu": {
+      "value": "Югославия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zm": {
+      "value": "Замбия",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zw": {
+      "value": "Зимбабве",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_combinations": {
+      "value": "Комбинации",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_ad": {
+      "value": "Приключения",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_cm": {
+      "value": "Комедия",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_dr": {
+      "value": "Драма",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_md": {
+      "value": "Мелодрама",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_police": {
+      "value": "Полиция",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_disaster": {
+      "value": "Катастрофа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_catalog": {
+      "value": "Каталог",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_anime": {
+      "value": "Аниме",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_settings": {
+      "value": "Настройки",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_about": {
+      "value": "Информация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "console_warnings": {
+      "value": "Предупреждения",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_screensaver_nature": {
+      "value": "Природа",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrent_lang_orig": {
+      "value": "Оригинал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_quality": {
+      "value": "Качество",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_flow": {
+      "value": "Поток",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_playlist": {
+      "value": "Плейлист",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "player_normalization": {
+      "value": "Нормализация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "notice_quality": {
+      "value": "Качество",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "account_profiles": {
+      "value": "Профили",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "size_byte": {
+      "value": "Байт",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "month_3": {
+      "value": "Март",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "month_8": {
+      "value": "Август",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "day_2": {
+      "value": "Вторник",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "extensions_info": {
+      "value": "Информация",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "extensions_hpu_video": {
+      "value": "Видео",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "ad": {
+      "value": "Реклама",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "terminal_title": {
+      "value": "Терминал",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_hash": {
+      "value": "Хеш",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "personal_catalog_category_2": {
+      "value": "Интерфейс и удобство",
+      "reason": "Native Bulgarian interface label; legitimate shared vocabulary with Russian, independently reviewed in context."
+    },
+    "diagnostics_protocol": {
+      "value": "Протокол",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_host": {
+      "value": "Хост",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "diagnostics_platform": {
+      "value": "Платформа",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "torrent_error_step_3": {
+      "value": "Протокол и порт",
+      "reason": "Native Bulgarian network terminology, independently context-reviewed; legitimate shared wording with Russian."
+    }
+  },
+  "cs": {
+    "settings_main_parser": {
+      "value": "Parser",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_parser": {
+      "value": "Parser",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_metadata": {
+      "value": "Metadata",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_eg": {
+      "value": "Egypt",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gp": {
+      "value": "Guadeloupe",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_py": {
+      "value": "Paraguay",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_genre_fe": {
+      "value": "Fantasy",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_genre_tr": {
+      "value": "Thriller",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "about_hash": {
+      "value": "Hash",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    }
+  },
+  "pl": {
+    "settings_cub_status": {
+      "value": "Status",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_parser": {
+      "value": "Parser",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_parser": {
+      "value": "Parser",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_meta_humor": {
+      "value": "Humor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_at": {
+      "value": "Austria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_au": {
+      "value": "Australia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cl": {
+      "value": "Chile",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ee": {
+      "value": "Estonia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ir": {
+      "value": "Iran",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mn": {
+      "value": "Mongolia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_om": {
+      "value": "Oman",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rs": {
+      "value": "Serbia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rw": {
+      "value": "Rwanda",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sy": {
+      "value": "Syria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ug": {
+      "value": "Uganda",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uz": {
+      "value": "Uzbekistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_hi": {
+      "value": "Hindi",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_genre_tr": {
+      "value": "Thriller",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "terminal_title": {
+      "value": "Terminal",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_host": {
+      "value": "Host",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  },
+  "ro": {
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "title_actor": {
+      "value": "Actor",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "country_ad": {
+      "value": "Andorra",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_al": {
+      "value": "Albania",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_am": {
+      "value": "Armenia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ao": {
+      "value": "Angola",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ar": {
+      "value": "Argentina",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_at": {
+      "value": "Austria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_au": {
+      "value": "Australia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_aw": {
+      "value": "Aruba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bd": {
+      "value": "Bangladesh",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bg": {
+      "value": "Bulgaria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bh": {
+      "value": "Bahrain",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bi": {
+      "value": "Burundi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bj": {
+      "value": "Benin",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bo": {
+      "value": "Bolivia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bs": {
+      "value": "Bahamas",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bt": {
+      "value": "Bhutan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_bw": {
+      "value": "Botswana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_by": {
+      "value": "Belarus",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ca": {
+      "value": "Canada",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cl": {
+      "value": "Chile",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cn": {
+      "value": "China",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cr": {
+      "value": "Costa Rica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_cu": {
+      "value": "Cuba",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dj": {
+      "value": "Djibouti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_dz": {
+      "value": "Algeria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ee": {
+      "value": "Estonia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ga": {
+      "value": "Gabon",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ge": {
+      "value": "Georgia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gh": {
+      "value": "Ghana",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_gt": {
+      "value": "Guatemala",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_hk": {
+      "value": "Hong Kong",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ht": {
+      "value": "Haiti",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_in": {
+      "value": "India",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_jm": {
+      "value": "Jamaica",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ke": {
+      "value": "Kenya",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_la": {
+      "value": "Laos",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_li": {
+      "value": "Liechtenstein",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lk": {
+      "value": "Sri Lanka",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_lr": {
+      "value": "Liberia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mc": {
+      "value": "Monaco",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_md": {
+      "value": "Moldova",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mm": {
+      "value": "Myanmar",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mn": {
+      "value": "Mongolia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mt": {
+      "value": "Malta",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mu": {
+      "value": "Mauritius",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_mw": {
+      "value": "Malawi",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_na": {
+      "value": "Namibia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ne": {
+      "value": "Niger",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ng": {
+      "value": "Nigeria",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ni": {
+      "value": "Nicaragua",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_np": {
+      "value": "Nepal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pa": {
+      "value": "Panama",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pe": {
+      "value": "Peru",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pk": {
+      "value": "Pakistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_pr": {
+      "value": "Puerto Rico",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_qa": {
+      "value": "Qatar",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_rs": {
+      "value": "Serbia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sd": {
+      "value": "Sudan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sg": {
+      "value": "Singapore",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_si": {
+      "value": "Slovenia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sn": {
+      "value": "Senegal",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_sv": {
+      "value": "El Salvador",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tm": {
+      "value": "Turkmenistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tn": {
+      "value": "Tunisia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tw": {
+      "value": "Taiwan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_tz": {
+      "value": "Tanzania",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uy": {
+      "value": "Uruguay",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_uz": {
+      "value": "Uzbekistan",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ve": {
+      "value": "Venezuela",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_ws": {
+      "value": "Samoa",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_xk": {
+      "value": "Kosovo",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zm": {
+      "value": "Zambia",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "country_zw": {
+      "value": "Zimbabwe",
+      "reason": "Reviewed native country name; identical spelling in the source locale is intentional."
+    },
+    "filter_lang_af": {
+      "value": "Afrikaans",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_gn": {
+      "value": "Guarani",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_hi": {
+      "value": "Hindi",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_mi": {
+      "value": "Maori",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_pa": {
+      "value": "Punjabi",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_sw": {
+      "value": "Swahili",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_lang_ur": {
+      "value": "Urdu",
+      "reason": "Reviewed native language name; spelling is shared with the source locale."
+    },
+    "filter_genre_tr": {
+      "value": "Thriller",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "filter_keyword_zombie": {
+      "value": "Zombie",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "menu_anime": {
+      "value": "Anime",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_background_complex": {
+      "value": "Complex",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_tb": {
+      "value": "Tbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "speed_pp": {
+      "value": "Pbps",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "extensions_hpu_video": {
+      "value": "Video",
+      "reason": "Reviewed native cognate, established loanword, product name or standard unit; this exact value is intentional."
+    },
+    "diagnostics_protocol": {
+      "value": "Protocol",
+      "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    }
+  }
+}

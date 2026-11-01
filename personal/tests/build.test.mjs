@@ -1,10 +1,11 @@
 import test from 'node:test';
+import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import {mkdtempSync,mkdirSync,existsSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {normalizeServerUrl,normalizeSettings,configScript,localTizenHtml,patchedGulp,patchedLibraries,patchedManifest,widgetManifest,packageTizen} from '../lib.mjs';
+import {checkBinaryAssets,normalizeServerUrl,normalizeSettings,configScript,localTizenHtml,patchedGulp,patchedLibraries,patchedManifest,widgetManifest,packageTizen} from '../lib.mjs';
 const root=resolve(import.meta.dirname,'..','..');
 const icon=join(root,'personal/assets/icon.png');
 const HTML='<html><head><title>Lampa</title><link href="css/app.css"></head><body><script src="./vender/jquery/jquery.js"></script><script src="http://www.youtube.com/iframe_api"></script><script src="loader.js"></script></body></html>';
@@ -20,7 +21,8 @@ test('URL validation and no secret-bearing URL',()=>{
 test('only supported source languages',()=>{
   assert.deepEqual(normalizeSettings(),{language:'ru',torrserverUrl:'',parserType:'jackett',pluginsEnabled:false});
   assert.equal(normalizeSettings({language:'uk'}).language,'uk');
-  assert.throws(()=>normalizeSettings({language:'nl'}));
+  assert.equal(normalizeSettings({language:'nl'}).language,'nl');
+  assert.throws(()=>normalizeSettings({language:'zz'}));
   assert.equal(normalizeSettings({parserType:'prowlarr'}).parserType,'prowlarr');
   assert.throws(()=>normalizeSettings({parserType:'invalid'}),e=>e.code==='INVALID_PARSER_TYPE');
 });
@@ -81,10 +83,10 @@ test('bundled catalogue is small, categorized, deduplicated and HTTPS-only',()=>
   const catalog=JSON.parse(source.slice(source.indexOf('export default ')+15).trim());
   assert.ok(catalog.results.length>=3);
   const urls=catalog.results.flatMap(category=>{
-    assert.ok(category.titles.en && category.titles.ru);
+    assert.ok(category.title_key);
     return category.results.map(item=>{
       assert.ok(item.link.startsWith('https://') && item.link.length>12);
-      assert.ok(item.name && item.descr && item.lang.en && item.lang.ru);
+      assert.ok(item.name && item.descr_key);
       return item.link;
     });
   });
@@ -157,4 +159,53 @@ test('produces a verified ZIP without loader or public credentials',()=>{
     assert.ok(!html.includes('loader.js'));
     assert.equal(readFileSync(join(source,'index.html'),'utf8'),HTML);
   }finally{rmSync(tmp,{recursive:true,force:true});}
+});
+
+test('changing the bundled interface locale preserves independently chosen metadata language and user data',()=>{
+  const data=new Map([['tmdb_lang','fr'],['favorite','[{"id":42}]'],['plugins','[{"url":"https://example.com/plugin.js"}]'],['history','[{"id":7}]']]);
+  const before=new Map(data);
+  const storage={setItem:(key,val)=>data.set(key,val),getItem:(key)=>data.get(key)??null};
+  for(const language of ['nl','de','tr']){
+    new Function('window','localStorage',configScript({language}))({},storage);
+    assert.equal(data.get('language'),language);
+    for(const [key,value] of before)assert.equal(data.get(key),value,key);
+  }
+});
+
+test('rebuilding with only another interface language preserves TV-side TorrServer and parser edits',()=>{
+  const values=new Map();
+  const storage={setItem:(key,val)=>values.set(key,val),getItem:key=>values.get(key)??null};
+  new Function('window','localStorage',configScript({language:'nl'}))({},storage);
+  values.set('torrserver_url','http://192.168.1.42:8090');
+  values.set('torrserver_use_link','two');
+  values.set('parser_torrent_type','prowlarr');
+  new Function('window','localStorage',configScript({language:'de'}))({},storage);
+  assert.equal(values.get('language'),'de');
+  assert.equal(values.get('torrserver_url'),'http://192.168.1.42:8090');
+  assert.equal(values.get('torrserver_use_link'),'two');
+  assert.equal(values.get('parser_torrent_type'),'prowlarr');
+});
+
+test('first-install language choice is pending only for a fresh device',()=>{
+  const script=configScript({language:'nl'});
+  const execute=entries=>{
+    const values=new Map(entries);
+    const localStorage={getItem:key=>values.get(key)||null,setItem:(key,value)=>values.set(key,value)};
+    vm.runInNewContext(script,{window:{lampa_settings:{}},localStorage});return values;
+  };
+  assert.equal(execute([]).get('lampa_personal_language_pending'),'true');
+  assert.equal(execute([['language','de']]).get('lampa_personal_language_pending'),undefined);
+});
+
+
+test('compiled binary assets must remain byte identical, including non-UTF8 bytes',()=>{
+ const temp=mkdtempSync(join(tmpdir(),'lampa-binary-test-'));
+ try{
+  const source=join(temp,'source'),built=join(temp,'built');mkdirSync(source);mkdirSync(built);
+  const bytes=Buffer.from([0x77,0x4f,0x46,0x46,0xff,0x80,0,0xfe]);
+  writeFileSync(join(source,'font.woff'),bytes);writeFileSync(join(built,'font.woff'),bytes);
+  assert.doesNotThrow(()=>checkBinaryAssets(source,built));
+  writeFileSync(join(built,'font.woff'),bytes.toString('utf8'),'utf8');
+  assert.throws(()=>checkBinaryAssets(source,built),error=>error.code==='CORRUPT_ASSET'&&error.detail==='font.woff');
+ }finally{rmSync(temp,{recursive:true,force:true});}
 });

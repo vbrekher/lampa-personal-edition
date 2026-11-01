@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Utils from '../../utils/utils'
@@ -75,11 +76,12 @@ function init(){
             Controller.collectionFocus(last, html, true)
         },
         right: ()=>{
-            Navigator.move('right')
+            if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()) Controller.toggle('menu')
         },
         left: ()=>{
             if(Navigator.canmove('left')) Navigator.move('left')
-            else Controller.toggle('menu')
+            else if(!Direction.isRTL()) Controller.toggle('menu')
         },
         down: ()=>{
             Controller.toggle('content')

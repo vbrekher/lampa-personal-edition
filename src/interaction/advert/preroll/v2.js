@@ -111,7 +111,7 @@ class Vast{
 
         console.log('Ad', 'run', this.preroll.name, 'from', this.preroll.name == 'plugin' ? 'plugin' : 'cub')
 
-        this.elems.status.text('Initialize...')
+        this.elems.status.text(Lang.translate('loading_progress_step_0'))
 
         try{
             this.initialize()
@@ -155,7 +155,7 @@ class Vast{
         this.player = new VASTPlayer(this.elems.container)
 
         this.player.load(this.url()).then(()=> {
-            this.elems.status.text('Loaded')
+            this.elems.status.text(Lang.translate('ready'))
 
             if(this.removed) return this.player.stopAd()
             else{
@@ -164,7 +164,7 @@ class Vast{
                 return this.player.startAd()
             }
         }).catch((reason)=> {
-            this.elems.status.text('Load error')
+            this.elems.status.text(Lang.translate('title_error'))
 
             if(!this.removed) this.error(100, reason.message)
         })
@@ -212,7 +212,7 @@ class Vast{
     onStarted(){
         console.log('Ad','event','started')
 
-        this.elems.status.text('Started: ' + (this.player.adDuration ? Math.round(this.player.adDuration) + 's' : ''))
+        this.elems.status.text(Lang.translate('settings_infuse_launch_play') + ': ' + (this.player.adDuration ? durationLabel(this.player.adDuration) : ''))
 
         stat('started', this.preroll.name)
 
@@ -239,7 +239,7 @@ class Vast{
 
         this.tiks.progress = setInterval(this.onProgress.bind(this), 100)
         this.tiks.watch    = setTimeout(()=>{
-            this.elems.status.text('Watch timeout: ' + duration + 's')
+            this.elems.status.text(Lang.translate('torrent_parser_timeout') + ': ' + durationLabel(duration))
 
             console.log('Ad','error','watch timeout', duration)
 
@@ -330,6 +330,10 @@ class Vast{
      * Остановить рекламу принудительно
      */
     stop(){
+        if(!this.player){
+            this.destroy()
+            return
+        }
         try{
             this.player._events = {}
 
@@ -361,3 +365,8 @@ class Vast{
 }
 
 export default Vast
+// Numeric duration stays readable independently of UI language.
+function durationLabel(seconds){
+    let total = Math.max(0, Math.round(seconds))
+    return Math.floor(total / 60) + ":" + ("0" + total % 60).slice(-2)
+}

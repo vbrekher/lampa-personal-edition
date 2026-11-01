@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {tmpdir} from 'node:os';
 import {dirname,join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {normalizeSettings,packageTizen,patchedGulp,patchedLibraries,patchedManifest,PersonalBuildError} from './lib.mjs';
+import {normalizeSettings,packageTizen,checkBinaryAssets,patchedGulp,patchedLibraries,patchedManifest,PersonalBuildError} from './lib.mjs';
 import {parseBuilderArgs,getBuilderLocale} from './cli.mjs';
 import {strings,formatBuildError} from './i18n.mjs';
 
@@ -60,6 +60,7 @@ function compile(settings,locale) {
       writeFileSync(logPath,diagnostics,{mode:0o600});
       throw new PersonalBuildError('UPSTREAM_BUILD_FAILED');
     }
+    checkBinaryAssets(join(temp,'public'),join(temp,'build/tizen'));
     packageTizen({builtDir:join(temp,'build/tizen'),
       outputFile:join(ROOT,'dist/Lampa-Personal-Edition.wgt'),
       iconFile:join(ROOT,'personal/assets/icon.png'),settings});

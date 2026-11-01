@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Controller from '../../core/controller'
 import Subscribe from '../../utils/subscribe'
 import Noty from '../noty'
@@ -32,7 +33,11 @@ function Keyboard(params = {}){
         'zh': 'zh-CN',
         'bg': 'bg-BG',
         'pt': 'pt-PT',
-        'cs': 'cs-CZ'
+        'cs': 'cs-CZ',
+        'nl': 'nl-NL', 'de': 'de-DE', 'tr': 'tr-TR',
+        'hi': 'hi-IN', 'bn': 'bn-BD', 'id': 'id-ID',
+        'ar': 'ar-SA', 'ur': 'ur-PK', 'he': 'he-IL',
+        'es': 'es-ES', 'fr': 'fr-FR', 'pl': 'pl-PL', 'ro': 'ro-RO'
     }
 
     let last
@@ -100,6 +105,8 @@ function Keyboard(params = {}){
                     }
                 }                              
             }
+
+            input.attr('dir',Direction.fieldDirection(params.name,params.password))
 
             input.on('keyup change input keypress',(e)=>{              
                 let now_value = input.val()
@@ -241,7 +248,8 @@ function Keyboard(params = {}){
         }
         else{
             let layout = typeof params.layout == 'string' ? Layers.get(params.layout) : params.layout || Layers.get('default')
-            let press  = Date.now()
+            let press  = 0
+            let last_press = ''
 
             if(is_electron){
                 Arrays.getKeys(layout).forEach((code)=>{
@@ -272,9 +280,10 @@ function Keyboard(params = {}){
                     this.listener.send('change', {value: value})
                 },
                 onKeyPress: (button)=>{
-                    if(Date.now() - press < 100) return
+                    if(button === last_press && Date.now() - press < 100) return
 
                     press = Date.now()
+                    last_press = button
 
                     if (button === "{SHIFT}" || button === "{SIM}" || button === "{ABC}") this._handle(button)
                     else if(button === '{MIC}'){
@@ -364,7 +373,7 @@ function Keyboard(params = {}){
                 }
             })
 
-            let lang = Storage.get('keyboard_default_lang', Storage.get('language','ru')) 
+            let lang = Direction.fieldDirection(params.name, false) === 'ltr' ? 'en' : Storage.get('keyboard_default_lang', Storage.get('language','ru')) 
 
             _keyBord.setOptions({
                 layoutName: lang == 'ru' ? 'default' : Arrays.getKeys(layout).indexOf(lang) >= 0 ? lang : layout.en ? 'en' : 'default',

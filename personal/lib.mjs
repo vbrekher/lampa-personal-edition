@@ -15,7 +15,7 @@ export class PersonalBuildError extends Error {
   }
 }
 
-export const LANGUAGES = Object.freeze(['ru','en','uk','be','zh','pt','bg','he','cs','ro','fr','pl','es']);
+export const LANGUAGES = Object.freeze(['nl','de','tr','en','zh','hi','es','ar','fr','bn','pt','id','ur','ru','uk','be','bg','cs','he','pl','ro']);
 
 export function normalizeServerUrl(raw, optional=true) {
   const value=String(raw??'').trim();
@@ -55,12 +55,17 @@ export function configScript(input={}) {
     '  s.disable_features.remote_configuration=true;',
     '  // Seed on first install or when builder inputs change; do not erase TV-side edits at each launch.',
     '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl,parserType:cfg.parserType});',
+    '  if(!localStorage.getItem("lampa_personal_seed_v2") && !localStorage.getItem("language")) localStorage.setItem("lampa_personal_language_pending","true");',
+    '  var previous=null;',
+    '  try { previous=JSON.parse(localStorage.getItem("lampa_personal_seed_v2")); } catch(ignore) {}',
     '  if(localStorage.getItem("lampa_personal_seed_v2")!==seed){',
-    '    localStorage.setItem("language",cfg.language);',
-    '    localStorage.setItem("tmdb_lang",cfg.language);',
-    '    localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
-    '    localStorage.setItem("torrserver_use_link","one");',
-    '    localStorage.setItem("parser_torrent_type",cfg.parserType);',
+    '    if(!previous || previous.language!==cfg.language) localStorage.setItem("language",cfg.language);',
+    '    if(!localStorage.getItem("tmdb_lang")) localStorage.setItem("tmdb_lang",cfg.language);',
+    '    if(!previous || previous.torrserverUrl!==cfg.torrserverUrl){',
+    '      localStorage.setItem("torrserver_url",cfg.torrserverUrl);',
+    '      localStorage.setItem("torrserver_use_link","one");',
+    '    }',
+    '    if(!previous || previous.parserType!==cfg.parserType) localStorage.setItem("parser_torrent_type",cfg.parserType);',
     '    localStorage.setItem("lampa_personal_seed_v2",seed);',
     '  }',
     '})();',''
@@ -131,6 +136,18 @@ function checkLinks(root) {
     const path=join(root,name),stat=lstatSync(path);
     if(stat.isSymbolicLink())throw new PersonalBuildError('SYMLINK_FORBIDDEN',path);
     if(stat.isDirectory())checkLinks(path);
+  }
+}
+// Gulp 5 decodes files as UTF-8 unless copying explicitly opts out.
+// Compare original binary assets byte-for-byte before packaging a releasable WGT.
+export function checkBinaryAssets(source, built, prefix='') {
+  for(const name of readdirSync(source)){
+    const input=join(source,name),relative=prefix+name,output=join(built,name);
+    if(statSync(input).isDirectory())checkBinaryAssets(input,output,relative+'/');
+    else if(/\.(?:woff2?|ttf|otf|png|jpe?g|gif|webp|ico|mp4|wasm)$/i.test(name)){
+      if(!existsSync(output)||!readFileSync(input).equals(readFileSync(output)))
+        throw new PersonalBuildError('CORRUPT_ASSET',relative);
+    }
   }
 }
 export function packageTizen({builtDir,outputFile,iconFile,settings}) {

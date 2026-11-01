@@ -101,6 +101,18 @@ let layers = {
     }
 }
 
+// Native RTL layouts keep physical key coordinates; only text direction changes.
+const rtlRows = {
+    ar: ['ض ص ث ق ف غ ع ه خ ح ج د', 'ش س ي ب ل ا ت ن م ك ط', 'ئ ء ؤ ر ى ة و ز ظ ذ', 'أ إ آ ّ َ ُ ِ ْ'],
+    ur: ['ق و ع ر ت ے ء ی ہ پ', 'ا س د ف گ ھ ج ک ل م', 'ز ش چ ط ب ن ں ح خ', 'ض ص ث غ ژ ڈ ٹ ڑ ذ ظ', 'ؤ ئ آ ة ۂ ٰ']
+}
+Object.keys(rtlRows).forEach(code=>{
+    const rows=rtlRows[code]
+    layers.search[code]=rows.map((row,index)=>(index===0?'{MIC} ':index===1?'{LANG} ':index===2?'{SIM} ':'')+row+(index===0?' {BKSP}':index===rows.length-1?' {SPACE}':''))
+    layers.clarify[code]=['1 2 3 4 5 6 7 8 9 0 - {BKSP}'].concat(rows,['{MIC} {LANG} {SPACE} {SEARCH}'])
+    layers.default[code]=['{SIM} 1 2 3 4 5 6 7 8 9 0 - + = {BKSP}'].concat(rows.map((row,index)=>(index===0?'{LANG} ':'')+row+(index===1?' {ENTER}':'')),['{SHIFT} . / : '+http+' {SPACE}'])
+})
+
 function add(name, layout){
     layers[name] = layout
 }

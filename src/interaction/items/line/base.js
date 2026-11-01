@@ -1,3 +1,4 @@
+import Direction from '../../../utils/direction'
 import Template from '../../template'
 import Scroll from '../../scroll'
 import Controller from '../../../core/controller'
@@ -49,7 +50,7 @@ class Base extends Emit{
     wheel(step){
         if(!Controller.own(this)) this.toggle()
 
-        Controller.enabled().controller[step > 0 ? 'right' : 'left']()
+        Controller.enabled().controller[step > 0 ? (Direction.isRTL() ? 'left' : 'right') : (Direction.isRTL() ? 'right' : 'left')]()
 
         this.emit('wheel')
     }
@@ -71,10 +72,11 @@ class Base extends Emit{
             },
             right: ()=>{
                 if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()) this.emit('left')
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else this.emit('left')
+                else if(!Direction.isRTL()) this.emit('left')
             },
             down: this.emit.bind(this, 'down'),
             up: this.emit.bind(this, 'up'),

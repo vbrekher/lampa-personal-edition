@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Keybord from '../keyboard/keyboard'
 import Controller from '../../core/controller'
@@ -21,6 +22,7 @@ function edit(params, call){
     html = Template.get('settings_input')
 
     input = html.find('.settings-input__input')
+    input.attr('dir',Direction.fieldDirection(params.name,params.password))
 
     if((params.keyboard || Storage.field('keyboard_type')) !== 'lampa') input.hide()
 

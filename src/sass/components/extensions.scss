@@ -69,6 +69,13 @@
         }
     }
 
+    // The bundled catalogue places a section heading between complete blocks.
+    .scroll__body > .extensions__block-title{
+        margin-top: 2.4em;
+        margin-bottom: 1em;
+        padding: 0 $offset;
+    }
+
     &__item{
         background-color: #404040;
         border-radius: 1em;

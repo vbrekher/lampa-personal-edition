@@ -1,6 +1,7 @@
 import {afterEach, describe, expect, test, vi} from 'vitest'
 import Tizen from '../src/interaction/player/video/tizen'
 import {isRestoring} from '../src/interaction/player/video/tizen_lifecycle'
+vi.mock('../src/core/lang',()=>({default:{translate:key=>'localized:'+key}}))
 let finish, players=[]
 afterEach(()=>{if(isRestoring()) finish();players.forEach(video=>video.destroy());players=[];vi.unstubAllGlobals()})
 function setup(){

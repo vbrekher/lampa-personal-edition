@@ -24,7 +24,7 @@ The personal builder compiles Lampa from source, packages its HTML/CSS/JavaScrip
 
 ## In-app localization
 
-The 13-language localization expansion is currently **in progress**, not complete: Dutch, German and Turkish are priority languages, joined by the ten most-spoken languages worldwide. Existing English, Chinese, Spanish, French and Portuguese now have complete canonical translation-key coverage (native-language editorial review remains separate); the eight additional locales are in translation drafts and are **not displayed as finished TV languages**. The curated plugin catalogue has translated categories and descriptions for all 13 languages. See the [localization coverage audit and acceptance criteria](docs/LOCALIZATION.md). Run `npm run i18n:report` to inspect real string coverage before publishing a language. No unfinished translation is substituted silently for a completed pack.
+All 21 interface languages are available in the first-launch chooser and Settings: nl, de, tr, en, zh, hi, es, ar, fr, bn, pt, id, ur, ru, uk, be, bg, cs, he, pl and ro. Each dictionary contains 1,399 canonical keys. Arabic, Urdu and Hebrew use a shared RTL layout with isolated technical values; local fonts cover Chinese, Devanagari, Bengali, Arabic/Urdu and Hebrew. Owned plugin categories/descriptions use the same dictionaries. Interface language and metadata/search/audio/subtitle preferences remain independent. See [localization implementation and acceptance](docs/LOCALIZATION.md); native-speaker review and physical Samsung acceptance are separate external checks.
 
 ## Quick Start
 
@@ -40,7 +40,7 @@ npm run build:personal
 The builder will ask for:
 
 ~~~text
-Lampa interface language [ru/en/uk/fr/es/pl] (Enter=en):
+Lampa interface language [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter=en):
 TorrServer URL (optional; Enter to skip):
 Parser backend [jackett/prowlarr/torrserver] (Enter=jackett):
 Enable third-party plugins? [y/N]:
@@ -48,7 +48,7 @@ Enable third-party plugins? [y/N]:
 
 Press Enter to accept the defaults for all four questions. The default English builder selects the English TV interface. The default build has **no TorrServer URL, no account credentials and no installed third-party plugins**. The optional plugin catalogue is visible, but installing a plugin requires a user action and the first installation requires explicit consent. It never asks for your CUB account/password.
 
-The **builder's terminal language** is separate from the **Lampa TV interface language**. The terminal defaults to English; use `--builder-language ru` or `--builder-language nl` for Russian or Dutch setup messages. Lampa does not yet provide a Dutch TV interface, so Dutch setup defaults the TV interface to English.
+The **builder's terminal language** is separate from the **Lampa TV interface language**. The terminal defaults to English; use `--builder-language ru` or `--builder-language nl` for Russian or Dutch setup messages. The Dutch terminal also defaults the TV interface to English; choose `nl` explicitly for Dutch on the TV.
 
 Want a non-interactive build? For example:
 
@@ -68,7 +68,7 @@ Install through [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung) →
 
 | Setting | Default | Notes |
 | --- | --- | --- |
-| TV interface language | `en` (English builder) | Supported upstream: ru, en, uk, be, zh, pt, bg, he, cs, ro, fr, pl, es |
+| TV interface language | `en` (English builder) | All 21 languages listed above; choose again in Settings without rebuilding |
 | TorrServer URL | empty | Your own reachable `http://192.168.x.x:8090` or HTTPS endpoint; optional. Parser and Server menus are visible even when empty. |
 | Third-party plugins | disabled | Six source-reviewed links appear in an offline categorized catalogue. Explicit user installation/consent is required before third-party code runs. |
 | Lampa account login | not bundled | No username, password, CUB cookie or tokens embedded |

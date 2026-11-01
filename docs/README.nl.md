@@ -29,22 +29,23 @@ npm run build:personal -- --builder-language nl
 
 Zo verschijnen de vragen en foutmeldingen van de bouwer in het **Nederlands**. Met `--builder-language` kies je de taal van de terminal; met `--language` kies je de interfacetaal van Lampa op de televisie.
 
-Het bouwscript stelt drie vragen:
+Het bouwscript stelt vier vragen:
 
-1. **Taal:** standaard `ru`; je kunt onder andere `en`, `uk`, `fr`, `pl` of `es` kiezen. Let op: **Nederlands is momenteel geen beschikbare interfacetaal in de oorspronkelijke Lampa**.
+1. **Taal:** standaard `en`; alle 21 interfacetalen zijn beschikbaar, waaronder `nl`, `de` en `tr`. Je kunt de taal later in de app wijzigen zonder opnieuw te bouwen.
 2. **TorrServer URL:** optioneel. Bijvoorbeeld `http://192.168.1.25:8090`. Je moet de server afzonderlijk draaien.
-3. **Externe plug-ins:** standaard uitgeschakeld. Schakel deze alleen in wanneer je de bronnen vertrouwt.
+3. **Parser:** `jackett`, `prowlarr` of `torrserver`; standaard `jackett`.
+4. **Externe plug-ins:** standaard uitgeschakeld. Schakel deze alleen in wanneer je de bronnen vertrouwt.
 
 De Nederlandstalige terminal toont:
 
 ~~~text
-Taal van Lampa op de tv [ru/en/uk/fr/es/pl] (Enter=en):
+Taal van Lampa op de tv [nl/de/tr/en/zh/hi/es/ar/fr/bn/pt/id/ur/ru/uk/be/bg/cs/he/pl/ro] (Enter=en):
 TorrServer-adres (optioneel; Enter om over te slaan):
 Parser-type [jackett/prowlarr/torrserver] (Enter=jackett):
 Externe plug-ins inschakelen? [j/N]:
 ~~~
 
-De standaardtaal van de **tv-app** is hier Engels: de originele Lampa biedt nog geen Nederlandse interface.
+De standaardtaal van de **tv-app** is hier Engels. Kies `nl` bij de taalvraag voor de Nederlandse tv-interface.
 
 Het script vraagt **niet** naar je wachtwoord, CUB-account of API-tokens. Zet geen wachtwoord in het serveradres.
 
