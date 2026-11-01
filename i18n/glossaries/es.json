@@ -62,7 +62,9 @@
     "diagnostics_host": "Servidor",
     "diagnostics_platform": "Plataforma",
     "diagnostics_connection": "Conexión",
-    "diagnostics_mirror": "Servidor espejo"
+    "diagnostics_mirror": "Servidor espejo",
+    "loading_progress_step_2": "Buscando servidores alternativos",
+    "loading_progress_step_5": "Iniciando la aplicación"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

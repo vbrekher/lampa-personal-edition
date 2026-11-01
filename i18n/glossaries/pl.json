@@ -67,7 +67,9 @@
     "diagnostics_host": "Host",
     "diagnostics_platform": "Platforma",
     "diagnostics_connection": "Połączenie",
-    "diagnostics_mirror": "Serwer lustrzany"
+    "diagnostics_mirror": "Serwer lustrzany",
+    "loading_progress_step_2": "Wyszukiwanie serwerów zapasowych",
+    "loading_progress_step_5": "Uruchamianie aplikacji"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

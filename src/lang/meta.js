@@ -50,7 +50,7 @@ export default {
             "name": "हिन्दी",
             "loading": "लोड हो रहा है",
             "preparing": "तैयारी",
-            "loading_languages": "लोड करने की भाषाएँ",
+            "loading_languages": "भाषाएँ लोड की जा रही हैं",
             "lang_choice_title": "स्वागत है",
             "lang_choice_subtitle": "अपनी भाषा चुनें"
         },
@@ -68,7 +68,7 @@ export default {
             "name": "العربية",
             "loading": "جارٍ التحميل",
             "preparing": "التحضير",
-            "loading_languages": "لغات التحميل",
+            "loading_languages": "تحميل اللغات",
             "lang_choice_title": "مرحبًا",
             "lang_choice_subtitle": "اختر لغتك"
         },
@@ -86,7 +86,7 @@ export default {
             "name": "বাংলা",
             "loading": "লোড হচ্ছে",
             "preparing": "প্রস্তুতি",
-            "loading_languages": "লোডিং ভাষা",
+            "loading_languages": "ভাষাগুলি লোড হচ্ছে",
             "lang_choice_title": "স্বাগতম",
             "lang_choice_subtitle": "আপনার ভাষা নির্বাচন করুন"
         },
@@ -104,7 +104,7 @@ export default {
             "name": "Bahasa Indonesia",
             "loading": "Memuat",
             "preparing": "Persiapan",
-            "loading_languages": "Bahasa pengunggahan",
+            "loading_languages": "Memuat bahasa",
             "lang_choice_title": "Selamat datang",
             "lang_choice_subtitle": "Pilih bahasa Anda"
         },
@@ -113,7 +113,7 @@ export default {
             "name": "اردو",
             "loading": "لوڈ ہو رہا ہے",
             "preparing": "تیاری",
-            "loading_languages": "لوڈ کرنے کی زبانیں",
+            "loading_languages": "زبانیں لوڈ ہو رہی ہیں",
             "lang_choice_title": "خوش آمدید",
             "lang_choice_subtitle": "اپنی زبان منتخب کریں"
         },

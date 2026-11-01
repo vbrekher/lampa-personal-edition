@@ -115,7 +115,12 @@
     "diagnostics_platform": "प्लैटफ़ॉर्म",
     "diagnostics_connection": "कनेक्शन",
     "diagnostics_mirror": "मिरर सर्वर",
-    "settings_request_caching_descr": "इंटरफ़ेस को तेज़ करने और डेटा का उपयोग कम करने के लिए API अनुरोधों के उत्तर कैश में रखें।"
+    "settings_request_caching_descr": "इंटरफ़ेस को तेज़ करने और डेटा का उपयोग कम करने के लिए API अनुरोधों के उत्तर कैश में रखें।",
+    "loading_progress_step_2": "वैकल्पिक सर्वर खोजे जा रहे हैं",
+    "loading_progress_step_5": "ऐप शुरू किया जा रहा है",
+    "loading_progress_step_1": "भाषाएँ लोड की जा रही हैं",
+    "loading_progress_step_3": "एक्सटेंशन तैयार किए जा रहे हैं",
+    "loading_progress_step_4": "लगभग तैयार"
   },
   "locale": "hi",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

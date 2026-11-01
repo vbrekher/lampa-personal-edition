@@ -67,7 +67,9 @@
     "diagnostics_host": "主机",
     "diagnostics_platform": "平台",
     "diagnostics_connection": "连接",
-    "diagnostics_mirror": "镜像服务器"
+    "diagnostics_mirror": "镜像服务器",
+    "loading_progress_step_2": "正在查找备用服务器",
+    "loading_progress_step_5": "正在启动应用"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

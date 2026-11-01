@@ -50,7 +50,9 @@
     "diagnostics_host": "Host",
     "diagnostics_platform": "Platform",
     "diagnostics_connection": "Connection",
-    "diagnostics_mirror": "Mirror server"
+    "diagnostics_mirror": "Mirror server",
+    "loading_progress_step_2": "Finding alternative servers",
+    "loading_progress_step_5": "Starting the app"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

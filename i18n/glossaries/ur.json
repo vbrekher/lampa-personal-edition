@@ -127,7 +127,11 @@
     "diagnostics_mirror": "مرر سرور",
     "torrent_error_step_3": "پروٹوکول اور پورٹ",
     "settings_request_caching_use": "درخواستوں کو کیش میں محفوظ کریں",
-    "settings_request_caching_descr": "انٹرفیس کو تیز کرنے اور ڈیٹا کا استعمال کم کرنے کے لیے API درخواستوں کے جوابات کیش میں محفوظ کریں۔"
+    "settings_request_caching_descr": "انٹرفیس کو تیز کرنے اور ڈیٹا کا استعمال کم کرنے کے لیے API درخواستوں کے جوابات کیش میں محفوظ کریں۔",
+    "loading_progress_step_2": "متبادل سرور تلاش کیے جا رہے ہیں",
+    "loading_progress_step_5": "ایپ شروع ہو رہی ہے",
+    "loading_progress_step_1": "زبانیں لوڈ ہو رہی ہیں",
+    "loading_progress_step_4": "تقریباً تیار ہے"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

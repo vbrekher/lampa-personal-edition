@@ -63,7 +63,9 @@
     "diagnostics_host": "Хост",
     "diagnostics_platform": "Платформа",
     "diagnostics_connection": "Подключение",
-    "diagnostics_mirror": "Сервер-зеркало"
+    "diagnostics_mirror": "Сервер-зеркало",
+    "loading_progress_step_2": "Поиск резервных серверов",
+    "loading_progress_step_5": "Запуск приложения"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

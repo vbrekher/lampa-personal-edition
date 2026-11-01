@@ -61,7 +61,9 @@
     "diagnostics_platform": "Платформа",
     "diagnostics_connection": "Връзка",
     "diagnostics_mirror": "Огледален сървър",
-    "torrent_error_step_3": "Протокол и порт"
+    "torrent_error_step_3": "Протокол и порт",
+    "loading_progress_step_2": "Търсене на резервни сървъри",
+    "loading_progress_step_5": "Стартиране на приложението"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

@@ -68,7 +68,9 @@
     "diagnostics_host": "Хост",
     "diagnostics_platform": "Платформа",
     "diagnostics_connection": "Злучэнне",
-    "diagnostics_mirror": "Сервер-люстэрка"
+    "diagnostics_mirror": "Сервер-люстэрка",
+    "loading_progress_step_2": "Пошук дадатковых сервераў",
+    "loading_progress_step_5": "Запуск праграмы"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

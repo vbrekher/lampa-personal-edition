@@ -115,7 +115,11 @@
     "diagnostics_connection": "Koneksi",
     "diagnostics_mirror": "Server cermin",
     "torrent_error_step_3": "Protokol dan port",
-    "settings_request_caching_descr": "Simpan respons permintaan API dalam cache untuk mempercepat antarmuka dan mengurangi penggunaan data."
+    "settings_request_caching_descr": "Simpan respons permintaan API dalam cache untuk mempercepat antarmuka dan mengurangi penggunaan data.",
+    "loading_progress_step_2": "Mencari server alternatif",
+    "loading_progress_step_5": "Memulai aplikasi",
+    "loading_progress_step_1": "Memuat bahasa",
+    "loading_progress_step_4": "Hampir siap"
   },
   "locale": "id",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

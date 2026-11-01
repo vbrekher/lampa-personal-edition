@@ -76,7 +76,9 @@
     "diagnostics_host": "Gazdă",
     "diagnostics_platform": "Platformă",
     "diagnostics_connection": "Conexiune",
-    "diagnostics_mirror": "Server oglindă"
+    "diagnostics_mirror": "Server oglindă",
+    "loading_progress_step_2": "Se caută servere alternative",
+    "loading_progress_step_5": "Se pornește aplicația"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

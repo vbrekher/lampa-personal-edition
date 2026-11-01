@@ -47,6 +47,8 @@
     "diagnostics_host": "Ana makine",
     "diagnostics_platform": "Platform",
     "diagnostics_connection": "Bağlantı",
-    "diagnostics_mirror": "Yansıtma sunucusu"
+    "diagnostics_mirror": "Yansıtma sunucusu",
+    "loading_progress_step_2": "Alternatif sunucular aranıyor",
+    "loading_progress_step_5": "Uygulama başlatılıyor"
   }
 }

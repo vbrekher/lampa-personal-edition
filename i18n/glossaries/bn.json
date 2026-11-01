@@ -115,7 +115,12 @@
     "diagnostics_connection": "সংযোগ",
     "diagnostics_mirror": "মিরর সার্ভার",
     "torrent_error_step_3": "প্রোটোকল ও পোর্ট",
-    "settings_request_caching_descr": "ইন্টারফেস দ্রুত করতে এবং ডেটা ব্যবহার কমাতে API অনুরোধের উত্তর ক্যাশে রাখুন।"
+    "settings_request_caching_descr": "ইন্টারফেস দ্রুত করতে এবং ডেটা ব্যবহার কমাতে API অনুরোধের উত্তর ক্যাশে রাখুন।",
+    "loading_progress_step_2": "বিকল্প সার্ভার খোঁজা হচ্ছে",
+    "loading_progress_step_5": "অ্যাপ চালু হচ্ছে",
+    "loading_progress_step_1": "ভাষাগুলি লোড হচ্ছে",
+    "loading_progress_step_3": "এক্সটেনশন প্রস্তুত করা হচ্ছে",
+    "loading_progress_step_4": "প্রায় প্রস্তুত"
   },
   "locale": "bn",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

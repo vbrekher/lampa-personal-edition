@@ -130,7 +130,11 @@
     "torrent_error_step_3": "البروتوكول والمنفذ",
     "settings_request_caching_use": "تخزين الطلبات مؤقتًا",
     "settings_request_caching_descr": "تخزين استجابات طلبات API مؤقتًا لتسريع الواجهة وتقليل استهلاك البيانات.",
-    "torrent_error_ping_format": "أعاد طلب ping استجابة بتنسيق غير صالح."
+    "torrent_error_ping_format": "أعاد طلب ping استجابة بتنسيق غير صالح.",
+    "loading_progress_step_2": "جارٍ البحث عن خوادم بديلة",
+    "loading_progress_step_5": "جارٍ بدء التطبيق",
+    "loading_progress_step_1": "تحميل اللغات",
+    "loading_progress_step_4": "أوشكنا على الانتهاء"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }
