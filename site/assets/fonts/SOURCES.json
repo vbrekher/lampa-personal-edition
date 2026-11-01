@@ -1,0 +1,48 @@
+[
+  {
+    "family": "NotoSansBengali",
+    "file": "NotoSansBengali-Regular.woff",
+    "bytes": 73288,
+    "sha256": "c9501a462ac2c0a8b72b239fa71609c2a303bffe20b7e9fa4473cf6b8524faa5",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosansbengali",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 444
+  },
+  {
+    "family": "NotoSansDevanagari",
+    "file": "NotoSansDevanagari-Regular.woff",
+    "bytes": 87944,
+    "sha256": "b95caaf6f7671b01f4d3444135c69c4ea5e9be48e755c411b382cce898d2a397",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosansdevanagari",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 551
+  },
+  {
+    "family": "NotoNaskhArabic",
+    "file": "NotoNaskhArabic-Regular.woff",
+    "bytes": 94196,
+    "sha256": "d5f6f7d4eb3326f9aed17c8034abc4f880767ca9d4d482d8a87cd719e6743185",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notonaskharabic",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 1719
+  },
+  {
+    "family": "NotoSansHebrew",
+    "file": "NotoSansHebrew-Regular.woff",
+    "bytes": 27684,
+    "sha256": "faf0c7a854ffcae9d33fc2352f2030591681cb1f25aa2a1d31f3ef2209fa91a9",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanshebrew",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 470
+  },
+  {
+    "family": "NotoSansSC",
+    "file": "NotoSansSC-Regular.woff",
+    "bytes": 214940,
+    "sha256": "4320a48c1d53b26958a3d6b78b537ac7777f5620e576a8035b495b1e4dc03ab1",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 1464,
+    "subset": "All current zh UI characters and native picker name; regenerate when zh strings change."
+  }
+]

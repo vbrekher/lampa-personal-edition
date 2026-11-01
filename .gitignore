@@ -35,3 +35,5 @@ TASKS.md
 /reports/ui-matrix.json
 /test-results/
 /playwright-report/
+/reports/builder-*/
+/reports/builder-e2e.json

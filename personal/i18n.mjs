@@ -17,6 +17,8 @@ const messages = {
     help: 'Usage: npm run build:personal [-- --builder-language en|ru|nl --language en --torrserver https://host:8090 --parser jackett --plugins off]\nWithout app settings the builder asks questions in your terminal.\n--builder-language changes terminal messages only; --language selects the TV interface language.',
     errorPrefix: 'Build failed',
     errors: {
+      BUILD_BUSY: 'Another local build is running. Wait for it to finish or cancel it.',
+      BUILD_CANCELLED: 'Build cancelled. Temporary files have been removed.',
       INVALID_ARGUMENT: 'Unknown option: {detail}. See --help.',
       MISSING_VALUE: 'Missing value for {detail}. See --help.',
       INVALID_PLUGIN_CHOICE: 'Plugin mode must be on or off.',
@@ -55,6 +57,8 @@ const messages = {
     help: 'Использование: npm run build:personal [-- --builder-language ru --language ru --torrserver https://host:8090 --parser jackett --plugins off]\nБез настроек приложения сборщик задаёт вопросы в терминале.\n--builder-language меняет язык вопросов, --language — язык Lampa на телевизоре.',
     errorPrefix: 'Ошибка сборки',
     errors: {
+      BUILD_BUSY: 'В проекте уже идёт сборка. Дождитесь завершения или отмените её.',
+      BUILD_CANCELLED: 'Сборка отменена. Временные файлы удалены.',
       INVALID_ARGUMENT: 'Неизвестный параметр: {detail}. См. --help.',
       MISSING_VALUE: 'Не указано значение для {detail}. См. --help.',
       INVALID_PLUGIN_CHOICE: 'Для плагинов укажи on или off.',
@@ -93,6 +97,8 @@ const messages = {
     help: 'Gebruik: npm run build:personal [-- --builder-language nl --language en --torrserver https://host:8090 --parser jackett --plugins off]\nZonder app-instellingen stelt de bouwer vragen in de terminal.\n--builder-language kiest de taal van de vragen; --language kiest de taal van Lampa op de tv.',
     errorPrefix: 'Bouwen mislukt',
     errors: {
+      BUILD_BUSY: 'Er loopt al een bouw. Wacht tot deze klaar is of annuleer deze.',
+      BUILD_CANCELLED: 'Bouw geannuleerd. Tijdelijke bestanden zijn verwijderd.',
       INVALID_ARGUMENT: 'Onbekende optie: {detail}. Zie --help.',
       MISSING_VALUE: 'Waarde ontbreekt voor {detail}. Zie --help.',
       INVALID_PLUGIN_CHOICE: 'Gebruik on of off voor plug-ins.',

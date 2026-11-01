@@ -1,0 +1,212 @@
+[
+  {
+    "code": "nl",
+    "name": "Nederlands",
+    "english": "Dutch",
+    "dir": "ltr",
+    "home": "Startpagina",
+    "settings": "Instellingen",
+    "search": "Zoeken",
+    "watch": "Bekijken"
+  },
+  {
+    "code": "de",
+    "name": "Deutsch",
+    "english": "German",
+    "dir": "ltr",
+    "home": "Startseite",
+    "settings": "Einstellungen",
+    "search": "Suche",
+    "watch": "Ansehen"
+  },
+  {
+    "code": "tr",
+    "name": "Türkçe",
+    "english": "Turkish",
+    "dir": "ltr",
+    "home": "Ana sayfa",
+    "settings": "Ayarlar",
+    "search": "Ara",
+    "watch": "İzle"
+  },
+  {
+    "code": "en",
+    "name": "English",
+    "english": "English",
+    "dir": "ltr",
+    "home": "Home",
+    "settings": "Settings",
+    "search": "Search",
+    "watch": "Watch"
+  },
+  {
+    "code": "zh",
+    "name": "简体中文",
+    "english": "Chinese",
+    "dir": "ltr",
+    "home": "首页",
+    "settings": "设置",
+    "search": "搜索",
+    "watch": "观看"
+  },
+  {
+    "code": "hi",
+    "name": "हिन्दी",
+    "english": "Hindi",
+    "dir": "ltr",
+    "home": "होम",
+    "settings": "सेटिंग्स",
+    "search": "खोजें",
+    "watch": "देखें"
+  },
+  {
+    "code": "es",
+    "name": "Español",
+    "english": "Spanish",
+    "dir": "ltr",
+    "home": "Inicio",
+    "settings": "Ajustes",
+    "search": "Buscar",
+    "watch": "Ver"
+  },
+  {
+    "code": "ar",
+    "name": "العربية",
+    "english": "Arabic",
+    "dir": "rtl",
+    "home": "الرئيسية",
+    "settings": "الإعدادات",
+    "search": "بحث",
+    "watch": "مشاهدة"
+  },
+  {
+    "code": "fr",
+    "name": "Français",
+    "english": "French",
+    "dir": "ltr",
+    "home": "Accueil",
+    "settings": "Paramètres",
+    "search": "Recherche",
+    "watch": "Regarder"
+  },
+  {
+    "code": "bn",
+    "name": "বাংলা",
+    "english": "Bengali",
+    "dir": "ltr",
+    "home": "হোম",
+    "settings": "সেটিংস",
+    "search": "অনুসন্ধান",
+    "watch": "দেখুন"
+  },
+  {
+    "code": "pt",
+    "name": "Português",
+    "english": "Portuguese",
+    "dir": "ltr",
+    "home": "Início",
+    "settings": "Configurações",
+    "search": "Procurar",
+    "watch": "Assistir"
+  },
+  {
+    "code": "id",
+    "name": "Bahasa Indonesia",
+    "english": "Indonesian",
+    "dir": "ltr",
+    "home": "Beranda",
+    "settings": "Pengaturan",
+    "search": "Cari",
+    "watch": "Tonton"
+  },
+  {
+    "code": "ur",
+    "name": "اردو",
+    "english": "Urdu",
+    "dir": "rtl",
+    "home": "ہوم",
+    "settings": "ترتیبات",
+    "search": "تلاش",
+    "watch": "دیکھیں"
+  },
+  {
+    "code": "ru",
+    "name": "Русский",
+    "english": "Russian",
+    "dir": "ltr",
+    "home": "Главная",
+    "settings": "Настройки",
+    "search": "Поиск",
+    "watch": "Смотреть"
+  },
+  {
+    "code": "uk",
+    "name": "Українська",
+    "english": "Ukrainian",
+    "dir": "ltr",
+    "home": "Головна",
+    "settings": "Налаштування",
+    "search": "Пошук",
+    "watch": "Дивитись"
+  },
+  {
+    "code": "be",
+    "name": "Беларуская",
+    "english": "Belarusian",
+    "dir": "ltr",
+    "home": "Галоўная",
+    "settings": "Налады",
+    "search": "Пошук",
+    "watch": "Глядзець"
+  },
+  {
+    "code": "bg",
+    "name": "Български",
+    "english": "Bulgarian",
+    "dir": "ltr",
+    "home": "Главна",
+    "settings": "Настройки",
+    "search": "Търсене",
+    "watch": "Гледайте"
+  },
+  {
+    "code": "cs",
+    "name": "Čeština",
+    "english": "Czech",
+    "dir": "ltr",
+    "home": "Hlavní",
+    "settings": "Nastavení",
+    "search": "Hledat",
+    "watch": "Sledovat"
+  },
+  {
+    "code": "he",
+    "name": "עברית",
+    "english": "Hebrew",
+    "dir": "rtl",
+    "home": "ראשי",
+    "settings": "הגדרות",
+    "search": "חיפוש",
+    "watch": "צפה"
+  },
+  {
+    "code": "pl",
+    "name": "Polski",
+    "english": "Polish",
+    "dir": "ltr",
+    "home": "Strona główna",
+    "settings": "Ustawienia",
+    "search": "Szukaj",
+    "watch": "Oglądaj"
+  },
+  {
+    "code": "ro",
+    "name": "Română",
+    "english": "Romanian",
+    "dir": "ltr",
+    "home": "Acasă",
+    "settings": "Setări",
+    "search": "Căutare",
+    "watch": "Vizionează"
+  }
+]

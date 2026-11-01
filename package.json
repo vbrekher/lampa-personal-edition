@@ -1,6 +1,6 @@
 {
   "name": "lampa-personal-edition",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Local personal Samsung Tizen WGT builder for Lampa; user-configured language and TorrServer.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,10 @@
     "i18n:report": "node tools/i18n-audit.mjs",
     "i18n:strict": "node tools/i18n-audit.mjs --strict",
     "i18n:inventory": "node tools/i18n-source-audit.mjs",
-    "i18n:source-check": "node tools/i18n-source-review.mjs"
+    "i18n:source-check": "node tools/i18n-source-review.mjs",
+    "builder": "node personal/server.mjs",
+    "site:prepare": "node tools/prepare-product-site.mjs",
+    "test:builder": "playwright test --config personal/wizard-tests/playwright.config.mjs"
   },
   "author": "unk",
   "license": "ISC",
