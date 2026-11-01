@@ -25,7 +25,10 @@ for(const locale of locales)for(const [scene,selector]of Object.entries(screens)
   await info.attach('assertions',{body:JSON.stringify(audit,null,2),contentType:'application/json'});
   expect(audit.viewport).toEqual([width,height]);expect(audit.overflow).toEqual([]);expect(audit.unresolved).toEqual([]);expect(errors).toEqual([]);
   if(['hi','bn','ar','ur','he'].includes(locale))expect(audit.fonts.some(f=>f.status==='loaded')).toBeTruthy();
-  if(expectedDir==='rtl')expect(audit.technical.every(e=>e.dir==='ltr')).toBeTruthy();
+  if(expectedDir==='rtl'){
+   expect(audit.technical.every(e=>e.dir==='ltr')).toBeTruthy();
+   if(scene==='errors')expect(audit.technical.some(e=>e.text.includes('192.168.1.100:8090'))).toBeTruthy();
+  }
   if(scene==='movie'||scene==='series')expect(audit.text).toContain(readLanguage(locale).full_notext);
   if(scene==='player')await expect.poll(()=>page.locator('video').first().evaluate(v=>v.readyState)).toBeGreaterThanOrEqual(2);
   mkdirSync('reports/ui-screenshots',{recursive:true});

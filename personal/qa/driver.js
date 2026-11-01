@@ -45,6 +45,7 @@
             var activity=(screen==='movie'||screen==='series')?{component:'full',source:'qa',id:screen==='series'?900002:900001,method:screen==='series'?'tv':'movie',card:movie(screen==='series')}:{component:'main',source:'qa',page:1,title:translate('title_main')};
             L.Activity.replace(activity,true);
             function mountPanel(){
+            try{
             if(screen==='settings')settings();
             else if(screen==='parser')settings('parser');
             else if(screen==='torrserver')settings('server');
@@ -69,7 +70,12 @@
             }
             else if(screen==='plugins')L.Extensions.show();
             else if(screen==='modal')L.Modal.open({title:translate('install_extension_rule_1'),html:L.Template.get('plugins_rules'),size:'medium',buttons:[{name:translate('extensions_install'),onSelect:function(){L.Modal.close();}},{name:translate('cancel'),onSelect:function(){L.Modal.close();}}]});
-            else if(screen==='errors')L.Modal.open({title:translate('torrent_error_connect'),html:L.Template.get('torrent_error',{ip:'http://192.168.1.100:8090'}),size:'large',buttons:[{name:translate('back'),onSelect:function(){L.Modal.close();}}]});
+            else if(screen==='errors'){
+                L.Modal.open({title:translate('torrent_error_connect'),html:L.Template.get('torrent_error',{ip:'http://192.168.1.100:8090'}),size:'large'});
+                L.Torserver.error();
+                // Controlled diagnostic step; executes production handlers without connecting to a server.
+                L.Modal.render().find('.torrent-checklist__footer .simple-button').trigger('hover:enter').trigger('hover:enter');
+            }
             else if(screen==='player'){
                 L.Player.play({url:location.origin+'/qa/fixture.mp4',title:'QA-VIDEO',quality:{'360p':location.origin+'/qa/fixture.mp4','720p':location.origin+'/qa/fixture-720.mp4'}});
                 setTimeout(function(){L.PlayerPanel.show();},400);
@@ -83,6 +89,7 @@
                 document.body.setAttribute('data-qa-ready',screen);
                 document.body.setAttribute('data-qa-mode','controlled-ui-fixture');
             },1000);
+            }catch(error){document.body.setAttribute('data-qa-error',String(error));throw error;}
             }
             function waitForContent(){
                 var target=document.querySelector(screen==='movie'||screen==='series'?'.full-start-new':'.items-line');

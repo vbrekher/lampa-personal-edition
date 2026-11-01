@@ -14,6 +14,7 @@
     window.lampa_settings.plugins_use = false;
     window.lampa_settings.account_use = false;
     window.lampa_settings.socket_use = false;
+    if(query.get('screen') === 'errors')localStorage.setItem('torrserver_url','http://192.168.1.100:8090');
     if(query.get('screen') === 'launch')localStorage.setItem('lampa_personal_language_pending','true');
     else localStorage.removeItem('lampa_personal_language_pending');
     window.qaFixture = {locale: locale, screen: query.get('screen') || 'home', mode: 'controlled-ui-fixture'};

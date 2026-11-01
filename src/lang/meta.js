@@ -1,5 +1,14 @@
 export default {
     languages: {
+        ur: {
+            code: 'ur',
+            name: "اردو",
+            loading: "لوڈ ہو رہا ہے",
+            preparing: "تیاری",
+            loading_languages: "لوڈ کرنے کی زبانیں",
+            lang_choice_title: "خوش آمدید",
+            lang_choice_subtitle: "اپنی زبان منتخب کریں",
+        },
         ar: {
             code: 'ar',
             name: "العربية",

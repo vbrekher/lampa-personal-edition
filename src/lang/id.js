@@ -219,7 +219,7 @@ export default {
     "settings_player_subs_source": "Sumber subtitel torrent",
     "settings_player_subs_source_descr": "Sumber subtitel eksternal untuk torrent. Mode TorrServer memerlukan MatriX.147 atau lebih baru. Mode bawaan menggunakan metode lama Lampa yang sudah usang dan tidak mendukung gaya ASS.",
     "settings_param_subtitles_source_torserver": "TorrServer",
-    "settings_param_subtitles_source_legacy": "Dibangun (dikurangi)",
+    "settings_param_subtitles_source_legacy": "Bawaan (metode lama)",
     "settings_player_subs_torserver_version": "Tidak bisa mendapatkan subtitel dari TorrServer. Ini membutuhkan versi MatriX.147 atau lebih baru.",
     "settings_player_subs_ass_readable": "ASS pembacaan dialog",
     "settings_player_subs_ass_readable_descr": "Menggunakan pengaturan subtitel Lampa (ukuran, stroke, latar belakang) untuk baris dialog utama.",

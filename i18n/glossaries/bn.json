@@ -91,7 +91,9 @@
     "menu_settings": "সেটিংস",
     "confirm": "নিশ্চিত করুন",
     "cancel": "বাতিল",
-    "settings_player_next_episode_descr": "বর্তমান পর্ব শেষ হলে স্বয়ংক্রিয়ভাবে পরের পর্ব চালান।"
+    "settings_player_next_episode_descr": "বর্তমান পর্ব শেষ হলে স্বয়ংক্রিয়ভাবে পরের পর্ব চালান।",
+    "settings_param_subtitles_source_legacy": "অন্তর্নির্মিত (পুরোনো পদ্ধতি)",
+    "settings_server_tracktimecode": "TrackTimecode চালু করুন"
   },
   "locale": "bn",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

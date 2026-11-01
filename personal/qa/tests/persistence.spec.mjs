@@ -8,7 +8,8 @@ test('language selection preserves bookmarks, playback state, parser, plugins an
  await expect(page.locator('body')).toHaveAttribute('data-qa-ready','movie');
  await page.locator('.button--book').click();
  await expect(page.locator('.selectbox__content')).toBeInViewport();
- await page.locator('.selectbox-item').filter({hasText:readLanguage('nl').title_book}).first().click();
+ await expect(page.locator('.selectbox-item.focus')).toContainText(readLanguage('nl').title_book);
+ await page.keyboard.press('Enter',{delay:120});
  await expect.poll(()=>page.evaluate(()=>localStorage.getItem('favorite'))).toContain('900001');
  await page.keyboard.press('Escape');
  // Test-owned persisted settings model independent metadata and TV-side edits.
@@ -17,10 +18,17 @@ test('language selection preserves bookmarks, playback state, parser, plugins an
  const before=await page.evaluate(()=>Object.fromEntries(['favorite','tmdb_lang','torrserver_url','parser_torrent_type','plugins','file_view'].map(k=>[k,localStorage.getItem(k)])));
  for(const locale of states.slice(1)){
   await page.locator('.open--settings').click();
-  await page.locator('.settings-folder[data-component="interface"]').click();
-  await page.locator('.settings-param[data-static="true"]').first().click();
+  await expect(page.locator('.settings-folder.focus')).toHaveAttribute('data-component','interface');
+  await page.keyboard.press('Enter',{delay:120});
+  await expect(page.locator('.settings-param.focus')).toHaveAttribute('data-static','true');
+  await page.keyboard.press('Enter',{delay:120});
   await expect(page.locator('.lang')).toBeVisible();
-  await page.locator(`.lang__selector-item[data-code="${locale}"]`).click();
+  const codes=await page.locator('.lang__selector-item').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('data-code')));
+  const current=await page.locator('.lang__selector-item.focus').getAttribute('data-code');
+  const delta=codes.indexOf(locale)-codes.indexOf(current);
+  for(let n=0;n<Math.abs(delta);n++)await page.keyboard.press(delta>0?'ArrowDown':'ArrowUp',{delay:120});
+  await expect(page.locator('.lang__selector-item.focus')).toHaveAttribute('data-code',locale);
+  await page.keyboard.press('Enter',{delay:120});
   await expect(page.locator('html')).toHaveAttribute('lang',locale);
   await expect(page.locator('body')).toHaveAttribute('data-qa-ready','home');
   const after=await page.evaluate(()=>Object.fromEntries(['favorite','tmdb_lang','torrserver_url','parser_torrent_type','plugins','file_view'].map(k=>[k,localStorage.getItem(k)])));
@@ -36,7 +44,7 @@ test('first launch preselects the builder language and confirms with remote Ente
  await page.keyboard.press('ArrowDown');
  await expect(page.locator('.lang__selector-item.focus')).not.toHaveAttribute('data-code','nl');
  const selected=await page.locator('.lang__selector-item.focus').getAttribute('data-code');
- await page.keyboard.press('Enter');
+ await page.keyboard.press('Enter',{delay:120});
  await expect(page.locator('.lang')).toHaveCount(0);
  await expect(page.locator('html')).toHaveAttribute('lang',selected);
  expect(await page.evaluate(()=>localStorage.getItem('lampa_personal_language_pending'))).toBeNull();

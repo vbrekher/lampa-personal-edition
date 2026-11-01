@@ -91,7 +91,9 @@
     "menu_settings": "सेटिंग्स",
     "confirm": "पुष्टि करें",
     "cancel": "रद्द करें",
-    "settings_player_next_episode_descr": "मौजूदा एपिसोड खत्म होने पर अगला एपिसोड अपने आप चलाएँ।"
+    "settings_player_next_episode_descr": "मौजूदा एपिसोड खत्म होने पर अगला एपिसोड अपने आप चलाएँ।",
+    "settings_param_subtitles_source_legacy": "अंतर्निहित (पुराना तरीका)",
+    "settings_server_tracktimecode": "TrackTimecode चालू करें"
   },
   "locale": "hi",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."
