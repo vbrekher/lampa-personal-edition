@@ -4035,6 +4035,10 @@
     "diagnostics_platform": {
       "value": "Платформа",
       "reason": "Context-reviewed native technical label (protocol/platform/host); legitimate shared terminology."
+    },
+    "torrent_error_step_3": {
+      "value": "Протокол и порт",
+      "reason": "Native Bulgarian network terminology, independently context-reviewed; legitimate shared wording with Russian."
     }
   },
   "cs": {

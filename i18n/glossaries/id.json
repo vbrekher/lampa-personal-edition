@@ -113,7 +113,9 @@
     "diagnostics_host": "Host",
     "diagnostics_platform": "Platform",
     "diagnostics_connection": "Koneksi",
-    "diagnostics_mirror": "Server cermin"
+    "diagnostics_mirror": "Server cermin",
+    "torrent_error_step_3": "Protokol dan port",
+    "settings_request_caching_descr": "Simpan respons permintaan API dalam cache untuk mempercepat antarmuka dan mengurangi penggunaan data."
   },
   "locale": "id",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

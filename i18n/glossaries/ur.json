@@ -124,7 +124,10 @@
     "diagnostics_host": "ہوسٹ",
     "diagnostics_platform": "پلیٹ فارم",
     "diagnostics_connection": "کنکشن",
-    "diagnostics_mirror": "مرر سرور"
+    "diagnostics_mirror": "مرر سرور",
+    "torrent_error_step_3": "پروٹوکول اور پورٹ",
+    "settings_request_caching_use": "درخواستوں کو کیش میں محفوظ کریں",
+    "settings_request_caching_descr": "انٹرفیس کو تیز کرنے اور ڈیٹا کا استعمال کم کرنے کے لیے API درخواستوں کے جوابات کیش میں محفوظ کریں۔"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

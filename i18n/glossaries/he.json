@@ -71,7 +71,9 @@
     "diagnostics_host": "מארח",
     "diagnostics_platform": "פלטפורמה",
     "diagnostics_connection": "חיבור",
-    "diagnostics_mirror": "שרת מראה"
+    "diagnostics_mirror": "שרת מראה",
+    "torrent_error_step_3": "פרוטוקול ופורט",
+    "torrent_error_info_3": "כדי להתחבר ל-TorrServer, הוסיפו את הפרוטוקול http:// בתחילת הכתובת ואת הפורט :8090 בסופה. ודאו שמספר הפורט מופיע אחרי כתובת ה-IP. הכתובת הנוכחית: {ip}"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

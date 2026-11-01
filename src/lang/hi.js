@@ -155,7 +155,7 @@ export default {
     "settings_rest_cache_all_descr": "सभी सेटिंग्स और डेटा साफ कर दिया जाएगा",
     "settings_rest_cache_calculate": "कितनी याददाश्त बची है",
     "settings_request_caching_use": "अनुरोध कैश करें",
-    "settings_request_caching_descr": "कैश API इंटरफेस को तेज करने और डेटा उपयोग को कम करने के लिए अनुरोध करता है।",
+    "settings_request_caching_descr": "इंटरफ़ेस को तेज़ करने और डेटा का उपयोग कम करने के लिए API अनुरोधों के उत्तर कैश में रखें।",
     "settings_parser_use": "पार्सर इस्तेमाल करें",
     "settings_parser_use_descr": "इस प्रकार आप टोरेंट और ऑनलाइन सामग्री देखने के लिए सार्वजनिक लिंक के उपयोग के लिए पूरी जिम्मेदारी स्वीकार करने से सहमत हैं।",
     "settings_parser_type": "टॉरेंट पार्सर का प्रकार",

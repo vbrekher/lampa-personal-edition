@@ -114,7 +114,8 @@
     "diagnostics_host": "होस्ट",
     "diagnostics_platform": "प्लैटफ़ॉर्म",
     "diagnostics_connection": "कनेक्शन",
-    "diagnostics_mirror": "मिरर सर्वर"
+    "diagnostics_mirror": "मिरर सर्वर",
+    "settings_request_caching_descr": "इंटरफ़ेस को तेज़ करने और डेटा का उपयोग कम करने के लिए API अनुरोधों के उत्तर कैश में रखें।"
   },
   "locale": "hi",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

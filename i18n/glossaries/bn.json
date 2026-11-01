@@ -113,7 +113,9 @@
     "diagnostics_host": "হোস্ট",
     "diagnostics_platform": "প্ল্যাটফর্ম",
     "diagnostics_connection": "সংযোগ",
-    "diagnostics_mirror": "মিরর সার্ভার"
+    "diagnostics_mirror": "মিরর সার্ভার",
+    "torrent_error_step_3": "প্রোটোকল ও পোর্ট",
+    "settings_request_caching_descr": "ইন্টারফেস দ্রুত করতে এবং ডেটা ব্যবহার কমাতে API অনুরোধের উত্তর ক্যাশে রাখুন।"
   },
   "locale": "bn",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

@@ -304,7 +304,7 @@
   "torrent_error_text": "Пропадна връзката към TorrServer. Нека набързо минем през списък с възможните проблеми и да проверим всичко.",
   "torrent_error_step_1": "TorrServer-а работи ли",
   "torrent_error_step_2": "Динамичен IP адрес",
-  "torrent_error_step_3": "Протокол и пристанище",
+  "torrent_error_step_3": "Протокол и порт",
   "torrent_error_step_4": "Блокиране от антивирусна програма",
   "torrent_error_step_5": "Проверете за наличност",
   "torrent_error_step_6": "Все още не работи",
