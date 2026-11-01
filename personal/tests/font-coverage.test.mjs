@@ -42,7 +42,7 @@ function hasGlyph(cmap,code){
   }
   return false;
 }
-for(const [code,family,first,last] of [['hi','NotoSansDevanagari',0x900,0x97f],['bn','NotoSansBengali',0x980,0x9ff]]){
+for(const [code,family,first,last] of [['hi','NotoSansDevanagari',0x900,0x97f],['bn','NotoSansBengali',0x980,0x9ff],['ar','NotoNaskhArabic',0x600,0x6ff],['ur','NotoNaskhArabic',0x600,0x6ff],['he','NotoSansHebrew',0x590,0x5ff]]){
   test(code+' bundled font covers every translated script character and retains shaping tables',()=>{
     const tables=woffTables('public/fonts/noto/'+family+'-Regular.woff');
     for(const tag of ['cmap','GSUB','GPOS','GDEF'])assert.ok(tables.has(tag),tag);

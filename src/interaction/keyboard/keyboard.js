@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Controller from '../../core/controller'
 import Subscribe from '../../utils/subscribe'
 import Noty from '../noty'
@@ -100,6 +101,8 @@ function Keyboard(params = {}){
                     }
                 }                              
             }
+
+            input.attr('dir',Direction.fieldDirection(params.name,params.password))
 
             input.on('keyup change input keypress',(e)=>{              
                 let now_value = input.val()

@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Activity from '../activity/activity'
@@ -91,7 +92,7 @@ class Empty extends Emit{
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             up: ()=>{
                 if(Navigator.canmove('up')) Navigator.move('up')
@@ -101,7 +102,8 @@ class Empty extends Emit{
                 Navigator.move('down')
             },
             right: ()=>{
-                Navigator.move('right')
+                if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()) Controller.toggle('menu')
             },
             back: ()=>{
                 Activity.backward()

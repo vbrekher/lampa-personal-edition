@@ -31,3 +31,7 @@ TASKS.md
 
 # Generated localization evidence is uploaded by CI.
 /reports/localization/
+/reports/ui-*/
+/reports/ui-matrix.json
+/test-results/
+/playwright-report/

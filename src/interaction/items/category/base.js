@@ -1,3 +1,4 @@
+import Direction from '../../../utils/direction'
 import Scroll from '../../scroll'
 import Controller from '../../../core/controller'
 import Emit from '../../../utils/emit'
@@ -71,7 +72,7 @@ class Base extends Emit{
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             right: ()=>{
                 if(Navigator.canmove('right')) Navigator.move('right')

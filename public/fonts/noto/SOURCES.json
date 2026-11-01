@@ -16,5 +16,23 @@
     "source": "https://github.com/google/fonts/tree/main/ofl/notosansdevanagari",
     "license": "SIL Open Font License 1.1",
     "glyphs": 551
+  },
+  {
+    "family": "NotoNaskhArabic",
+    "file": "NotoNaskhArabic-Regular.woff",
+    "bytes": 94196,
+    "sha256": "d5f6f7d4eb3326f9aed17c8034abc4f880767ca9d4d482d8a87cd719e6743185",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notonaskharabic",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 1719
+  },
+  {
+    "family": "NotoSansHebrew",
+    "file": "NotoSansHebrew-Regular.woff",
+    "bytes": 27684,
+    "sha256": "faf0c7a854ffcae9d33fc2352f2030591681cb1f25aa2a1d31f3ef2209fa91a9",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosanshebrew",
+    "license": "SIL Open Font License 1.1",
+    "glyphs": 470
   }
 ]

@@ -98,6 +98,11 @@
     var started=false;
     function afterStart(){
         if(started)return;
+        if(fixture.screen==='launch'){
+            var chooser=document.querySelector('.lang');
+            if(!chooser || !chooser.getBoundingClientRect().width || (document.fonts && document.fonts.status==='loading'))return setTimeout(afterStart,50);
+            started=true;document.body.setAttribute('data-qa-ready','launch');document.body.setAttribute('data-qa-mode','controlled-first-launch-fixture');return;
+        }
         var welcome=document.querySelector('.welcome');
         if(!window.appready||!window.show_app||!L.Activity.active()||(welcome&&getComputedStyle(welcome).display!=='none'))return setTimeout(afterStart,50);
         started=true;ready();

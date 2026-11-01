@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Activity from './activity'
@@ -68,7 +69,10 @@ class ActivitySlide{
                 Controller.clear()
             },
             left: ()=>{
-                Controller.toggle('menu')
+                if(!Direction.isRTL()) Controller.toggle('menu')
+            },
+            right: ()=>{
+                if(Direction.isRTL()) Controller.toggle('menu')
             },
             up: ()=>{
                 Controller.toggle('head')

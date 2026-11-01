@@ -1,0 +1,39 @@
+name: Localization UI fixture matrix
+on:
+  push:
+    branches: [feat/complete-localization-qa]
+  workflow_dispatch:
+    inputs:
+      locales:
+        description: Comma-separated locales (empty runs all 13 targets)
+        default: ''
+      browser:
+        type: choice
+        options: [chromium, webkit]
+        default: chromium
+permissions:
+  contents: read
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-fund
+      - run: npx playwright install --with-deps ${{ inputs.browser || 'chromium' }}
+      - run: npm run build:personal -- --language en --plugins off
+      - run: npx playwright test --config personal/qa/playwright.config.mjs
+        env:
+          QA_LOCALES: ${{ inputs.locales || 'nl,he' }}
+          QA_BROWSER: ${{ inputs.browser || 'chromium' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: localization-ui-${{ inputs.browser || 'chromium' }}
+          path: |
+            reports/ui-*
+          retention-days: 14

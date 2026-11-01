@@ -55,6 +55,7 @@ export function configScript(input={}) {
     '  s.disable_features.remote_configuration=true;',
     '  // Seed on first install or when builder inputs change; do not erase TV-side edits at each launch.',
     '  var seed=JSON.stringify({language:cfg.language,torrserverUrl:cfg.torrserverUrl,parserType:cfg.parserType});',
+    '  if(!localStorage.getItem("lampa_personal_seed_v2") && !localStorage.getItem("language")) localStorage.setItem("lampa_personal_language_pending","true");',
     '  var previous=null;',
     '  try { previous=JSON.parse(localStorage.getItem("lampa_personal_seed_v2")); } catch(ignore) {}',
     '  if(localStorage.getItem("lampa_personal_seed_v2")!==seed){',

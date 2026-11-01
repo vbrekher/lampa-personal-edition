@@ -1,3 +1,4 @@
+import {isRTL,readScroll,writeScroll} from '../utils/direction'
 import Template from './template'
 import Layer from '../core/layer'
 import Platform from '../core/platform'
@@ -26,6 +27,8 @@ function Scroll(params = {}){
     let body    = html.querySelector('.scroll__body')
     let content = html.querySelector('.scroll__content')
     let screen  = Platform.screen('tv')
+
+    const rtl = !!params.horizontal && isRTL()
 
     let scroll_position        = 0
     let scroll_animating       = false
@@ -93,7 +96,7 @@ function Scroll(params = {}){
             end_position = params.horizontal ? e.clientX : e.clientY
 
             if(move_position && end_position){
-                let delta        = move_position - end_position
+                let delta        = (move_position - end_position) * (rtl ? -1 : 1)
                 let direct       = params.horizontal ? 'left' : 'top'
                 let scrl         = scroll_position,
                     scrl_padding = parseInt(window.getComputedStyle(content, null).getPropertyValue('padding-' + direct))
@@ -153,7 +156,7 @@ function Scroll(params = {}){
                 requestAnimationFrame(()=>{
                     native_scroll_animate = false
 
-                    scroll_position = -(params.horizontal ? html.scrollLeft : html.scrollTop)
+                    scroll_position = -(params.horizontal ? readScroll(html,rtl) : html.scrollTop)
 
                     scrollEnded()
                 })
@@ -206,10 +209,11 @@ function Scroll(params = {}){
      */
     function translateScroll(){
         if(!screen){
-            html[params.horizontal ? 'scrollLeft' : 'scrollTop'] = -scroll_position
+            if(params.horizontal)writeScroll(html,-scroll_position,rtl)
+            else html.scrollTop = -scroll_position
         }
         else{
-            body.style['-webkit-transform'] = 'translate3d('+Math.round(params.horizontal ? scroll_position : 0)+'px, '+Math.round(params.horizontal ? 0 : scroll_position)+'px, 0px)'
+            body.style['-webkit-transform'] = 'translate3d('+Math.round(params.horizontal ? scroll_position * (rtl ? -1 : 1) : 0)+'px, '+Math.round(params.horizontal ? 0 : scroll_position)+'px, 0px)'
         }
     }
 
@@ -258,7 +262,7 @@ function Scroll(params = {}){
      * @returns {number}
      */
     function getElementPosition(elem, tocenter){
-        let dir = params.horizontal ? 'left' : 'top',
+        let dir = params.horizontal ? (rtl ? 'right' : 'left') : 'top',
             siz = params.horizontal ? 'offsetWidth' : 'offsetHeight'
 
         let target = elem instanceof jQuery ? elem[0] : elem
@@ -267,8 +271,8 @@ function Scroll(params = {}){
 
         let ofs_elm = target.getBoundingClientRect()[dir],
             ofs_box = body.getBoundingClientRect()[dir],
-            center  = ofs_box + (tocenter ? (content[siz] / 2) - target[siz] / 2 - p : 0),
-            scrl    = Math.min(0,center - ofs_elm)
+            center  = ofs_box + (rtl ? -1 : 1) * (tocenter ? (content[siz] / 2) - target[siz] / 2 - p : 0),
+            scrl    = Math.min(0,(center - ofs_elm) * (rtl ? -1 : 1))
             scrl    = maxOffset(scrl)
 
         return scrl
@@ -315,7 +319,7 @@ function Scroll(params = {}){
      * @param {number} size - на сколько пикселей прокрутить
      */
     this.wheel = function(size){
-        let direct = params.horizontal ? 'left' : 'top'
+        let direct = params.horizontal ? (rtl ? 'right' : 'left') : 'top'
 
         let scrl         = scroll_position,
             scrl_offset  = html.getBoundingClientRect()[direct],
@@ -336,7 +340,7 @@ function Scroll(params = {}){
             let item = items[pos],
                 ofst = item.getBoundingClientRect()[direct]
 
-            size = ofst - scrl_offset - scrl_padding
+            size = (ofst - scrl_offset) * (rtl ? -1 : 1) - scrl_padding
         }
 
         let max  = params.horizontal ? 30000 : body.offsetHeight
@@ -403,7 +407,7 @@ function Scroll(params = {}){
         let vieport = {}
 
         if(!screen){
-            vieport.position = html[params.horizontal ? 'scrollLeft' : 'scrollTop'],
+            vieport.position = params.horizontal ? readScroll(html,rtl) : html.scrollTop,
             vieport.body     = body[params.horizontal ? 'scrollWidth' : 'scrollHeight'],
             vieport.content  = html[params.horizontal ? 'offsetWidth' : 'offsetHeight'] 
         }

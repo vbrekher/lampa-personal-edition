@@ -3,6 +3,7 @@ import Controller from '../core/controller'
 import Template from './template'
 import Lang from '../core/lang'
 import Scroll from './scroll'
+import Direction from '../utils/direction'
 
 /**
  * Открывает окно выбора языка на начальном экране
@@ -16,7 +17,7 @@ function open(callSelected, callCancel){
     let codes  = Lang.codes()
 
     function selector(code){
-        let item = $('<div class="selector lang__selector-item" data-code="'+code+'">'+codes[code]+'</div>')
+        let item = $('<div lang="'+code+'" dir="'+(Direction.isRTL(code)?'rtl':'ltr')+'" class="selector lang__selector-item" data-code="'+code+'">'+codes[code]+'</div>')
 
         item.on('hover:enter click',(e)=>{
             if(callSelected) callSelected(code)
@@ -35,6 +36,7 @@ function open(callSelected, callCancel){
 
             $(e.target).addClass('last-focus')
 
+            html.find('.lang__body').attr({lang:code,dir:Direction.isRTL(code)?'rtl':'ltr'})
             html.find('.lang__title').text(Lang.translate('lang_choice_title', code))
             html.find('.lang__subtitle').text(Lang.translate('lang_choice_subtitle', code))
         })

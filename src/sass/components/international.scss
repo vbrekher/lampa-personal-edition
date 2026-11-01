@@ -35,3 +35,84 @@ html[lang='hi'], html[lang='bn'] {
 body {
     font-family: 'SegoeUI', 'Noto Devanagari', 'Noto Bengali', sans-serif;
 }
+
+@font-face {
+    font-family: 'Noto Arabic';
+    src: url('../fonts/noto/NotoNaskhArabic-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Hebrew';
+    src: url('../fonts/noto/NotoSansHebrew-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+html[lang='ar'] body, html[lang='ur'] body {
+    font-family: 'Noto Arabic', 'SegoeUI', sans-serif;
+    line-height: 1.6;
+}
+html[lang='he'] body { font-family: 'Noto Hebrew', 'SegoeUI', sans-serif; }
+.lang__selector-item[lang='ar'], .lang__selector-item[lang='ur'],
+.lang__body[lang='ar'] .lang__title, .lang__body[lang='ar'] .lang__subtitle,
+.lang__body[lang='ur'] .lang__title, .lang__body[lang='ur'] .lang__subtitle { font-family: 'Noto Arabic', sans-serif; }
+.lang__selector-item[lang='he'], .lang__body[lang='he'] { font-family: 'Noto Hebrew', sans-serif; }
+.technical-ltr {
+    direction: ltr;
+    unicode-bidi: embed;
+    unicode-bidi: isolate;
+    display: inline-block;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+html[dir='rtl'] {
+    body { text-align: right; }
+    .settings-param__name, .settings-param__descr, .modal__text,
+    .full-descr__text, .menu__text { line-height: 1.5; overflow-wrap: break-word; }
+    .wrap__left { margin-left: 0; margin-right: -15em; }
+    body.menu--open:not(.light--version) {
+        .wrap__left, .wrap__content { transform: translate3d(-15em, 0, 0); }
+    }
+    body.menu--always:not(.light--version) .wrap__left { margin-right: 0; }
+    body.menu--always.menu--open:not(.light--version) {
+        .wrap__left { transform: translate3d(0, 0, 0); }
+        .wrap__content { transform: translate3d(-10em, 0, 0); }
+    }
+    .menu__ico, .settings-folder__icon { margin-right: 0; margin-left: 1.5em; }
+    .menu__list { padding-left: 0; padding-right: 0.6em; }
+    .menu__split { margin-left: 1em; margin-right: 1.7em; }
+    .head__logo-icon, .head__menu-icon, .head__backward { margin-right: 0; margin-left: 1em; }
+    .head__title { margin-right: 0; margin-left: auto; }
+    .head__action { margin-left: 0; margin-right: 1.5em; }
+    // Only directional navigation arrows change orientation, never media or QR images.
+    .head__backward svg, .explorer__button-back svg { transform: scaleX(-1); }
+    .settings__content { left: auto; right: 100%; }
+    body.settings--open .settings__content { transform: translate3d(100%,0,0); }
+    .full-start-new__left { margin-right: 0; margin-left: 3em; }
+    .full-start__poster { margin-right: 0; margin-left: 2em; }
+    .full-start__button + .full-start__button { margin-left: 0; margin-right: 1em; }
+    .full-start__button > svg, .simple-button > svg { margin-right: 0; margin-left: 0.6em; }
+    .full-episode__viewed { right: auto; left: 0.5em; }
+    .card__type { left: auto; right: 0.5em; }
+    .card__quality { right: auto; left: 0.5em; }
+    .torrent-item__title, .torrent-item__details, .selectbox-item,
+    .settings-param__value, .modal__title { text-align: right; }
+    .search__input { padding-left: 0; padding-right: 0.7em; }
+    .simple-keyboard, .player-panel, .player-video, .player-panel__time,
+    .player-panel__timenow, .player-panel__timeend, .timeline,
+    .time-line, .torrent-item__size, .torrent-item__bitrate {
+        direction: ltr;
+    }
+    .player-panel__title, .player-panel__text { direction: rtl; text-align: right; }
+    // Track direction is independent of the interface; do not mirror rendered captions.
+    .player-subtitles, .subtitle, .subtitles { unicode-bidi: plaintext; }
+    input[dir='ltr'], textarea[dir='ltr'] { text-align: left; }
+    input[dir='auto'], textarea[dir='auto'] { text-align: start; }
+    @media screen and (max-width: $media_xm) {
+        .settings__content { left: 0; right: 0; transform: translate3d(0,100%,0); }
+        body.settings--open .settings__content { transform: translate3d(0,0,0); }
+        .full-start-new__left { margin-left: -$offset; margin-right: -$offset; }
+    }
+}

@@ -1,4 +1,5 @@
 import test from 'node:test';
+import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import {mkdtempSync,mkdirSync,existsSync,writeFileSync,readFileSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
@@ -183,4 +184,15 @@ test('rebuilding with only another interface language preserves TV-side TorrServ
   assert.equal(values.get('torrserver_url'),'http://192.168.1.42:8090');
   assert.equal(values.get('torrserver_use_link'),'two');
   assert.equal(values.get('parser_torrent_type'),'prowlarr');
+});
+
+test('first-install language choice is pending only for a fresh device',()=>{
+  const script=configScript({language:'nl'});
+  const execute=entries=>{
+    const values=new Map(entries);
+    const localStorage={getItem:key=>values.get(key)||null,setItem:(key,value)=>values.set(key,value)};
+    vm.runInNewContext(script,{window:{lampa_settings:{}},localStorage});return values;
+  };
+  assert.equal(execute([]).get('lampa_personal_language_pending'),'true');
+  assert.equal(execute([['language','de']]).get('lampa_personal_language_pending'),undefined);
 });

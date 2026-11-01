@@ -1,3 +1,4 @@
+import Direction from '../../utils/direction'
 import Template from '../template'
 import Controller from '../../core/controller'
 import Select from '../select'
@@ -90,7 +91,10 @@ function init(){
             $('body').toggleClass('menu--open',true)
         },
         right: ()=>{
-            Controller.toggle('content')
+            if(!Direction.isRTL()) Controller.toggle('content')
+        },
+        left: ()=>{
+            if(Direction.isRTL()) Controller.toggle('content')
         },
         up: ()=>{
             if(Navigator.canmove('up')) Navigator.move('up')
@@ -392,7 +396,7 @@ function addButton(svg_icon, title, action){
  */
 function toggle(){
     if($('body').hasClass('menu--open')) Controller.toggle('content')
-    else Controller.toggle('menu')
+    else if(!Direction.isRTL()) Controller.toggle('menu')
 
     Lampa.Listener.send('menu',{type:'toggle'})
 }

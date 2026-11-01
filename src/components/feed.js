@@ -1,3 +1,4 @@
+import Direction from '../utils/direction'
 import Controller from '../core/controller'
 import Reguest from '../utils/reguest'
 import Scroll from '../interaction/scroll'
@@ -252,10 +253,11 @@ function Feed(object){
             },
             left: ()=>{
                 if(Navigator.canmove('left')) Navigator.move('left')
-                else Controller.toggle('menu')
+                else if(!Direction.isRTL()) Controller.toggle('menu')
             },
             right: ()=>{
-                Navigator.move('right')
+                if(Navigator.canmove('right')) Navigator.move('right')
+                else if(Direction.isRTL()) Controller.toggle('menu')
             },
             up: ()=>{
                 if(Navigator.canmove('up')) Navigator.move('up')

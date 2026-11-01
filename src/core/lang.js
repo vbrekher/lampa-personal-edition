@@ -1,4 +1,5 @@
 import Storage from './storage/storage'
+import Direction from '../utils/direction'
 import Arrays from '../utils/arrays'
 import Manifest from './manifest'
 import Utils from '../utils/utils'
@@ -134,5 +135,6 @@ export default {
     codes,
     addCodes,
     AddTranslation,
-    selected
+    selected,
+    isRTL: Direction.isRTL
 }
