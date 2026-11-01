@@ -330,6 +330,10 @@ class Vast{
      * Остановить рекламу принудительно
      */
     stop(){
+        if(!this.player){
+            this.destroy()
+            return
+        }
         try{
             this.player._events = {}
 

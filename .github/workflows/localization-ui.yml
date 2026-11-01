@@ -7,6 +7,9 @@ on:
       locales:
         description: Comma-separated locales (empty runs all 13 targets)
         default: ''
+      grep:
+        description: Optional test title pattern for focused reruns
+        default: '.*'
       browser:
         type: choice
         options: [chromium, webkit]
@@ -26,9 +29,10 @@ jobs:
       - run: npm ci --no-fund
       - run: npx playwright install --with-deps ${{ inputs.browser || 'chromium' }}
       - run: npm run build:personal -- --language en --plugins off
-      - run: npx playwright test --config personal/qa/playwright.config.mjs
+      - run: npx playwright test --config personal/qa/playwright.config.mjs --grep "$QA_TEST_GREP"
         env:
           QA_LOCALES: ${{ inputs.locales || 'nl,de,tr,en,zh,hi,es,ar,fr,bn,pt,id,ur,ru,uk,be,bg,cs,he,pl,ro' }}
+          QA_TEST_GREP: ${{ inputs.grep || '.*' }}
           QA_BROWSER: ${{ inputs.browser || 'chromium' }}
       - uses: actions/upload-artifact@v4
         if: always()

@@ -28,7 +28,7 @@ function loadSDK2(){
 
         sdk2_try++
 
-        Utils.putScriptAsync([Manifest.github_lampa + '/vender/vast/vast.js'], false, reject, resolve)
+        Utils.putScriptAsync([Manifest.github_lampa.replace(/\/+$/, '') + '/vender/vast/vast.js'], false, reject, resolve)
     })
 }
 
