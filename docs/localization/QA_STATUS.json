@@ -1,0 +1,184 @@
+{
+  "sourceCommit": "792666ae1c36e25da59a672633001b48ddc409d3",
+  "implementationFingerprint": "83a98868957eb30989c30b52a98cd57e54e3db8f74571ab47cdb6014afc46b5c",
+  "packagingFingerprint": "e8b368b22bf0d08b3fafd4243edfb220f7e6901596d48087944e85e7b06210f0",
+  "browsers": {
+    "chromium": {
+      "runId": 41275375908,
+      "url": "https://github.com/vbrekher/lampa-personal-edition/actions/runs/41275375908",
+      "sourceCommit": "792666ae1c36e25da59a672633001b48ddc409d3",
+      "browser": "chromium",
+      "passed": 601,
+      "failed": 0,
+      "skipped": 0,
+      "visualCases": 588,
+      "mandatoryVisualCases": 364,
+      "locales": [
+        "nl",
+        "de",
+        "tr",
+        "en",
+        "zh",
+        "hi",
+        "es",
+        "ar",
+        "fr",
+        "bn",
+        "pt",
+        "id",
+        "ur",
+        "ru",
+        "uk",
+        "be",
+        "bg",
+        "cs",
+        "he",
+        "pl",
+        "ro"
+      ],
+      "screens": [
+        "launch",
+        "home",
+        "movie",
+        "series",
+        "search",
+        "filters",
+        "settings",
+        "parser",
+        "torrserver",
+        "player",
+        "subtitles",
+        "plugins",
+        "modal",
+        "errors"
+      ],
+      "resolutions": [
+        [
+          1920,
+          1080
+        ],
+        [
+          3840,
+          2160
+        ]
+      ],
+      "all21LanguagePersistence": "PASS",
+      "firstLaunch": "PASS",
+      "rtlPhysicalNavigation": "PASS",
+      "rtlUrlEditing": "PASS",
+      "videoRemoteControls": "PASS",
+      "unresolvedTokens": 0,
+      "criticalLabelOverflow": 0,
+      "startTime": "2026-11-01T05:03:36.023Z",
+      "durationMs": 1592061.937
+    },
+    "webkit": {
+      "runId": 41275378832,
+      "url": "https://github.com/vbrekher/lampa-personal-edition/actions/runs/41275378832",
+      "sourceCommit": "792666ae1c36e25da59a672633001b48ddc409d3",
+      "browser": "webkit",
+      "passed": 601,
+      "failed": 0,
+      "skipped": 0,
+      "visualCases": 588,
+      "mandatoryVisualCases": 364,
+      "locales": [
+        "nl",
+        "de",
+        "tr",
+        "en",
+        "zh",
+        "hi",
+        "es",
+        "ar",
+        "fr",
+        "bn",
+        "pt",
+        "id",
+        "ur",
+        "ru",
+        "uk",
+        "be",
+        "bg",
+        "cs",
+        "he",
+        "pl",
+        "ro"
+      ],
+      "screens": [
+        "launch",
+        "home",
+        "movie",
+        "series",
+        "search",
+        "filters",
+        "settings",
+        "parser",
+        "torrserver",
+        "player",
+        "subtitles",
+        "plugins",
+        "modal",
+        "errors"
+      ],
+      "resolutions": [
+        [
+          1920,
+          1080
+        ],
+        [
+          3840,
+          2160
+        ]
+      ],
+      "all21LanguagePersistence": "PASS",
+      "firstLaunch": "PASS",
+      "rtlPhysicalNavigation": "PASS",
+      "rtlUrlEditing": "PASS",
+      "videoRemoteControls": "PASS",
+      "unresolvedTokens": 0,
+      "criticalLabelOverflow": 0,
+      "startTime": "2026-11-01T05:03:47.228Z",
+      "durationMs": 1749000.881
+    }
+  },
+  "buildMatrix": {
+    "sourceCommit": "792666ae1c36e25da59a672633001b48ddc409d3",
+    "passed": 13,
+    "required": 13,
+    "packagingFingerprint": "e8b368b22bf0d08b3fafd4243edfb220f7e6901596d48087944e85e7b06210f0",
+    "manifest": "wgt/manifest.json",
+    "all21DictionaryAndMetadataBytes": "PASS"
+  },
+  "unitTests": {
+    "personal": {
+      "passed": 65,
+      "total": 65
+    },
+    "application": {
+      "passed": 103,
+      "total": 103
+    }
+  },
+  "dependencyAudit": {
+    "vulnerabilities": 0,
+    "status": "PASS"
+  },
+  "sourceReview": {
+    "status": "PASS",
+    "currentCandidates": 1344,
+    "currentDynamicCalls": 88,
+    "baselineCandidates": 1601,
+    "baselineDynamicCalls": 85,
+    "fixedBaselineCandidates": 261,
+    "unclassified": 0,
+    "issues": []
+  },
+  "nativeLinguisticReview": "NOT_RUN",
+  "physicalSamsung": "NOT_RUN",
+  "nativeTizenEmulator": "NOT_RUN",
+  "liveUserServerProviders": "NOT_RUN",
+  "sourceImplementationComplete": true,
+  "externalAcceptanceComplete": false,
+  "readyForIndependentAudit": true
+}

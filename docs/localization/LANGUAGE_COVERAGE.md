@@ -1,31 +1,29 @@
-# Dictionary coverage snapshot
+# Complete runtime language coverage
 
-The canonical union grew from 1,348 to **1,351** keys: `country_ba`, `about_hash`, `about_build_date` were added to the reference set. `country_ba` already existed in some legacy locales but not the reference dictionaries.
+All 21 locales are available in the first-launch chooser and Settings. Every WGT contains every locale. Canonical union: **1,399 keys**; total owned values: **29,379**. Missing keys, placeholder/HTML/code/URL corruption, duplicate declarations and unreviewed source-language copies: **0**. Legitimate identical native terminology, proper names and brands retain exact value-bound review decisions; they are not presented as untranslated UI.
 
-“Present” counts nonempty owned values; it is **not a claim of correct translation**. Identical source values are review signals, including possible brands and legitimate cognates. No broad allowlist suppresses these signals.
+| Code | Native name | Keys | Glossary terms | Structure and context | Visual Chromium + WebKit | Settings/reload persistence | Native review |
+|---|---|---:|---:|---|---|---|---|
+| nl | Nederlands | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| de | Deutsch | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| tr | Türkçe | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| en | English | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| zh | 简体中文 | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| hi | हिन्दी | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| es | Español | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| ar | العربية | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| fr | Français | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| bn | বাংলা | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| pt | Português | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| id | Bahasa Indonesia | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| ur | اردو | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| ru | Русский | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| uk | Українська | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| be | Беларуская | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| bg | Български | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| cs | Čeština | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| he | עברית | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| pl | Polski | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
+| ro | Română | 1399/1399 | 20 | PASS | 28/28 + 28/28 | PASS | NOT_RUN |
 
-| Locale | Runtime state | Present | Coverage | English copies | Russian copies | Acceptance |
-|---|---|---:|---:|---:|---:|---|
-| nl | Draft | 100/1351 | 7.4% | 13 | 0 | NOT_READY |
-| de | Draft | 100/1351 | 7.4% | 10 | 0 | NOT_READY |
-| tr | Draft | 100/1351 | 7.4% | 1 | 0 | NOT_READY |
-| en | Shipped | 1351/1351 | 100% | 0 | 0 | NOT_READY |
-| zh | Shipped | 1351/1351 | 100% | 17 | 0 | NOT_READY |
-| hi | Draft | 100/1351 | 7.4% | 1 | 0 | NOT_READY |
-| es | Shipped | 1351/1351 | 100% | 101 | 0 | NOT_READY |
-| ar | Draft | 100/1351 | 7.4% | 1 | 0 | NOT_READY |
-| fr | Shipped | 1351/1351 | 100% | 127 | 0 | NOT_READY |
-| bn | Draft | 100/1351 | 7.4% | 1 | 0 | NOT_READY |
-| pt | Shipped | 1351/1351 | 100% | 107 | 0 | NOT_READY |
-| id | Draft | 100/1351 | 7.4% | 5 | 0 | NOT_READY |
-| ur | Draft | 100/1351 | 7.4% | 1 | 0 | NOT_READY |
-| be | Shipped | 1336/1351 | 98.9% | 6 | 84 | NOT_READY |
-| bg | Shipped | 1330/1351 | 98.4% | 16 | 177 | NOT_READY |
-| cs | Shipped | 1349/1351 | 99.9% | 59 | 0 | NOT_READY |
-| he | Shipped | 1307/1351 | 96.7% | 257 | 0 | NOT_READY |
-| pl | Shipped | 1349/1351 | 99.9% | 72 | 0 | NOT_READY |
-| ro | Shipped | 1330/1351 | 98.4% | 149 | 0 | NOT_READY |
-| ru | Shipped | 1349/1351 | 99.9% | 5 | 0 | NOT_READY |
-| uk | Shipped | 1351/1351 | 100% | 5 | 134 | NOT_READY |
-
-All 13 shipped locales and all eight drafts have zero duplicate properties, empty owned values, detected placeholder mismatches, and detected malformed HTML/Unicode after these repairs. Missing legacy keys still fall back at runtime; there is no claim of fallback-free coverage. The source inventory records 1,774 references to 1,124 distinct keys and 85 dynamic calls. The union of reference keys and statically referenced keys is 1,351; dynamically generated keys and hardcoded text still require review.
+PASS for context means Codex terminology/source-context review following machine-assisted authoring; independent native editing is NOT_RUN. Browser evidence uses controlled catalog/server/media fixtures in the actual compiled app. Every locale has 14 scenes at both 1920×1080 and 3840×2160 in each engine.

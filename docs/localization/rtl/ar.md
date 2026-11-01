@@ -1,5 +1,3 @@
-# ar RTL audit
+# ar RTL acceptance
 
-Status: BLOCKED — locale remains an incomplete unpublished draft; visual/navigation tests NOT_RUN.
-
-Physical Tizen: NOT_RUN. Font shaping/coverage, mixed-direction editing, player/subtitle direction and Samsung remote focus: NOT_RUN. See [acceptance details](../RTL_ACCEPTANCE.md) and [visual evidence](../UI_VISUAL_REPORT.md).
+Chromium and WebKit: PASS for root language/direction, shared layout, loaded script font, 28 visual cases per engine, physical sidebar/card scrolling, exact ASCII URL entry/save and real-video remote pause/resume/seek/quality. Test source `792666ae1c36e25da59a672633001b48ddc409d3`. Physical Samsung and native editorial certification: NOT_RUN. See [complete RTL evidence](../RTL_ACCEPTANCE.md).

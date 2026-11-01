@@ -1,29 +1,7 @@
-# de individual audit
+# Deutsch (de)
 
-State: unpublished draft; **NOT_READY**.
+Runtime dictionary: src/lang/de.js, 1,399/1,399 keys (100%). Missing, duplicate, placeholder/markup/code/URL errors and unreviewed English/Russian copies: 0. Glossary: 20 terms; context overrides: 29. Exact legitimate identical English/Russian values remain reviewed exceptions (127/0 raw signals).
 
-| Metric | Result |
-|---|---|
-| Required dictionary keys | 1351 |
-| Present nonempty keys | 100 |
-| Structural coverage | 7.4% |
-| Missing keys | 1251 |
-| Placeholder mismatches | 0 |
-| Duplicate properties | 0 |
-| Value validation issues | 0 |
-| Identical English review signals | 10 |
-| Identical Russian review signals | 0 |
-| Unexpected Cyrillic review signals | 0 |
-| Long Latin phrase review signals | 0 |
-| Long-translation review signals | 0 |
-| Terminology / independent editorial review | NOT_RUN |
-| Native-speaker review | NOT_RUN |
-| Full 14-category visual matrix | NOT_RUN |
-| Samsung remote navigation | NOT_RUN |
-| Physical Samsung test | NOT_RUN |
+Terminology/context: Codex reviewed; native-speaker review: NOT_RUN. Chromium: 28/28 visual cases; WebKit: 28/28 visual cases. Real Settings language selection/reload and independent stored-data preservation: PASS. LTR root/layout and loaded expected script fonts verified.
 
-Repairs in this checkpoint: three added reference entries (country name and About labels); shadowed declarations removed where present. Other existing effective values preserved.
-
-Visual observations: NOT_RUN.
-
-Missing keys and suspicious values are enumerated individually in generated `reports/localization/de.json`; run `node tools/i18n-evidence.mjs` or download the CI artifact. No source-copy signal has been accepted automatically as an exception. No claim of semantic translation completeness is made.
+Physical Samsung and real user server/provider playback: NOT_RUN. Evidence: [chromium](https://github.com/vbrekher/lampa-personal-edition/actions/runs/41275375908); [webkit](https://github.com/vbrekher/lampa-personal-edition/actions/runs/41275378832). Test source: `792666ae1c36e25da59a672633001b48ddc409d3`. See the final visual/regression reports for exact fixture scope.
