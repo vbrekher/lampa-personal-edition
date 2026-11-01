@@ -116,3 +116,11 @@ html[dir='rtl'] {
         .full-start-new__left { margin-left: -$offset; margin-right: -$offset; }
     }
 }
+html[dir='rtl'] {
+    .mapping--line > * + * { margin-left: 0; margin-right: 1em; }
+    .items-line__more { margin-left: 0; margin-right: 2em; }
+    .card__quality { left: auto; right: -0.8em; }
+    .card__marker { left: auto; right: 0.4em; padding-right: 0.2em; padding-left: 0.6em; }
+    .card__marker > img { margin-right: 0; margin-left: 0.4em; }
+    .card__textbox-episode, .card__status-voice { margin-left: 0; margin-right: auto; }
+}

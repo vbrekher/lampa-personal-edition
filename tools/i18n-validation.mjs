@@ -48,5 +48,5 @@ export function inspectValue(value,reference=''){
 
 export function productIssues(value,source){
   const products=['Lampa','CUB','TMDB','TorrServer','Jackett','Prowlarr','Torlook','Rutor','Infuse','libass','MatriX','MediaStationX','Telegram','YouTube','VLC','MPV','JavaScript','Samsung','Tizen'];
-  return products.filter(product=>new RegExp('\\b'+product+'\\b','i').test(source)&&!value.toLowerCase().includes(product.toLowerCase()));
+  return products.filter(product=>new RegExp('\\b'+product+'\\b','i').test(source)&&!new RegExp('\\b'+product+'\\b','i').test(value));
 }

@@ -1,0 +1,43 @@
+{
+  "locale": "he",
+  "terms": {
+    "settings": "הגדרות",
+    "subtitles": "כתוביות",
+    "search": "חיפוש",
+    "watchHistory": "היסטוריית צפייה",
+    "installPlugin": "התקנת תוסף",
+    "parser": "מנתח טורנטים",
+    "torrent": "טורנט",
+    "player": "נגן",
+    "buffer": "אגירה במאגר",
+    "stream": "זרם",
+    "playlist": "רשימת ניגון",
+    "episode": "פרק",
+    "season": "עונה",
+    "watchlist": "לצפייה מאוחר יותר",
+    "extensions": "תוספים",
+    "quality": "איכות",
+    "audioTrack": "רצועת שמע",
+    "resume": "המשך",
+    "cache": "מטמון",
+    "TorrServer": "TorrServer"
+  },
+  "overrides": {
+    "title_settings": "הגדרות",
+    "menu_settings": "הגדרות",
+    "settings_player_subs": "כתוביות",
+    "title_history": "היסטוריית צפייה",
+    "settings_main_player": "נגן",
+    "settings_main_parser": "מנתח טורנטים",
+    "player_playlist": "רשימת ניגון",
+    "full_episode": "פרק",
+    "full_season": "עונה",
+    "settings_main_plugins": "תוספים",
+    "player_tracks": "רצועת שמע",
+    "title_buffer": "אגירה במאגר",
+    "extensions_install": "התקנת תוסף",
+    "settings_main_torrserver": "TorrServer",
+    "settings_param_subtitles_source_torserver": "TorrServer"
+  },
+  "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
+}

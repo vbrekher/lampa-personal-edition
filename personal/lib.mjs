@@ -138,6 +138,18 @@ function checkLinks(root) {
     if(stat.isDirectory())checkLinks(path);
   }
 }
+// Gulp 5 decodes files as UTF-8 unless copying explicitly opts out.
+// Compare original binary assets byte-for-byte before packaging a releasable WGT.
+export function checkBinaryAssets(source, built, prefix='') {
+  for(const name of readdirSync(source)){
+    const input=join(source,name),relative=prefix+name,output=join(built,name);
+    if(statSync(input).isDirectory())checkBinaryAssets(input,output,relative+'/');
+    else if(/\.(?:woff2?|ttf|otf|png|jpe?g|gif|webp|ico|mp4|wasm)$/i.test(name)){
+      if(!existsSync(output)||!readFileSync(input).equals(readFileSync(output)))
+        throw new PersonalBuildError('CORRUPT_ASSET',relative);
+    }
+  }
+}
 export function packageTizen({builtDir,outputFile,iconFile,settings}) {
   const input=resolve(builtDir),output=resolve(outputFile);
   checkAssets(input);

@@ -1,7 +1,7 @@
 // Only the isolated QA server injects this file. It is never packaged in a WGT.
 (function(){
     var query = new URLSearchParams(location.search);
-    var locale = query.get('locale') || 'en';
+    var locale = query.get('locale') || localStorage.getItem('language') || 'en';
     localStorage.setItem('language', locale);
     localStorage.setItem('parser_use', 'true');
     localStorage.setItem('player', 'inner');

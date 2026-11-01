@@ -1786,5 +1786,47 @@
       "value": "Hash",
       "reason": "Reviewed Indonesian loanword, product name, or standard technical unit; identical spelling is intentional."
     }
+  },
+  "he": {
+    "settings_param_torrserver_search_rutor": {
+      "value": "Rutor",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_torznab": {
+      "value": "Torznab",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_torrserver_search_both": {
+      "value": "Rutor + Torznab",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "torrent_item_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_player_inner": {
+      "value": "Lampa",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_param_keyboard_lampa": {
+      "value": "Lampa",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "speed_kb": {
+      "value": "Kbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "speed_mb": {
+      "value": "Mbps",
+      "reason": "Reviewed product name or standard bitrate unit; Latin spelling is intentional."
+    },
+    "settings_main_torrserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed TorrServer product name; Latin spelling is intentional."
+    },
+    "settings_param_subtitles_source_torserver": {
+      "value": "TorrServer",
+      "reason": "Reviewed TorrServer product name; Latin spelling is intentional."
+    }
   }
 }

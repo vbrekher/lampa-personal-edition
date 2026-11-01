@@ -5,7 +5,7 @@ import {mkdtempSync,mkdirSync,existsSync,writeFileSync,readFileSync,rmSync} from
 import {tmpdir} from 'node:os';
 import {join,resolve} from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {normalizeServerUrl,normalizeSettings,configScript,localTizenHtml,patchedGulp,patchedLibraries,patchedManifest,widgetManifest,packageTizen} from '../lib.mjs';
+import {checkBinaryAssets,normalizeServerUrl,normalizeSettings,configScript,localTizenHtml,patchedGulp,patchedLibraries,patchedManifest,widgetManifest,packageTizen} from '../lib.mjs';
 const root=resolve(import.meta.dirname,'..','..');
 const icon=join(root,'personal/assets/icon.png');
 const HTML='<html><head><title>Lampa</title><link href="css/app.css"></head><body><script src="./vender/jquery/jquery.js"></script><script src="http://www.youtube.com/iframe_api"></script><script src="loader.js"></script></body></html>';
@@ -195,4 +195,17 @@ test('first-install language choice is pending only for a fresh device',()=>{
   };
   assert.equal(execute([]).get('lampa_personal_language_pending'),'true');
   assert.equal(execute([['language','de']]).get('lampa_personal_language_pending'),undefined);
+});
+
+
+test('compiled binary assets must remain byte identical, including non-UTF8 bytes',()=>{
+ const temp=mkdtempSync(join(tmpdir(),'lampa-binary-test-'));
+ try{
+  const source=join(temp,'source'),built=join(temp,'built');mkdirSync(source);mkdirSync(built);
+  const bytes=Buffer.from([0x77,0x4f,0x46,0x46,0xff,0x80,0,0xfe]);
+  writeFileSync(join(source,'font.woff'),bytes);writeFileSync(join(built,'font.woff'),bytes);
+  assert.doesNotThrow(()=>checkBinaryAssets(source,built));
+  writeFileSync(join(built,'font.woff'),bytes.toString('utf8'),'utf8');
+  assert.throws(()=>checkBinaryAssets(source,built),error=>error.code==='CORRUPT_ASSET'&&error.detail==='font.woff');
+ }finally{rmSync(temp,{recursive:true,force:true});}
 });

@@ -237,18 +237,18 @@ function public_github(){
 }
 
 function index_webos(){
-    return src(idxFolder + '/webos/**/*').pipe(dest(bulFolder+'webos/'));
+    return src(idxFolder + '/webos/**/*', {encoding: false}).pipe(dest(bulFolder+'webos/'));
 }
 function index_tizen(){
-    return src(idxFolder + '/tizen/**/*').pipe(dest(bulFolder+'tizen/'));
+    return src(idxFolder + '/tizen/**/*', {encoding: false}).pipe(dest(bulFolder+'tizen/'));
 }
 function index_github(){
-    return src(idxFolder + '/github/**/*').pipe(dest(bulFolder+'github/lampa/'));
+    return src(idxFolder + '/github/**/*', {encoding: false}).pipe(dest(bulFolder+'github/lampa/'));
 }
 
 /** Сверяем файлы **/
 function sync_task(path){
-    return src([pubFolder + '**/*'])
+    return src([pubFolder + '**/*'], {encoding: false})
         .pipe(dest(bulFolder+path));
 }
 

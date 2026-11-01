@@ -2,7 +2,7 @@ import {test,expect} from '@playwright/test';
 import {mkdirSync} from 'node:fs';
 import {TARGETS,readLanguage} from '../../../tools/i18n-audit.mjs';
 const locales=process.env.QA_LOCALES?.split(',')||TARGETS;
-const screens={launch:'.lang',home:'.items-line',movie:'.full-start-new',series:'.full-start-new',search:'.main-search',filters:'.selectbox',settings:'.settings-folder',parser:'[data-name="parser_use"]',torrserver:'[data-name="torrserver_url"]',player:'.player',subtitles:'[data-name="subtitles_start"]',plugins:'.extensions',modal:'.modal',errors:'.torrent-checklist'};
+const screens={launch:'.lang',home:'.items-line',movie:'.full-start-new',series:'.full-start-new',search:'.main-search',filters:'.selectbox__content',settings:'.settings-folder',parser:'[data-name="parser_use"]',torrserver:'[data-name="torrserver_url"]',player:'.player',subtitles:'[data-name="subtitles_start"]',plugins:'.extensions',modal:'.modal',errors:'.torrent-checklist'};
 for(const locale of locales)for(const [scene,selector]of Object.entries(screens))for(const [width,height]of [[1920,1080],[3840,2160]]){
  test(`${locale} ${scene} ${width}x${height}`,async({page},info)=>{
   const errors=[];page.on('pageerror',error=>errors.push(error.message));

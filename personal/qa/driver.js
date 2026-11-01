@@ -77,7 +77,7 @@
             setTimeout(function settle(){
                 var welcome=document.querySelector('.welcome');
                 if((welcome && getComputedStyle(welcome).display!=='none') || (document.fonts && document.fonts.status==='loading'))return setTimeout(settle,50);
-                var selectors={settings:'.settings-folder',parser:'[data-name=parser_use]',torrserver:'[data-name=torrserver_url]',subtitles:'[data-name=subtitles_start]',launch:'.lang',search:'.main-search',filters:'.selectbox',plugins:'.extensions',modal:'.modal',errors:'.torrent-checklist',player:'.player'};
+                var selectors={settings:'.settings-folder',parser:'[data-name=parser_use]',torrserver:'[data-name=torrserver_url]',subtitles:'[data-name=subtitles_start]',launch:'.lang',search:'.main-search',filters:'.selectbox__content',plugins:'.extensions',modal:'.modal',errors:'.torrent-checklist',player:'.player'};
                 var target=selectors[screen]&&document.querySelector(selectors[screen]);
                 if(selectors[screen]&&(!target||!target.getBoundingClientRect().width))return document.body.setAttribute('data-qa-error','Scenario target did not open: '+screen);
                 document.body.setAttribute('data-qa-ready',screen);
