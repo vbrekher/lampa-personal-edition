@@ -36,10 +36,12 @@ test('the baseline includes all keys from both shipped canonical dictionaries',(
     assert.equal(report.translated,expected-report.missing.length,code);
   }
 });
-test('RTL locales remain unpublished until direction and font acceptance',()=>{
-  const css=readFileSync(resolve(root,'src/core/lang.js'),'utf8');
-  assert.ok(css.includes('lang_default'),'fallback runtime must remain present');
-  for(const code of ['ar','ur'])assert.equal(select(code),false);
+test('integrated RTL locales require complete dictionaries, local fonts and direction support',()=>{
+  const app=readFileSync(resolve(root,'src/app.js'),'utf8');
+  const styles=readFileSync(resolve(root,'src/sass/components/international.scss'),'utf8');
+  assert.match(app,/Direction\.apply/);
+  assert.ok(styles.includes("html[dir='rtl']"));
+  for(const c of ['ar','ur','he'])if(select(c))assert.equal(examine(c).releaseReady,true,c);
 });
 
 test('Personal plugin catalogue category names and descriptions exist for all 13 languages',()=>{

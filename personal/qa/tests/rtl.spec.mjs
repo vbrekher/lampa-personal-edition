@@ -1,0 +1,22 @@
+import {test,expect} from '@playwright/test';
+const locales=(process.env.QA_LOCALES||'ar,ur,he').split(',').filter(c=>['ar','ur','he'].includes(c));
+for(const locale of locales)test(`${locale} physical arrows, horizontal scroll and media orientation`,async({page})=>{
+ await page.setViewportSize({width:1920,height:1080});
+ await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'||route.request().url().startsWith('data:')?route.continue():route.abort());
+ await page.goto(`/?locale=${locale}&screen=home`);
+ await expect(page.locator('body')).toHaveAttribute('data-qa-ready','home');
+ await expect(page.locator('.card.focus')).toHaveCount(1);
+ await page.keyboard.press('ArrowRight');
+ await expect(page.locator('body')).toHaveClass(/menu--open/);
+ await page.keyboard.press('ArrowLeft');
+ await expect(page.locator('body')).not.toHaveClass(/menu--open/);
+ const initial=await page.locator('.card.focus').innerText();
+ for(let n=0;n<8;n++)await page.keyboard.press('ArrowLeft');
+ await expect(page.locator('.card.focus')).toBeInViewport();
+ expect(await page.locator('.card.focus').innerText()).not.toBe(initial);
+ const images=await page.locator('.card__img').evaluateAll(nodes=>nodes.map(e=>({transform:getComputedStyle(e).transform,loaded:e.complete&&e.naturalWidth>0})));
+ expect(images.some(e=>e.loaded)).toBeTruthy();expect(images.every(e=>e.transform==='none'||!e.transform.includes('-1'))).toBeTruthy();
+ for(let n=0;n<8;n++)await page.keyboard.press('ArrowRight');
+ await expect(page.locator('.card.focus')).toBeInViewport();
+ expect(await page.locator('.card.focus').innerText()).toBe(initial);
+});

@@ -11,7 +11,7 @@
             release_date: '2024-01-15', genres: [], production_countries: [], production_companies: [],
             spoken_languages: [], keywords: {results: []}, credits: {cast: [], crew: []},
             videos: {results: []}, images: {posters: [], backdrops: []},
-            budget: 0, status: 'Released', adult: false, poster_path: null, backdrop_path: null
+            budget: 0, status: 'Released', adult: false, poster_path: null, backdrop_path: null, img: location.origin+'/qa/poster.svg'
         };
         if(tv){
             delete item.release_date;
@@ -24,7 +24,7 @@
     function later(callback,data){ setTimeout(function(){ callback(data); },20); }
     L.Api.sources.qa = {
         main: function(params,done){
-            later(done,[{title:translate('title_popular_movie'),results:[movie(false),movie(true),Object.assign(movie(false),{id:900003,title:'QA-003'})]}]);
+            later(done,[{title:translate('title_popular_movie'),results:Array.from({length:10},function(_,n){return Object.assign(movie(n===1),{id:900001+n,title:'QA-'+String(n+1).padStart(3,'0')});})}]);
         },
         full: function(params,done){
             var tv=params.method==='tv', data={movie:movie(tv)};

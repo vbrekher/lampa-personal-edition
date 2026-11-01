@@ -133,3 +133,5 @@ html[dir='rtl'] {
         body.selectbox--open .selectbox__content { transform: translate3d(0,0,0); }
     }
 }
+.lang__selector-item[lang='hi'], .lang__body[lang='hi'] { font-family: 'Noto Devanagari', 'SegoeUI', sans-serif; }
+.lang__selector-item[lang='bn'], .lang__body[lang='bn'] { font-family: 'Noto Bengali', 'SegoeUI', sans-serif; }

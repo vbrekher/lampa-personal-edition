@@ -50,7 +50,7 @@ class Base extends Emit{
     wheel(step){
         if(!Controller.own(this)) this.toggle()
 
-        Controller.enabled().controller[step > 0 ? 'right' : 'left']()
+        Controller.enabled().controller[step > 0 ? (Direction.isRTL() ? 'left' : 'right') : (Direction.isRTL() ? 'right' : 'left')]()
 
         this.emit('wheel')
     }
