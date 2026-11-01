@@ -56,6 +56,7 @@
     "diagnostics_connection": "Verbinding",
     "diagnostics_mirror": "Spiegelserver",
     "loading_progress_step_2": "Alternatieve servers zoeken",
-    "loading_progress_step_5": "App starten"
+    "loading_progress_step_5": "App starten",
+    "title_left": "Resterend"
   }
 }

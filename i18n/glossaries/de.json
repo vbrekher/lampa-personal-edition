@@ -50,6 +50,7 @@
     "diagnostics_connection": "Verbindung",
     "diagnostics_mirror": "Spiegelserver",
     "loading_progress_step_2": "Alternative Server werden gesucht",
-    "loading_progress_step_5": "App wird gestartet"
+    "loading_progress_step_5": "App wird gestartet",
+    "title_left": "Verbleibend"
   }
 }

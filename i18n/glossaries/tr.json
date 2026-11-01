@@ -49,6 +49,7 @@
     "diagnostics_connection": "Bağlantı",
     "diagnostics_mirror": "Yansıtma sunucusu",
     "loading_progress_step_2": "Alternatif sunucular aranıyor",
-    "loading_progress_step_5": "Uygulama başlatılıyor"
+    "loading_progress_step_5": "Uygulama başlatılıyor",
+    "title_left": "Kalan"
   }
 }

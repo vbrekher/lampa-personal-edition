@@ -472,7 +472,7 @@ export default {
     "title_reactions": "ردود الفعل",
     "title_last_year": "العام الماضي",
     "title_reset": "إعادة تشغيل",
-    "title_left": "اليسار",
+    "title_left": "المتبقي",
     "title_parental_control": "مراقبة الوالدين",
     "title_worth_rewatch": "يستحق إعادة السرعة",
     "title_fire": "إطلاق النار!",

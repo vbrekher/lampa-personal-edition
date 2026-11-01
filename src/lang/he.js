@@ -472,7 +472,7 @@ export default {
     "title_reactions": "תגובות",
     "title_last_year": "בשנה שעברה",
     "title_reset": "התחל מחדש",
-    "title_left": "שמאלה",
+    "title_left": "נותר",
     "title_parental_control": "שליטה הורית",
     "title_worth_rewatch": "שווה צפייה חוזרת",
     "title_fire": "אֵשׁ!",

@@ -472,7 +472,7 @@ export default {
     "title_reactions": "Reaksiyonlar",
     "title_last_year": "Geçen yıl",
     "title_reset": "Yeniden Başlat",
-    "title_left": "Sol",
+    "title_left": "Kalan",
     "title_parental_control": "Ebeveyn Kontrolü",
     "title_worth_rewatch": "Tekrar izlemeye değer",
     "title_fire": "Harika!",

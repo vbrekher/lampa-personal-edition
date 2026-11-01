@@ -69,7 +69,8 @@
     "diagnostics_connection": "连接",
     "diagnostics_mirror": "镜像服务器",
     "loading_progress_step_2": "正在查找备用服务器",
-    "loading_progress_step_5": "正在启动应用"
+    "loading_progress_step_5": "正在启动应用",
+    "title_left": "剩余"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

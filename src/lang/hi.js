@@ -472,7 +472,7 @@ export default {
     "title_reactions": "प्रतिक्रियाएँ",
     "title_last_year": "पिछले वर्ष",
     "title_reset": "पुनः आरंभ करें",
-    "title_left": "बाएँ",
+    "title_left": "शेष",
     "title_parental_control": "अभिभावक नियंत्रण",
     "title_worth_rewatch": "एक पुनरावलोकन के लायक",
     "title_fire": "आग!",

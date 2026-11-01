@@ -71,7 +71,8 @@
     "diagnostics_connection": "Conexão",
     "diagnostics_mirror": "Servidor espelho",
     "loading_progress_step_2": "Buscando servidores alternativos",
-    "loading_progress_step_5": "Iniciando o aplicativo"
+    "loading_progress_step_5": "Iniciando o aplicativo",
+    "title_left": "Restante"
   },
   "review": "Existing upstream translations plus local machine translation of flagged gaps; a separate Codex terminology/context pass follows. Not native-speaker certified."
 }

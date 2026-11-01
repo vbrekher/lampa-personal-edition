@@ -472,7 +472,7 @@ export default {
     "title_reactions": "প্রতিক্রিয়া",
     "title_last_year": "গত বছর",
     "title_reset": "পুনরায় বুট",
-    "title_left": "বাম",
+    "title_left": "বাকি",
     "title_parental_control": "পিতামাতার নিয়ন্ত্রণ",
     "title_worth_rewatch": "এটা আবার দেখার যোগ্য।",
     "title_fire": "আগুন!",

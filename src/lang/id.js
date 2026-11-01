@@ -472,7 +472,7 @@ export default {
     "title_reactions": "Reaksi",
     "title_last_year": "Tahun lalu",
     "title_reset": "Mulai ulang",
-    "title_left": "Kiri",
+    "title_left": "Tersisa",
     "title_parental_control": "Kontrol Orangtua",
     "title_worth_rewatch": "Layak jam ulang.",
     "title_fire": "Menembak!",
