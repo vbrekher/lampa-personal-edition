@@ -119,7 +119,11 @@
     "loading_progress_step_2": "Mencari server alternatif",
     "loading_progress_step_5": "Memulai aplikasi",
     "loading_progress_step_1": "Memuat bahasa",
-    "loading_progress_step_4": "Hampir siap"
+    "loading_progress_step_4": "Hampir siap",
+    "settings_param_yes": "Ya",
+    "settings_param_no": "Tidak",
+    "torrent_parser_yes": "Ya",
+    "torrent_parser_no": "Tidak"
   },
   "locale": "id",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."

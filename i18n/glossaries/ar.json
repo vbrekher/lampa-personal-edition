@@ -134,7 +134,12 @@
     "loading_progress_step_2": "جارٍ البحث عن خوادم بديلة",
     "loading_progress_step_5": "جارٍ بدء التطبيق",
     "loading_progress_step_1": "تحميل اللغات",
-    "loading_progress_step_4": "أوشكنا على الانتهاء"
+    "loading_progress_step_4": "أوشكنا على الانتهاء",
+    "settings_param_yes": "نعم",
+    "settings_param_no": "لا",
+    "torrent_parser_yes": "نعم",
+    "torrent_parser_no": "لا",
+    "settings_server_preload": "استخدام مخزن التحميل المسبق"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

@@ -120,7 +120,11 @@
     "loading_progress_step_5": "অ্যাপ চালু হচ্ছে",
     "loading_progress_step_1": "ভাষাগুলি লোড হচ্ছে",
     "loading_progress_step_3": "এক্সটেনশন প্রস্তুত করা হচ্ছে",
-    "loading_progress_step_4": "প্রায় প্রস্তুত"
+    "loading_progress_step_4": "প্রায় প্রস্তুত",
+    "settings_param_yes": "হ্যাঁ",
+    "settings_param_no": "না",
+    "torrent_parser_yes": "হ্যাঁ",
+    "torrent_parser_no": "না"
   },
   "locale": "bn",
   "review": "Local machine translation followed by a separate Codex terminology and context pass; not native-speaker certified."
