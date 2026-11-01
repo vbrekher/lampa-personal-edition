@@ -142,7 +142,8 @@
     "settings_server_preload": "استخدام مخزن التحميل المسبق",
     "title_left": "المتبقي",
     "filter_sorted": "ترتيب",
-    "tv_status_released": "صدر"
+    "tv_status_released": "صدر",
+    "settings_rest_cache_all": "ذاكرة التخزين المؤقت والبيانات"
   },
   "review": "Local machine translation and existing upstream text followed by a separate Codex context/terminology pass; not native-speaker certified."
 }

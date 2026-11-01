@@ -151,7 +151,7 @@ export default {
     "settings_rest_protocol_descr": "استخدم بروتوكول HTTPS",
     "settings_rest_cache_only": "فقط كاش",
     "settings_rest_cache_only_descr": "سيتم الحفاظ على الإعدادات الأساسية",
-    "settings_rest_cache_all": "الاحتفاظ بالمنطقة المحفظة والبيانات",
+    "settings_rest_cache_all": "ذاكرة التخزين المؤقت والبيانات",
     "settings_rest_cache_all_descr": "كل الإعدادات والبيانات سيتم مسحها",
     "settings_rest_cache_calculate": "كم عدد الذاكرة المتبقية",
     "settings_request_caching_use": "تخزين الطلبات مؤقتًا",
